@@ -1,4 +1,4 @@
 # Current State
 
-- Phase: 2/8 — Content Files
-- Status: Completed. The content architecture has been established with strong typings and SEO metadata for all pages.
+- Phase: 3/8 — Animated Visuals & Image Registry
+- Status: Completed. The visual foundation including 8 animated components and the centralized image registry are implemented. No local images exist.
