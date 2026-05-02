@@ -1,3 +1,3 @@
 # Next State
 
-- Ready for Phase 2: Content Files. The project is ready for content authoring.
+- Ready for Phase 3: Animated Visuals & Image Registry.
