@@ -53,3 +53,14 @@
   - Formatted the pricing menus to reflect a luxury spa menu rather than a generic SaaS pricing table.
   - Adhered strictly to OKLCH color palettes and visual primitives from Phase 3.
 - **Open Questions:** Ready for Phase 7 (Secondary pages).
+
+### Phase 7: Implement Secondary Pages: Blog, FAQ, Legal
+- **Date:** 2026-05-02
+- **Phase:** 7
+- **Changes:**
+  - Implemented `app/careers/page.tsx` with expandable role accordions.
+  - Implemented `app/blog/page.tsx` with a highly visual magazine grid.
+  - Implemented `app/faq/page.tsx` with Framer Motion accordions and local search state.
+  - Implemented `app/terms/page.tsx` and `app/privacy/page.tsx` with sticky sidebars.
+  - Maintained perfect fidelity to the design system and `content/` source files.
+- **Open Questions:** Ready for final Phase 8 (Navigation & Polish).
