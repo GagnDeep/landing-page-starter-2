@@ -52,11 +52,11 @@ export function StaggeredTextReveal({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-10%" }}
-      className={cn("flex flex-wrap", className)}
+      className={className}
       // Cast the custom component to div for Framer Motion, but keep semantic tag if needed,
       // however Framer Motion requires specific types. Using a div wrapper is safer.
     >
-      <Component className={cn("flex flex-wrap", className)}>
+      <Component className="flex flex-wrap">
         {words.map((word, index) => (
           <motion.span
             variants={child}

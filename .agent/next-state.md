@@ -1,10 +1,10 @@
-# Next State (Phase 4: Implement Home Page Core Sections)
+# Next State (Phase 5: Implement Supporting Pages: About & Features)
 
-The foundational assets (design system, text content, animations, and image registry) are now completely in place. It is time to begin assembling the UI.
+The Home Page core structure is successfully implemented. We are now ready to build out the supporting narrative and functional pages.
 
 **Handoff Instructions:**
-1. Focus exclusively on the Home Page (`app/page.tsx` or similar root).
-2. Utilize the animated visual components from `components/visuals/` to build out the 20 structural sections defined in `.agent/layout-home.md`.
-3. Import and use the exact text strings from `content/home.ts`.
-4. Import and use the exact images from `lib/images.ts`.
-5. Ensure the Home Page is fully responsive and adheres strictly to the OKLCH color variables and spacing scales defined in `globals.css` and the design system.
+1. Focus on creating and implementing `app/about/page.tsx` and `app/features/page.tsx` (or `app/services/page.tsx` as appropriate).
+2. Reference `.agent/layout-about.md` and `.agent/layout-features.md` for exact structural intent.
+3. Import text strictly from `content/about.ts` and `content/features.ts`.
+4. Import photography strictly from `lib/images.ts`.
+5. Continue utilizing the animated visual primitives from `components/visuals/` to maintain the same premium, cinematic standard established on the home page.
