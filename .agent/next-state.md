@@ -1,9 +1,9 @@
 # Next State
 
 ## Goal
-Phase 2: Content Files
+Phase 3: Animated Visuals & Image Registry
 
 ## Immediate Next Steps
-- Write `.agent/content-home.md` detailing strings and copy for the home page sections.
-- Populate content files for the remaining pages (`about`, `features`, `pricing`, `blog`, etc.) using the layout blueprints as a guide.
-- Ensure the tone matches the brand guidelines (warm, professional, luxurious, craftsmanship-focused).
+- Curate and register high-quality, boutique-appropriate images.
+- Develop animated visual components that align with the smooth, exponential easing motion principles outlined in `.agent/design-system.md`.
+- Prepare the image and animation assets for integration into the core layout shell in Phase 4.
