@@ -1,3 +1,3 @@
 # Next State
 
-Phase 3: Animated Visuals & Image Registry is ready to begin.
+Phase 4: Core Layout and Navigation Shell is ready to begin.
