@@ -1,3 +1,3 @@
 # Next State
 
-Phase 5: Home Page Implementation is ready to begin.
+Phase 7: Blog, FAQ, and Contact Pages implementation is ready to begin.

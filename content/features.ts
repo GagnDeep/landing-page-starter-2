@@ -27,6 +27,7 @@ export const featuresContent = {
   fabricLibrary: {
     headline: "The Fabric Library",
     description: "We source only the finest fabrics from trusted mills, ensuring longevity, comfort, and a premium finish.",
+    imageBadge: "Premium Selection",
   },
   process: {
     headline: "The Measurement Process",

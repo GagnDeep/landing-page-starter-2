@@ -64,6 +64,27 @@ export const homeContent = {
   gallery: {
     headline: "The Bespoke Gallery",
   },
+  gifting: {
+    headline: "Gifting & Wedding Packages",
+    description: "Explore our exclusive bundles for groomsmen and special occasions. Handcrafted to coordinate perfectly.",
+    button: "View Packages"
+  },
+  inStore: {
+    headline: "Visit Our Patiala Shop",
+    description: "Experience the fabric textures firsthand and consult directly with our master tailors.",
+    studioImageAlt: "Studio View",
+    cta: "Get Directions via WhatsApp \u2192"
+  },
+  faqSnippet: {
+    headline: "Common Questions",
+    cta: "View all FAQs \u2192"
+  },
+  newsletter: {
+    headline: "Join our inner circle",
+    description: "Exclusive fabric releases and tailoring tips delivered to your inbox.",
+    placeholder: "Email address",
+    button: "Subscribe"
+  },
   cta: {
     headline: "Ready for your perfect fit?",
     button: "Book a Consultation",

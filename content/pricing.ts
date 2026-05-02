@@ -31,6 +31,11 @@ export const pricingContent = {
   packages: {
     headline: "Wedding Packages",
     description: "Special bundled pricing available for grooms and groomsmen. Ensure your entire party looks impeccably coordinated.",
+    button: "Inquire About Weddings",
+  },
+  faqSnippet: {
+    headline: "Payment & Deposits",
+    content: "All custom orders require a 50% deposit before work begins. The remaining balance is due upon completion.",
   },
   cta: {
     headline: "Get a Custom Quote",
