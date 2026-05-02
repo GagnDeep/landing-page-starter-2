@@ -1,3 +1,3 @@
 # Next State
 
-- Phase 5: Boutique Services and About Pages are ready to begin.
+- Phase 6: Pricing, FAQ, and Contact Pages are ready to begin.

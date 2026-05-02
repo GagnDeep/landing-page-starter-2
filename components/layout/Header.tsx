@@ -49,8 +49,8 @@ export const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <Link href="#" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wider">Shop</Link>
             <Link href="#" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wider">Collections</Link>
-            <Link href="#" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wider">Custom Stitching</Link>
-            <Link href="#" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wider">About</Link>
+            <Link href="/features" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wider">Custom Stitching</Link>
+            <Link href="/about" className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wider">About</Link>
           </nav>
 
           {/* Right Icons */}

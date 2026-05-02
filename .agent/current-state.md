@@ -1,4 +1,4 @@
 # Current State
 
-- Phase 4: Core Layout and Home Page (Completed)
-- RootLayout, Header, Footer, and full Home page built using animated components and Unsplash registry.
+- Phase 5: Boutique Services and About Pages (Completed)
+- About and Features pages fully implemented and responsive.

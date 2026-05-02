@@ -25,8 +25,8 @@ export const Footer = () => {
           <div>
             <h4 className="font-medium mb-6 uppercase tracking-wider text-sm">Services</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><Link href="#" className="hover:text-foreground transition-colors">Custom Stitching</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">Bridal Styling</Link></li>
+              <li><Link href="/features" className="hover:text-foreground transition-colors">Custom Stitching</Link></li>
+              <li><Link href="/features" className="hover:text-foreground transition-colors">Bridal Styling</Link></li>
               <li><Link href="#" className="hover:text-foreground transition-colors">Virtual Consultation</Link></li>
               <li><Link href="#" className="hover:text-foreground transition-colors">Boutique Rates</Link></li>
             </ul>
