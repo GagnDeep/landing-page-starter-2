@@ -8,9 +8,6 @@ export interface PricingCategory {
 
 export interface PricingContent extends BasePageContent {
   stitchingRates: PricingCategory[];
-  stitchingRatesHeading: string;
-  addonsHeading: string;
-  faqHeading: string;
   fabricNote: string;
   addons: {
     name: string;
@@ -36,9 +33,6 @@ export const pricingContent: PricingContent = {
     { name: "Lehenga Choli (Basic)", basePrice: "₹3,500", description: "Standard flair with lining." },
     { name: "Western Dress", basePrice: "₹2,000", description: "Custom fit A-line or shift dresses." }
   ],
-  stitchingRatesHeading: "Base Stitching Rates",
-  addonsHeading: "Add-ons & Embellishments",
-  faqHeading: "Common Questions",
   fabricNote: "Please note: The prices listed above are for stitching services only and do not include the cost of fabric. Fabric can be provided by the client or sourced by us at an additional cost.",
   addons: [
     { name: "Premium Lining", startingPrice: "+ ₹300" },

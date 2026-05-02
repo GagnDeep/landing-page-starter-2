@@ -1,3 +1,3 @@
 # Next State
 
-- Phase 6: Pricing, FAQ, and Contact Pages are ready to begin.
+- Phase 7: Blog and Careers Pages are ready to begin.

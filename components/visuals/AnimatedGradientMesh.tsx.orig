@@ -27,16 +27,6 @@ export const AnimatedGradientMesh: React.FC<Props> = ({
        return;
     }
 
-    const getCSSVarValue = (varString: string) => {
-      if (varString.startsWith('var(')) {
-        const varName = varString.slice(4, -1);
-        return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
-      }
-      return varString;
-    };
-    const resolvedBaseColor = getCSSVarValue(baseColor);
-    const resolvedOverlayColor = getCSSVarValue(overlayColor);
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -54,8 +44,8 @@ export const AnimatedGradientMesh: React.FC<Props> = ({
         w/2 - Math.sin(t) * w/2, h/2 - Math.cos(t) * h/2
       );
 
-      gradient.addColorStop(0, resolvedBaseColor || '#ffffff');
-      gradient.addColorStop(1, resolvedOverlayColor || '#000000');
+      gradient.addColorStop(0, baseColor);
+      gradient.addColorStop(1, overlayColor);
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, w, h);

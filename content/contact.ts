@@ -8,6 +8,9 @@ export interface ContactContent extends BasePageContent {
     hours: string;
   };
   form: {
+    heading: string;
+    successTitle: string;
+    successMessage: string;
     nameLabel: string;
     emailLabel: string;
     subjectLabel: string;
@@ -15,9 +18,11 @@ export interface ContactContent extends BasePageContent {
     submitLabel: string;
   };
   social: {
+    heading: string;
     instagram: string;
     facebook: string;
   };
+  detailsHeading: string;
 }
 
 export const contactContent: ContactContent = {
@@ -36,6 +41,9 @@ export const contactContent: ContactContent = {
     hours: "Monday - Saturday: 10:00 AM - 8:00 PM"
   },
   form: {
+    heading: "Send a Message",
+    successTitle: "Message Sent Successfully!",
+    successMessage: "Thank you for reaching out. We will get back to you shortly.",
     nameLabel: "Full Name",
     emailLabel: "Email Address",
     subjectLabel: "Subject / Inquiry Type",
@@ -43,7 +51,9 @@ export const contactContent: ContactContent = {
     submitLabel: "Send Message"
   },
   social: {
+    heading: "Connect with us",
     instagram: "https://instagram.com/auraboutique.patiala",
     facebook: "https://facebook.com/auraboutiquepatiala"
-  }
+  },
+  detailsHeading: "Studio Details"
 };

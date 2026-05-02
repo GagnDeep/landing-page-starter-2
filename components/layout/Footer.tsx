@@ -28,14 +28,14 @@ export const Footer = () => {
               <li><Link href="/features" className="hover:text-foreground transition-colors">Custom Stitching</Link></li>
               <li><Link href="/features" className="hover:text-foreground transition-colors">Bridal Styling</Link></li>
               <li><Link href="#" className="hover:text-foreground transition-colors">Virtual Consultation</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">Boutique Rates</Link></li>
+              <li><Link href="/pricing" className="hover:text-foreground transition-colors">Boutique Rates</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-medium mb-6 uppercase tracking-wider text-sm">Help</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><Link href="#" className="hover:text-foreground transition-colors">Contact Us</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact Us</Link></li>
+              <li><Link href="/faq" className="hover:text-foreground transition-colors">FAQ</Link></li>
               <li><Link href="#" className="hover:text-foreground transition-colors">Shipping & Returns</Link></li>
               <li><Link href="#" className="hover:text-foreground transition-colors">Track Order</Link></li>
             </ul>

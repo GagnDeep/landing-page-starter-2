@@ -18,3 +18,7 @@
 - [2026-05-02] Phase 4 complete. Implemented RootLayout and immersive Home page using animated components and typed content structure. Responsive and hydration-safe.
 
 - [2026-05-02] Phase 5 complete. Built the About and Features pages using the visual design system, animated components, and dynamic content. Updated global navigation. Next.js router optimizations remain as minor tech debt.
+
+- [2026-05-02] Phase 6 complete. Built the Pricing, FAQ, and Contact pages using the visual design system, animated components, and dynamic content. Updated global navigation.
+
+- [2026-05-02] Phase 6 complete. Built the Pricing, FAQ, and Contact pages using the visual design system, animated components, and dynamic content. Updated global navigation. Removed hardcoded Unsplash URL.
