@@ -44,6 +44,22 @@ export const homeContent = {
       cta: "Discover Bridal Packages",
     },
   },
+  teamPreview: {
+    title: "The Artisans",
+    members: [
+      { name: "Aria M.", role: "Creative Director" },
+      { name: "Riya S.", role: "Nail Artist" },
+      { name: "Kiara T.", role: "Senior Stylist" }
+    ]
+  },
+  lookbook: {
+    title: "Lookbook",
+    follow: {
+      title: "Follow Us",
+      handle: "@bohosalon.chd",
+      href: "https://instagram.com"
+    }
+  },
   testimonials: {
     title: "Love Notes",
     reviews: [

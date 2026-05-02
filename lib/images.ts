@@ -64,7 +64,7 @@ export const siteImages: Record<string, UnsplashImage> = {
 
   // Bridal
   bridalPrep: {
-    src: getUnsplashUrl("1510822625224-b15d2146f2aa", 1200), // Soft elegant bridal prep
+    src: getUnsplashUrl("1583939003579-730e3918a45a", 1200), // Updated to a valid image
     alt: "Bridal preparation and styling",
     credit: "Photo by Unsplash",
   },
