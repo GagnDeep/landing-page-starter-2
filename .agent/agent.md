@@ -23,3 +23,13 @@
   - Content perfectly adheres to the high-end, convenient, modern luxury tone established in Phase 1.
   - Updated `current-state.md` and `next-state.md` to reflect that the project is ready for UI consumption.
 - **Open Questions:** Ready for Phase 3 (Animated Visuals & Image Registry).
+
+### Phase 3: Animated Visuals & Image Registry
+- **Date:** 2026-05-02
+- **Phase:** 3
+- **Changes:**
+  - Configured Next.js for external Unsplash images.
+  - Built `lib/images.ts` with direct Unsplash URLs mapped to strict `ImageSlot` types.
+  - Developed a suite of 9 animated React components using Framer Motion (FadeIn, Parallax, KenBurns, GradientMesh, etc.).
+  - Ensured all animations respect `prefers-reduced-motion` and utilize the cinematic easing defined in Phase 1.
+- **Open Questions:** Ready for Phase 4 (Home Page implementation).

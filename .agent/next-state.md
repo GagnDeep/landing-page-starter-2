@@ -1,9 +1,10 @@
-# Next State (Phase 3: Animated Visuals & Image Registry)
+# Next State (Phase 4: Implement Home Page Core Sections)
 
-With the structural blueprints (Phase 1) and text content (Phase 2) finalized, the project is ready to begin sourcing and defining the visual assets and animations.
+The foundational assets (design system, text content, animations, and image registry) are now completely in place. It is time to begin assembling the UI.
 
 **Handoff Instructions:**
-1. The UI implementation teams can now reference the `content/` directory as the single source of truth for all text. No hardcoded strings should exist in future TSX files.
-2. In Phase 3, you will need to curate the imagery required by the layout documents and establish the technical implementation for the motion principles (e.g., Framer Motion configurations, specific entrance animations).
-3. Review `.agent/design-system.md` regarding the "Motion & Interaction" section (cinematic, graceful, 300-500ms durations, cubic-bezier easing).
-4. Do not build the final page layouts yet; focus entirely on the animation primitives and the image registry.
+1. Focus exclusively on the Home Page (`app/page.tsx` or similar root).
+2. Utilize the animated visual components from `components/visuals/` to build out the 20 structural sections defined in `.agent/layout-home.md`.
+3. Import and use the exact text strings from `content/home.ts`.
+4. Import and use the exact images from `lib/images.ts`.
+5. Ensure the Home Page is fully responsive and adheres strictly to the OKLCH color variables and spacing scales defined in `globals.css` and the design system.

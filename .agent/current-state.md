@@ -1,9 +1,18 @@
 # Current State
 
-Phase 2 (Content Files) has been successfully completed.
+Phase 3 (Animated Visuals & Image Registry) has been successfully completed.
 
-- A dedicated `content/` directory has been created at the root of the repository.
-- Ten primary TypeScript files (and one additional for booking) have been populated with structured content strings:
-  - `home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `booking.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`
-- All files contain SEO metadata, section headlines, body paragraphs, and UI labels that adhere strictly to the "modern luxury" tone defined in Phase 1.
-- No UI components or functional code have been written yet, maintaining the strict separation of concerns.
+- Installed `framer-motion` and `lucide-react`.
+- Created a robust image registry at `lib/images.ts` providing typed, high-quality Unsplash URLs for 18 distinct content slots (heroes, features, team, blog).
+- Updated `next.config.mjs` to allow `images.unsplash.com`.
+- Built 9 highly reusable, animated visual primitives in `components/visuals/`:
+  - `AnimatedGradientMesh.tsx`
+  - `AnimatedStatCounter.tsx`
+  - `CTAGlow.tsx`
+  - `FadeInScroll.tsx`
+  - `HoverImageReveal.tsx`
+  - `KenBurnsImage.tsx`
+  - `LineDrawingIcon.tsx`
+  - `ParallaxSection.tsx`
+  - `StaggeredTextReveal.tsx`
+- All components implement `useReducedMotion` and apply the luxurious, cinematic easing curves defined in the design system.
