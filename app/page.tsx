@@ -1,19 +1,67 @@
-import { Button } from "@/components/ui/button"
+import React from "react";
+import { homeContent } from "@/content/home";
+import {
+  Hero,
+  BrandEssence,
+  SherwaniCollection,
+  KurtaCollection,
+  MasterTailor,
+  Process,
+  FabricGallery,
+  Testimonials,
+  Heritage,
+  FAQTeaser,
+  Newsletter,
+  Location,
+  TrustIndicators,
+} from "@/components/home";
 
-export default function Page() {
+export const metadata = {
+  title: homeContent.seo.title,
+  description: homeContent.seo.description,
+};
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
+    <>
+      {/* 2. Hero/Opening Statement */}
+      <Hero />
+
+      {/* 3. Brand Essence */}
+      <BrandEssence />
+
+      {/* Trust Indicators (Not explicitly numbered but needed for 5.0 rating rep) */}
+      <TrustIndicators />
+
+      {/* 4. Featured Collection - Sherwanis */}
+      <SherwaniCollection />
+
+      {/* 5. Featured Collection - Kurta Pajamas */}
+      <KurtaCollection />
+
+      {/* 6. The Master Tailor */}
+      <MasterTailor />
+
+      {/* 7-10. The Process */}
+      <Process />
+
+      {/* 11. Fabric Gallery */}
+      <FabricGallery />
+
+      {/* 12, 16. Testimonials (Combined) */}
+      <Testimonials />
+
+      {/* 15. The Patiala Heritage */}
+      <Heritage />
+
+      {/* 17. FAQ Teaser */}
+      <FAQTeaser />
+
+      {/* 18. Newsletter */}
+      <Newsletter />
+
+      {/* 19. Location */}
+      <Location />
+    </>
+  );
 }
