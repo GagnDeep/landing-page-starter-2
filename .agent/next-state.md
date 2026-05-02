@@ -1,3 +1,3 @@
 # Next State
 
-Phase 2: Content Files is ready to begin.
+Phase 3: Animated Visuals & Image Registry is ready to begin.
