@@ -12,3 +12,5 @@
 - Phase 1 complete. Design system and layout documentation created. Global CSS variables initialized. Memory files seeded.
 
 - [2026-05-02] Phase 2 complete. All site copy authored and structured in TypeScript modules. Ready for visual component development.
+
+- [2026-05-02] Phase 3 complete. Animated visual primitives and Unsplash registry established. All components SSR-safe and theme-aware.

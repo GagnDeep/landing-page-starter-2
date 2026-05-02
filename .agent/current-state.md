@@ -1,4 +1,4 @@
 # Current State
 
-- Phase 2: Content Files (Completed)
-- Content architecture is ready and fully typed in the `content/` directory.
+- Phase 3: Animated Visuals & Image Registry (Completed)
+- Visual primitives and image registry established.
