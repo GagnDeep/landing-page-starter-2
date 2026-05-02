@@ -14,3 +14,5 @@
 - [2026-05-02] Phase 2 complete. All site copy authored and structured in TypeScript modules. Ready for visual component development.
 
 - [2026-05-02] Phase 3 complete. Animated visual primitives and Unsplash registry established. All components SSR-safe and theme-aware.
+
+- [2026-05-02] Phase 4 complete. Implemented RootLayout and immersive Home page using animated components and typed content structure. Responsive and hydration-safe.

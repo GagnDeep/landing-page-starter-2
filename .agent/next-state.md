@@ -1,3 +1,3 @@
 # Next State
 
-- Phase 4: Core Layout and Home Page is ready to begin.
+- Phase 5: Boutique Services and About Pages are ready to begin.

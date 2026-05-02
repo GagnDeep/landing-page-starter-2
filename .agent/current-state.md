@@ -1,4 +1,4 @@
 # Current State
 
-- Phase 3: Animated Visuals & Image Registry (Completed)
-- Visual primitives and image registry established.
+- Phase 4: Core Layout and Home Page (Completed)
+- RootLayout, Header, Footer, and full Home page built using animated components and Unsplash registry.
