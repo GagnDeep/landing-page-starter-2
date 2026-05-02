@@ -1,4 +1,4 @@
 # Current Project State
 
-## Phase 3: Animated Visuals & Image Registry
-- Phase 3 complete. The animated visual library (`components/visuals/`) and image registry (`lib/images.ts`) are established and aligned with the "Sherwani Craftsman" persona.
+## Phase 4: Core Layout and Navigation Shell
+- Phase 4 complete. The RootLayout, Header, and Footer are fully implemented and production-ready. The site shell features responsive navigation, dynamic content sourcing from Phase 2 files, proper Playfair/Lato typography integration, and a functional Dark/Light mode toggle respecting system preferences.
