@@ -5,4 +5,5 @@ The Boho Salon is a premier beauty and nail destination in Sector 17, Chandigarh
 
 ## Status
 Phase 1: Design System & Layout Documentation is complete.
-Phase 2: Content Files is complete. The content repository (`content/` directory) is fully populated with 10 typed TypeScript files covering bespoke, premium, and SEO-optimized copy for all pages, ensuring zero hardcoded strings in the upcoming UI layer. The content repository is ready for UI integration.
+Phase 2: Content Files is complete.
+Phase 3: Animated Visuals & Image Registry is complete. We now have a robust library of 8 prop-driven, SSR-safe animated visual components (`AnimatedGradientMesh`, `LogoMarquee`, etc.) and a centralized, type-safe image registry (`lib/images.ts`) utilizing remote Unsplash assets. `next.config.mjs` is correctly configured for remote images. The project is fully equipped with design tokens, layout maps, content, imagery, and visual components.

@@ -1,5 +1,5 @@
 # Next State
 
 ## Priorities
-Phase 3: Animated Visuals & Image Registry is the next priority.
-The focus will be on preparing visual assets, setting up image processing logic, defining the animated behaviors established in the design system, and developing the core UI components utilizing the content repository. The content is ready for Phase 3's visual component development.
+Phase 4: Core Layout & Home Page is the next priority.
+The focus will be on implementing the core routing, the main navigation header, the footer assembly, and the primary Home page leveraging the layouts documented in Phase 1, the copy from Phase 2, and the visual/animated components from Phase 3.
