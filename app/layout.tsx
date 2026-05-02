@@ -1,15 +1,19 @@
-import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import { Playfair_Display, Lato } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-mono",
-})
+  variable: "--font-heading",
+});
+
+const lato = Lato({
+  weight: ["300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export default function RootLayout({
   children,
@@ -20,7 +24,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
+      className={cn("antialiased", lato.variable, playfair.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
