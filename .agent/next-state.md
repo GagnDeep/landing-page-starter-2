@@ -1,2 +1,2 @@
 # Next State
-Ready for Phase 2: Content Files. The goal is to generate content strings and SEO metadata for all pages defined in the layout documentation.
+Phase 3 (Animated Visuals & Image Registry) is now unblocked and ready to begin. The goal is to source, optimize, and register premium image assets that complement the content and design system.
