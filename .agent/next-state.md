@@ -1,10 +1,9 @@
-# Next State (Phase 2: Content Files)
+# Next State (Phase 3: Animated Visuals & Image Registry)
 
-With the layout structures and design system firmly in place, the next phase focuses entirely on generating the concrete text content and copy for the site.
+With the structural blueprints (Phase 1) and text content (Phase 2) finalized, the project is ready to begin sourcing and defining the visual assets and animations.
 
 **Handoff Instructions:**
-1. Review the `.agent/layout-[page].md` files created in Phase 1 to understand what textual content is needed for every specific section on every page.
-2. Read `.agent/design-system.md` to ensure the voice and tone match the established "modern luxury and artistic editorial" aesthetic. The copy must sound like a high-end concierge or lifestyle magazine.
-3. Your goal for Phase 2 is to create `.agent/content-[page].md` files corresponding to every layout file.
-4. Each content file must provide the exact headings, body copy, button text, and micro-copy for the sections outlined in the layout files.
-5. Do not write any code or download any images during Phase 2. Focus strictly on narrative, persuasive copy, and clear information hierarchy.
+1. The UI implementation teams can now reference the `content/` directory as the single source of truth for all text. No hardcoded strings should exist in future TSX files.
+2. In Phase 3, you will need to curate the imagery required by the layout documents and establish the technical implementation for the motion principles (e.g., Framer Motion configurations, specific entrance animations).
+3. Review `.agent/design-system.md` regarding the "Motion & Interaction" section (cinematic, graceful, 300-500ms durations, cubic-bezier easing).
+4. Do not build the final page layouts yet; focus entirely on the animation primitives and the image registry.
