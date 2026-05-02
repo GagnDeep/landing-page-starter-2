@@ -1,10 +1,10 @@
-# Next State (Phase 5: Implement Supporting Pages: About & Features)
+# Next State (Phase 7: Implement Secondary Pages: Blog, FAQ, Legal)
 
-The Home Page core structure is successfully implemented. We are now ready to build out the supporting narrative and functional pages.
+The core conversion funnel (Booking, Pricing, Contact) is complete. It's time to build out the supporting informational pages.
 
 **Handoff Instructions:**
-1. Focus on creating and implementing `app/about/page.tsx` and `app/features/page.tsx` (or `app/services/page.tsx` as appropriate).
-2. Reference `.agent/layout-about.md` and `.agent/layout-features.md` for exact structural intent.
-3. Import text strictly from `content/about.ts` and `content/features.ts`.
-4. Import photography strictly from `lib/images.ts`.
-5. Continue utilizing the animated visual primitives from `components/visuals/` to maintain the same premium, cinematic standard established on the home page.
+1. Focus entirely on `app/blog/page.tsx` (Journal), `app/faq/page.tsx`, `app/terms/page.tsx`, and `app/privacy/page.tsx`.
+2. Reference the respective `.agent/layout-[page].md` files for structural instructions (e.g., Blog needs a magazine index feel, Legal pages need sticky sidebars).
+3. Hydrate data strictly from `content/blog.ts`, `content/faq.ts`, `content/terms.ts`, and `content/privacy.ts`.
+4. Ensure components like the FAQ accordion use Framer Motion for smooth disclosure.
+5. All legal and informational pages must prioritize supreme readability and typographic polish (Playfair/Manrope pairing).

@@ -43,3 +43,13 @@
   - Ensured responsiveness and strict adherence to the design system OKLCH color tokens.
   - Applied the typography pairing (Playfair Display & Manrope) successfully via `app/layout.tsx`.
 - **Open Questions:** Ready for Phase 5 (About & Features pages).
+
+### Phase 6: Implement Booking, Pricing, & Contact Pages
+- **Date:** 2026-05-02
+- **Phase:** 6
+- **Changes:**
+  - Built `app/pricing/page.tsx`, `app/booking/page.tsx`, and `app/contact/page.tsx`.
+  - Created a smooth, multi-step state-driven UI for the booking form.
+  - Formatted the pricing menus to reflect a luxury spa menu rather than a generic SaaS pricing table.
+  - Adhered strictly to OKLCH color palettes and visual primitives from Phase 3.
+- **Open Questions:** Ready for Phase 7 (Secondary pages).
