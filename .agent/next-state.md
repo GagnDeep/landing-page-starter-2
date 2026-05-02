@@ -1,3 +1,3 @@
 # Next Project State
 
-Ready for Phase 3 (Animated Visuals & Image Registry). Begin building the animated visual library and image registry.
+Ready for Phase 4 (Core Layout and Navigation Shell). Begin building the RootLayout, global navigation, and footer using the visual assets and content established in previous phases.

@@ -1,4 +1,4 @@
 # Current Project State
 
-## Phase 2: Content Files
-- Phase 2 complete. The `content/` repository is ready, fully typed, and contains SEO metadata and brand-aligned text for 10 core pages.
+## Phase 3: Animated Visuals & Image Registry
+- Phase 3 complete. The animated visual library (`components/visuals/`) and image registry (`lib/images.ts`) are established and aligned with the "Sherwani Craftsman" persona.
