@@ -1,11 +1,10 @@
 # Next State
 
-## Phase 2: Content Files
+## Phase 3: Animated Visuals & Image Registry
 
-The next phase will focus on creating the content files that will populate the structural layouts defined in Phase 1.
+The next phase will focus on establishing the visual assets and dynamic motion elements that will bring the design system and content to life.
 
 **Upcoming Tasks:**
-- Translate the narrative and intent from the `.agent/layout-*.md` files into concrete, compelling copy.
-- Ensure the tone matches the brand's aesthetic: polite, trustworthy, and reflecting master craftsmanship.
-- Prepare the content structure (likely in JSON or structured markdown files) to be easily consumed by the React components that will be built in Phase 4.
-- No UI code or actual routing should be implemented yet.
+- Curate and configure an image registry/manifest for the high-quality editorial images required by the layout documents.
+- Define or implement initial animation utility components (e.g., using Framer Motion, Tailwind Animate, or GSAP) based on the motion principles outlined in Phase 1.
+- Prepare the visual assets to be seamlessly integrated with the React component architecture in Phase 4.
