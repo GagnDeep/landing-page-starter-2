@@ -1,4 +1,4 @@
 # Next State
 
-- Phase 2: Content Files is ready to begin.
-- Use the tone and aesthetic established in `.agent/design-system.md` to guide content creation.
+- Phase 3: Animated Visuals & Image Registry is now unblocked and ready to begin.
+- Use the content structures to guide the mapping of image assets and animations.

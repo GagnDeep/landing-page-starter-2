@@ -1,4 +1,4 @@
 # Current State
 
-- Phase 1: Design System & Layout Documentation (Completed)
-- Design system and layout documentation finalized.
+- Phase 2: Content Files (Completed)
+- Content architecture is ready and fully typed in the `content/` directory.
