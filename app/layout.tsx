@@ -1,29 +1,39 @@
-import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import { Playfair_Display, Montserrat } from 'next/font/google'
+import { ThemeProvider } from '@/components/theme-provider'
+import './globals.css'
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
 
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
-
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-heading',
 })
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+export const metadata = {
+  title: 'Imran Tailor | Master Tailoring & Bespoke Suits in Patiala',
+  description: "Experience 20+ years of precision tailoring and bespoke craftsmanship with Imran Tailor in Patiala. Specializing in luxury men's wear and serving a global NRI clientele.",
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" suppressHydrationWarning className={`${playfair.variable} ${montserrat.variable}`}>
+      <body className="min-h-screen flex flex-col font-sans">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navigation />
+          <main className="flex-grow pt-24">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
