@@ -1,13 +1,11 @@
 # Current State
 
 ## Summary
-Phase 2: Content Files is complete.
+Phase 3 & Phase 4 are complete.
 
 ## Completed Work
-- Created `content/` directory at the project root.
-- Generated typed TypeScript content files (`content/home.ts`, `content/about.ts`, `content/features.ts`, `content/pricing.ts`, `content/blog.ts`, `content/faq.ts`, `content/contact.ts`, `content/careers.ts`, `content/terms.ts`, `content/privacy.ts`).
-- Populated files with professional, warm, and boutique-focused copy, adhering strictly to the brand guidelines established in Phase 1.
-- Ensured all SEO metadata fields are populated with brand-specific, keyword-rich content.
+- **Phase 3**: Established the Image Registry in `lib/images.ts` using Unsplash photos with proper credits and alt text. Implemented 8 robust, prop-driven animated visual components in `components/visuals/` which leverage CSS variables and gracefully handle `prefers-reduced-motion`. Updated `next.config.mjs` to allow Unsplash remote patterns.
+- **Phase 4**: Implemented the Core Layout Shell. Created `Header` and `Footer` layout components in `components/layout/`. Integrated them into `app/layout.tsx`. Established functional theme-switching via `next-themes` and wired up navigation links to utilize Phase 2 content strings.
 
 ## Active Focus
-Ready to proceed to Phase 3: Animated Visuals & Image Registry.
+Ready to proceed to Phase 5: Home Page Implementation.
