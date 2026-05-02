@@ -1,4 +1,4 @@
 # Next State
 
-- Phase 4 (Layout Shell and Global Navigation) is unblocked and ready to begin.
-- The project now has design tokens, content data, a visual component library, and an image registry ready to be assembled into global layouts.
+- Phase 6 (Core Pages: About, Features, and Pricing) is ready to begin.
+- The project now has a functional layout shell and home page; the next step is applying these components and layout paradigms to the secondary narrative and conversion pages.
