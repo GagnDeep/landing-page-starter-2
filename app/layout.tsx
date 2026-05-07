@@ -3,6 +3,8 @@ import { Geist_Mono, Fraunces, DM_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
+import { SiteHeader } from "@/components/global/site-header";
+import { SiteFooter } from "@/components/global/site-footer";
 
 const dmSans = DM_Sans({
   subsets:['latin'],
@@ -32,8 +34,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, dmSans.variable, fraunces.variable, "font-sans")}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="flex flex-col min-h-screen">
+        <ThemeProvider>
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   )

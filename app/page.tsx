@@ -18,7 +18,6 @@ import Link from "next/link";
 
 export default function HomePage() {
   const {
-    nav,
     hero,
     urgencyBanner,
     intro,
@@ -37,34 +36,12 @@ export default function HomePage() {
     newsletter,
     socialGrid,
     finalCTA,
-    footer,
   } = homeContent;
 
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-hidden">
-      {/* 1. Top Navigation Bar (HomeNav) */}
-      <header className="fixed top-0 w-full z-50 transition-colors duration-300 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-heading text-2xl font-bold tracking-tight text-primary">
-            {nav.logo}
-          </div>
-          <nav className="hidden md:flex gap-8">
-            {nav.links.map((link) => (
-              <Link key={link} href="#" className="text-sm font-medium hover:text-primary transition-colors">
-                {link}
-              </Link>
-            ))}
-          </nav>
-          <MagneticButton>
-            <Button className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90">
-              {nav.cta}
-            </Button>
-          </MagneticButton>
-        </div>
-      </header>
-
+    <main className="flex-1 bg-background text-foreground overflow-hidden pt-20">
       {/* 2. Hero Section (HomeHero) */}
-      <section className="relative min-h-screen flex items-center pt-20">
+      <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
             src={images.hero.bestsellerCake}
@@ -277,7 +254,7 @@ export default function HomePage() {
             {testimonials.items.map((testimonial, i) => (
               <div key={i} className="min-w-[300px] md:min-w-[400px] snap-center">
                 <FadeIn delay={i * 0.2}>
-                  <p className="font-heading text-2xl md:text-3xl italic mb-6">"{testimonial.quote}"</p>
+                  <p className="font-heading text-2xl md:text-3xl italic mb-6">&quot;{testimonial.quote}&quot;</p>
                   <p className="text-muted-foreground">— {testimonial.author}</p>
                 </FadeIn>
               </div>
@@ -456,42 +433,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
-      {/* 20. Footer (HomeFooter) */}
-      <footer className="bg-zinc-950 text-zinc-400 py-20">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-            <div className="md:col-span-4">
-              <h3 className="font-heading text-3xl text-white mb-4">{footer.brand}</h3>
-              <p className="text-lg">{footer.tagline}</p>
-            </div>
-            <div className="md:col-span-2 md:col-start-7">
-              <h4 className="text-white font-medium mb-6 uppercase tracking-wider text-sm">Shop</h4>
-              <ul className="space-y-4">
-                {footer.links.shop.map(link => <li key={link}><Link href="#" className="hover:text-white transition-colors">{link}</Link></li>)}
-              </ul>
-            </div>
-            <div className="md:col-span-2">
-              <h4 className="text-white font-medium mb-6 uppercase tracking-wider text-sm">About</h4>
-              <ul className="space-y-4">
-                {footer.links.about.map(link => <li key={link}><Link href="#" className="hover:text-white transition-colors">{link}</Link></li>)}
-              </ul>
-            </div>
-            <div className="md:col-span-2">
-              <h4 className="text-white font-medium mb-6 uppercase tracking-wider text-sm">Support</h4>
-              <ul className="space-y-4">
-                {footer.links.support.map(link => <li key={link}><Link href="#" className="hover:text-white transition-colors">{link}</Link></li>)}
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm">{footer.copyright}</p>
-            <div className="flex gap-6 text-sm">
-              {footer.links.legal.map(link => <Link key={link} href="#" className="hover:text-white transition-colors">{link}</Link>)}
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

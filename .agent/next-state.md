@@ -1,13 +1,12 @@
-# Expected Next State (Phase 5: Build Supporting Pages & Navigation)
+# Expected Next State (Phase 6: Implement Utility & Information Pages)
 
 ## Goal
-To implement the core secondary pages (About, Features, Pricing, Blog) and wire up global navigation.
+To complete the implementation of the remaining pages specified in the layout architecture.
 
 ## Scope
-1. **Routing & Pages:** Create `app/about/page.tsx`, `app/features/page.tsx`, `app/pricing/page.tsx`, `app/blog/page.tsx`.
+1. **Utility Pages:** Create and implement `app/pricing/page.tsx`, `app/faq/page.tsx`, `app/blog/page.tsx`, `app/terms/page.tsx`, `app/privacy/page.tsx`, and `app/careers/page.tsx`.
 2. **Component Assembly:** Build out the sections defined in their respective `.agent/layout-*.md` files.
-3. **Integration:** Pass data from their respective `content/*.ts` files into these sections. Use photography from `lib/images.ts` and animations from `components/visuals/`.
-4. **Global Navigation:** Extract the Navigation from the homepage into a global layout component or reusable component to share across pages.
+3. **Integration:** Pass data from their respective `content/*.ts` files into these sections. Ensure they utilize the global layout and design system.
 
 ## Readiness
-The foundational assets are proven to work via the Homepage implementation. We are ready to rapidly expand the site's footprint.
+The design patterns, component library, and global structure are fully established and working smoothly across the primary pages. Expanding to utility pages is a straightforward application of these existing assets.
