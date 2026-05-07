@@ -22,9 +22,10 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu when route changes
+  // Close menu when route changes (using setTimeout to avoid immediate setState during render flow)
   useEffect(() => {
-    setIsOpen(false);
+    const timeout = setTimeout(() => setIsOpen(false), 0);
+    return () => clearTimeout(timeout);
   }, [pathname]);
 
   // Lock body scroll when menu is open

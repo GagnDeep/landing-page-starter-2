@@ -86,7 +86,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
               {blogContent.detail.simulatedBody[2]}
             </p>
             <blockquote>
-              "A wedding is not a production. It is a profoundly intimate narrative, expressed through the medium of hospitality."
+              &quot;A wedding is not a production. It is a profoundly intimate narrative, expressed through the medium of hospitality.&quot;
             </blockquote>
             <p>
               {blogContent.detail.simulatedBody[3]}

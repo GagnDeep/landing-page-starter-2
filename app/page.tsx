@@ -148,7 +148,7 @@ export default function HomePage() {
       <section className="py-40 px-6 md:px-12 bg-primary text-primary-foreground text-center">
         <ScrollReveal className="max-w-4xl mx-auto">
           <p className="text-3xl md:text-5xl font-heading leading-snug mb-10 italic">
-            "{homeContent.founderQuote.quote}"
+            &quot;{homeContent.founderQuote.quote}&quot;
           </p>
           <p className="text-sm tracking-widest uppercase opacity-80">
             — {homeContent.founderQuote.author}
@@ -211,7 +211,7 @@ export default function HomePage() {
       <section className="py-32 px-6 md:px-12 bg-secondary text-secondary-foreground text-center">
         <ScrollReveal className="max-w-4xl mx-auto">
           <p className="text-2xl md:text-4xl font-heading leading-snug mb-10">
-            "{homeContent.testimonial.quote}"
+            &quot;{homeContent.testimonial.quote}&quot;
           </p>
           <p className="text-sm tracking-widest uppercase">
             {homeContent.testimonial.author} <span className="opacity-60 block mt-2 text-xs">{homeContent.testimonial.location}</span>
