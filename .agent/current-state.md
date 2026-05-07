@@ -1,22 +1,21 @@
 # Current Project State
 
-**Phase:** 2/8 — Content Files (Completed)
+**Phase:** 3/8 — Animated Visuals & Image Registry (Completed)
 
 ## Accomplishments
-*   Created the `content/` directory at the repository root to centralize all text data.
-*   Successfully created 11 discrete TypeScript files mapping to site requirements:
-    *   `content/global.ts` (Navigation, footer, shared UI strings, default SEO)
-    *   `content/home.ts` (Tailored copy for 20 unique home page sections)
-    *   `content/about.ts` (Legacy and philosophy)
-    *   `content/features.ts` (Service offerings and logistics)
-    *   `content/pricing.ts` (Curated collections and quotation process)
-    *   `content/blog.ts` (Journal and editorial setup)
-    *   `content/faq.ts` (Categorized logistics and booking questions)
-    *   `content/contact.ts` (Inquiry form and direct contact info)
-    *   `content/careers.ts` (Culture and job listings)
-    *   `content/terms.ts` (Legal Terms of Service)
-    *   `content/privacy.ts` (Legal Privacy Policy)
-*   All content is written in a consistent "royal Punjabi" luxury voice, avoiding generic placeholders, and explicitly tailored for large-scale catering.
+*   Created a centralized, strictly-typed image registry (`lib/images.ts`) mapping specific site slots to high-quality Unsplash URLs fitting the luxury theme.
+*   Updated `next.config.mjs` to allow `images.unsplash.com` remote patterns.
+*   Built 8 reusable, prop-driven animated visual primitives using Framer Motion (`components/visuals/`):
+    *   `FadeIn`
+    *   `SlideUp`
+    *   `StaggerContainer` & `StaggerItem`
+    *   `ParallaxImage`
+    *   `KenBurnsHero`
+    *   `RevealText`
+    *   `AnimatedCounter`
+    *   `CTAGlow`
+*   All animations respect accessibility guidelines (`useReducedMotion`) and feature slow, graceful easings.
+*   Audited all content files from Phase 2; no placeholder text remains.
 
 ## Current Status
-All textual content required for the website has been structured and exported as strongly-typed objects. The site structure is fully populated with real copy. The project is now ready for visual implementation, starting with reusable animated components and image registries.
+The project now possesses a robust foundation of text content, layout blueprints, and high-end visual primitives (imagery and motion). The project is ready for the assembly phase to construct the Home Page.
