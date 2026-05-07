@@ -2,16 +2,18 @@
 Verma's Bakery & Sweets
 
 ## Status
-Phase 3: Animated Visuals & Image Registry is complete.
+Phase 4: Build Core Homepage Experience is complete.
 
 ## Completed Work
-- Established a centralized image registry (`lib/images.ts`) featuring curated Unsplash photography mapped to specific page layouts.
-- Updated `next.config.mjs` to authorize `images.unsplash.com` remote patterns for the Next.js Image component.
-- Built a library of 8 reusable animated visual components in `components/visuals/` using `framer-motion` (e.g., `FadeIn`, `StaggerItem`, `ParallaxImage`, `RevealText`), all supporting `prefers-reduced-motion` and styled via CSS variable tokens.
-- All structural and content preconditions are now fully met for UI implementation.
+- Assembled the homepage (`app/page.tsx`) mapping directly to `.agent/layout-home.md` specifications.
+- Imported and utilized `homeContent` exclusively for all text rendering; zero hardcoded strings exist in the UI file.
+- Applied CSS variables defined in `.agent/design-system.md` for proper light and dark mode functionality.
+- Incorporated animated visual components (`FadeIn`, `ParallaxImage`, `StaggerContainer`, `RevealText`, `DecorativeLine`, `ScaleHover`) created in Phase 3.
+- Utilized `next/image` with the established `lib/images.ts` registry for high-quality visual fallbacks.
+- Ran successful frontend verifications ensuring responsive behavior and styling accuracy.
 
 ## Blocking Issues
 - None.
 
 ## Next Immediate Goal
-- Proceed to Phase 4 (Build Core Homepage Experience) to implement the first end-to-end page using the design tokens, content strings, and visual library created in Phases 1-3.
+- Proceed to Phase 5 (Develop Secondary Pages: About & Features) to map the secondary content files and layout blueprints to structural TSX files.
