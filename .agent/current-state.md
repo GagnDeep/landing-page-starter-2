@@ -1,10 +1,10 @@
 # Current State
 
-- **Phase**: 2/8 Completed (Content Files)
-- **Status**: All 10 necessary textual and structural content for every page are housed in dedicated, type-safe TypeScript files in the `content/` directory (`home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`), ready for component consumption. No UI code has been written yet.
+- **Phase**: 3/8 Completed (Animated Visuals & Image Registry)
+- **Status**: The visual library is fully initialized. An image registry exists in `lib/images.ts` with direct Unsplash URLs, and `next.config.mjs` has been updated to permit these images. Eight distinct, reusable animated primitives (`components/visuals/`) have been created using Framer Motion, all respecting `prefers-reduced-motion`. Content files from Phase 2 are finalized. No page UI has been implemented yet.
 - **Design System**: Established in `.agent/design-system.md`.
 - **Layouts**:
   - Home page layout (20 sections) detailed in `.agent/layout-home.md`.
   - Secondary pages (11 pages) layout intent detailed in `.agent/layout-secondary.md`.
 - **Global CSS**: `app/globals.css` has been updated with the design system tokens.
-- **Next Action**: Awaiting Phase 3 (Animated Visuals & Image Registry) to connect the layout intents and content with imagery and motion principles.
+- **Next Action**: Awaiting Phase 4 (Implement Home Page Core Structure) to finally start assembling the layout intent, content data, images, and animated primitives into a functional Home Page.

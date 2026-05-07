@@ -1,17 +1,20 @@
-# Next State: Phase 3 (Animated Visuals & Image Registry)
+# Next State: Phase 4 (Implement Home Page Core Structure)
 
 ## Goal
-Now that the structural layout and copy are fully available, the next phase focuses on establishing the image registry and defining the animated visuals, laying the groundwork before the core UI structures are built.
+To assemble the layout intents, content data, images, and animated primitives into a functional Home Page.
 
 ## Handoff Context
-- The design system (`.agent/design-system.md`) is complete.
-- Layout intents (`.agent/layout-home.md`, `.agent/layout-secondary.md`) are complete.
-- Page content strings are available in the `content/` directory.
+- Phase 1 defined the layout intents (`.agent/layout-home.md`).
+- Phase 2 populated the hardcoded copy (`content/home.ts`).
+- Phase 3 established the image registry (`lib/images.ts`) and animated primitives (`components/visuals/`).
+- We are now ready to write actual page UI.
 
 ## Required Actions
-- Establish the `lib/images.ts` registry containing Unsplash URLs that match the luxury, high-end destination catering vibe.
-- Create Framer Motion components mapping to the "smooth, deliberate, and unhurried" motion principles in the design system, within `components/visuals/`.
+- Implement the 20 distinct sections for the Home page.
+- Integrate the visual primitives (animations) and the `images` registry.
+- Ensure the layout perfectly mimics the "Destination Luxury & Culinary Editorial" vibe defined in the design system.
 
 ## Acceptance Criteria
-- `lib/images.ts` is fully populated.
-- Necessary animated components are created.
+- Home page correctly renders all sections outlined in `.agent/layout-home.md`.
+- Content is fully data-driven from `content/home.ts`.
+- All visual components from `components/visuals/` are utilized to add polish.
