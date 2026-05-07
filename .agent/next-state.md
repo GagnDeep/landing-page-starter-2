@@ -1,5 +1,5 @@
-# Next Phase Handoff (Phase 5: Implement Conversion & Support Pages)
+# Next Phase Handoff (Phase 6: Implement Auxiliary & Legal Pages)
 
-- **Context**: The core marketing narrative (Home, About, Features) is successfully implemented visually and functionally.
-- **Action**: Begin Phase 5 by assembling the Conversion and Support pages (`/pricing`, `/faq`, `/contact`). Utilize the same visual primitives (`components/visuals/`), content text (`content/`), and layouts (`.agent/`) as done in Phase 4. Pay special attention to form layout intent on the Contact page and sophisticated data presentation on the Pricing page.
-- **Constraints**: Ensure absolute visual consistency with the pages implemented in Phase 4. Maintain the luxury, high-end editorial aesthetic. Note that the global nav and footer are still placeholders and will be handled in Phase 7.
+- **Context**: The primary user journey, from initial landing to final inquiry/conversion, is complete and visually integrated.
+- **Action**: Begin Phase 6 by implementing the remaining secondary pages: Careers (`/careers`), Terms of Service (`/terms`), and Privacy Policy (`/privacy`). Use the text files from `content/` and layouts from `.agent/`.
+- **Constraints**: These pages should remain highly polished and brand-aligned, though they will naturally be more text-heavy. Use the `components/visuals/` primitives to introduce elegance without overwhelming the content.

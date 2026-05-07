@@ -19,7 +19,7 @@ export const contactContent = {
         { name: "eventDate", label: "Anticipated Date or Season", type: "text" },
         { name: "destination", label: "Desired Destination(s)", type: "text" },
         { name: "guestCount", label: "Estimated Guest Count", type: "text" },
-        { name: "budget", label: "Anticipated Event Investment (Excluding Planning Fees)", type: "select", options: ["$250k - $500k", "$500k - $1M", "$1M+"] },
+        { name: "budget", label: "Anticipated Event Investment (Excluding Planning Fees)", type: "select", options: ["$250k - $500k", "$500k - $1M", "$1M+"], placeholder: "Select Budget" },
       ]
     },
     vision: {
