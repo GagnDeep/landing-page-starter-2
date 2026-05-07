@@ -1,12 +1,10 @@
 # Next State
 
-**Phase:** 4/8.
-**Focus:** Implement Core Homepage Experience.
+**Phase:** 5/8.
+**Focus:** Implement Secondary Pages & Services.
 
-## Handoff Instructions for Phase 4
-- The design system, layout blueprints, text content, image registry, and animated visual primitives are all completely finished and available.
-- Your goal is to build the actual homepage (`app/page.tsx` and associated feature components in `components/`).
-- Import content from `content/home.ts`.
-- Use the images from `lib/images.ts`.
-- Liberally use the animated components in `components/visuals/` to build the structure.
-- Follow the 20-section architectural blueprint found in `.agent/layout-home.md` precisely.
+## Handoff Instructions for Phase 5
+- The Homepage is fully complete and establishes the component usage patterns.
+- Proceed to implement the `About`, `Features`, and `Blog` pages based on `.agent/layout-[page].md` blueprints.
+- Ensure all copy is fetched from the respective `content/[page].ts` files.
+- Re-use the animated visual components where appropriate to maintain the premium feel.
