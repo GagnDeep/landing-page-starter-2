@@ -1,10 +1,10 @@
 # Next State
 
-**Phase:** 2/8.
-**Focus:** Content Files.
+**Phase:** 3/8.
+**Focus:** Animated Visuals & Image Registry.
 
-## Handoff Instructions for Phase 2
-- Review the layout blueprints defined in Phase 1 (e.g., `.agent/layout-home.md`, `.agent/layout-about.md`, etc.).
-- Create heavily structured TypeScript files in a `content/` directory (e.g., `content/home.ts`, `content/about.ts`).
-- These files must export objects containing all the hardcoded copy, labels, and text required for the layouts outlined in Phase 1.
-- No React components should be built in Phase 2; it is strictly about establishing the text content that will drive the UI later.
+## Handoff Instructions for Phase 3
+- The textual content is fully prepared in the `content/` directory.
+- The next step is to build the reusable visual primitives and image assets required to bring the design system to life.
+- Establish the centralized image registry (`lib/images.ts`) mapping to specific page slots using Unsplash URLs.
+- Build the animated visual components using Framer Motion, ensuring adherence to accessibility guidelines (`useReducedMotion`) and careful prop management to avoid TypeScript errors when wrapping standard HTML elements.
