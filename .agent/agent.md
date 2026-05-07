@@ -14,3 +14,7 @@
 *   **Date:** 2026-05-07
 *   **Phase:** 4 - Home Page Composition & Core Layout
 *   **Actions:** Built the global `Header` and `Footer`. Composed `app/page.tsx` using 13 custom section components. Integrated `content/home.ts` data and `components/visuals` animations. Confirmed strict adherence to design system and visual intent.
+
+*   **Date:** 2026-05-07
+*   **Phase:** 6 - Utility Pages: Pricing, FAQ, Blog, Legal
+*   **Actions:** Implemented /pricing, /faq, /blog, /terms, and /privacy routes. Replaced hardcoded blog data with content file strings. Updated .agent state files for Phase 7 handoff.

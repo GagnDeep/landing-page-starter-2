@@ -1,13 +1,13 @@
 # Current Project State
 
-**Phase:** 4/8 — Home Page Composition & Core Layout (Completed)
+**Phase:** 6/8 — Utility Pages: Pricing, FAQ, Blog, Legal (Completed)
 
 ## Accomplishments
-*   Built the global `Header` and `Footer` layout components, complete with scroll-reactive animations, responsive mobile menus, and dynamic content injection from `content/global.ts`.
-*   Implemented `app/layout.tsx` incorporating custom Google Fonts (Cormorant Garamond, Montserrat) mapped to Tailwind CSS variables, ensuring accurate typographic styling.
-*   Constructed `app/page.tsx`, composing 13 highly polished, responsive sections detailing the core service offerings, scale, process, and culinary philosophy.
-*   Successfully integrated Phase 2 text content and Phase 3 animated visual primitives (Parallax, RevealText, CTAGlow, KenBurnsHero) into the layout to achieve the specified "royal Punjabi" aesthetic.
-*   Addressed Framer Motion polymorphic type safety by defining strict HTML tag unions.
+*   Implemented `/pricing` utilizing Framer Motion stagger effects to display curated collections and bespoke additions without generic table structures.
+*   Implemented `/faq` using Radix UI/shadcn Accordion components for accessible, elegant Q&A displays.
+*   Implemented `/blog` with a sticky category filter, a responsive masonry-style grid for articles, and a newsletter sign-up block.
+*   Implemented `/terms` and `/privacy` using `@tailwindcss/typography` to ensure dense legal text is readable and aligned with the brand's typographic scales.
+*   Updated `content/blog.ts` to include previously hardcoded mock data, ensuring 100% of text strings across all utility pages are sourced from the central `content/` directory.
 
 ## Current Status
-The Home Page acts as a fully functional, high-end digital storefront demonstrating the technical and visual capabilities of the application. The project is now ready to begin populating the supporting interior pages.
+The website now possesses a fully functional core marketing funnel (Home, About, Features, Contact) supported by a complete suite of utility pages (Pricing, FAQ, Blog, Legal). The project is ready for the final secondary page implementation (Careers) and global site polish.
