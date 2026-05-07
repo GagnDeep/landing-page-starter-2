@@ -1,19 +1,19 @@
 # Next Project State
 Verma's Bakery & Sweets
 
-## Phase 2 Handoff: Content Files
+## Phase 3 Handoff: Animated Visuals & Image Registry
 
 ### Objective
-Generate all hardcoded strings, localization content, and textual data for the pages defined in the Phase 1 layout blueprints.
+Establish the foundational visual components, motion wrappers, and a centralized, strongly-typed image registry necessary before building out the full page layouts.
 
 ### Required Actions
-1. Read `.agent/design-system.md` to understand the brand voice (heritage, artisanal, premium).
-2. Read the layout blueprints in `.agent/` (`layout-home.md`, `layout-about.md`, etc.) to understand the exact sections that require content.
-3. Create distinct TypeScript files in a new `content/` directory (e.g., `content/home.ts`, `content/about.ts`, `content/pricing.ts`) that export structured objects.
-4. Ensure absolutely no UI implementation or React components are created in this phase.
-5. All text should be rich and evocative, tailored to a high-end, traditional Indian bakery experience.
+1. **Image Registry:** Create a centralized file (e.g., `lib/images.ts`) mapping specific page slots to direct Unsplash URLs, ensuring a curated, high-quality visual aesthetic. Configure `images.remotePatterns` in `next.config.mjs` accordingly.
+2. **Motion Components:** Build reusable, accessible Framer Motion components in a `components/visuals/` directory (e.g., fade-in wrappers, scroll-triggered reveals, interactive hover states).
+3. **Accessibility:** Ensure all animations respect the `prefers-reduced-motion` media query using Framer Motion's `useReducedMotion`.
+4. **Integration Prep:** Ensure these visual primitives are ready to consume the content strings generated in Phase 2 during the upcoming layout implementation phases.
 
 ### Acceptance Criteria
-- A fully populated `content/` directory exists with a `.ts` file for each page blueprint.
-- Each content file perfectly maps to the structural requirements outlined in its respective `.agent/layout-[page].md` document.
-- The project memory files (`.agent/current-state.md`, `.agent/next-state.md`, `.agent/agent.md`) are updated to reflect the completion of Phase 2.
+- A centralized image registry exists with curated, high-quality Unsplash URLs mapped to page sections.
+- `next.config.mjs` is configured to allow the specified remote image patterns.
+- Reusable, accessible animated visual components (using Framer Motion) are created and ready for integration.
+- The project memory files (`.agent/current-state.md`, `.agent/next-state.md`, `.agent/agent.md`) are updated to reflect the completion of Phase 3.
