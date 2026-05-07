@@ -1,12 +1,12 @@
-# Expected Next State (Phase 3: Animated Visuals & Image Registry)
+# Expected Next State (Phase 4: Implement Core Homepage Experience)
 
 ## Goal
-To build the reusable visual library, handle imagery, and implement the motion principles defined in Phase 1 before building the core pages.
+To wire up the layout blueprints, the content strings, and the visual component library to build the full, highly engaging homepage.
 
 ## Scope
-1. **Animated Components:** Build custom Framer Motion wrappers matching the "deliberate, graceful" unwrapping style described in `.agent/design-system.md`.
-2. **Image Registry:** Create `lib/images.ts` to manage strong typing for images via Unsplash.
-3. **Accessibility:** Ensure all animations respect `prefers-reduced-motion`.
+1. **Routing:** Ensure `app/page.tsx` acts as the primary entry point.
+2. **Component Assembly:** Build out the 20 specific sections defined in `.agent/layout-home.md`.
+3. **Integration:** Pass data from `content/home.ts` into these sections. Wrap the UI in the visual components from `components/visuals/`. Use photography from `lib/images.ts`.
 
 ## Readiness
-The site now has a complete textual structure. The text objects in `content/` are ready to be wired into UI components. The foundational tokens are in `app/globals.css`.
+All foundational assets (text, images, animations, layout docs, tokens) are complete. The homepage implementation should not require inventing new copy or sourcing new images.
