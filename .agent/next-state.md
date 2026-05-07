@@ -1,9 +1,10 @@
-# Next Expected State (Phase 3 Handoff)
+# Next Expected State (Phase 4 Handoff)
 
-The project is moving into Phase 3: Animated Visuals & Image Registry.
+The project is moving into Phase 4: Home Page Composition & Hero Section.
 
-The expected outcome of Phase 3 is the creation of a centralized registry for all images, videos, and visual assets used across the website, aligning with the luxury aesthetic and the content structure established in Phase 2.
+The expected outcome of Phase 4 is the assembly of the home page structure using the previously created content strings and visual components, creating a compelling, luxury narrative from top to bottom.
 
 Handoff details:
-- The content structure is finalized in the `content/` directory and is ready to be consumed by visual components.
-- The visual identity (design system) is established and should guide the selection and styling of all imagery and animated visuals.
+- Consume content from `content/home.ts`.
+- Consume images from `lib/images.ts`.
+- Use the animated visual primitives from `components/visuals/` to build the structure mapped out in `.agent/layout-home.md`.
