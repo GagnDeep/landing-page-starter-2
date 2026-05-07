@@ -1,5 +1,5 @@
-# Next Phase Handoff (Phase 6: Implement Auxiliary & Legal Pages)
+# Next Phase Handoff (Phase 7: Global Polish, Navigation, and Footer)
 
-- **Context**: The primary user journey, from initial landing to final inquiry/conversion, is complete and visually integrated.
-- **Action**: Begin Phase 6 by implementing the remaining secondary pages: Careers (`/careers`), Terms of Service (`/terms`), and Privacy Policy (`/privacy`). Use the text files from `content/` and layouts from `.agent/`.
-- **Constraints**: These pages should remain highly polished and brand-aligned, though they will naturally be more text-heavy. Use the `components/visuals/` primitives to introduce elegance without overwhelming the content.
+- **Context**: The site architecture and all individual page routes (`/`, `/about`, `/features`, `/pricing`, `/faq`, `/contact`, `/blog`, `/blog/[id]`, `/careers`, `/terms`, `/privacy`) are structurally complete and visually populated.
+- **Action**: Begin Phase 7 by replacing the placeholders with robust, fully functional global components. Specifically, implement a responsive, high-end Global Navigation (potentially a full-screen or elegant sticky menu) and a comprehensive Global Footer mapping all internal links. Both components must be integrated into `app/layout.tsx`.
+- **Constraints**: These global elements must perfectly match the existing luxury design system (`.agent/design-system.md`) and function seamlessly across all viewport sizes.

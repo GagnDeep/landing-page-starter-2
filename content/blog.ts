@@ -56,5 +56,21 @@ export const blogContent = {
   },
   pagination: {
     loadMoreLabel: "Explore the Archive"
+  },
+  detail: {
+    backLabel: "Back to Journal",
+    shareLabel: "Share Article",
+    author: {
+      initials: "ER",
+      name: "Elena Rossi",
+      title: "Creative Director"
+    },
+    simulatedBody: [
+      "The conception of an extraordinary event begins long before the first invitation is sealed. It starts with an architectural understanding of the space, a deep resonance with the surrounding landscape, and a relentless commitment to a singular aesthetic vision.",
+      "When our clients requested an immersive, multi-day celebration that felt both intimately personal and staggeringly grand, we immediately knew the execution required an unprecedented level of restraint and curation. True luxury, we often find, is defined as much by what you choose to omit as what you choose to include.",
+      "We approached the venue not as a backdrop, but as an active participant in the narrative. By manipulating lighting, structural floral installations, and custom soundscapes, we transformed the historic courtyard into a living, breathing entity. The transition from daylight to candlelight was not abrupt, but a meticulously choreographed fade, mirroring the rising energy of the evening.",
+      "In destination weddings, the guest experience is paramount. We treat attendees with the same reverence we treat the couple, ensuring their journey is seamless, luxurious, and entirely managed by our team. From private aviation logistics to bespoke welcome amenities, every touchpoint is designed to reinforce the overarching narrative of the celebration.",
+      "Ultimately, the success of such an endeavor lies in the unseen mechanics. It is the flawless orchestration of a thousand microscopic decisions, culminating in an experience that feels entirely effortless. This is the hallmark of Guide Events."
+    ]
   }
 };

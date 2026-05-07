@@ -5,6 +5,7 @@
 - **Phase 3: Animated Visuals & Image Registry** is COMPLETE.
 - **Phase 4: Implement Core Marketing Pages** is COMPLETE.
 - **Phase 5: Implement Conversion & Support Pages** is COMPLETE.
+- **Phase 6: Implement Auxiliary & Legal Pages** is COMPLETE.
 - Foundational design system defined in `.agent/design-system.md` with typography, OKLCH luxury color tokens, spacing, border radius, and motion principles.
 - Layout blueprints established for all required pages (`home`, `about`, `features`, `pricing`, `blog`, `faq`, `contact`, `careers`, `terms`, `privacy`) in the `.agent/` directory.
 - `app/globals.css` updated with the new luxurious light/dark mode theme.
@@ -13,4 +14,6 @@
 - Centralized image registry defined in `lib/images.ts` mapping Unsplash URLs to layout slots. Next.js image config updated for Unsplash remote patterns.
 - Created `components/visuals/` directory containing reusable Framer Motion primitives (FadeIn, StaggerReveal, ParallaxImage, AnimatedText, HoverScale, SmoothAccordion, LuxuryGrid, ScrollReveal, AtmosphereStrip) built to honor the luxury aesthetic and `prefers-reduced-motion`.
 - Implemented core pages (`/`, `/about`, `/features`) adhering strictly to `.agent/` layouts.
-- Implemented conversion/support pages (`/pricing`, `/faq`, `/contact`, `/blog`) showcasing polished luxury data presentation, a white-glove intake form, and an editorial asymmetrical article grid. Global Navigation and Footer exist as placeholders on the home page awaiting Phase 7.
+- Implemented conversion/support pages (`/pricing`, `/faq`, `/contact`, `/blog`) showcasing polished luxury data presentation, a white-glove intake form, and an editorial asymmetrical article grid.
+- Implemented auxiliary/legal pages (`/careers`, `/terms`, `/privacy`, `/blog/[id]`) delivering a deeply readable, elegant typography-focused experience.
+- The site is structurally complete. Global Navigation and Footer exist as placeholders on the home page awaiting Phase 7.
