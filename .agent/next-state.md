@@ -1,17 +1,17 @@
-# Next State: Phase 2 (Content Files)
+# Next State: Phase 3 (Animated Visuals & Image Registry)
 
 ## Goal
-Populate the structural blueprint defined in Phase 1 with actual, hardcoded copy. Ensure a strict separation of text from UI components.
+Now that the structural layout and copy are fully available, the next phase focuses on establishing the image registry and defining the animated visuals, laying the groundwork before the core UI structures are built.
 
 ## Handoff Context
-The visual identity, layout structure, and aesthetic direction ("Destination Luxury & Culinary Editorial") are completely locked in `.agent/design-system.md`, `.agent/layout-home.md`, and `.agent/layout-secondary.md`. The UI implementation is waiting for content.
+- The design system (`.agent/design-system.md`) is complete.
+- Layout intents (`.agent/layout-home.md`, `.agent/layout-secondary.md`) are complete.
+- Page content strings are available in the `content/` directory.
 
 ## Required Actions
-1. Create a `content/` directory.
-2. Create distinct TypeScript files for each page (e.g., `content/home.ts`, `content/about.ts`).
-3. Export structured objects containing all strings, headings, descriptions, and CTA labels required by the layouts defined in `.agent/layout-home.md` and `.agent/layout-secondary.md`.
-4. Do not write any React components or styles in this phase.
+- Establish the `lib/images.ts` registry containing Unsplash URLs that match the luxury, high-end destination catering vibe.
+- Create Framer Motion components mapping to the "smooth, deliberate, and unhurried" motion principles in the design system, within `components/visuals/`.
 
 ## Acceptance Criteria
-- All 12 pages have corresponding `.ts` content files.
-- The content reflects the high-end, professional, and appetizing tone required by the brand.
+- `lib/images.ts` is fully populated.
+- Necessary animated components are created.
