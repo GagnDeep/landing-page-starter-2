@@ -46,9 +46,10 @@ export function StaggerReveal({
 interface StaggerItemProps {
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function StaggerItem({ children, className }: StaggerItemProps) {
+export function StaggerItem({ children, className, style }: StaggerItemProps) {
   const shouldReduceMotion = useReducedMotion();
 
   const itemVariants = {
@@ -64,7 +65,7 @@ export function StaggerItem({ children, className }: StaggerItemProps) {
   };
 
   return (
-    <motion.div variants={itemVariants} className={cn(className)}>
+    <motion.div variants={itemVariants} className={cn(className)} style={style}>
       {children}
     </motion.div>
   );

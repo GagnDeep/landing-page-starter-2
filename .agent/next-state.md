@@ -1,5 +1,5 @@
-# Next Phase Handoff (Phase 4: Implement Core Marketing Pages)
+# Next Phase Handoff (Phase 5: Implement Conversion & Support Pages)
 
-- **Context**: The foundational blueprints (Phase 1), string content (Phase 2), and visual primitives/image registry (Phase 3) are completely finalized.
-- **Action**: Begin Phase 4 by assembling the core marketing pages (`/`, `/about`, `/features`). You must use the existing layout blueprints in `.agent/`, content strings from `content/`, and visual components from `components/visuals/` to implement these pages visually and functionally.
-- **Constraints**: Ensure perfect alignment with the luxury, editorial design system. Components should look sophisticated and performant. Adhere to Next.js App Router best practices.
+- **Context**: The core marketing narrative (Home, About, Features) is successfully implemented visually and functionally.
+- **Action**: Begin Phase 5 by assembling the Conversion and Support pages (`/pricing`, `/faq`, `/contact`). Utilize the same visual primitives (`components/visuals/`), content text (`content/`), and layouts (`.agent/`) as done in Phase 4. Pay special attention to form layout intent on the Contact page and sophisticated data presentation on the Pricing page.
+- **Constraints**: Ensure absolute visual consistency with the pages implemented in Phase 4. Maintain the luxury, high-end editorial aesthetic. Note that the global nav and footer are still placeholders and will be handled in Phase 7.
