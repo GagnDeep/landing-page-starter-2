@@ -1,10 +1,9 @@
-# Next Project State: Phase 2 Handoff
+# Next Project State: Phase 3 Handoff
 
-## Phase 2 Goal: Content Files
-Now that the structural blueprints (the layout `.md` files) are complete, Phase 2 is responsible for generating and mapping the actual written content to these structures.
+## Phase 3 Goal: Animated Visuals & Image Registry
+With structural blueprints (Phase 1) and textual content (Phase 2) secured, Phase 3 focuses on the visual assets necessary to bring the luxury design system to life.
 
 ## Expectations
-- Create content files (e.g., JSON or MD files) that correspond to the layout sections defined in Phase 1.
-- Populate the structured layout sections with real, tailored, and luxurious content strings suitable for A2Zee Events.
-- Avoid hardcoding these strings directly into React components prematurely; build a robust content map that the frontend will eventually consume.
-- Maintain the high-end, editorial tone established in the Design System.
+- Curate and register high-resolution placeholder imagery (e.g., via Unsplash) that aligns with the "destination-luxury" aesthetic (e.g., Lake Como, Amalfi Coast, upscale table settings).
+- Create a registry or mapping system for these images so they can be easily consumed by components in later phases.
+- Define or prototype complex motion/animation logic (like staggered reveals or scroll parallax) required by the layout documents, ensuring smooth, performant, and elegant transitions before full page assembly.
