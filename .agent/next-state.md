@@ -1,13 +1,12 @@
-# Expected Next State (Phase 2: Content Files)
+# Expected Next State (Phase 3: Animated Visuals & Image Registry)
 
 ## Goal
-To completely separate content from structure, preparing the groundwork for seamless UI implementation in later phases.
+To build the reusable visual library, handle imagery, and implement the motion principles defined in Phase 1 before building the core pages.
 
 ## Scope
-1. **Directory Setup:** Create a `content/` directory.
-2. **Content Maps:** Create strongly-typed TypeScript files (e.g., `content/home.ts`, `content/about.ts`) that map directly to the layout sections defined in Phase 1.
-3. **Data Population:** Populate these objects with rich, high-quality, conversion-focused copy that matches the "Immediate Celebration" brand voice (premium, reliable, slightly celebratory).
-4. **No UI Code:** This phase must strictly involve data structures and copy. No React components or CSS modifications should occur.
+1. **Animated Components:** Build custom Framer Motion wrappers matching the "deliberate, graceful" unwrapping style described in `.agent/design-system.md`.
+2. **Image Registry:** Create `lib/images.ts` to manage strong typing for images via Unsplash.
+3. **Accessibility:** Ensure all animations respect `prefers-reduced-motion`.
 
 ## Readiness
-The design tokens in `app/globals.css` and the structural blueprints in `.agent/layout-*.md` are finalized and ready to inform the shape of the content objects.
+The site now has a complete textual structure. The text objects in `content/` are ready to be wired into UI components. The foundational tokens are in `app/globals.css`.
