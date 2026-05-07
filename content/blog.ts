@@ -1,0 +1,61 @@
+export const blogContent = {
+  meta: {
+    title: "Journal | Sangam Caterer | Culinary Insights",
+    description: "Read the latest insights, recipes, and event stories from the culinary experts at Sangam Caterer.",
+  },
+  hero: {
+    title: "The Culinary Journal",
+    subtitle: "Insights, inspiration, and stories from our kitchens around the world.",
+  },
+  featuredArticle: {
+    title: "The Art of the Destination Wedding Menu",
+    excerpt: "Designing a menu that travels well while maintaining Michelin-level quality requires immense planning. Here is how we execute flawless dining experiences from Lake Como to Rajasthan.",
+    date: "October 12, 2025",
+    author: "Chef Elena Rossi",
+    readTime: "5 min read",
+  },
+  recentArticles: [
+    {
+      slug: "elevating-the-traditional-punjabi-feast",
+      title: "Elevating the Traditional Punjabi Feast",
+      excerpt: "How we take centuries-old recipes from Patiala and present them with modern elegance for today's luxury weddings.",
+      content: "When catering for a luxury wedding, the expectation is that the food not only tastes authentic but is presented with the highest level of culinary artistry. For centuries, the royal kitchens of Patiala have guarded recipes that are rich, robust, and incredibly flavorful. Our mission at Sangam Caterer is to elevate these traditional dishes to meet the expectations of an international audience.\n\nWe start with the ingredients. Sourcing the finest saffron, pure desi ghee, and organic spices directly from the farms. The slow-cooking processes remain untouched, ensuring that the depth of flavor is exactly as it was intended generations ago.\n\nHowever, the presentation is where the modern transformation occurs. Instead of communal buffets, we often suggest plated services for our most prestigious events. A classic Murg Makhani is served with delicate precision, accompanied by micro-greens and a subtle drizzle of infused oils. This careful balance of rustic heritage and refined elegance ensures that every bite is a celebration of both the past and the present.",
+      date: "September 28, 2025",
+      author: "Chef Rajinder Singh",
+      readTime: "4 min read",
+    },
+    {
+      slug: "wine-pairings-for-spiced-cuisines",
+      title: "Wine Pairings for Spiced Cuisines",
+      excerpt: "A sommelier's guide to pairing robust Indian flavors with delicate European wines.",
+      content: "Pairing wine with Indian cuisine is often considered a challenge due to the complex spices and heat levels. However, when done correctly, it elevates the dining experience tremendously. The key is balance.",
+      date: "September 15, 2025",
+      author: "The Sangam Sommelier Team",
+      readTime: "6 min read",
+    },
+    {
+      slug: "interactive-dessert-station",
+      title: "The Rise of the Interactive Dessert Station",
+      excerpt: "Why static dessert buffets are out, and live, theatrical sweet stations are the new standard for elite events.",
+      content: "Dessert is the final impression of your event. Static buffets no longer provide the wow factor expected at luxury gatherings. Enter the interactive dessert station.",
+      date: "August 30, 2025",
+      author: "Amanpreet Kaur",
+      readTime: "3 min read",
+    },
+    {
+      slug: "sustainable-sourcing",
+      title: "Sustainable Sourcing for Large Scale Events",
+      excerpt: "Our commitment to ethical ingredients and how it fundamentally improves the taste of our food.",
+      content: "Luxury does not have to come at the expense of the environment. Our commitment to sustainable sourcing ensures that every dish not only tastes exceptional but is ethically produced.",
+      date: "August 10, 2025",
+      author: "The Sangam Culinary Team",
+      readTime: "5 min read",
+    },
+  ],
+  sidebar: {
+    categoriesTitle: "Explore Topics",
+    categories: ["Destination Weddings", "Culinary Techniques", "Event Planning", "Menu Inspiration"],
+    newsletterTitle: "Subscribe",
+    newsletterDescription: "Get the latest articles delivered to your inbox.",
+  },
+};
