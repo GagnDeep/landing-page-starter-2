@@ -1,19 +1,33 @@
-import { Button } from "@/components/ui/button"
+import { HeroSection } from "@/components/home/hero"
+import { LegacySection } from "@/components/home/legacy"
+import { OfferingsSection } from "@/components/home/offerings"
+import { ScaleSection } from "@/components/home/scale"
+import { GalleryPreview } from "@/components/home/gallery"
+import { TestimonialSection } from "@/components/home/testimonial"
+import { ProcessSection } from "@/components/home/process"
+import { FeaturedEventSection } from "@/components/home/featured-event"
+import { TeamSection } from "@/components/home/team"
+import { SensorySection } from "@/components/home/sensory"
+import { HeritageSection } from "@/components/home/heritage"
+import { FAQPreviewSection } from "@/components/home/faq-preview"
+import { FinalCtaSection } from "@/components/home/final-cta"
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <HeroSection />
+      <LegacySection />
+      <OfferingsSection />
+      <ScaleSection />
+      <GalleryPreview />
+      <TestimonialSection />
+      <ProcessSection />
+      <FeaturedEventSection />
+      <TeamSection />
+      <SensorySection />
+      <HeritageSection />
+      <FAQPreviewSection />
+      <FinalCtaSection />
+    </>
   )
 }
