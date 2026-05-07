@@ -1,20 +1,20 @@
-# Next State: Phase 6 (Implement Transactional Pages)
+# Next State: Phase 7 (Implement Auxiliary Pages)
 
 ## Goal
-To implement the critical conversion-focused pages: Pricing and Contact/Booking.
+To implement the auxiliary content pages that build brand authority and provide necessary legal compliance: Blog, Careers, Terms, and Privacy.
 
 ## Handoff Context
 - Phase 1 defined the layout intents (`.agent/layout-secondary.md`).
-- Phase 2 populated the hardcoded copy (`content/pricing.ts`, `content/contact.ts`).
+- Phase 2 populated the hardcoded copy (`content/blog.ts`, `content/careers.ts`, `content/terms.ts`, `content/privacy.ts`).
 - Phase 3 established the image registry (`lib/images.ts`) and animated primitives (`components/visuals/`).
-- Phase 4 & 5 implemented the core branding, home page, and supporting informational pages.
+- Phase 4, 5 & 6 implemented the core navigation paths, supporting info, and critical conversion workflows.
 
 ## Required Actions
-- Implement the page routes for `/pricing` and `/contact`.
-- Ensure the forms and pricing tiers adhere strictly to the luxury editorial design system, avoiding standard SaaS-like UI patterns.
-- Reuse the animated visual primitives.
+- Implement the page routes for `/blog`, `/careers`, `/terms`, and `/privacy`.
+- Ensure the Blog and Careers pages reflect the same high-end editorial standard as the rest of the site.
+- Ensure the Terms and Privacy pages are highly legible, centered reading experiences.
+- Continue to leverage the animated visual primitives and the design system tokens.
 
 ## Acceptance Criteria
-- `/pricing` and `/contact` render successfully.
-- The contact form structure is fully styled (it does not need to handle real form submissions yet, but the UI must be pristine).
-- Content is fully data-driven from their respective `content/` TypeScript files.
+- `/blog`, `/careers`, `/terms`, and `/privacy` render successfully and are fully responsive.
+- Content is strictly pulled from the respective `content/` TypeScript files.
