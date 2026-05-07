@@ -1,26 +1,24 @@
 # Next Project State
 Verma's Bakery & Sweets
 
-## Phase 6 Handoff: Implement Transactional Pages (Pricing & Contact)
+## Phase 7 Handoff: Implement Supporting Pages (Blog, FAQ, Legal)
 
 ### Objective
-Assemble the two transactional pages (`app/pricing/page.tsx` and `app/contact/page.tsx`) by integrating their respective layout blueprints, exported content strings, and the design system visual library.
+Assemble the supporting and informational pages (`app/blog/page.tsx`, `app/faq/page.tsx`, `app/careers/page.tsx`, `app/terms/page.tsx`, `app/privacy/page.tsx`) by integrating their respective layout blueprints, exported content strings, and the design system visual library.
 
 ### Required Actions
-1. **Layout Mapping:** Refer to `.agent/layout-pricing.md` and `.agent/layout-contact.md` to structure the TSX files.
-2. **Content Integration:** Import `pricingContent` from `content/pricing.ts` and `contactContent` from `content/contact.ts`. Use them exclusively for text mapping.
+1. **Layout Mapping:** Refer to `.agent/layout-blog.md`, `.agent/layout-faq.md`, `.agent/layout-careers.md`, `.agent/layout-terms.md`, and `.agent/layout-privacy.md` to structure the TSX files.
+2. **Content Integration:** Import the respective content objects (e.g., `blogContent`, `faqContent`, `careersContent`, `termsContent`, `privacyContent`) from the `content/` directory. Use them exclusively for text mapping.
 3. **Structured UI:**
-   - Ensure the Pricing page clearly uses tabular/grid formats for easy reading.
-   - Ensure the Contact page implements the required forms and operational hours cleanly.
+   - Ensure the Blog page uses a clean grid for articles and a clear header structure.
+   - Ensure the FAQ page uses an accordion or similar interactive element for ease of reading.
+   - Ensure Legal pages (Terms, Privacy) are structured with clean typography, appropriate headings, and readable line lengths.
 4. **Visuals & Styling:**
    - Apply `oklch` CSS variables for light/dark mode parity.
-   - Reuse components from `components/visuals/` to introduce motion to these highly structured pages.
+   - Reuse components from `components/visuals/` to introduce motion subtly where appropriate.
    - Utilize images from `lib/images.ts` using the Next.js `<Image />` component.
-5. **Accessibility:** Forms must have correct ARIA labels, semantic `<form>` tags, and proper input associations.
 
 ### Acceptance Criteria
-- `app/pricing/page.tsx` perfectly reflects the blueprint from `layout-pricing.md`.
-- `app/contact/page.tsx` perfectly reflects the blueprint from `layout-contact.md`.
-- No hardcoded text exists in either file; everything is sourced from the respective TypeScript content file.
-- Forms are visually implemented and accessible (functionality is not required, just the UI).
-- The project memory files (`.agent/current-state.md`, `.agent/next-state.md`, `.agent/agent.md`) are updated to reflect the completion of Phase 6.
+- `app/blog/page.tsx`, `app/faq/page.tsx`, `app/careers/page.tsx`, `app/terms/page.tsx`, and `app/privacy/page.tsx` perfectly reflect their blueprints.
+- No hardcoded text exists in any of these files; everything is sourced from the respective TypeScript content file.
+- The project memory files (`.agent/current-state.md`, `.agent/next-state.md`, `.agent/agent.md`) are updated to reflect the completion of Phase 7.

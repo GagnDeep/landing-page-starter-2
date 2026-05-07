@@ -2,19 +2,21 @@
 Verma's Bakery & Sweets
 
 ## Status
-Phase 5: Develop Secondary Pages (About & Features) is complete.
+Phase 6: Implement Transactional Pages (Pricing & Contact) is complete.
 
 ## Completed Work
-- Assembled the About page (`app/about/page.tsx`) mapping directly to `.agent/layout-about.md` specifications.
-- Assembled the Features page (`app/features/page.tsx`) mapping directly to `.agent/layout-features.md` specifications.
-- Imported and utilized `aboutContent` and `featuresContent` exclusively for text rendering; zero hardcoded strings exist in either UI file.
+- Assembled the Pricing page (`app/pricing/page.tsx`) mapping directly to `.agent/layout-pricing.md` specifications.
+- Assembled the Contact page (`app/contact/page.tsx`) mapping directly to `.agent/layout-contact.md` specifications.
+- Imported and utilized `pricingContent` and `contactContent` exclusively for text rendering; zero hardcoded strings exist in either UI file.
 - Maintained strict adherence to the OKLCH CSS variables and typography stack defined in `.agent/design-system.md` for proper light and dark mode parity.
 - Re-used animated visual components (`FadeIn`, `ParallaxImage`, `StaggerContainer`, `RevealText`, `DecorativeLine`, `ScaleHover`) from the visual library.
+- Built accessible form UI on the Contact page using native HTML elements and React state, with a simulated `alert()` submission successfully intercepted in tests.
+- Built interactive and responsive pricing grids/tables on the Pricing page.
 - Utilized `next/image` with the established `lib/images.ts` registry.
-- Ran successful frontend verifications ensuring responsive behavior and styling accuracy across both secondary pages.
+- Ran successful frontend verifications ensuring responsive behavior, form interactions, and styling accuracy across both transactional pages.
 
 ## Blocking Issues
 - None.
 
 ## Next Immediate Goal
-- Proceed to Phase 6 (Implement Transactional Pages: Pricing & Contact) to build out the menu, pricing grids, and interactive contact forms.
+- Proceed to Phase 7 (Implement Supporting Pages: Blog, FAQ, Legal).
