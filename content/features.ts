@@ -56,12 +56,14 @@ export const featuresContent = {
   inclusionsExclusions: {
     heading: "Clarity in Scope.",
     description: "Transparency is the foundation of trust. We clearly define the parameters of our commissions to ensure absolute alignment.",
+    inclusionsLabel: "Inclusions",
     inclusions: [
       "Unlimited consultation hours within the commission period.",
       "Dedicated senior planner and design director.",
       "Comprehensive digital planning dashboard access.",
       "On-site staffing scaled precisely to your guest count."
     ],
+    exclusionsLabel: "Exclusions",
     exclusions: [
       "Vendor hard costs (these are contracted directly for transparency).",
       "Travel and accommodation costs for the Guide Events team (billed at cost).",

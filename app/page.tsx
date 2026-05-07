@@ -20,20 +20,6 @@ import { ArrowRight } from "lucide-react";
 export default function HomePage() {
   return (
     <main className="min-h-screen w-full overflow-hidden bg-background">
-      {/* 1. Minimal Navigation Bar (Placeholder for Phase 7) */}
-      <nav className="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-background/80 backdrop-blur-md border-b border-border">
-        <Link href="/" className="font-heading text-xl tracking-widest text-foreground uppercase">
-          {homeContent.navigation.logoText}
-        </Link>
-        <div className="hidden md:flex space-x-8 text-sm tracking-widest uppercase">
-          {homeContent.navigation.links.map((link) => (
-            <Link key={link.label} href={link.href} className="text-foreground hover:text-muted-foreground transition-colors">
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
-
       {/* 2. Cinematic Hero */}
       <section className="relative h-screen w-full flex items-center justify-center pt-20">
         <ParallaxImage image={images.homeHero} className="absolute inset-0" priority offset={80} />
@@ -285,12 +271,6 @@ export default function HomePage() {
         </FadeIn>
       </section>
 
-      {/* 20. Expansive Footer (Placeholder for Phase 7) */}
-      <footer className="py-12 px-6 border-t border-border text-center text-sm text-muted-foreground flex flex-col items-center">
-        <p className="uppercase tracking-widest mb-4 text-foreground">{homeContent.footer.brandName}</p>
-        <p className="mb-8">{homeContent.footer.tagline}</p>
-        <p>{homeContent.footer.copyright}</p>
-      </footer>
     </main>
   );
 }

@@ -106,6 +106,9 @@ export const homeContent = {
     brandName: "Guide Events",
     tagline: "The Pinnacle of Destination Celebrations.",
     copyright: "© 2025 Guide Events. All rights reserved.",
+    exploreLabel: "Explore",
+    infoLabel: "Information",
+    directInquiriesLabel: "Direct Inquiries",
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },

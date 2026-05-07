@@ -10,9 +10,11 @@ import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 
 // Next.js dynamic routing implementation
-export default function BlogDetailPage({ params }: { params: { id: string } }) {
+export default async function BlogDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+
   // Find the post from our dummy content
-  const post = blogContent.articleGrid.posts.find((p) => p.id === params.id);
+  const post = blogContent.articleGrid.posts.find((p) => p.id === id);
 
   // If no post matches the ID, show a 404
   if (!post) {

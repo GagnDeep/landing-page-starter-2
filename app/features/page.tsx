@@ -124,7 +124,7 @@ export default function FeaturesPage() {
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
           <FadeIn direction="up" delay={0.1}>
-            <h3 className="text-xl tracking-widest uppercase text-foreground border-b border-border pb-4 mb-8">Inclusions</h3>
+            <h3 className="text-xl tracking-widest uppercase text-foreground border-b border-border pb-4 mb-8">{featuresContent.inclusionsExclusions.inclusionsLabel}</h3>
             <ul className="space-y-6">
               {featuresContent.inclusionsExclusions.inclusions.map((item, i) => (
                 <li key={i} className="text-muted-foreground leading-relaxed">{item}</li>
@@ -132,7 +132,7 @@ export default function FeaturesPage() {
             </ul>
           </FadeIn>
           <FadeIn direction="up" delay={0.2}>
-            <h3 className="text-xl tracking-widest uppercase text-foreground border-b border-border pb-4 mb-8 opacity-60">Exclusions</h3>
+            <h3 className="text-xl tracking-widest uppercase text-foreground border-b border-border pb-4 mb-8 opacity-60">{featuresContent.inclusionsExclusions.exclusionsLabel}</h3>
             <ul className="space-y-6">
               {featuresContent.inclusionsExclusions.exclusions.map((item, i) => (
                 <li key={i} className="text-muted-foreground leading-relaxed opacity-80">{item}</li>
