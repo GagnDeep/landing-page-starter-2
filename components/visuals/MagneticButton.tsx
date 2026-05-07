@@ -31,6 +31,8 @@ export function MagneticButton({
     setPosition({ x: 0, y: 0 });
   };
 
+  const { onDrag, onDragStart, onDragEnd, onAnimationStart, ...safeProps } = props as any;
+
   return (
     <motion.button
       ref={ref}
@@ -42,7 +44,7 @@ export function MagneticButton({
         "relative overflow-hidden rounded-md bg-primary text-primary-foreground px-8 py-3 text-sm font-medium tracking-wide transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
         className
       )}
-      {...props}
+      {...safeProps}
     >
       {children}
     </motion.button>

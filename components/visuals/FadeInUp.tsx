@@ -19,6 +19,9 @@ export function FadeInUp({
 }: FadeInUpProps) {
   const prefersReducedMotion = useReducedMotion();
 
+  // Remove problematic HTML attribute conflicts with Framer Motion
+  const { onDrag, onDragStart, onDragEnd, onAnimationStart, ...safeProps } = props as any;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: prefersReducedMotion ? 0 : yOffset }}
@@ -30,7 +33,7 @@ export function FadeInUp({
         ease: [0.22, 1, 0.36, 1], // Custom slow ease out
       }}
       className={cn("w-full", className)}
-      {...props}
+      {...safeProps}
     >
       {children}
     </motion.div>

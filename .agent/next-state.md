@@ -1,11 +1,10 @@
-# Next Project State: Phase 4 Handoff
+# Next Project State: Phase 5 Handoff
 
-## Phase 4 Goal: Implement Core Homepage & Navigation
-With layouts, content, images, and visual components established, Phase 4 focuses on assembling the `app/page.tsx` and the global `app/layout.tsx` (specifically the Header and Footer).
+## Phase 5 Goal: Build Secondary Pages (About & Features)
+With the global shell (Nav/Footer) and Homepage completed, Phase 5 expands the site to include the primary informational pages: About and Features (Services).
 
 ## Expectations
-- Build the global Header (transparent on top, solid on scroll) and Footer components based on the layout intent.
-- Assemble the `app/page.tsx` using the 20 structured sections defined in `.agent/layout-home.md`.
-- Consume content exclusively from `content/home.ts` and images from `lib/images.ts`.
-- Integrate the animated visual components (e.g., `ParallaxImage`, `FadeInUp`, `TextReveal`) to bring the homepage to life.
-- Ensure perfect responsive behavior and absolute parity with the design system's luxury aesthetic.
+- Implement `app/about/page.tsx` utilizing the 10 sections defined in `.agent/layout-about.md`.
+- Implement `app/features/page.tsx` utilizing the 10 sections defined in `.agent/layout-features.md`.
+- Ensure all copy is drawn exclusively from `content/about.ts` and `content/features.ts`.
+- Continue leveraging the image registry (`lib/images.ts`) and the animated visual components (`components/visuals/`) to maintain parity with the Homepage's luxury aesthetic.
