@@ -2,15 +2,14 @@
 > landing-page-starter@0.0.1 start /app
 > next start
 
-▲ Next.js 16.1.7
-- Local:         http://localhost:3000
-- Network:       http://192.168.0.2:3000
-
-✓ Starting...
-✓ Ready in 316ms
-⨯ upstream image response failed for https://images.unsplash.com/photo-1631515243349-e0cb45bb3c69?q=80&w=2060&auto=format&fit=crop 404
-⨯ upstream image response failed for https://images.unsplash.com/photo-1626804475297-41607ea0d5eb?q=80&w=2070&auto=format&fit=crop 404
-⨯ upstream image response failed for https://images.unsplash.com/photo-1631515243349-e0cb45bb3c69?q=80&w=2060&auto=format&fit=crop 404
-⨯ upstream image response failed for https://images.unsplash.com/photo-1626804475297-41607ea0d5eb?q=80&w=2070&auto=format&fit=crop 404
-⨯ upstream image response failed for https://images.unsplash.com/photo-1631515243349-e0cb45bb3c69?q=80&w=2060&auto=format&fit=crop 404
-⨯ upstream image response failed for https://images.unsplash.com/photo-1626804475297-41607ea0d5eb?q=80&w=2070&auto=format&fit=crop 404
+⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+ ELIFECYCLE  Command failed with exit code 1.

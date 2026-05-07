@@ -14,3 +14,7 @@
 ## 2026-05-07 - Phase 4: Implement Home Page Core Structure
 - **Completed**: Fully implemented the Home Page (`app/page.tsx`) alongside global layout wrappers (`GlobalHeader`, `GlobalFooter`, `ThemeToggle`). Integrated all content data, animated primitives, and the image registry while adhering to the Destination Luxury aesthetic.
 - **Open Questions**: None. Ready for Phase 5.
+
+## 2026-05-07 - Phase 5: Implement Supporting Pages
+- **Completed**: Fully implemented the `/about`, `/features`, and `/faq` pages using the provided content files, layout specs, and visual components.
+- **Open Questions**: None. Ready for Phase 6.
