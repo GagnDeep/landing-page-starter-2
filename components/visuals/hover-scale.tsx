@@ -4,7 +4,7 @@ import React from "react";
 import { motion, useReducedMotion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<any>>;
+type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<"div">>;
 
 type HoverScaleProps = OmitFramerProps<React.ComponentProps<"div">> & {
   children: React.ReactNode;

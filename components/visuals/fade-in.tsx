@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { motion, useInView, useReducedMotion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<any>>;
+type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<"div">>;
 
 type FadeInProps = OmitFramerProps<React.ComponentProps<"div">> & {
   delay?: number;

@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import { motion, useReducedMotion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<any>>;
+type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<"button">>;
 
 type MagneticButtonProps = OmitFramerProps<React.ComponentProps<"button">> & {
   children: React.ReactNode;

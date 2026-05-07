@@ -1,10 +1,20 @@
-import { Geist_Mono, Figtree } from "next/font/google"
+import { Geist_Mono, Fraunces, DM_Sans } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
+const dmSans = DM_Sans({
+  subsets:['latin'],
+  variable:'--font-sans',
+  weight: ["300", "400", "500", "700"]
+});
+
+const fraunces = Fraunces({
+  subsets:['latin'],
+  variable:'--font-heading',
+  axes: ["SOFT", "WONK"]
+});
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -20,7 +30,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
+      className={cn("antialiased", fontMono.variable, dmSans.variable, fraunces.variable, "font-sans")}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
