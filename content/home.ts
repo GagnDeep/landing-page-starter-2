@@ -112,6 +112,33 @@ export const homeContent = {
       { question: "How far in advance should we book?", answer: "For large events, we recommend booking 6-12 months in advance." },
     ],
   },
+  recentJournal: {
+    title: "From the Journal",
+    viewAllCta: "Read All Articles",
+    articles: [
+      {
+        title: "The Art of the Destination Wedding Menu",
+        date: "October 12, 2025",
+        readMoreCta: "Read Article",
+        href: "/blog"
+      },
+      {
+        title: "Elevating the Traditional Punjabi Feast",
+        date: "September 28, 2025",
+        readMoreCta: "Read Article",
+        href: "/blog"
+      },
+      {
+        title: "Wine Pairings for Spiced Cuisines",
+        date: "September 15, 2025",
+        readMoreCta: "Read Article",
+        href: "/blog"
+      }
+    ]
+  },
+  instagramFeed: {
+    handle: "@SangamCaterer"
+  },
   newsletter: {
     title: "Join the Inner Circle",
     description: "Subscribe for exclusive culinary insights and event inspiration.",

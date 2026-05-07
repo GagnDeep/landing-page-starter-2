@@ -26,12 +26,12 @@ export const DrawSvg = ({ children, className, delay = 0, duration = 1.5, ...pro
   };
 
   const pathVariants = {
-    hidden: { pathLength: 0, opacity: 0 },
+    hidden: { pathLength: shouldReduceMotion ? 1 : 0, opacity: 0 },
     show: {
       pathLength: 1,
       opacity: 1,
       transition: {
-        duration,
+        duration: shouldReduceMotion ? 0.3 : duration,
         ease: "easeInOut",
       },
     },

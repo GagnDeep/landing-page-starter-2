@@ -10,3 +10,7 @@
 ## 2026-05-07 - Phase 3: Animated Visuals & Image Registry
 - **Completed**: Delivered the visual primitive library (`components/visuals/`) featuring 8 reusable, accessible Framer Motion components. Created the image registry (`lib/images.ts`) with Unsplash URLs and updated `next.config.mjs` to permit remote fetching. Finalized all content files.
 - **Open Questions**: None. Ready for Phase 4.
+
+## 2026-05-07 - Phase 4: Implement Home Page Core Structure
+- **Completed**: Fully implemented the Home Page (`app/page.tsx`) alongside global layout wrappers (`GlobalHeader`, `GlobalFooter`, `ThemeToggle`). Integrated all content data, animated primitives, and the image registry while adhering to the Destination Luxury aesthetic.
+- **Open Questions**: None. Ready for Phase 5.

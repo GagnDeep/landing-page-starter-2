@@ -8,7 +8,7 @@ export const images = {
     careers: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1968&auto=format&fit=crop", // Professional chefs
   },
   cuisine: {
-    punjabi: "https://images.unsplash.com/photo-1631515243349-e0cb45bb3c69?q=80&w=2060&auto=format&fit=crop", // Rich curry
+    punjabi: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=2060&auto=format&fit=crop", // Rich curry (updated)
     international: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop", // European plated dish
     desserts: "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2064&auto=format&fit=crop", // Fine desserts
     liveStation: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop", // Live cooking
@@ -26,7 +26,7 @@ export const images = {
     murgMakhani: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=1974&auto=format&fit=crop",
     risotto: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?q=80&w=2070&auto=format&fit=crop",
     paneer: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1971&auto=format&fit=crop",
-    scallops: "https://images.unsplash.com/photo-1626804475297-41607ea0d5eb?q=80&w=2070&auto=format&fit=crop",
+    scallops: "https://images.unsplash.com/photo-1599339736340-979927b2ab1b?q=80&w=2070&auto=format&fit=crop", // Updated to a valid scallop/seafood image
   },
   team: {
     headChef: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop",
