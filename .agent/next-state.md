@@ -1,19 +1,22 @@
 # Next Project State
 Verma's Bakery & Sweets
 
-## Phase 3 Handoff: Animated Visuals & Image Registry
+## Phase 4 Handoff: Build Core Homepage Experience
 
 ### Objective
-Establish the foundational visual components, motion wrappers, and a centralized, strongly-typed image registry necessary before building out the full page layouts.
+Assemble the homepage (`app/page.tsx`) by integrating the layout blueprints, the exported content strings, the design system tokens, and the newly created visual/animation components.
 
 ### Required Actions
-1. **Image Registry:** Create a centralized file (e.g., `lib/images.ts`) mapping specific page slots to direct Unsplash URLs, ensuring a curated, high-quality visual aesthetic. Configure `images.remotePatterns` in `next.config.mjs` accordingly.
-2. **Motion Components:** Build reusable, accessible Framer Motion components in a `components/visuals/` directory (e.g., fade-in wrappers, scroll-triggered reveals, interactive hover states).
-3. **Accessibility:** Ensure all animations respect the `prefers-reduced-motion` media query using Framer Motion's `useReducedMotion`.
-4. **Integration Prep:** Ensure these visual primitives are ready to consume the content strings generated in Phase 2 during the upcoming layout implementation phases.
+1. **Layout Mapping:** Refer to `.agent/layout-home.md` to structure the TSX layout.
+2. **Content Integration:** Import `homeContent` from `content/home.ts` and use it exclusively for all text on the homepage.
+3. **Visuals & Styling:**
+   - Apply the `oklch` CSS variables and typography variables defined in `.agent/design-system.md`.
+   - Incorporate the animated wrappers from `components/visuals/` to introduce motion elegantly.
+   - Utilize images from `lib/images.ts` using the Next.js `<Image />` component.
+4. **Accessibility:** Ensure semantic HTML, proper ARIA labeling, and responsive design across all breakpoints.
 
 ### Acceptance Criteria
-- A centralized image registry exists with curated, high-quality Unsplash URLs mapped to page sections.
-- `next.config.mjs` is configured to allow the specified remote image patterns.
-- Reusable, accessible animated visual components (using Framer Motion) are created and ready for integration.
-- The project memory files (`.agent/current-state.md`, `.agent/next-state.md`, `.agent/agent.md`) are updated to reflect the completion of Phase 3.
+- `app/page.tsx` perfectly reflects the blueprint from `layout-home.md`.
+- No hardcoded text exists in the TSX file; everything is sourced from `content/home.ts`.
+- The homepage utilizes at least three different animated visual components.
+- The project memory files (`.agent/current-state.md`, `.agent/next-state.md`, `.agent/agent.md`) are updated to reflect the completion of Phase 4.
