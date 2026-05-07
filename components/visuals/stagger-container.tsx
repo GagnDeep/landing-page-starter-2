@@ -12,6 +12,7 @@ type StaggerContainerProps = OmitFramerProps<React.ComponentProps<"div">> & {
   delayChildren?: number;
   className?: string;
   once?: boolean;
+  id?: string;
 };
 
 export function StaggerContainer({
@@ -60,6 +61,7 @@ type StaggerItemProps = OmitFramerProps<React.ComponentProps<"div">> & {
   direction?: "up" | "down" | "left" | "right" | "none";
   distance?: number;
   duration?: number;
+  id?: string;
 };
 
 export function StaggerItem({
