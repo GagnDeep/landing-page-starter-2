@@ -1,10 +1,10 @@
-# Next Expected State (Phase 4 Handoff)
+# Next Expected State (Phase 5 Handoff)
 
-The project is moving into Phase 4: Home Page Composition & Hero Section.
+The project is moving into Phase 5: Core Information Pages Implementation.
 
-The expected outcome of Phase 4 is the assembly of the home page structure using the previously created content strings and visual components, creating a compelling, luxury narrative from top to bottom.
+The expected outcome of Phase 5 is the assembly of the core information pages (About, Features, FAQ) using the previously created content strings and visual components.
 
 Handoff details:
-- Consume content from `content/home.ts`.
+- Consume content from `content/about.ts`, `content/features.ts`, and `content/faq.ts`.
 - Consume images from `lib/images.ts`.
-- Use the animated visual primitives from `components/visuals/` to build the structure mapped out in `.agent/layout-home.md`.
+- Use the animated visual primitives from `components/visuals/` to build the structure mapped out in the respective `.agent/layout-[page].md` files.

@@ -1,19 +1,47 @@
-import { Button } from "@/components/ui/button"
+import {
+  HeroCinematic,
+  BrandStatement,
+  StatisticsGrid,
+  TheExperienceIntro,
+  ServiceHighlights,
+  FeaturedDestinations,
+  TestimonialShowcase,
+  MenuPhilosophy,
+  SignatureDishGallery,
+  TheProcess,
+  PartnerVenues,
+  PressAndMedia,
+  LeadDesignerProfile,
+  VideoInterlude,
+  FAQTeaser,
+  FinalCallToAction
+} from "@/components/home";
+import { homeContent } from "@/content/home";
 
-export default function Page() {
+export const metadata = {
+  title: homeContent.seo.title,
+  description: homeContent.seo.description
+};
+
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
+    <>
+      <HeroCinematic />
+      <BrandStatement />
+      <StatisticsGrid />
+      <TheExperienceIntro />
+      <ServiceHighlights />
+      <FeaturedDestinations />
+      <TestimonialShowcase />
+      <MenuPhilosophy />
+      <SignatureDishGallery />
+      <TheProcess />
+      <PartnerVenues />
+      <PressAndMedia />
+      <LeadDesignerProfile />
+      <VideoInterlude />
+      <FAQTeaser />
+      <FinalCallToAction />
+    </>
+  );
 }

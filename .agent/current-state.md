@@ -1,8 +1,9 @@
 # Current Project State
 
-Phase 3 (Animated Visuals & Image Registry) is complete.
+Phase 4 (Home Page Composition & Hero Section) is complete.
 
-- A comprehensive, centralized image registry (`lib/images.ts`) exists, mapping every photographic slot to high-quality, typed Unsplash URLs fitting the premium brand.
-- The `next.config.mjs` is configured to allow `images.unsplash.com`.
-- A library of 8 performant, prop-driven animated visual components (`components/visuals/`) is built, implementing the CSS and motion primitives outlined in the design system while respecting `prefers-reduced-motion` and ensuring SSR compatibility.
-- Content, configuration, and visual primitives are fully prepared for page structure implementation.
+- The Home page structure perfectly matches the 20-section layout intent specified in `.agent/layout-home.md`.
+- The Hero section utilizes the animated visual components from Phase 3 (`KenBurnsImage`, `FadeUpStagger`) ensuring full dark mode parity and performance.
+- All textual content is pulled from `content/home.ts`, and no copy is hardcoded into the UI components.
+- The design consistently applies the typography, color tokens, and motion principles defined in `.agent/design-system.md` across all sections.
+- The site correctly handles Next.js image optimization referencing only Unsplash URLs from `lib/images.ts`.
