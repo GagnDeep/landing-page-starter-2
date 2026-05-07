@@ -1,14 +1,21 @@
-import { Geist_Mono, Figtree } from "next/font/google"
-
+import { Cormorant_Garamond, Montserrat } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
+import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const fontHeading = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+})
+
+const fontSans = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600"],
 })
 
 export default function RootLayout({
@@ -20,10 +27,14 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
+      className={cn("antialiased", fontHeading.variable, fontSans.variable)}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="min-h-svh bg-background font-sans text-foreground selection:bg-primary/20 selection:text-primary overflow-x-hidden">
+        <ThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -1,23 +1,26 @@
 # Next Phase Readiness
 
-**Target Phase:** Phase 4 - Home Page Composition & Core Layout
+**Target Phase:** Phase 5 - Supporting Pages: About, Features, Contact
 
 ## Objective
-To assemble the Home Page using the layout blueprint (`.agent/layout-home.md`), the hardcoded content (`content/home.ts`), and the animated primitives (`components/visuals/`). This phase brings the theoretical design system into a tangible, interactive web page.
+To build the three primary interior pages (`/about`, `/features`, `/contact`) that support the Home page funnel. This phase requires translating their respective layout blueprints into code while continuing to leverage the established content files, image registry, and visual primitives.
 
-## Required Tasks for Phase 4
-1.  **Global UI Construction:** Build the responsive Navigation Bar and Footer using the links defined in `content/global.ts`.
-2.  **Home Page Assembly:** Translate the 20 sections defined in `.agent/layout-home.md` into React components within `app/page.tsx` (or distinct section components).
-3.  **Integration:**
-    *   Map the text content from `content/home.ts` into the UI.
-    *   Map the images from `lib/images.ts` into the image components.
-    *   Wrap elements in the animated primitives (`FadeIn`, `SlideUp`, `ParallaxImage`, etc.) to create the "royal, slow, and graceful" feel.
-4.  **Styling:** Ensure perfect responsive behavior, massive padding as defined in the design system, and perfect parity between light and dark modes.
+## Required Tasks for Phase 5
+1.  **About Page (`app/about/page.tsx`):**
+    *   Implement the layout defined in `.agent/layout-about.md` (Origin, Founder Narrative, Generational Evolution timeline, Philosophy, Chef portraits).
+    *   Integrate content from `content/about.ts`.
+2.  **Features Page (`app/features/page.tsx`):**
+    *   Implement the layout defined in `.agent/layout-features.md` (Service Grid, Live Stalls deep dive, Logistics of Scale, Tastings).
+    *   Integrate content from `content/features.ts`.
+3.  **Contact Page (`app/contact/page.tsx`):**
+    *   Implement the layout defined in `.agent/layout-contact.md` (Inquiry form, Direct contact info, Expectations).
+    *   Integrate content from `content/contact.ts`. Use standard semantic HTML forms; do not wire up server actions or backend logic yet.
+4.  **Consistency & Styling:** Ensure these pages feel cohesive with the Homepage, utilizing massive padding, asymmetric grids, and the same slow, graceful animation wrappers.
 
 ## Prerequisites Met
 *   [x] Design System established (`.agent/design-system.md`)
-*   [x] Layout blueprints finalized (`.agent/layout-home.md`)
-*   [x] All textual content finalized (`content/home.ts`)
-*   [x] Animated visual primitives and image registry are built and ready.
+*   [x] Layout blueprints finalized (`.agent/layout-about.md`, `layout-features.md`, `layout-contact.md`)
+*   [x] Textual content finalized (`content/about.ts`, `features.ts`, `contact.ts`)
+*   [x] Core visual primitives and global layouts (Header/Footer) built and proven on the Home Page.
 
-The project is ready to proceed to Phase 4.
+The project is ready to proceed to Phase 5.

@@ -10,3 +10,7 @@
 *   **Date:** 2026-05-07
 *   **Phase:** 3 - Animated Visuals & Image Registry
 *   **Actions:** Built 8+ animated components (`FadeIn`, `KenBurnsHero`, `RevealText`, etc.) using Framer Motion. Created typed image registry (`lib/images.ts`) with Unsplash URLs. Updated Next config for remote images. Confirmed readiness for page assembly.
+
+*   **Date:** 2026-05-07
+*   **Phase:** 4 - Home Page Composition & Core Layout
+*   **Actions:** Built the global `Header` and `Footer`. Composed `app/page.tsx` using 13 custom section components. Integrated `content/home.ts` data and `components/visuals` animations. Confirmed strict adherence to design system and visual intent.

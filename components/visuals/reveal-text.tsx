@@ -2,15 +2,21 @@
 
 import { motion, useReducedMotion } from "framer-motion"
 import { cn } from "@/lib/utils"
+import React from "react"
+
+// We limit the "as" prop to valid HTML elements that Framer Motion supports natively via motion.*
+type ValidTags = "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "div" | "blockquote";
 
 interface RevealTextProps {
   text: string
+  as?: ValidTags
   className?: string
   delay?: number
 }
 
 export function RevealText({
   text,
+  as = "span",
   className,
   delay = 0
 }: RevealTextProps) {
@@ -44,9 +50,10 @@ export function RevealText({
 
   // Split text into words, then map to characters for smooth word-wrapping
   const words = text.split(" ")
+  const MotionComponent = motion[as]
 
   return (
-    <motion.span
+    <MotionComponent
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -66,6 +73,6 @@ export function RevealText({
           ))}
         </span>
       ))}
-    </motion.span>
+    </MotionComponent>
   )
 }

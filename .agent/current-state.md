@@ -1,21 +1,13 @@
 # Current Project State
 
-**Phase:** 3/8 — Animated Visuals & Image Registry (Completed)
+**Phase:** 4/8 — Home Page Composition & Core Layout (Completed)
 
 ## Accomplishments
-*   Created a centralized, strictly-typed image registry (`lib/images.ts`) mapping specific site slots to high-quality Unsplash URLs fitting the luxury theme.
-*   Updated `next.config.mjs` to allow `images.unsplash.com` remote patterns.
-*   Built 8 reusable, prop-driven animated visual primitives using Framer Motion (`components/visuals/`):
-    *   `FadeIn`
-    *   `SlideUp`
-    *   `StaggerContainer` & `StaggerItem`
-    *   `ParallaxImage`
-    *   `KenBurnsHero`
-    *   `RevealText`
-    *   `AnimatedCounter`
-    *   `CTAGlow`
-*   All animations respect accessibility guidelines (`useReducedMotion`) and feature slow, graceful easings.
-*   Audited all content files from Phase 2; no placeholder text remains.
+*   Built the global `Header` and `Footer` layout components, complete with scroll-reactive animations, responsive mobile menus, and dynamic content injection from `content/global.ts`.
+*   Implemented `app/layout.tsx` incorporating custom Google Fonts (Cormorant Garamond, Montserrat) mapped to Tailwind CSS variables, ensuring accurate typographic styling.
+*   Constructed `app/page.tsx`, composing 13 highly polished, responsive sections detailing the core service offerings, scale, process, and culinary philosophy.
+*   Successfully integrated Phase 2 text content and Phase 3 animated visual primitives (Parallax, RevealText, CTAGlow, KenBurnsHero) into the layout to achieve the specified "royal Punjabi" aesthetic.
+*   Addressed Framer Motion polymorphic type safety by defining strict HTML tag unions.
 
 ## Current Status
-The project now possesses a robust foundation of text content, layout blueprints, and high-end visual primitives (imagery and motion). The project is ready for the assembly phase to construct the Home Page.
+The Home Page acts as a fully functional, high-end digital storefront demonstrating the technical and visual capabilities of the application. The project is now ready to begin populating the supporting interior pages.
