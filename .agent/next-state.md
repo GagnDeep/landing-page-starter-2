@@ -1,20 +1,21 @@
-# Next State: Phase 7 (Implement Auxiliary Pages)
+# Next State: Phase 8 (Global Polish, Navigation, & Final Review)
 
 ## Goal
-To implement the auxiliary content pages that build brand authority and provide necessary legal compliance: Blog, Careers, Terms, and Privacy.
+To perform a comprehensive final review, polish the entire site experience, and finalize the global navigation structures.
 
 ## Handoff Context
-- Phase 1 defined the layout intents (`.agent/layout-secondary.md`).
-- Phase 2 populated the hardcoded copy (`content/blog.ts`, `content/careers.ts`, `content/terms.ts`, `content/privacy.ts`).
-- Phase 3 established the image registry (`lib/images.ts`) and animated primitives (`components/visuals/`).
-- Phase 4, 5 & 6 implemented the core navigation paths, supporting info, and critical conversion workflows.
+- All layout, design system, and content documentation from Phases 1 & 2 is complete.
+- All visual primitives from Phase 3 are implemented.
+- The structural page routing and UI implementations from Phases 4, 5, 6, and 7 are fully built.
+- The site is functionally complete but requires a final cohesive pass.
 
 ## Required Actions
-- Implement the page routes for `/blog`, `/careers`, `/terms`, and `/privacy`.
-- Ensure the Blog and Careers pages reflect the same high-end editorial standard as the rest of the site.
-- Ensure the Terms and Privacy pages are highly legible, centered reading experiences.
-- Continue to leverage the animated visual primitives and the design system tokens.
+- Finalize the `GlobalHeader` navigation (ensure mobile menu functionality if required by the design intent, or ensure desktop links are perfect).
+- Conduct a site-wide audit for responsive consistency (mobile/tablet/desktop).
+- Conduct a site-wide audit for Dark Mode parity.
+- Add any missing micro-interactions to buttons, links, or cards to heighten the luxury feel.
 
 ## Acceptance Criteria
-- `/blog`, `/careers`, `/terms`, and `/privacy` render successfully and are fully responsive.
-- Content is strictly pulled from the respective `content/` TypeScript files.
+- The site feels like a unified, world-class luxury catering platform.
+- No layout breaks occur on standard mobile viewports.
+- Dark mode provides an equally polished "Gala Dinner" aesthetic.
