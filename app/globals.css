@@ -49,8 +49,6 @@
 }
 
 :root {
-    --font-display: "Fredoka", "Sniglet", "Fraunces", var(--font-sans);
-    --font-sans: "Poppins", "Quicksand", "Nunito", sans-serif;
     --background: oklch(0.98 0.01 70); /* Buttercream */
     --foreground: oklch(0.25 0.02 50); /* Velvet Cocoa */
     --card: oklch(1 0 0);

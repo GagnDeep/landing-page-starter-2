@@ -8,17 +8,21 @@ import { HTMLMotionProps } from "framer-motion";
 
 type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<any>>;
 
-interface CTAGlowButtonProps extends OmitFramerProps<React.ButtonHTMLAttributes<HTMLButtonElement>> {
+type ValidTags = "button" | "span" | "div";
+
+interface CTAGlowButtonProps extends OmitFramerProps<React.HTMLAttributes<HTMLElement>> {
   className?: string;
   children: React.ReactNode;
+  as?: ValidTags;
 }
 
-export const CTAGlowButton = React.forwardRef<HTMLButtonElement, CTAGlowButtonProps>(
-  ({ className, children, ...props }, ref) => {
+export const CTAGlowButton = React.forwardRef<HTMLElement, CTAGlowButtonProps>(
+  ({ className, children, as = "button", ...props }, ref) => {
     const shouldReduceMotion = useReducedMotion();
+    const Component = motion[as] as React.ElementType;
 
     return (
-      <motion.button
+      <Component
         ref={ref}
         whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
         whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
@@ -39,7 +43,7 @@ export const CTAGlowButton = React.forwardRef<HTMLButtonElement, CTAGlowButtonPr
         )}
 
         <span className="relative z-10">{children}</span>
-      </motion.button>
+      </Component>
     );
   }
 );

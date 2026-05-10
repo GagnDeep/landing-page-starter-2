@@ -1,3 +1,3 @@
 # Next State
 
-Phase 4 (Core Layout Shell and Navigation) is the next step to assemble the layout foundation.
+Phase 5 (Home Page Composition) is ready to begin.
