@@ -1,8 +1,9 @@
 # Next State
 
-**Phase 2: Content Files**
+**Phase 3: Animated Visuals & Image Registry**
 
 Handoff:
-Content files need to be authored based on the design system's voice and tone.
-- Create structured content (in `content/` folder as `.ts` files, according to project memory context) focusing on authentic Punjabi hospitality and a high-end service tone.
-- Do not build UI yet; focus solely on the content structures.
+Phase 3 is now ready to consume the content files generated in Phase 2 for the construction of the visual library.
+- Create central image registry mapping to specific page slots in `lib/images.ts`.
+- Build Framer Motion animated components in `components/visuals/`.
+- Respect `prefers-reduced-motion` in all animations.
