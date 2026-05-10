@@ -1,9 +1,10 @@
 # Next State
 
-**Phase 4: Core Layout and Navigation Shell**
+**Phase 5: Home Page Implementation**
 
 Handoff:
-Phase 4 can now begin consuming the visual library, image registry, and design system variables to construct the global layout shell.
-- Create the global `Header` (with mobile navigation) and `Footer`.
-- Integrate them into `app/layout.tsx`.
-- Ensure navigation consumes links from `content/home.ts` (or similar).
+The global layout shell (Phase 4) is complete. Phase 5 can now populate `app/page.tsx`.
+- Build the Home Page matching the structure defined in `.agent/layout-home.md`.
+- Consume data exclusively from `content/home.ts`.
+- Utilize visuals heavily: `AnimatedHeroAurora`, `FloatingBlobs`, `LogoMarquee`, etc.
+- Integrate remote Unsplash images from `lib/images.ts`.
