@@ -1,4 +1,8 @@
 export const homeContent = {
+  socialProof: {
+    lovedBy: "Loved by 100+ Couples",
+    rating: "Consistently rated 4.9 stars across Punjab.",
+  },
   meta: {
     title: "Royal Flower Decoration | Premier Anand Karaj Decor in Patiala",
     description: "Specializing in exquisite Anand Karaj and premium wedding floral designs in Patiala. Elevate your celebration with our bespoke, budget-friendly floral artistry.",

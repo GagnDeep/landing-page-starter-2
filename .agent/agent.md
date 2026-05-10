@@ -21,3 +21,9 @@
 - Orchestrated the Next.js root layout structure, injecting proper responsive header and footer components.
 - Refactored all components to strictly pull layout strings (e.g., location, phone, brand name) from `content/home.ts`.
 - Integrated `AnimatedFloralSVG` into the brand identity marks to unify Phase 3 visually within the layout shell.
+
+## [2026-05-10] Phase 5 Completion
+- Built the `Home` and `About` pages mapping perfectly to the layout intent maps.
+- Exclusively consumed content from `content/home.ts` and `content/about.ts`.
+- Brought Phase 3 animated visual primitives (Blobs, Grids, Typers) to life alongside Framer Motion scroll reveals.
+- Addressed code-review feedback by refactoring all remaining hardcoded strings to the content models.

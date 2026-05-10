@@ -1,5 +1,9 @@
 # Next State / Handoff
 
-Ready to proceed to **Phase 5 — Home Page and About Page Implementation**.
+Ready to proceed to **Phase 6 — Service Features, Pricing, and FAQ Pages**.
 
-The core shell (Header, Footer, Theme, Fonts, Animations, Content Registry) is fully operational. Phase 5 should focus strictly on building out the rich content and layout rhythm for the `app/page.tsx` and `app/about/page.tsx` routes, heavily utilizing the `lib/images.ts` registry, Phase 3's visual components, and the Phase 2 content definitions.
+The core foundation is incredibly solid, and the primary entry pages (Home, About) are live. The next phase must implement `app/features/page.tsx`, `app/pricing/page.tsx`, and `app/faq/page.tsx`.
+Expectations:
+- Consume the layouts defined in `.agent/layout-*.md`.
+- Pull *all* content strictly from the corresponding TS files in `content/`.
+- Ensure complex data structures (like FAQ accordions or pricing tier cards) utilize appropriate Shadcn UI components or accessible headless UI elements to guarantee usability.
