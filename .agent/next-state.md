@@ -1,6 +1,6 @@
 # Next State
 
-## Phase 3: Animated Visuals & Image Registry
-- Create animated visual components prioritizing elegance and smooth, fade-led transitions.
-- Establish a type-safe image registry (`lib/images.ts`) using high-resolution, context-appropriate Unsplash assets.
-- Integrate animations with CSS tokens ensuring motion obeys `prefers-reduced-motion` settings.
+## Phase 4: Core Layout and Home Page
+- Build the RootLayout including global navigation (Header) and Footer.
+- Assemble the Home page using the structural blueprints (`.agent/layout-home.md`), content sources (`content/home.ts`), and the newly created visual components.
+- Ensure SSR stability, hydration safety, and luxury aesthetic fidelity across components.
