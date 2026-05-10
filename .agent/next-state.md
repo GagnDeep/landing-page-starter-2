@@ -1,13 +1,14 @@
 # Next State Intent
 
 ## Target Phase
-Phase 2 — Content Files
+Phase 3 — Animated Visuals & Image Registry
 
-## Objectives for Phase 2
-- Generate structured TypeScript content files (e.g., `content/home.ts`, `content/about.ts`) for all pages.
-- Ensure all copy strictly aligns with the "royal Punjabi luxury" brand voice, reflecting a premium, high-end editorial tone.
-- Isolate all hardcoded strings from UI components to enable seamless updates and future localization.
-- Use the layout intent documents (`.agent/layout-*.md`) created in Phase 1 as the blueprint for required content slots.
+## Objectives for Phase 3
+- Create the image registry (`lib/images.ts`) mapping to specific page slots, relying strictly on Unsplash URLs configured via `images.remotePatterns` in `next.config.mjs`.
+- Create Reusable animated Framer Motion components in `components/visuals/` (e.g., `RevealText.tsx`, `FadeIn.tsx`, `ParallaxImage.tsx`).
+- Ensure all animations respect `prefers-reduced-motion`.
+- Add necessary types for Framer Motion components to avoid TypeScript index signature errors.
 
 ## Dependencies / Requirements Before Starting
-- The design system and layout intent documentation from Phase 1 must be strictly referenced to understand the context and tone required for each text string.
+- The layout intent documents and the newly created content files must be referenced to determine which components need specific animated treatments or image placements.
+- Ensure `framer-motion` is installed if not already present.
