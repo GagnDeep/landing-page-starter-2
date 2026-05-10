@@ -1,6 +1,6 @@
 # Next State / Handoff
 
-Ready to proceed to **Phase 3 — Animated Visuals & Image Registry**.
+Ready to proceed to **Phase 4 — Core Layout and Global Components**.
 
-The project now has the complete layout blueprints (from Phase 1) and all actual text copy (from Phase 2). The next logical step is to set up the visual assets.
-This will involve establishing the `lib/images.ts` registry utilizing direct Unsplash URLs aligned with the brand aesthetic, and creating the reusable Framer Motion animation components inside `components/visuals/` to handle the graceful reveal effects outlined in the design system.
+With the content decoupled (Phase 2), the visual tokens set (Phase 1), and the motion/image assets primed (Phase 3), we are ready to assemble the core global shell.
+The next phase requires building out the `Navbar`, `Footer`, `MobileMenu`, and the main `Layout` wrappers that will frame all the pages. It is vital to use the `lib/images.ts` registry for logos and the `content/` files for navigation strings.
