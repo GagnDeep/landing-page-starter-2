@@ -1,6 +1,6 @@
-# Next State: Phase 4 — Core Layout and Global Components
+# Next State: Phase 5 — Home Page Implementation
 
-**Goal:** Implement the global navigation (Header/Footer), overarching shell layout, and common container components, applying the design system and consuming the new visual/content assets.
+**Goal:** Assemble the home page utilizing the layout blueprints, content maps, animated visuals, and image registry built in previous phases.
 
 **Prerequisites:**
-- Completion of Phase 1 (Design System), Phase 2 (Content Files), and Phase 3 (Animated Visuals & Image Registry).
+- Completion of Phases 1 through 4 (Design System, Content, Visuals, and Core Layout).
