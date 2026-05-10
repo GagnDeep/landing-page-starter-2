@@ -21,6 +21,12 @@ export const homeContent = {
     title: "Magical Themes for Magical Days",
     description: "From superheroes to unicorns, explore our gallery of meticulously crafted, kid-approved cake designs.",
     cta: "See All Designs",
+    themes: [
+      { id: "superhero", label: "Superhero" },
+      { id: "unicorn", label: "Unicorn" },
+      { id: "floral", label: "Floral" },
+      { id: "classic", label: "Classic" },
+    ]
   },
   flavorSpotlight: {
     title: "Flavors Worth Celebrating",

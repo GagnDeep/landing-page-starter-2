@@ -8,17 +8,18 @@ import { PaintBoardIcon, BirthdayCakeIcon, TruckDeliveryIcon } from "@hugeicons/
 
 interface OrderFlowDiagramProps {
   className?: string;
+  labels?: [string, string, string];
 }
 
-export function OrderFlowDiagram({ className }: OrderFlowDiagramProps) {
+export function OrderFlowDiagram({ className, labels = ["Design", "Bake", "Deliver"] }: OrderFlowDiagramProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
   const shouldReduceMotion = useReducedMotion();
 
   const steps = [
-    { icon: PaintBoardIcon, label: "Design" },
-    { icon: BirthdayCakeIcon, label: "Bake" },
-    { icon: TruckDeliveryIcon, label: "Deliver" },
+    { icon: PaintBoardIcon, label: labels[0] },
+    { icon: BirthdayCakeIcon, label: labels[1] },
+    { icon: TruckDeliveryIcon, label: labels[2] },
   ];
 
   const containerVariants = {
