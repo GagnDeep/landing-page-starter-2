@@ -12,7 +12,15 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Project specific ignores based on memory
+    ".agents/**",
+    ".agent/**"
   ]),
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }]
+    }
+  }
 ]);
 
 export default eslintConfig;
