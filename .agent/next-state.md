@@ -1,6 +1,6 @@
-# Next: Phase 5 (About, Features, and Pricing Pages)
+# Next: Phase 6 (Blog and FAQ Pages)
 
-1. Use Phase 1 layout documentation for About, Features, and Pricing.
-2. Consume content from their respective `content/*.ts` files.
+1. Use Phase 1 layout documentation for Blog and FAQ.
+2. Consume content from `content/blog.ts` and `content/faq.ts`.
 3. Reuse the animated visual components established in Phase 3.
-4. Render imagery cleanly using `lib/images.ts`.
+4. Add any necessary components such as Accordions for the FAQ or grids for the Blog.

@@ -60,6 +60,23 @@ export const pricingContent = {
       "Interactive Dessert Stations (e.g., Flambé, Liquid Nitrogen)"
     ]
   },
+  faq: {
+    title: "Pricing specific FAQs",
+    items: [
+      {
+        q: "What is your minimum guest count?",
+        a: "Our minimum guest count varies by season, typically starting at 50 guests for bespoke gatherings and 200 for full wedding packages."
+      },
+      {
+        q: "Are there travel fees for events outside Patiala?",
+        a: "Yes, travel and logistical fees apply for events located more than 20km outside of Patiala. This will be clearly outlined in your custom proposal."
+      },
+      {
+        q: "Do prices include service staff and equipment?",
+        a: "All of our standard packages include premium serving ware, chafing dishes, and standard buffet staff. Premium table service and specialized chefs are available as enhancements."
+      }
+    ]
+  },
   cta: {
     headline: "Ready for a precise quote?",
     button: "Request a Custom Proposal"
