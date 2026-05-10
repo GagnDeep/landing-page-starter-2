@@ -1,6 +1,6 @@
 # Next State
 
-Ready for Phase 4: Core Layout and Navigation Shell
-- Assemble the persistent root layout (header, footer, navigation).
-- Ensure mobile responsiveness for the navigation shell.
-- Utilize the design tokens and animated visual components.
+Ready for Phase 5: Home Page Implementation
+- Assemble the 20 distinct sections for the Home page.
+- Leverage the visual components built in Phase 3.
+- Use structured content from `content/home.ts`.

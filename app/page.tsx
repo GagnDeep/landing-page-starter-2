@@ -1,19 +1,18 @@
-import { Button } from "@/components/ui/button"
+import { AnimatedGradientMesh } from "@/components/visuals";
+import { homeContent } from "@/content/home";
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <div className="relative min-h-[calc(100vh-88px)] flex items-center justify-center">
+      <AnimatedGradientMesh className="absolute inset-0" />
+      <div className="container relative z-10 px-4 py-32 text-center max-w-3xl">
+        <h1 className="text-4xl md:text-6xl font-heading font-medium tracking-tight mb-6">
+          {homeContent.hero.headline}
+        </h1>
+        <p className="text-lg md:text-xl text-muted-foreground font-sans mb-10">
+          {homeContent.hero.subheadline}
+        </p>
       </div>
     </div>
-  )
+  );
 }

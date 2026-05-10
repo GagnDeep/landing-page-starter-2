@@ -1,6 +1,7 @@
 # Current State
 
-Phase 3: Animated Visuals & Image Registry has been completed.
-- `lib/images.ts` maps all remote Unsplash images securely.
-- 8 responsive, SSR-safe, animated component building blocks added to `components/visuals/`.
-- Ready for Root Layout assembly.
+Phase 4: Core Layout and Navigation Shell has been completed.
+- Global navigation header handles responsive menu and themes.
+- Footer integrated with automatic Unsplash dynamic attribution.
+- Root layout shell correctly wraps children and utilizes global fonts/theme CSS vars.
+- Ready for specific page assembly.
