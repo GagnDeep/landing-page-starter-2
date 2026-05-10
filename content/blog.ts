@@ -1,0 +1,80 @@
+export const blogContent = {
+  metadata: {
+    title: "Blog & Driving Tips | Capital Driving School",
+    description: "Expert driving advice, RTO updates, and road safety tips from the instructors at Capital Driving School in Chandigarh.",
+  },
+  hero: {
+    heading: "Driving Tips & Local News",
+    subheading: "Expert advice to help you pass your test and drive safely on Chandigarh's roads.",
+  },
+  categories: [
+    { label: "All", value: "all" },
+    { label: "Tips for Beginners", value: "beginners" },
+    { label: "RTO Rules & Updates", value: "rto" },
+    { label: "Car Maintenance", value: "maintenance" },
+    { label: "Student Stories", value: "stories" },
+  ],
+  featuredArticle: {
+    title: "5 Most Common Mistakes During the Chandigarh RTO Test",
+    excerpt: "Nervous about your upcoming driving test? We break down the top five reasons students fail the local RTO test and how you can easily avoid them.",
+    category: "RTO Rules & Updates",
+    date: "May 10, 2026",
+    readTime: "5 min read",
+    slug: "5-common-mistakes-chandigarh-rto-test",
+  },
+  recentPostsHeading: "Latest Articles",
+  posts: [
+    {
+      title: "How to Overcome Driving Anxiety: A Beginner's Guide",
+      excerpt: "If the thought of getting behind the wheel makes your palms sweat, you aren't alone. Here are our top tips for staying calm.",
+      category: "Tips for Beginners",
+      date: "May 02, 2026",
+      readTime: "4 min read",
+      slug: "overcome-driving-anxiety",
+    },
+    {
+      title: "Understanding Chandigarh's Roundabouts: Who Has the Right of Way?",
+      excerpt: "Chandigarh is famous for its roundabouts. Learn the rules of the road to navigate them safely and confidently.",
+      category: "Tips for Beginners",
+      date: "April 28, 2026",
+      readTime: "3 min read",
+      slug: "understanding-chandigarh-roundabouts",
+    },
+    {
+      title: "Basic Car Maintenance Every Driver Should Know",
+      excerpt: "You don't need to be a mechanic, but knowing how to check your oil and tire pressure is essential for safe driving.",
+      category: "Car Maintenance",
+      date: "April 15, 2026",
+      readTime: "6 min read",
+      slug: "basic-car-maintenance",
+    },
+    {
+      title: "Success Story: How Priya Conquered Peak Hour Traffic",
+      excerpt: "Read about Priya's journey from a nervous beginner to confidently commuting during Sector 17's rush hour.",
+      category: "Student Stories",
+      date: "April 05, 2026",
+      readTime: "4 min read",
+      slug: "success-story-priya-traffic",
+    },
+  ],
+  sidebar: {
+    trendingHeading: "Trending Now",
+    authorHeading: "About the Editors",
+    authorBio: "Our blog is written by the expert instructors at Capital Driving School. Led by Jeet Singh, we share decades of combined experience to help you stay safe on the road.",
+  },
+  newsletter: {
+    heading: "Get Weekly Driving Tips",
+    subheading: "Join our newsletter to receive expert advice and RTO updates directly in your inbox.",
+    placeholder: "Enter your email address",
+    ctaLabel: "Subscribe",
+  },
+  faqTeaser: {
+    heading: "Quick Questions",
+    description: "Looking for quick answers about our school or lessons?",
+    ctaLabel: "Visit our FAQ",
+  },
+  callToAction: {
+    heading: "Ready to put these tips into practice?",
+    ctaLabel: "Book Your Lesson",
+  },
+};

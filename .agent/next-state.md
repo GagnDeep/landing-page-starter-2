@@ -1,7 +1,6 @@
-# Next State: Phase 2 — Content Files
+# Next State: Phase 3 — Animated Visuals & Image Registry
 
-**Goal:** Create content files that separate text from UI components, based on the structural blueprints created in Phase 1.
+**Goal:** Build animated visual components that align with the brand identity and initialize a strongly-typed image registry.
 
 **Prerequisites:**
-- Completion of Phase 1 (Design System & Layout Documentation).
-- Availability of layout intent maps (`.agent/layout-*.md`).
+- Completion of Phase 1 (Design System) and Phase 2 (Content Files).
