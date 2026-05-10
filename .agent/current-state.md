@@ -1,13 +1,20 @@
 # Current State
 
-**Phase**: 2/8 — Content Files (COMPLETED)
+**Phase**: 3/8 — Animated Visuals & Image Registry (COMPLETED)
 
 ## What was just completed:
-- Created the `content/` directory.
-- Generated 10 TypeScript content files (`home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`) to serve as the centralized single source of truth.
-- Established a professional, urgent, and warm brand voice across all copy ("The 24/7 Rescue").
-- Defined SEO metadata optimized for local search in Patiala.
-- Ensured no hardcoded strings remain for future UI integration.
+- Configured Next.js to allow Unsplash remote images.
+- Created `lib/images.ts` with a curated registry of specific imagery needed for the A-One brand.
+- Implemented 8 reusable, animated visual components in `components/visuals/`:
+  - `AnimatedGradientMesh`
+  - `AnimatedCakeIllustration`
+  - `CodeWindowTyping`
+  - `CTAGlow`
+  - `DotMatrixGrid`
+  - `FloatingBlobs`
+  - `LogoMarquee`
+  - `MicroIconSet`
+- Ensured all animations respect accessibility (prefers-reduced-motion) and utilize OKLCH design variables.
 
 ## Next immediate steps:
-- Move on to Phase 3: Animated Visuals & Image Registry.
+- Move on to Phase 4: Core Layout & Navigation Implementation.

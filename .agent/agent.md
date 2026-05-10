@@ -8,3 +8,4 @@
 - **Colors**: OKLCH base. Warm cake-inspired tones (Caramel), dark night sky (for the 24/7 aspect), and gold accents. Dark mode is treated as a first-class citizen ("Evening Fitting").
 - **Layouts**: 10 pages outlined with visual rhythm and section-by-section breakdown.
 - Phase 2 complete. Content files generated for all pages. Brand voice and SEO metadata established.
+- Phase 3 complete. Animated visual components and Unsplash registry established. Next: implementing global layout and navigation.
