@@ -13,3 +13,5 @@ Project tracking initialized. This file serves as a chronological log of phase c
 - **[Phase 4]** Complete (Date: 2026-05-10). Implemented the global core layout (Header/Footer) and the fully animated, dynamic Home Page (`/`). All content decoupled. Animated visual system working flawlessly with the layout rhythm.
 
 - **[Phase 5]** Complete (Date: 2026-05-10). Implemented the About, Features, and Pricing pages. High-end visual fidelity maintained using Framer Motion components and Unsplash remote images. Content is completely decoupled.
+
+- **[Phase 6]** Complete (Date: 2026-05-10). Implemented Blog listing, dynamic Blog post templates, and an interactive FAQ page. Used `@tailwindcss/typography` to enforce strict typographical hierarchy for long-form content.

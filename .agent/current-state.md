@@ -1,18 +1,18 @@
 # Current Project State
 
 ## Status
-- **Phase:** 5/8 (About, Features, and Pricing Pages)
+- **Phase:** 6/8 (Blog and FAQ Pages)
 - **Status:** Complete.
 
 ## Recent Achievements
-- Built the `About` page (`/about`) focusing on the founder's vision, core values, and catering heritage.
-- Built the `Features` page (`/features`) mapping detailed service offerings (decor, culinary, logistics) with alternating image/text layouts.
-- Built the `Pricing` page (`/pricing`) establishing clear service tiers (Full Orchestration, Destination, Design) with a focus on custom quotes over rigid packages.
-- Wired all three pages dynamically using content strings from `content/about.ts`, `content/features.ts`, and `content/pricing.ts`.
-- Deeply integrated Phase 3 animated components (`RevealText`, `ScaleImage`, `StaggerGroup`, `FloatingBlobs`, `DotMatrixGrid`) and Unsplash registry imagery to maintain the "royal Punjabi luxury" aesthetic.
+- Developed the `FAQ` page (`app/faq/page.tsx`) utilizing `shadcn/ui` accordion components for clean, interactive question/answer categories.
+- Developed the `Blog Listing` page (`app/blog/page.tsx`) with a large featured post, category tabs, and a staggered recent posts grid.
+- Developed the dynamic `Blog Detail` template (`app/blog/[slug]/page.tsx`), utilizing `generateStaticParams` for static generation and `@tailwindcss/typography` for beautiful, long-form reading experiences.
+- Maintained rigorous design system adherence across all pages (typography scales, OKLCH theme parity).
+- Ensured all copy is pulled from `content/faq.ts` and `content/blog.ts`.
 
 ## Current Blockers / Constraints
-- None. Phase 5 is complete.
+- None. Phase 6 is complete.
 
 ## Next Immediate Actions
-- Move to Phase 6: Blog and FAQ Pages.
+- Move to Phase 7: Contact, Careers, and Legal Pages.
