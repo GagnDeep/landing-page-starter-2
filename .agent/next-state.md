@@ -1,5 +1,6 @@
 # Next State / Handoff
 
-Ready to proceed to **Phase 2 — Content Files**.
+Ready to proceed to **Phase 3 — Animated Visuals & Image Registry**.
 
-The structural and visual layout mappings, along with global design tokens, are now ready for content mapping. The next phase will focus exclusively on creating the localized content files in the `content/` directory representing all the distinct text strings defined across the layout models, fully decoupling the copy from UI component code.
+The project now has the complete layout blueprints (from Phase 1) and all actual text copy (from Phase 2). The next logical step is to set up the visual assets.
+This will involve establishing the `lib/images.ts` registry utilizing direct Unsplash URLs aligned with the brand aesthetic, and creating the reusable Framer Motion animation components inside `components/visuals/` to handle the graceful reveal effects outlined in the design system.
