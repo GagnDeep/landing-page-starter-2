@@ -35,7 +35,7 @@ export default function BlogPage() {
           <Link href={blogContent.featuredArticle.href} className="group block">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScaleImage className="aspect-[4/3] relative rounded-none">
-                <Image src={IMAGES.blogPost1.src} alt={IMAGES.blogPost1.alt} fill className="object-cover" />
+                <Image src={IMAGES.blogPost1.src} alt={IMAGES.blogPost1.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </ScaleImage>
               <div className="flex flex-col justify-center">
                 <FadeIn>
@@ -92,7 +92,7 @@ export default function BlogPage() {
                        <Image
                          src={index === 0 ? IMAGES.blogPost2.src : index === 1 ? IMAGES.realCouple.src : IMAGES.culinaryThali.src}
                          alt={post.title}
-                         fill
+                         fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                          className="object-cover"
                        />
                     </div>

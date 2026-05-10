@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScaleImage className="aspect-[3/4] relative shadow-2xl rounded-sm">
-              <Image src={IMAGES.teamFounder.src} alt={IMAGES.teamFounder.alt} fill className="object-cover" />
+              <Image src={IMAGES.teamFounder.src} alt={IMAGES.teamFounder.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
             </ScaleImage>
             <RevealText>
               <h2 className="text-4xl md:text-5xl font-heading text-foreground mb-8">
@@ -89,7 +89,7 @@ export default function AboutPage() {
             </RevealText>
             <div className="order-1 lg:order-2">
               <ScaleImage className="aspect-video md:aspect-[4/3] relative">
-                <Image src={IMAGES.culinaryThali.src} alt={IMAGES.culinaryThali.alt} fill className="object-cover" />
+                <Image src={IMAGES.culinaryThali.src} alt={IMAGES.culinaryThali.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </ScaleImage>
             </div>
           </div>

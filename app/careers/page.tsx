@@ -29,7 +29,7 @@ export default function CareersPage() {
           </RevealText>
 
           <ScaleImage delay={0.4} className="aspect-video md:aspect-[21/9] relative max-w-5xl mx-auto shadow-2xl">
-             <Image src={IMAGES.teamAction.src} alt={IMAGES.teamAction.alt} fill className="object-cover" priority />
+             <Image src={IMAGES.teamAction.src} alt={IMAGES.teamAction.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
           </ScaleImage>
         </div>
       </section>

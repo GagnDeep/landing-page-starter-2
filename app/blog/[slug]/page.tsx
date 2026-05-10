@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </FadeIn>
 
         <FadeIn delay={0.2} className="relative aspect-[21/9] w-full mb-16 shadow-xl">
-          <Image src={imageSrc} alt={post.title} fill className="object-cover" priority />
+          <Image src={imageSrc} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
         </FadeIn>
 
         <div className="prose prose-lg dark:prose-invert prose-headings:font-heading prose-headings:font-medium prose-p:text-muted-foreground prose-p:leading-relaxed max-w-3xl mx-auto">

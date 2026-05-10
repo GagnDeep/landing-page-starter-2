@@ -68,7 +68,7 @@ export default function FeaturesPage() {
                 </div>
                 <div className={`order-1 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                   <ScaleImage className="aspect-square relative rounded-none shadow-lg">
-                    <Image src={imageAsset.src} alt={imageAsset.alt} fill className="object-cover" />
+                    <Image src={imageAsset.src} alt={imageAsset.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                   </ScaleImage>
                 </div>
               </div>

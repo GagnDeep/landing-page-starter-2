@@ -116,7 +116,7 @@ export default function HomePage() {
             </RevealText>
             <div className="order-1 lg:order-2">
               <ScaleImage className="aspect-[4/5] md:aspect-square relative shadow-2xl">
-                <Image src={IMAGES.blogPost2.src} alt={IMAGES.blogPost2.alt} fill className="object-cover" />
+                <Image src={IMAGES.blogPost2.src} alt={IMAGES.blogPost2.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </ScaleImage>
             </div>
           </div>
@@ -128,22 +128,22 @@ export default function HomePage() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScaleImage delay={0.1} className="aspect-square relative col-span-1 md:col-span-2 lg:col-span-2">
-              <Image src={IMAGES.decorStage.src} alt={IMAGES.decorStage.alt} fill className="object-cover" />
+              <Image src={IMAGES.decorStage.src} alt={IMAGES.decorStage.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               <div className="absolute inset-0 bg-black/20 flex items-end p-8">
                 <h3 className="text-white text-3xl font-heading">Thematic Decor Design</h3>
               </div>
             </ScaleImage>
             <ScaleImage delay={0.2} className="aspect-square relative col-span-1">
-              <Image src={IMAGES.decorFloral.src} alt={IMAGES.decorFloral.alt} fill className="object-cover" />
+              <Image src={IMAGES.decorFloral.src} alt={IMAGES.decorFloral.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
             </ScaleImage>
             <ScaleImage delay={0.3} className="aspect-square relative col-span-1">
-              <Image src={IMAGES.culinaryThali.src} alt={IMAGES.culinaryThali.alt} fill className="object-cover" />
+              <Image src={IMAGES.culinaryThali.src} alt={IMAGES.culinaryThali.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               <div className="absolute inset-0 bg-black/20 flex items-end p-8">
                 <h3 className="text-white text-2xl font-heading">Royal Culinary Affairs</h3>
               </div>
             </ScaleImage>
             <ScaleImage delay={0.4} className="aspect-square relative col-span-1 md:col-span-2 lg:col-span-2">
-              <Image src={IMAGES.culinaryStall.src} alt={IMAGES.culinaryStall.alt} fill className="object-cover" />
+              <Image src={IMAGES.culinaryStall.src} alt={IMAGES.culinaryStall.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
             </ScaleImage>
           </div>
         </div>

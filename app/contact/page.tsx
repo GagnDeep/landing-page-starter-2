@@ -88,7 +88,7 @@ export default function ContactPage() {
 
               <FadeIn delay={0.2}>
                 <ScaleImage className="aspect-[4/3] relative rounded-none shadow-lg mb-12">
-                   <Image src={IMAGES.locationUdaipur.src} alt="Guide Events Location" fill className="object-cover" />
+                   <Image src={IMAGES.locationUdaipur.src} alt="Guide Events Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </ScaleImage>
               </FadeIn>
 

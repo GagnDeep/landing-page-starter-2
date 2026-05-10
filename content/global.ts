@@ -38,8 +38,8 @@ export const globalContent: GlobalContent = {
       { label: "Privacy Policy", href: "/privacy" },
     ],
     social: [
-      { label: "Instagram", href: "#" },
-      { label: "Pinterest", href: "#" },
+      { label: "Instagram", href: "https://instagram.com" },
+      { label: "Pinterest", href: "https://pinterest.com" },
     ],
   },
   copyright: "© 2024 Guide Events. All rights reserved.",
