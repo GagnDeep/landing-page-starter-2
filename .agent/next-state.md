@@ -1,3 +1,3 @@
 # Next State
 
-- **Phase 5:** Clinical Services and About Pages (Implement the detailed secondary pages using the content repository and established design system).
+- **Phase 6:** Pricing, FAQ, and Blog Infrastructure (Implement these secondary pages using dynamic content and prepare blog architecture).
