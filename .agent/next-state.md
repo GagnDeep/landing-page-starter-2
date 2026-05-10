@@ -1,5 +1,6 @@
 # Next State
 
-- Proceed to Phase 3: Animated Visuals & Image Registry.
-- The content foundation is laid out. The next agent should establish the image registry (`lib/images.ts`) mapping the Phase 2 content and Phase 1 layouts to direct Unsplash URLs.
-- Following the image registry, set up Framer Motion visual components in `components/visuals/` complying with the subtle and luxurious motion principles from `.agent/design-system.md` while strictly ensuring accessibility (`useReducedMotion`).
+- Proceed to Phase 4: Core Layout and Navigation Shell.
+- Begin assembling the structural page shells, responsive navigation, and footer using the Phase 1 layouts.
+- Integrate the animated visual components from Phase 3 into the core layout.
+- Start importing and using the text content from `content/` and images from `lib/images.ts`.
