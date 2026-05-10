@@ -1,7 +1,7 @@
 # Next State
 
-- **Target Phase**: 5/8 (About, Features, and Pricing Pages)
+- **Target Phase**: 6/8 (Blog and FAQ Dynamic Pages)
 - **Handoff Notes**:
-  - The RootLayout and Home page provide a strong structural reference.
-  - Proceed to build out `/about`, `/features`, and `/pricing` routes.
-  - Ensure adherence to `.agent/layout-*.md` guidelines and continue strict usage of `content/` and `components/visuals/`.
+  - The static content pages (Home, About, Features, Pricing) are complete.
+  - Proceed to implement the dynamic/interactive layout components for `/blog` (journal articles grid, pagination, article detail view) and `/faq` (searchable accordion components).
+  - Continue utilizing established design system variables and typography.

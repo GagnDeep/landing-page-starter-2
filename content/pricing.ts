@@ -63,3 +63,27 @@ export const orderingProcess = {
 export const dietaryInfo = {
   text: "Eggless options are available for most of our menu items. Please inquire about specific gluten-sensitive or vegan requirements. Note: We bake in a facility that handles nuts and wheat."
 };
+
+export const tieredCakeGraphic = {
+  heading: "Tier Guide",
+  tiers: [
+    { name: "Single Tier", size: "6 inch", description: "Perfect for intimate gatherings." },
+    { name: "Single Tier", size: "8 inch", description: "Standard party size." },
+    { name: "Two Tier", size: "6 + 8 inch", description: "Elegant stacked presentation." }
+  ]
+};
+
+export const bulkOrderDiscount = {
+  heading: "Bulk & Corporate Orders",
+  content: "We offer tailored pricing for orders exceeding 50 units of standard pastries or 20 loaves of bread. Please contact our catering team directly for a custom quote."
+};
+
+export const paymentMethods = {
+  heading: "Accepted Payments",
+  methods: ["Credit Card", "UPI", "Bank Transfer (for corporate orders)"]
+};
+
+export const termsOfOrder = {
+  heading: "Order Policies",
+  content: "All custom orders require a 50% non-refundable deposit. Changes to design or flavor cannot be guaranteed within 7 days of the scheduled pickup/delivery."
+};

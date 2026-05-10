@@ -86,3 +86,19 @@ export const meetTheBakers = {
     }
   ]
 };
+
+export const communityInvolvement = {
+  heading: "Rooted in Patiala",
+  content: "Our success is the community's success. We are proud to support local schools with daily fresh bread donations and sponsor the annual heritage festival, ensuring the spirit of Punjab lives on in every celebration."
+};
+
+export const awardsAndRecognition = [
+  "Voted Best Custom Cake Bakery - Punjab Heritage Awards 2022",
+  "Featured in The Patiala Post for artisanal bread craftsmanship",
+  "15+ Years continuous service excellence award"
+];
+
+export const joinOurFamilyCTA = {
+  heading: "Passionate about baking?",
+  cta: { label: "View Open Positions", href: "/careers" }
+};

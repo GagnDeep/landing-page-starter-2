@@ -68,3 +68,43 @@ export const eventCatering = {
   heading: "Elevate Your Events",
   content: "From lavish dessert tables at grand weddings to elegant boxed pastries for corporate boardrooms, our catering team ensures your guests experience the pinnacle of Patiala's bakery heritage."
 };
+
+export const packagingDesign = {
+  heading: "Sustainable Heritage Packaging",
+  content: "Our signature pink and gold boxes are crafted from 100% recycled materials. Beautiful enough to gift, sturdy enough to protect delicate bakes, and kind to our environment."
+};
+
+export const corporateGifting = {
+  heading: "Corporate Gifting",
+  content: "Leave a lasting impression with bespoke gifting boxes tailored for corporate events, Diwali distributions, and executive client appreciation."
+};
+
+export const comparisonTable = {
+  heading: "The Verma Standard",
+  columns: ["", "Verma's Artisanal", "Commercial Bakery"],
+  rows: [
+    ["Butter", "100% Pure European-Style", "Margarine Blends"],
+    ["Wheat", "Locally Sourced Whole Wheat", "Bleached White Flour"],
+    ["Flavorings", "Real Vanilla Beans & Spices", "Artificial Essences"],
+    ["Bake Cycle", "Daily, Zero Holdover", "Preservative Extended"]
+  ]
+};
+
+export const customerTestimonial = {
+  quote: "The only bakery in Punjab that respects the ingredients as much as they respect their customers.",
+  author: "Chef Vikas",
+  role: "Culinary Director"
+};
+
+export const faqPreview = {
+  heading: "Common Questions",
+  questions: [
+    { q: "Are your breads vegan?", a: "Many of our rustic breads are naturally vegan, containing only flour, water, salt, and yeast." },
+    { q: "How long do the cookies last?", a: "Stored in an airtight container, our whole wheat jaggery cookies stay fresh for up to two weeks." }
+  ]
+};
+
+export const tasteTheDifferenceCTA = {
+  heading: "Taste the difference craftsmanship makes.",
+  cta: { label: "Explore Our Menu", href: "/pricing" }
+};
