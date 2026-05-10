@@ -1,7 +1,6 @@
 # Current State
 
-Phase 2: Content Files has been completed.
-- The `content/` directory has been created.
-- Type-safe content strings and structural objects have been established for all 10 major pages.
-- Content follows the "NRI-friendly, candid, family-comfortable" brand voice.
-- Ready for component integration.
+Phase 3: Animated Visuals & Image Registry has been completed.
+- `lib/images.ts` maps all remote Unsplash images securely.
+- 8 responsive, SSR-safe, animated component building blocks added to `components/visuals/`.
+- Ready for Root Layout assembly.

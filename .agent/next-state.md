@@ -1,6 +1,6 @@
 # Next State
 
-Ready for Phase 3: Animated Visuals & Image Registry
-- Unblocked to consume the content files.
-- Focus on setting up the centralized image registry in `lib/images.ts` using Unsplash assets.
-- Create global, reusable animated visual components.
+Ready for Phase 4: Core Layout and Navigation Shell
+- Assemble the persistent root layout (header, footer, navigation).
+- Ensure mobile responsiveness for the navigation shell.
+- Utilize the design tokens and animated visual components.
