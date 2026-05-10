@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { seo, hero, culture, openings, applicationProcess } from "@/content/careers";
 import { AnimatedGradientMesh } from "@/components/visuals/AnimatedGradientMesh";
 import { DotMatrixPattern } from "@/components/visuals/DotMatrixPattern";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {

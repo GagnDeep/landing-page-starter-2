@@ -34,7 +34,6 @@ import { images } from "@/lib/images";
 import { AnimatedGradientMesh } from "@/components/visuals/AnimatedGradientMesh";
 import { LogoMarquee } from "@/components/visuals/LogoMarquee";
 import { HeroIllustration } from "@/components/visuals/HeroIllustration";
-import { ClinicalProgressChart } from "@/components/visuals/ClinicalProgressChart";
 import { DotMatrixPattern } from "@/components/visuals/DotMatrixPattern";
 import { FloatingBlobs } from "@/components/visuals/FloatingBlobs";
 import { MicroIconSet } from "@/components/visuals/MicroIconSet";
@@ -80,7 +79,7 @@ export default function Home() {
       <section className="py-24 md:py-32 relative">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-8">
           <p className="text-2xl md:text-3xl font-heading text-foreground leading-relaxed font-medium">
-            "{welcomeStatement.quote}"
+            &quot;{welcomeStatement.quote}&quot;
           </p>
           <div className="space-y-1">
             <p className="text-lg font-bold text-primary">{welcomeStatement.author}</p>
@@ -153,7 +152,7 @@ export default function Home() {
               <p className="text-lg text-slate-300 leading-relaxed">{nriFocus.description}</p>
             </div>
             <div className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 md:p-10 rounded-3xl shadow-2xl">
-              <p className="text-xl italic text-slate-200 leading-relaxed mb-6">"{nriFocus.testimonial}"</p>
+              <p className="text-xl italic text-slate-200 leading-relaxed mb-6">&quot;{nriFocus.testimonial}&quot;</p>
               <p className="font-bold text-sky-400">{nriFocus.testimonialAuthor}</p>
             </div>
           </div>
@@ -267,9 +266,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {patientSuccess.testimonials.map((testimonial, idx) => (
               <Card key={idx} className="bg-background shadow-md">
-                <CardContent className="p-8">
-                  <p className="text-lg italic text-muted-foreground mb-6">"{testimonial.quote}"</p>
-                  <div>
+                  <CardContent className="p-8 flex flex-col justify-between h-full">
+                    <p className="text-lg italic text-muted-foreground mb-6">&quot;{testimonial.quote}&quot;</p>
+                    <div className="mt-auto">
                     <p className="font-bold text-foreground">{testimonial.author}</p>
                     <p className="text-sm text-primary">{testimonial.condition}</p>
                   </div>

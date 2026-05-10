@@ -15,9 +15,10 @@ export function TypingCodeWindow({ codeString, typingSpeed = 30, className, ...p
   const indexRef = useRef(0);
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
     if (shouldReduceMotion) {
-      setDisplayedText(codeString);
-      return;
+      timeoutId = setTimeout(() => setDisplayedText(codeString), 0);
+      return () => clearTimeout(timeoutId);
     }
 
     const interval = setInterval(() => {
@@ -32,7 +33,10 @@ export function TypingCodeWindow({ codeString, typingSpeed = 30, className, ...p
       });
     }, typingSpeed);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeoutId);
+    };
   }, [codeString, typingSpeed, shouldReduceMotion]);
 
   return (

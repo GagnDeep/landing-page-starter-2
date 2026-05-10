@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { globalHeader } from "@/content/home";
-import { cn } from "@/lib/utils";
 
 export function Header() {
   return (

@@ -7,7 +7,7 @@ import { Brain02Icon, Activity02Icon, Shield02Icon, FavouriteIcon, FlashIcon } f
 
 type IconName = "brain" | "activity" | "shield" | "heartbeat" | "flash";
 
-type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<any>>;
+type OmitFramerProps<T> = Omit<T, keyof HTMLMotionProps<"div">>;
 
 interface Props extends OmitFramerProps<React.HTMLAttributes<HTMLDivElement>> {
   icon: IconName;

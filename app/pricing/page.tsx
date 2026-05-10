@@ -6,7 +6,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { seo, hero, tiers, packages, nriCare, faq } from "@/content/pricing";
 import { AnimatedGradientMesh } from "@/components/visuals/AnimatedGradientMesh";
 import { DotMatrixPattern } from "@/components/visuals/DotMatrixPattern";
-import { MicroIconSet } from "@/components/visuals/MicroIconSet";
 
 export const metadata: Metadata = {
   title: seo.title,

@@ -59,7 +59,7 @@ export default function BlogPage() {
              {articles.map((article) => {
                 // Map to real images from registry
                 let imgSrc: string = images.hero.about.src;
-                let imgAlt = article.imageAlt || blogTeaserImages.fallbackAltText;
+                const imgAlt = article.imageAlt || blogTeaserImages.fallbackAltText;
 
                 if (article.id === "understanding-neuroplasticity") {
                    imgSrc = images.blog.neuroplasticity.src;
