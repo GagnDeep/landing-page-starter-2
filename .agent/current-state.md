@@ -1,1 +1,1 @@
-Phase 4 complete. The Core Layout and Navigation Shell (TopBar, SiteHeader with mobile drawer & dark mode toggle, and SiteFooter) has been fully implemented using design tokens and dynamic content from `content/home.ts`.
+Phase 5 complete. The Home Page is fully assembled, mapping all content from `content/home.ts` into a cohesive, responsive layout utilizing design tokens, visual primitive components, and Unsplash images.
