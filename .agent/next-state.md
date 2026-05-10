@@ -1,16 +1,21 @@
 # Next State: Armaan Driving School
 
-**Target Phase:** 5/8 — Features, Pricing, and About Pages
+**Target Phase:** 6/8 — Blog and FAQ Page Implementation
 
 ## Goal
-To implement the primary secondary pages (`/features`, `/pricing`, and `/about`) by utilizing the layout blueprints, the centralized content files, and the existing visual component library.
+To build the `/blog` and `/faq` routes, providing structured, SEO-friendly homes for the school's driving advice, local RTO updates, and frequently asked questions.
 
 ## Planned Actions
-1.  **About Page (`app/about/page.tsx`):** Build the history, mission, and team sections based on `.agent/layout-about.md` and `content/about.ts`.
-2.  **Features Page (`app/features/page.tsx`):** Detail the pedagogy, dual-control vehicles, and methodology based on `.agent/layout-features.md` and `content/features.ts`.
-3.  **Pricing Page (`app/pricing/page.tsx`):** Display the transparent pricing tiers and booking flow based on `.agent/layout-pricing.md` and `content/pricing.ts`.
-4.  **Refinements:** Address any missing sections from the Home page (e.g., Blog Teaser, Video Tour) if time permits or integrate them into a global utility component.
+1.  **FAQ Page (`app/faq/page.tsx`):**
+    *   Implement the accordion-based FAQ layout according to `.agent/layout-faq.md`.
+    *   Hydrate with data from `content/faq.ts`.
+    *   Include the search/filter UI placeholder and contact form block.
+2.  **Blog Index Page (`app/blog/page.tsx`):**
+    *   Implement the blog listing layout (Hero, Featured, Grid) based on `.agent/layout-blog.md`.
+    *   Hydrate with mock data from `content/blog.ts`.
+3.  **Blog Post Template (Optional/Prep):**
+    *   Outline the `app/blog/[slug]/page.tsx` structure if time permits.
 
 ## Constraints & Considerations
-*   **Reuse:** Maximize the reuse of existing visual components (`RevealText`, `CTAGlow`, etc.) to maintain visual consistency.
-*   **Data Binding:** Strictly adhere to pulling all text from the respective `content/*.ts` files. Do not hardcode new strings.
+*   **Accessibility:** Ensure the FAQ accordions are fully accessible (keyboard navigable, proper ARIA states) — utilizing the existing shadcn/ui Accordion component is recommended.
+*   **Data Binding:** Continue the strict pattern of pulling all strings from the `content/` directory.
