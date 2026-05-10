@@ -1,7 +1,7 @@
-# Next State: Phase 6 — About, Features, and Pricing Pages
+# Next State: Phase 7 — Blog, FAQ, and Contact Pages
 
-**Goal:** Implement the About, Features, and Pricing pages following their respective layout blueprints (`layout-about.md`, `layout-features.md`, `layout-pricing.md`).
+**Goal:** Implement the Blog, FAQ, and Contact pages following their respective layout blueprints (`layout-blog.md`, `layout-faq.md`, `layout-contact.md`).
 
 **Prerequisites:**
-- Completion of Phase 5 (Home Page Implementation).
+- Completion of Phase 6 (About, Features, and Pricing pages).
 - Existing design system, layout files, content layer, and visual component library available and verified.
