@@ -10,3 +10,11 @@
   - Use OKLCH colors for accessible, warm, baking-inspired theming.
   - Dark mode is designed as a "Night Mode" (dimly lit studio) rather than a direct color inversion.
   - Radii are set to soft values (`0.75rem` base) to avoid sharp, aggressive modern corners.
+
+## Date: 2026-05-10
+- **Phase**: 2/8 (Content Files)
+- **Summary**: Established the project's content architecture. Created a `content/` directory with 10 type-safe TypeScript files containing all strings, SEO metadata, and structural content arrays for the UI to consume.
+- **Notes**:
+  - Maintained the "Heritage Bakery" tone, focusing on authenticity, local sourcing, and craftsmanship.
+  - Defined explicit types in `content/types.ts` (e.g., `HeroSection`, `TextBlock`) to ensure component prop safety in future phases.
+  - Strictly avoided creating any UI, JSX, or CSS code.

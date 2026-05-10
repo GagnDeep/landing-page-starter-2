@@ -1,8 +1,7 @@
 # Next State
 
-- **Target Phase**: 2/8 (Content Files)
+- **Target Phase**: 3/8 (Animated Visuals & Image Registry)
 - **Handoff Notes**:
-  - Design tokens are finalized and mapped in `app/globals.css`.
-  - Layout structures are fully documented in the `.agent/layout-*.md` files.
-  - The project is ready for string integration.
-  - Next steps involve creating the content structure using type-safe TypeScript objects within the `content/` directory.
+  - Content files are ready to be imported into components.
+  - The type schema in `content/types.ts` should be referenced when building props for the React components.
+  - Next step involves setting up the central image registry (`lib/images.ts`) and planning animated visuals that are SSR-safe.
