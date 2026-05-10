@@ -9,10 +9,11 @@ import {
   FireIcon,
   Pot01Icon,
   Restaurant01Icon,
-  ChefHatIcon
+  ChefHatIcon,
+  StarIcon
 } from "@hugeicons/core-free-icons";
 
-type IconName = "veg" | "leaf" | "fire" | "pot" | "restaurant" | "chef";
+type IconName = "veg" | "leaf" | "fire" | "pot" | "restaurant" | "chef" | "star";
 
 interface MicroIconProps extends React.HTMLAttributes<HTMLDivElement> {
   icon: IconName;
@@ -27,6 +28,7 @@ const iconMap = {
   pot: Pot01Icon,
   restaurant: Restaurant01Icon,
   chef: ChefHatIcon,
+  star: StarIcon,
 };
 
 export function MicroIcon({
