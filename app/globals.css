@@ -45,8 +45,8 @@
 
 :root {
     /* Fonts */
-    --font-heading: "Oswald", sans-serif;
-    --font-sans: "DM Sans", sans-serif;
+    /* --font-heading is defined via next/font in layout */
+    /* --font-sans is defined via next/font in layout */
 
     /* Light Mode OKLCH Colors */
     --background: oklch(0.99 0.01 250);

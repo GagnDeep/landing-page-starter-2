@@ -1,1 +1,1 @@
-Phase 3 complete. The animated visual component library and Unsplash image registry have been created. The design tokens, visual primitives, and content layer are now firmly established.
+Phase 4 complete. The Core Layout and Navigation Shell (TopBar, SiteHeader with mobile drawer & dark mode toggle, and SiteFooter) has been fully implemented using design tokens and dynamic content from `content/home.ts`.
