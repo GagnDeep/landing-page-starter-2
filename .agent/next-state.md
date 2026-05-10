@@ -1,3 +1,3 @@
 # Next State
 
-Phase 2 (Content Files) will be the next logical step, with all structural foundations in place from Phase 1.
+Phase 3 (Animated Visuals & Image Registry) will be the next logical step, bringing the UI to life with Framer Motion and configured imagery.
