@@ -1,6 +1,6 @@
-# Next State: Phase 3 — Animated Visuals & Image Registry
+# Next State: Phase 4 — Core Layout and Global Components
 
-**Goal:** Build animated visual components that align with the brand identity and initialize a strongly-typed image registry.
+**Goal:** Implement the global navigation (Header/Footer), overarching shell layout, and common container components, applying the design system and consuming the new visual/content assets.
 
 **Prerequisites:**
-- Completion of Phase 1 (Design System) and Phase 2 (Content Files).
+- Completion of Phase 1 (Design System), Phase 2 (Content Files), and Phase 3 (Animated Visuals & Image Registry).
