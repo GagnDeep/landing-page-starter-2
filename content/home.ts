@@ -154,3 +154,65 @@ export const globalFooter = {
   email: "care@generalwilliamsphysio.com",
   copyright: "© 2024 General Williams Physiotherapy. All rights reserved."
 };
+
+// Adding missing sections required by the layout but omitted in content phase
+
+export const technologyHighlight = {
+  title: "Advanced Clinical Technology",
+  items: [
+    "Interferential Therapy (IFT) Units",
+    "Ultrasound Therapy Machines",
+    "TENS Nerve Stimulators",
+    "Robotic Gait Training Systems"
+  ]
+};
+
+export const insurancePayment = {
+  title: "Insurance & Payments",
+  description: "We provide comprehensive clinical invoices to assist with your health insurance OPD claims.",
+  accepted: ["Major Health Insurance (Reimbursement)", "Credit/Debit Cards", "UPI & Digital Payments", "Cash"]
+};
+
+export const blogTeaser = {
+  title: "Clinical Insights",
+  description: "Latest research and recovery strategies from our specialists."
+};
+
+export const homeFaq = {
+  title: "Frequently Asked Questions",
+  description: "Quick answers to help you prepare for your visit.",
+  ctaText: "View all FAQs \u2192"
+};
+
+export const finalCtaBlock = {
+  title: "Start Your Recovery Journey Today",
+  description: "Expert clinical care tailored to your specific neurological or orthopedic needs.",
+  buttonLabel: "Schedule Assessment",
+  contactPrefix: "Call us directly at "
+};
+
+export const mapSection = {
+  title: "Visit Our Clinic",
+  addressTitle: "Location",
+  hoursTitle: "Hours of Operation",
+  directionsTitle: "Directions",
+  directionsText: "Centrally located in Patiala with dedicated patient parking and complete wheelchair accessibility.",
+  mapFallbackText: "Interactive Map Integration Pending"
+};
+
+export const blogTeaserImages = {
+  fallbackAltText: "Image Placeholder"
+};
+
+export const generalStrings = {
+  readArticleText: "Read Article \u2192",
+  hoursMondayToSaturday: "Monday - Saturday: 9:00 AM - 7:00 PM",
+  hoursSunday: "Sunday: Closed"
+};
+
+export const footerHeadings = {
+  contact: "Contact",
+  legal: "Legal",
+  privacy: "Privacy Policy",
+  terms: "Terms of Service"
+};

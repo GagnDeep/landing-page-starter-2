@@ -1,3 +1,3 @@
 # Next State
 
-- **Phase 4:** Global Layout and Home Page Implementation (Assemble the Home page using the content objects and the newly created visual components).
+- **Phase 5:** Clinical Services and About Pages (Implement the detailed secondary pages using the content repository and established design system).
