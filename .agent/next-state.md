@@ -1,6 +1,6 @@
 # Next State
 
-## Phase 2: Content Files
-- Implement content files under the `content/` directory.
-- Centralize all strings, copy, and metadata as type-safe TypeScript objects.
-- Ensure structural blueprints from Phase 1 are integrated with content sources.
+## Phase 3: Animated Visuals & Image Registry
+- Create animated visual components prioritizing elegance and smooth, fade-led transitions.
+- Establish a type-safe image registry (`lib/images.ts`) using high-resolution, context-appropriate Unsplash assets.
+- Integrate animations with CSS tokens ensuring motion obeys `prefers-reduced-motion` settings.
