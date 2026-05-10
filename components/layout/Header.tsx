@@ -19,7 +19,7 @@ export function Header() {
   const pathname = usePathname();
 
   React.useEffect(() => {
-    setMounted(true);
+    queueMicrotask(() => setMounted(true));
   }, []);
 
   React.useEffect(() => {
