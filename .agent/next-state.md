@@ -1,16 +1,17 @@
 # Next State: Armaan Driving School
 
-**Target Phase:** 3/8 — Animated Visuals & Image Registry
+**Target Phase:** 4/8 — Core Layout & Home Page Implementation
 
 ## Goal
-To establish the kinetic identity of the site and finalize asset sourcing before building full pages. This involves creating reusable, accessible Framer Motion wrappers and defining a strongly typed image registry that maps to the layout blueprints.
+To build the global shell (Header, Footer) and construct the primary landing page (`app/page.tsx`) by integrating the content objects (`content/home.ts`), visual components (`components/visuals/`), and the image registry (`lib/images.ts`) according to the layout blueprint (`.agent/layout-home.md`).
 
 ## Planned Actions
-1.  **Image Registry:** Create `lib/images.ts` mapping specific Unsplash URLs to the layout blocks defined in Phase 1 (e.g., `hero.background`, `about.team`). Configure `next.config.mjs` to allow Unsplash domains.
-2.  **Animation Skill Review:** Review `.agent/skills/animate/SKILL.md` to ensure animations are calm and purposeful, fitting the driving school brand.
-3.  **Visual Components:** Create a `components/visuals/` directory.
-4.  **Base Animations:** Build core Framer Motion wrappers (e.g., `FadeIn`, `SlideUp`, `StaggeredList`). Ensure strict adherence to `prefers-reduced-motion`.
+1.  **Global Shell:** Implement the global Navigation (Header) and Footer components.
+2.  **Home Page Assembly:** Build out the 20 distinct section blocks defined in `.agent/layout-home.md`.
+3.  **Component Integration:** Wire up the `AnimatedGradientMesh` for the hero, `LogoMarquee` for the trust bar, etc.
+4.  **Content Hydration:** Pass data from `content/home.ts` into the respective UI sections.
 
 ## Constraints & Considerations
-*   **No Full Pages Yet:** Do not build the `app/page.tsx` or other route pages yet. Focus purely on reusable visual primitives and asset mapping.
-*   **Performance:** Images must rely on remote URLs (no local downloads). Animations must use `useRef` for intersection observers to avoid ESLint/hydration issues with state.
+*   **SSR Awareness:** Ensure Framer Motion components and client-side logic don't cause hydration errors (e.g., using `use client` where necessary, checking `mounted` state if needed).
+*   **Accessibility:** Maintain semantic HTML and ensure contrast ratios defined in the design system are met. Ensure `prefers-reduced-motion` is respected across all new UI assemblies.
+*   **No other pages:** Focus *only* on the Home page and global layout shell. Other pages (About, Features, etc.) belong in subsequent phases.

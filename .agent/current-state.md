@@ -1,25 +1,27 @@
 # Current State: Armaan Driving School
 
-**Date:** Phase 2 Completion
-**Phase:** 2/8 — Content Files Completed
+**Date:** Phase 3 Completion
+**Phase:** 3/8 — Animated Visuals & Image Registry Completed
 
 ## Status Summary
-We have successfully decoupled all text copy from the UI by creating a centralized `content/` directory. All strings, including SEO metadata, headlines, and body copy, are structured in TypeScript files corresponding to their respective pages. The tone reflects the "Calm, Methodical, Safe" brand identity and government-registered status. No UI code has been written yet.
+We have successfully established the kinetic and visual asset foundations. Reusable, accessible Framer Motion components have been built and a centralized image registry has been established using remote Unsplash URLs. The project is now fully prepped with design tokens, layout docs, content, and visual primitives. No full page UI components (e.g., page.tsx) have been constructed yet.
 
 ## Completed Artifacts
-*   **Content Directory (`content/`):**
-    *   `content/home.ts`
-    *   `content/about.ts`
-    *   `content/features.ts`
-    *   `content/pricing.ts`
-    *   `content/blog.ts`
-    *   `content/faq.ts`
-    *   `content/contact.ts`
-    *   `content/careers.ts`
-    *   `content/terms.ts`
-    *   `content/privacy.ts`
+*   **Visual Components (`components/visuals/`):**
+    *   `AnimatedGradientMesh` (Hero backdrop)
+    *   `LogoMarquee` (Trust bar)
+    *   `AnimatedDrivingLine` (Path-drawing SVG)
+    *   `DotMatrixGrid` (Texture layer)
+    *   `FloatingBlobs` (Background depth)
+    *   `CodeWindowTyping` (Testimonial/stat display)
+    *   `MicroIconSet` (Training modules)
+    *   `CTAGlow` (Interactive buttons)
+    *   `RevealText` (Text animation wrapper)
+*   **Image Registry:** `lib/images.ts` maps all necessary photography to specific layout slots.
+*   **Config:** `next.config.mjs` updated to allow Unsplash remote patterns.
+*   **Content Directory:** `content/` (Completed in Phase 2)
 *   **Design System:** `.agent/design-system.md` (Completed in Phase 1)
 *   **Layout Blueprints:** `.agent/layout-*.md` (Completed in Phase 1)
 
 ## Next Immediate Steps
-Transitioning to Phase 3: Animated Visuals & Image Registry. This phase will unlock UI development by creating the base Framer Motion components (using `.agent/skills/animate` principles) and establishing a strict image registry (`lib/images.ts`) mapping Unsplash URLs to specific layout slots.
+Transitioning to Phase 4: Core Layout & Home Page Implementation. We will now assemble the global navigation, footer, and the full Home page (`app/page.tsx`) by importing the established content objects, visual components, and image registry, pulling everything together into the final UI.
