@@ -1,20 +1,13 @@
 # Current State
 
-**Phase**: 3/8 — Animated Visuals & Image Registry (COMPLETED)
+**Phase**: 4/8 — Core Layout & Navigation Implementation (COMPLETED)
 
 ## What was just completed:
-- Configured Next.js to allow Unsplash remote images.
-- Created `lib/images.ts` with a curated registry of specific imagery needed for the A-One brand.
-- Implemented 8 reusable, animated visual components in `components/visuals/`:
-  - `AnimatedGradientMesh`
-  - `AnimatedCakeIllustration`
-  - `CodeWindowTyping`
-  - `CTAGlow`
-  - `DotMatrixGrid`
-  - `FloatingBlobs`
-  - `LogoMarquee`
-  - `MicroIconSet`
-- Ensured all animations respect accessibility (prefers-reduced-motion) and utilize OKLCH design variables.
+- Created the global `Header`, `MobileNav`, and `Footer` components.
+- Integrated the `ThemeToggle` for seamless switching between light and dark modes ("Morning Display" / "Evening Fitting").
+- Refactored `app/layout.tsx` to wrap pages in the global header and footer shell.
+- Established a `content/global.ts` file to centralize navigation and footer link structures.
+- Implemented dynamic photographer credit attribution in the footer, reading directly from `lib/images.ts`.
 
 ## Next immediate steps:
-- Move on to Phase 4: Core Layout & Navigation Implementation.
+- Move on to Phase 5: Home Page Composition.
