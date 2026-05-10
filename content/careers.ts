@@ -1,4 +1,5 @@
 export const careersContent = {
+  applyText: "Apply Now",
   meta: {
     title: "Careers | Royal Flower Decoration",
     description: "Join the artisan team at Royal Flower Decoration. We are always looking for passionate floral designers and event crew in Patiala.",

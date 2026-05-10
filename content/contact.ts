@@ -1,4 +1,8 @@
 export const contactContent = {
+  statusText: {
+    received: "Message Received",
+    sendAnother: "Send another message",
+  },
   meta: {
     title: "Contact Us | Royal Flower Decoration",
     description: "Get in touch with Royal Flower Decoration in Patiala. Book a consultation for your Anand Karaj or wedding decor.",
