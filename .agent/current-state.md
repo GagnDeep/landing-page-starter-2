@@ -1,26 +1,17 @@
 # Current State: Blinking Eye Events
 
-**Project Phase:** Phase 1 (Complete) - Design System & Layout Documentation
+**Project Phase:** Phase 2 (Complete) - Content Files
 
 ## What is Currently Built
-- **Design System:** `.agent/design-system.md` established. Defines elegant, high-contrast serif/sans-serif typography, deep/warm OKLCH color palettes for both light ("Daylight Celebration") and dark ("The Evening Fitting") modes. Spacing, radius, shadow, and motion principles have been set.
-- **Layout Architecture:** 10 core pages have layout blueprints defined with 20+ sections each in the `.agent/` directory:
-  - `layout-home.md`
-  - `layout-about.md`
-  - `layout-features.md`
-  - `layout-pricing.md`
-  - `layout-blog.md`
-  - `layout-faq.md`
-  - `layout-contact.md`
-  - `layout-careers.md`
-  - `layout-terms.md`
-  - `layout-privacy.md`
-- **Styling Configuration:** `app/globals.css` is updated with the new foundational CSS variables using OKLCH and an adjusted base border-radius.
+- **Design System & Layout:** Phase 1 complete. `globals.css` configured with OKLCH tokens. Layout blueprints available in `.agent/layout-*.md`.
+- **Content Architecture:** A `content/` directory has been created containing 10 strongly-typed TypeScript files (`home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`).
+- **Content Voice:** The data perfectly reflects the "warm-planner" and "full-service" premium boutique aesthetic, serving as the single source of truth for all site strings, including SEO metadata.
 
 ## Technical Details
 - Next.js (App Router) is scaffolded.
 - Tailwind CSS v4 and shadcn/ui are initialized.
+- Content is fully separated from UI logic.
 
 ## Known Constraints
-- No actual UI code (TSX/components) or content strings have been created yet.
-- Local image hosting is forbidden; remote Unsplash assets must be used.
+- No actual UI code (TSX/components) has been created yet.
+- Local image hosting is forbidden; Unsplash URLs are included in the mock data, but a dedicated image registry is needed in the next phase.

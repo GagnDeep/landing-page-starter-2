@@ -1,17 +1,16 @@
 # Next State: Blinking Eye Events
 
-**Upcoming Phase:** Phase 2 - Content Files
+**Upcoming Phase:** Phase 3 - Animated Visuals & Image Registry
 
 ## Immediate Objectives
-- Create centralized, type-safe content structures within a `content/` directory.
-- Define TypeScript interfaces or types for page content (Home, About, Services, etc.).
-- Populate content objects with copy aligned with the "Blinking Eye Events" premium, warm, and professional identity.
-- Ensure all copy mapping perfectly aligns with the section architecture defined in Phase 1's `layout-[page].md` files.
+- Create a centralized, type-safe image registry in `lib/images.ts` using high-quality remote Unsplash assets that align with the brand.
+- Develop SSR-safe, highly accessible visual and animated components (e.g., Parallax images, smooth fade-ins, or subtle background video placeholders) that respect `prefers-reduced-motion`.
+- Update `next.config.mjs` to allow remote images from `images.unsplash.com`.
 
 ## Technical Requirements for Next Phase
-- Content must be maintained as type-safe TypeScript objects.
-- Do not hardcode strings in UI components in future phases; they must pull from this centralized source of truth.
-- Do not use placeholder text (lorem ipsum). All copy must be drafted and conceptually aligned with a premium event planning firm.
+- Ensure all animations use CSS variables for themeing and follow the principles defined in `design-system.md`.
+- No local images in the `public/` directory for content (only UI icons/logos if absolutely necessary, but prefer remote or inline SVGs).
+- Components must be robust and ready to be imported into the page layouts in Phase 4.
 
 ## Blockers / Considerations
-- We need to confirm if we're using a specific CMS pattern locally (like simple exported constants) or preparing for a headless CMS. Currently, the assumption is centralized TS files.
+- We must ensure the `next.config.mjs` is correctly configured *before* building any `next/image` components to prevent build errors.
