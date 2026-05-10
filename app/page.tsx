@@ -1,19 +1,31 @@
-import { Button } from "@/components/ui/button"
+import { HeroSection } from "@/components/home/HeroSection";
+import { TrustBanner } from "@/components/home/TrustBanner";
+import { IntroSection } from "@/components/home/IntroSection";
+import { SignatureDishes } from "@/components/home/SignatureDishes";
+import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { GenerousPromise } from "@/components/home/GenerousPromise";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { GalleryTeaser } from "@/components/home/GalleryTeaser";
+import { ChefPhilosophy } from "@/components/home/ChefPhilosophy";
+import { FaqTeaser } from "@/components/home/FaqTeaser";
+import { FinalCta } from "@/components/home/FinalCta";
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <HeroSection />
+      <TrustBanner />
+      <IntroSection />
+      <SignatureDishes />
+      <ServicesOverview />
+      <GenerousPromise />
+      <TestimonialsSection />
+      <GalleryTeaser />
+      <WhyChooseUs />
+      <ChefPhilosophy />
+      <FaqTeaser />
+      <FinalCta />
     </div>
-  )
+  );
 }
