@@ -1,9 +1,9 @@
 # Next State
 
-**Phase 3: Animated Visuals & Image Registry**
+**Phase 4: Core Layout and Navigation Shell**
 
 Handoff:
-Phase 3 is now ready to consume the content files generated in Phase 2 for the construction of the visual library.
-- Create central image registry mapping to specific page slots in `lib/images.ts`.
-- Build Framer Motion animated components in `components/visuals/`.
-- Respect `prefers-reduced-motion` in all animations.
+Phase 4 can now begin consuming the visual library, image registry, and design system variables to construct the global layout shell.
+- Create the global `Header` (with mobile navigation) and `Footer`.
+- Integrate them into `app/layout.tsx`.
+- Ensure navigation consumes links from `content/home.ts` (or similar).
