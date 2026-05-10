@@ -1,3 +1,3 @@
 # Next State
 
-- **Phase 6:** Pricing, FAQ, and Blog Infrastructure (Implement these secondary pages using dynamic content and prepare blog architecture).
+- **Phase 7:** Contact, Careers, and Legal Pages (Build out the final static and interactive form layouts).
