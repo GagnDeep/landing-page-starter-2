@@ -59,6 +59,7 @@ export const homeContent = {
     ],
   },
   theProcessSteps: {
+    heading: "The Architecture of a Celebration",
     steps: [
       { stepNumber: "01", title: "Discovery", description: "An in-depth consultation to understand your vision, aesthetic, and logistical requirements." },
       { stepNumber: "02", title: "Design & Sourcing", description: "Curating the finest venues, vendors, and aesthetic elements to craft your bespoke blueprint." },
@@ -93,9 +94,16 @@ export const homeContent = {
     ],
   },
   aestheticGalleryMasonry: {
+    heading: "Curated Portfolio",
+    ctaLabel: "View Gallery",
+    ctaHref: "/portfolio",
     images: ["Table Settings", "Floral Arrangements", "Bespoke Lighting"], // Placeholders for image data
   },
   faqPreviewAccordion: {
+    heading: "Frequently Asked",
+    subheading: "Clarity before the commitment.",
+    ctaLabel: "View All Inquiries",
+    ctaHref: "/faq",
     faqs: [
       { question: "Do you plan weddings internationally?", answer: "Yes, we specialize in destination weddings globally, managing all logistics, vendor relations, and legalities required for international events." },
       { question: "How do you handle the design process?", answer: "Our design process is deeply collaborative. We start with a comprehensive discovery phase, followed by mood boards, sketches, and 3D renderings to ensure your vision is perfectly translated." },
@@ -127,5 +135,6 @@ export const homeContent = {
       legal: [{ label: "Privacy Policy", href: "/privacy" }, { label: "Terms of Service", href: "/terms" }],
     },
     copyright: "© 2024 A2Zee Events. All rights reserved.",
+    curatedBy: "Curated by A2Zee Events",
   },
 };

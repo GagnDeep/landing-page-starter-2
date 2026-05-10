@@ -1,11 +1,11 @@
 # Current State
 
-Phase 3 is complete.
-The visual and asset foundations are now fully established.
+Phase 4 is complete.
+The core layout shell and global Home page are now fully functional.
 
-- A centralized image registry (`lib/images.ts`) provides type-safe access to curated Unsplash photography.
-- `next.config.mjs` is configured to allow `images.unsplash.com`.
-- A library of 8 reusable, animated visual components exists in `components/visuals/`. These components are SSR-safe, use CSS variables for seamless light/dark mode transitions, and respect `prefers-reduced-motion`.
-- Custom animation keyframes have been integrated into `globals.css` via the `@theme inline` directive.
+- `app/layout.tsx` is implemented with proper typography (Playfair Display and Montserrat) and global theme providers.
+- `components/layout/site-header.tsx` and `components/layout/site-footer.tsx` provide persistent navigation and structural framing.
+- `app/page.tsx` implements the comprehensive 20-section home layout using dynamic data from `content/home.ts` and visual assets from `lib/images.ts`.
+- All Phase 3 animated visual components are successfully integrated into the Home page.
 
-The codebase is now fully equipped to begin UI assembly and routing in Phase 4.
+The project is now ready for Phase 5: Secondary Page Implementations.
