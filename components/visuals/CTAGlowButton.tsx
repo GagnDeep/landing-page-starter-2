@@ -14,6 +14,7 @@ interface CTAGlowButtonProps extends OmitFramerProps<React.HTMLAttributes<HTMLEl
   className?: string;
   children: React.ReactNode;
   as?: ValidTags;
+  type?: "button" | "submit" | "reset";
 }
 
 export const CTAGlowButton = React.forwardRef<HTMLElement, CTAGlowButtonProps>(
