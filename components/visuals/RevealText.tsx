@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type ValidTags = "div" | "span" | "section" | "header" | "main";
+type ValidTags = "div" | "span" | "section" | "header" | "main" | "h1" | "h2" | "h3" | "p";
 
 interface RevealTextProps extends React.HTMLAttributes<HTMLElement> {
   as?: ValidTags;
@@ -22,7 +22,7 @@ export function RevealText({
   ...props
 }: RevealTextProps) {
   const prefersReducedMotion = useReducedMotion();
-  const MotionComponent = motion[as] as React.ElementType;
+  const MotionComponent = motion[as as keyof typeof motion] as React.ElementType;
 
   const variants = {
     hidden: {

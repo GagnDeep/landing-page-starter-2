@@ -1,4 +1,6 @@
 import { Geist_Mono, Montserrat, Cormorant_Garamond } from "next/font/google"
+import { Header } from "@/components/layout/Header"
+import { Footer } from "@/components/layout/Footer"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -31,8 +33,14 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, montserrat.variable, cormorantGaramond.variable, "font-sans")}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="min-h-screen flex flex-col">
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -1,18 +1,19 @@
 # Current Project State
 
 ## Status
-- **Phase:** 3/8 (Animated Visuals & Image Registry)
+- **Phase:** 4/8 (Core Layout Shell & Home Page)
 - **Status:** Complete.
 
 ## Recent Achievements
-- Created the centralized image registry in `lib/images.ts` mapping Unsplash URLs to specific layout slots.
-- Updated `next.config.mjs` to allow `images.unsplash.com`.
-- Installed `framer-motion`.
-- Developed a comprehensive suite of reusable, prop-driven animated components in `components/visuals/` (`RevealText`, `FadeIn`, `ParallaxImage`, `FloatingBlobs`, `LogoMarquee`, `StaggerGroup`, `ElegantTyping`, `DotMatrixGrid`, `ScaleImage`).
-- Ensured all animations gracefully degrade or disable entirely when `prefers-reduced-motion` is active.
+- Created the global `Header` and `Footer` components, making them responsive and wired up with dynamic navigation links from `content/global.ts`.
+- Integrated `Header` and `Footer` into `app/layout.tsx`.
+- Built the `app/page.tsx` (Home Page) to exact specifications from `.agent/layout-home.md`, utilizing 20 distinct section structures.
+- Plumbed all hardcoded UI text to reference the type-safe `content/home.ts`.
+- Brought the Home Page to life with Phase 3 animated visual components (`RevealText`, `FadeIn`, `ParallaxImage`, `StaggerGroup`, `ElegantTyping`, `FloatingBlobs`, `LogoMarquee`, `ScaleImage`).
+- Bound the Unsplash image registry (`lib/images.ts`) to visual components using Next.js `Image`.
 
 ## Current Blockers / Constraints
-- None. Phase 3 is complete.
+- None. Phase 4 is complete.
 
 ## Next Immediate Actions
-- Move to Phase 4: Core Layout Shell & Home Page.
+- Move to Phase 5: About, Features, and Pricing Pages.

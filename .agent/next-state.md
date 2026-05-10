@@ -1,15 +1,14 @@
 # Next State Intent
 
 ## Target Phase
-Phase 4 — Core Layout Shell & Home Page
+Phase 5 — About, Features, and Pricing Pages
 
-## Objectives for Phase 4
-- Construct the core global layout (`app/layout.tsx` refinements if necessary, global Header, and global Footer).
-- Assemble the Home Page (`app/page.tsx`) by strictly following `.agent/layout-home.md`.
-- Wire the content from `content/home.ts` into the Home Page components.
-- Utilize the animated components (`RevealText`, `StaggerGroup`, `ParallaxImage`, etc.) from `components/visuals/` to bring the Home Page to life.
-- Utilize the `lib/images.ts` registry for all imagery.
-- Ensure the layout is fully responsive and adheres to the design system (typography scale, OKLCH colors, spacing).
+## Objectives for Phase 5
+- Develop `app/about/page.tsx`, `app/features/page.tsx`, and `app/pricing/page.tsx`.
+- Follow the exact layout intents specified in `.agent/layout-about.md`, `.agent/layout-features.md`, and `.agent/layout-pricing.md`.
+- Wire content from `content/about.ts`, `content/features.ts`, and `content/pricing.ts`.
+- Continue utilizing the animated components from `components/visuals/` to maintain the high-end luxury feel.
+- Ensure responsive design, accessibility, and fast load times.
 
 ## Dependencies / Requirements Before Starting
 - Rely on Phase 1 layout intents, Phase 2 content strings, and Phase 3 visual components.
