@@ -1,20 +1,24 @@
 # Next State: Armaan Driving School
 
-**Target Phase:** 7/8 — Contact, Careers, and Legal Pages
+**Target Phase:** 8/8 — Final Polish, SEO, and Audit
 
 ## Goal
-To complete the site map by implementing the final operational and legal pages: Contact, Careers, Terms & Conditions, and Privacy Policy.
+To perform a comprehensive site-wide audit, optimizing performance, accessibility, and search engine visibility to ensure the project is fully production-ready.
 
 ## Planned Actions
-1.  **Contact Page (`app/contact/page.tsx`):**
-    *   Build out the contact grid (Phone, Email, Map).
-    *   Implement the contact request form UI based on `.agent/layout-contact.md` and `content/contact.ts`.
-2.  **Careers Page (`app/careers/page.tsx`):**
-    *   Construct the recruitment layout detailing core values, requirements, and current openings based on `.agent/layout-careers.md` and `content/careers.ts`.
-3.  **Legal Pages (`app/terms/page.tsx` and `app/privacy/page.tsx`):**
-    *   Create clean, text-heavy layouts utilizing `@tailwindcss/typography` (`prose`) to render the policy arrays defined in `content/terms.ts` and `content/privacy.ts`.
+1.  **SEO & Metadata:**
+    *   Review all `metadata` exports across `app/**/page.tsx`.
+    *   Add Open Graph (OG) tags, Twitter cards, and structured schema markup (LocalBusiness for Armaan Driving School).
+    *   Ensure canonical URLs are set.
+2.  **Accessibility (a11y) Audit:**
+    *   Verify ARIA labels on interactive elements (buttons, accordions, forms).
+    *   Check color contrast ratios against the OKLCH tokens defined in the design system.
+    *   Ensure `prefers-reduced-motion` is universally respected by Framer Motion wrappers.
+3.  **Performance & Polish:**
+    *   Review `next/image` usage for proper sizing, `priority` loading on LCP images (heroes), and appropriate lazy loading.
+    *   Audit Framer Motion variants to ensure they aren't causing layout shifts or excessive repaints.
+    *   Final cross-page visual consistency check (spacing rhythm, typography scales).
 
 ## Constraints & Considerations
-*   **Data Binding:** Maintain the strict rule of zero hardcoded strings in the UI components; all copy must flow from the `content/` directory.
-*   **Form Implementation:** The forms on the Contact and Careers pages should be visually complete (using Shadcn UI inputs) but do not require backend submission logic in this frontend phase. Ensure they are SSR safe.
-*   **Typography Reuse:** Leverage the same `prose` setup used in the blog for the legal pages to maintain typographical consistency.
+*   **No New Features:** This phase is strictly for refinement and optimization. Do not introduce new sections, pages, or major UI shifts unless they fix a critical accessibility or layout bug.
+*   **Performance Budget:** Ensure the site maintains high Lighthouse scores, particularly regarding LCP (Largest Contentful Paint) and CLS (Cumulative Layout Shift).
