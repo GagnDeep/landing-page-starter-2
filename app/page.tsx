@@ -279,7 +279,12 @@ export default function HomePage() {
 
       {/* 11. Final CTA */}
       <section className="py-32 bg-primary relative z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557925923-33b2512ea2aa?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay" />
+        <Image
+          src={SITE_IMAGES.hero.bgPattern}
+          alt="Decorative Background"
+          fill
+          className="object-cover opacity-10 mix-blend-overlay"
+        />
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <div className="max-w-3xl mx-auto flex flex-col gap-8 items-center">
             <h2 className="text-5xl md:text-6xl font-display font-bold text-primary-foreground drop-shadow-md">

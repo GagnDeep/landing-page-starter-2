@@ -2,6 +2,10 @@ export type SiteImagesType = {
   hero: {
     main: string;
     about: string;
+    bgPattern: string;
+  };
+  contact: {
+    mapPlaceholder: string;
   };
   gallery: {
     superhero: string;
@@ -30,6 +34,10 @@ export const SITE_IMAGES: SiteImagesType = {
     // Beautiful, high-quality cake hero images
     main: "https://images.unsplash.com/photo-1557925923-33b2512ea2aa?q=80&w=2000&auto=format&fit=crop",
     about: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2000&auto=format&fit=crop",
+    bgPattern: "https://images.unsplash.com/photo-1557925923-33b2512ea2aa?q=80&w=2000&auto=format&fit=crop",
+  },
+  contact: {
+    mapPlaceholder: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop",
   },
   gallery: {
     // Themed cakes

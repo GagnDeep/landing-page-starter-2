@@ -21,9 +21,13 @@ export const contactContent = {
     description: "Fill out the form below and our head baker will be in touch shortly.",
     fields: ["Name", "Phone Number", "Event Date", "Message / Theme Idea"],
     cta: "Send Message",
+    successTitle: "Message Sent!",
+    successMessage: "Thank you for reaching out. Our head baker will be in touch shortly.",
+    resetCta: "Send another message"
   },
   map: {
     title: "Our Boutique Location",
     description: "Drop by our bakery near 22 No Phatak to discuss your design in person and sample our flavors.",
+    cta: "View on Google Maps"
   }
 };

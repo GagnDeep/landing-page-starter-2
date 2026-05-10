@@ -46,5 +46,10 @@ export const blogContent = {
     description: "Join our local Patiala newsletter for exclusive flavor drops, early access to holiday pre-orders, and party planning tips.",
     placeholder: "Enter your email",
     cta: "Subscribe",
+    successMessage: "Thanks for subscribing! Check your inbox soon."
+  },
+  ui: {
+    readFullArticle: "Read Full Article",
+    backToBlog: "Back to Blog"
   }
 };

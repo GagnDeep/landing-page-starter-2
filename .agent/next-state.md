@@ -1,3 +1,3 @@
 # Next State
 
-Phase 7 (Blog, FAQ, and Contact Pages) is the next scheduled layout implementation.
+Phase 8 (Careers, Legal, and Final Polish) is the final remaining step.
