@@ -1,6 +1,5 @@
 # Next State
 
-- Proceed to Phase 2: Content Files.
-- The next agent should begin drafting content files based on the established brand voice ("Royal Punjabi" elegance, warmth, opulence, and professional precision).
-- Create structured content files (e.g., in `content/` directory) containing text, copy, and strings for all the sections documented in the Phase 1 layout blueprints.
-- Do not implement UI code yet. Focus solely on producing rich, descriptive, and engaging text content.
+- Proceed to Phase 3: Animated Visuals & Image Registry.
+- The content foundation is laid out. The next agent should establish the image registry (`lib/images.ts`) mapping the Phase 2 content and Phase 1 layouts to direct Unsplash URLs.
+- Following the image registry, set up Framer Motion visual components in `components/visuals/` complying with the subtle and luxurious motion principles from `.agent/design-system.md` while strictly ensuring accessibility (`useReducedMotion`).
