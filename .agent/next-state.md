@@ -1,16 +1,17 @@
 # Next State: Blinking Eye Events
 
-**Upcoming Phase:** Phase 3 - Animated Visuals & Image Registry
+**Upcoming Phase:** Phase 4 - Core Layout & Home Page Implementation
 
 ## Immediate Objectives
-- Create a centralized, type-safe image registry in `lib/images.ts` using high-quality remote Unsplash assets that align with the brand.
-- Develop SSR-safe, highly accessible visual and animated components (e.g., Parallax images, smooth fade-ins, or subtle background video placeholders) that respect `prefers-reduced-motion`.
-- Update `next.config.mjs` to allow remote images from `images.unsplash.com`.
+- Create the global layout wrapper (`app/layout.tsx`) including the Main Navigation (transparent to solid on scroll) and Global Footer.
+- Assemble the Home Page (`app/page.tsx`) using the data from `content/home.ts` and the visual components from `components/visuals/`.
+- Translate the narrative structure defined in `.agent/layout-home.md` into responsive, semantic React components.
+- Ensure light/dark mode toggling works flawlessly across the new layout using `next-themes`.
 
 ## Technical Requirements for Next Phase
-- Ensure all animations use CSS variables for themeing and follow the principles defined in `design-system.md`.
-- No local images in the `public/` directory for content (only UI icons/logos if absolutely necessary, but prefer remote or inline SVGs).
-- Components must be robust and ready to be imported into the page layouts in Phase 4.
+- Stick to React Server Components where possible. Use `"use client"` only for interactive elements (like the nav toggle or specific visual components that need hydration context).
+- Ensure image rendering uses `next/image` referencing the `lib/images.ts` registry.
+- Do not pass non-serializable props (like functions) to Client Components from Server Components.
 
 ## Blockers / Considerations
-- We must ensure the `next.config.mjs` is correctly configured *before* building any `next/image` components to prevent build errors.
+- Verify that `shadcn/ui` components needed for the navigation or footer (like buttons or sheets for mobile nav) are installed before attempting to use them.
