@@ -1,27 +1,22 @@
 # Current State: Armaan Driving School
 
-**Date:** Phase 3 Completion
-**Phase:** 3/8 — Animated Visuals & Image Registry Completed
+**Date:** Phase 4 Completion
+**Phase:** 4/8 — Core Layout & Home Page Implementation Completed
 
 ## Status Summary
-We have successfully established the kinetic and visual asset foundations. Reusable, accessible Framer Motion components have been built and a centralized image registry has been established using remote Unsplash URLs. The project is now fully prepped with design tokens, layout docs, content, and visual primitives. No full page UI components (e.g., page.tsx) have been constructed yet.
+We have successfully built the global shell and the primary landing page. The `RootLayout` integrates the `Header` and `Footer`, while the `Home` page (`app/page.tsx`) assembles all major sections using the animated components, remote images, and structured content. The site is responsive, respects user preferences (e.g., reduced motion), and adheres strictly to the "Calm, Methodical, Safe" brand aesthetic.
 
 ## Completed Artifacts
-*   **Visual Components (`components/visuals/`):**
-    *   `AnimatedGradientMesh` (Hero backdrop)
-    *   `LogoMarquee` (Trust bar)
-    *   `AnimatedDrivingLine` (Path-drawing SVG)
-    *   `DotMatrixGrid` (Texture layer)
-    *   `FloatingBlobs` (Background depth)
-    *   `CodeWindowTyping` (Testimonial/stat display)
-    *   `MicroIconSet` (Training modules)
-    *   `CTAGlow` (Interactive buttons)
-    *   `RevealText` (Text animation wrapper)
-*   **Image Registry:** `lib/images.ts` maps all necessary photography to specific layout slots.
-*   **Config:** `next.config.mjs` updated to allow Unsplash remote patterns.
+*   **Global Shell:**
+    *   `app/layout.tsx` updated with fonts (Inter, Merriweather) and layout structure.
+    *   `components/layout/Header.tsx`
+    *   `components/layout/Footer.tsx`
+*   **Pages:**
+    *   `app/page.tsx` (Home Page)
+*   **Visual Components (`components/visuals/`):** (Completed in Phase 3)
+*   **Image Registry:** `lib/images.ts` (Completed in Phase 3)
 *   **Content Directory:** `content/` (Completed in Phase 2)
 *   **Design System:** `.agent/design-system.md` (Completed in Phase 1)
-*   **Layout Blueprints:** `.agent/layout-*.md` (Completed in Phase 1)
 
 ## Next Immediate Steps
-Transitioning to Phase 4: Core Layout & Home Page Implementation. We will now assemble the global navigation, footer, and the full Home page (`app/page.tsx`) by importing the established content objects, visual components, and image registry, pulling everything together into the final UI.
+Transitioning to Phase 5: Features, Pricing, and About Pages. We will build out the secondary pages using the existing content objects and visual components, ensuring a consistent user journey across the core informational routes.
