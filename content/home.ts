@@ -72,6 +72,48 @@ export const homeContent = {
       }
     ]
   },
+  team: {
+    title: "Masters of the Craft",
+    roles: ["Executive Chef", "Head Chef", "Pastry Chef"]
+  },
+  partnerships: {
+    title: "Trusted by Premium Venues",
+    venues: [
+      "The Heritage Grand",
+      "Patiala Royal Club",
+      "Oasis Gardens",
+      "The Imperial",
+      "Crown Plaza",
+      "Lakeview Resort"
+    ]
+  },
+  gallery: {
+    alt: "Gallery image"
+  },
+  faq: {
+    title: "Frequently Asked",
+    preview: {
+      q: "How far in advance should we book?",
+      a: "We recommend 6 to 12 months for large events in Patiala."
+    },
+    link: "View all FAQs"
+  },
+  journal: {
+    title: "From the Journal",
+    preview: {
+      category: "Culinary Trends",
+      title: "5 Live Stations That Will Wow Your Guests"
+    },
+    link: "Read more articles"
+  },
+  awards: {
+    title: "Recognized For Excellence",
+    items: [
+      "Top Caterer Punjab 2023",
+      "Patiala Hospitality Award",
+      "5-Star Premium Service"
+    ]
+  },
   cta: {
     headline: "Ready to Plan Your Perfect Menu?",
     body: "Contact us today to discuss your upcoming event and secure your date.",

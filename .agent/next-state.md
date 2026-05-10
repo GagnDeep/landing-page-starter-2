@@ -1,6 +1,6 @@
-# Next: Phase 4 (Core Layout & Home Page)
+# Next: Phase 5 (About, Features, and Pricing Pages)
 
-1. Use Phase 1 layout documentation (`layout-home.md`) to build the core home page.
-2. Consume content from `content/home.ts`.
-3. Integrate visual components from `components/visuals/`.
+1. Use Phase 1 layout documentation for About, Features, and Pricing.
+2. Consume content from their respective `content/*.ts` files.
+3. Reuse the animated visual components established in Phase 3.
 4. Render imagery cleanly using `lib/images.ts`.
