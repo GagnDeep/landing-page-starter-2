@@ -1,3 +1,3 @@
 # Next State
 
-Phase 3 (Animated Visuals & Image Registry) will be the next logical step, bringing the UI to life with Framer Motion and configured imagery.
+Phase 4 (Core Layout Shell and Navigation) is the next step to assemble the layout foundation.
