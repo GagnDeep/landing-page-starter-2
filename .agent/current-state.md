@@ -1,11 +1,11 @@
 # Current State
 
-Phase 2 is complete.
-A centralized, type-safe content repository has been established.
+Phase 3 is complete.
+The visual and asset foundations are now fully established.
 
-- The `content/` directory contains complete, typed data objects for all site pages (Home, About, Features, Pricing, Blog, FAQ, Contact, Careers, Terms, Privacy).
-- All site copy is authored in the agreed "hospitality-pro" and "destination-luxury" tone.
-- SEO metadata is defined for all pages.
-- No hardcoded strings remain necessary for the codebase.
+- A centralized image registry (`lib/images.ts`) provides type-safe access to curated Unsplash photography.
+- `next.config.mjs` is configured to allow `images.unsplash.com`.
+- A library of 8 reusable, animated visual components exists in `components/visuals/`. These components are SSR-safe, use CSS variables for seamless light/dark mode transitions, and respect `prefers-reduced-motion`.
+- Custom animation keyframes have been integrated into `globals.css` via the `@theme inline` directive.
 
-The codebase is now ready for Phase 3: Animated Visuals & Image Registry.
+The codebase is now fully equipped to begin UI assembly and routing in Phase 4.

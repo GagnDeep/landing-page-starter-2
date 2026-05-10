@@ -1,9 +1,10 @@
-# Next State (Phase 3: Animated Visuals & Image Registry)
+# Next State (Phase 4: Core Layout Shell & Home Page)
 
-The next step is to transition into Phase 3, which involves setting up the visual assets and animated components.
+The next step is to transition into Phase 4, which involves building the functional UI shell and the Home page.
 
-1.  Establish a centralized image registry (`lib/images.ts`) utilizing high-quality Unsplash URLs to represent the "premium-craft" aesthetic.
-2.  Create reusable, SSR-safe animated components (e.g., slow fade-ins, parallax wrappers) that respect `prefers-reduced-motion`.
-3.  Ensure the visual assets align with the deep rich tones and "Evening Fitting" dark mode concepts defined in the design system.
+1.  Construct the root layout (`app/layout.tsx`), implementing the global site header (navigation) and footer using the content from `content/home.ts`.
+2.  Implement the Home page (`app/page.tsx`), assembling the sections defined in `.agent/layout-home.md`.
+3.  Consume data exclusively from `content/home.ts` and `lib/images.ts`.
+4.  Integrate the animated visual components created in Phase 3 where appropriate (e.g., `AnimatedHeroIllustration` in the hero, `LogoMarquee` for the trust bar).
 
-The content created in Phase 2 is now available to be integrated once the core visual utilities are ready.
+Ensure all components are responsive and adhere to the "hospitality-pro" aesthetic outlined in `.agent/design-system.md`.
