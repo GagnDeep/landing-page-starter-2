@@ -1,9 +1,9 @@
 # Next State
 
-**Phase**: 7/8 — Content-Rich Pages: Blog, FAQ, About
+**Phase**: 8/8 — Contact, Careers, Legal & Final Polish
 
 ## Goals for next phase:
-- Implement `/about`, `/faq`, and `/blog` routes based on their respective `.agent/layout-[page].md` blueprints.
-- Emphasize the Patiala roots and the story behind the 24/7 rescue mission in the About page.
-- Build accordion or interactive components for the FAQ.
-- Maintain the strict "zero hardcoded strings" rule using `content/about.ts`, `content/faq.ts`, and `content/blog.ts`.
+- Implement the functional routes for `/contact` and `/careers`.
+- Implement simple, readable text routes for `/terms` and `/privacy`.
+- Perform a final site-wide audit for accessibility (`prefers-reduced-motion`, `aria` attributes) and visual consistency (CSS variables mapping properly in light/dark modes).
+- Ensure all forms have proper client-side structure (even if mock submissions).
