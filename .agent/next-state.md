@@ -1,6 +1,7 @@
-# Next: Phase 6 (Blog and FAQ Pages)
+# Next: Phase 7 (Contact, Careers, and Legal Pages)
 
-1. Use Phase 1 layout documentation for Blog and FAQ.
-2. Consume content from `content/blog.ts` and `content/faq.ts`.
-3. Reuse the animated visual components established in Phase 3.
-4. Add any necessary components such as Accordions for the FAQ or grids for the Blog.
+1. Implement `app/contact/page.tsx` adhering to `.agent/layout-contact.md`.
+2. Implement `app/careers/page.tsx` adhering to `.agent/layout-careers.md`.
+3. Implement `app/terms/page.tsx` and `app/privacy/page.tsx` adhering to `.agent/layout-terms.md` and `.agent/layout-privacy.md`.
+4. Import `@tailwindcss/typography` or standard `prose` classes for the Legal pages if needed.
+5. All text MUST be sourced securely from the respective `content/*.ts` dictionary files.

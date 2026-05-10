@@ -37,6 +37,25 @@ export const blogContent = {
       category: "News"
     }
   ],
+  labels: {
+    readArticle: "Read Article",
+    loadMore: "Load More Articles",
+    backToJournal: "Back to Journal",
+    moreFromJournal: "More from the Journal"
+  },
+  articleContent: {
+    lead: "The landscape of event catering is constantly evolving. What was once a standard buffet line has transformed into a theatrical dining experience that engages all the senses. In this article, we explore how Sangam Caterer is leading this culinary revolution in Patiala.",
+    section1: {
+      title: "The Return to Authenticity",
+      p1: "While international cuisines remain incredibly popular for grand weddings, there is a powerful resurgence of hyper-local, authentic Punjabi dishes. Guests are looking for the comforting flavors of heritage recipes, elevated through masterful technique and premium ingredients.",
+      p2: "Our executive chefs spend weeks perfecting the spice blends that define our signature dishes, ensuring that every bite carries the legacy of Patiala's rich culinary history.",
+      quote: "Food is not just sustenance at a wedding; it is the ultimate expression of hospitality and joy. It must be unforgettable."
+    },
+    section2: {
+      title: "Interactive Dining Experiences",
+      p1: "The modern guest wants to participate in the culinary process. This is why bespoke live stations have become the centerpiece of our premium packages. From artisan flatbreads baked to order to molecular gastronomy dessert bars, the visual theater of food preparation is as important as the taste."
+    }
+  },
   newsletter: {
     headline: "Stay Inspired",
     subheadline: "Subscribe for seasonal menus, event inspiration, and company news.",
