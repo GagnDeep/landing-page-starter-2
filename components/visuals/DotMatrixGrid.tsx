@@ -2,7 +2,7 @@
 
 export const DotMatrixGrid = () => {
   return (
-    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <div
         className="absolute inset-0 opacity-[0.15] dark:opacity-[0.05]"
         style={{

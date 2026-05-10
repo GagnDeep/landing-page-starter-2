@@ -10,7 +10,7 @@ export const AnimatedGradientMesh = ({ className = "" }: AnimatedGradientMeshPro
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className={`absolute inset-0 z-0 overflow-hidden bg-background ${className}`}>
+    <div className={`absolute inset-0 z-0 overflow-hidden bg-background ${className}`} aria-hidden="true">
       <motion.div
         animate={
           prefersReducedMotion

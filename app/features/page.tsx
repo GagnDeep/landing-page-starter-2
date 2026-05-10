@@ -15,6 +15,10 @@ import { CheckmarkBadge01Icon, ArrowRight01Icon, MultiplicationSignIcon } from "
 export const metadata = {
   title: featuresContent.metadata.title,
   description: featuresContent.metadata.description,
+  openGraph: {
+    title: featuresContent.metadata.title,
+    description: featuresContent.metadata.description,
+  }
 };
 
 export default function FeaturesPage() {

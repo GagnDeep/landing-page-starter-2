@@ -15,6 +15,10 @@ import { Search01Icon, Call02Icon, Mail01Icon } from "@hugeicons/core-free-icons
 export const metadata = {
   title: faqContent.metadata.title,
   description: faqContent.metadata.description,
+  openGraph: {
+    title: faqContent.metadata.title,
+    description: faqContent.metadata.description,
+  }
 };
 
 export default function FAQPage() {

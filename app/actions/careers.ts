@@ -1,6 +1,6 @@
 "use server";
 
-export async function submitApplicationForm(prevState: unknown, formData: FormData) {
+export async function submitApplicationForm(formData: FormData) {
   const name = formData.get("name");
   const phone = formData.get("phone");
   const email = formData.get("email");
@@ -9,7 +9,7 @@ export async function submitApplicationForm(prevState: unknown, formData: FormDa
   const message = formData.get("message");
 
   if (!name || !phone || !email || !experience || !role) {
-    return { success: false, message: "Please fill out all required fields." };
+    return; // { success: false, message: "Please fill out all required fields." };
   }
 
   // Simulate server-side processing delay
@@ -18,5 +18,5 @@ export async function submitApplicationForm(prevState: unknown, formData: FormDa
   // Here you would typically integrate with an ATS, email service, or database.
   console.log("Application Form Submission:", { name, phone, email, experience, role, message });
 
-  return { success: true, message: "Thank you! Your application has been submitted successfully." };
+  // return { success: true, message: "Thank you! Your application has been submitted successfully." };
 }

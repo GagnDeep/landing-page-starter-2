@@ -22,7 +22,7 @@ export const AnimatedDrivingLine = ({ className = "" }: AnimatedDrivingLineProps
   };
 
   return (
-    <div className={`absolute inset-0 pointer-events-none z-0 hidden md:block ${className}`}>
+    <div className={`absolute inset-0 pointer-events-none z-0 hidden md:block ${className}`} aria-hidden="true">
       <svg
         className="w-full h-full text-accent/30"
         viewBox="0 0 1000 1000"

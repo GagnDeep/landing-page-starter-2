@@ -15,6 +15,32 @@ export function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const post = blogContent.mockPosts.find((p) => p.slug === resolvedParams.slug);
+
+  if (!post) {
+    return { title: "Post Not Found | Armaan Driving School" };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      authors: [post.author],
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    }
+  };
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const post = blogContent.mockPosts.find((p) => p.slug === resolvedParams.slug);

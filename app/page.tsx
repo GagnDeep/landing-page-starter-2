@@ -22,6 +22,14 @@ import {
 } from "@hugeicons/core-free-icons";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
+export const metadata = {
+  title: "Armaan Driving School | Govt. Registered in Sector 47, Chandigarh",
+  openGraph: {
+    title: "Armaan Driving School | Govt. Registered in Sector 47, Chandigarh",
+    description: "Build confidence behind the wheel with Chandigarh's premier, government-registered driving school. Specializing in calm, methodical instruction for beginners.",
+  },
+};
+
 export default function Home() {
   const {
     hero,

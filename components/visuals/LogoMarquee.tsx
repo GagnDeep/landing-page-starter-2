@@ -10,8 +10,9 @@ export const LogoMarquee = ({ items }: LogoMarqueeProps) => {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="flex overflow-hidden relative w-full bg-muted/50 py-8 border-y border-border">
+    <div className="flex overflow-hidden relative w-full bg-muted/50 py-8 border-y border-border" aria-label="Certifications and Accolades">
       <motion.div
+        aria-hidden="true"
         animate={
           prefersReducedMotion
             ? {}
@@ -34,9 +35,15 @@ export const LogoMarquee = ({ items }: LogoMarqueeProps) => {
           </div>
         ))}
       </motion.div>
+      {/* Screen reader only list */}
+      <ul className="sr-only">
+        {items.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
       {/* Gradient masks for smooth fade at edges */}
-      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" aria-hidden="true" />
     </div>
   );
 };

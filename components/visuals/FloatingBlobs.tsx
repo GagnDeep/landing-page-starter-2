@@ -27,7 +27,7 @@ export const FloatingBlobs = ({ className = "" }: FloatingBlobsProps) => {
   if (prefersReducedMotion) return null;
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none z-0 mix-blend-multiply dark:mix-blend-screen opacity-40 ${className}`}>
+    <div className={`absolute inset-0 overflow-hidden pointer-events-none z-0 mix-blend-multiply dark:mix-blend-screen opacity-40 ${className}`} aria-hidden="true">
       <motion.div
         variants={blobVariants}
         animate="animate1"

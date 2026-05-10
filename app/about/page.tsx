@@ -12,6 +12,10 @@ import { CodeWindowTyping } from "@/components/visuals/CodeWindowTyping";
 export const metadata = {
   title: aboutContent.metadata.title,
   description: aboutContent.metadata.description,
+  openGraph: {
+    title: aboutContent.metadata.title,
+    description: aboutContent.metadata.description,
+  }
 };
 
 export default function AboutPage() {

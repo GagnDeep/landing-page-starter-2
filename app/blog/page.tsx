@@ -15,6 +15,10 @@ import { ArrowRight01Icon, Calendar01Icon, UserIcon, Mail01Icon } from "@hugeico
 export const metadata = {
   title: blogContent.metadata.title,
   description: blogContent.metadata.description,
+  openGraph: {
+    title: blogContent.metadata.title,
+    description: blogContent.metadata.description,
+  }
 };
 
 export default function BlogIndexPage() {
@@ -80,6 +84,7 @@ export default function BlogIndexPage() {
                 src={images.mockPost1.src}
                 alt={images.mockPost1.alt}
                 fill
+                priority
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />

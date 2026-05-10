@@ -40,6 +40,7 @@ export default function CareersPage() {
             src={images.heroBackground.src}
             alt={images.heroBackground.alt}
             fill
+            priority
             className="object-cover"
           />
         </div>

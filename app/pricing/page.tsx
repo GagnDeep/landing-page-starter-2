@@ -14,6 +14,10 @@ import { cn } from "@/lib/utils";
 export const metadata = {
   title: pricingContent.metadata.title,
   description: pricingContent.metadata.description,
+  openGraph: {
+    title: pricingContent.metadata.title,
+    description: pricingContent.metadata.description,
+  }
 };
 
 export default function PricingPage() {

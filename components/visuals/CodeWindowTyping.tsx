@@ -35,9 +35,13 @@ export const CodeWindowTyping = ({ codeString, className = "" }: CodeWindowTypin
   }, [codeString, prefersReducedMotion]);
 
   return (
-    <div className={`rounded-xl overflow-hidden border border-border bg-card shadow-lg ${className}`}>
+    <div
+      className={`rounded-xl overflow-hidden border border-border bg-card shadow-lg ${className}`}
+      aria-label="Animated text window"
+      role="region"
+    >
       {/* Window Header */}
-      <div className="flex items-center px-4 py-3 bg-muted/50 border-b border-border">
+      <div className="flex items-center px-4 py-3 bg-muted/50 border-b border-border" aria-hidden="true">
         <div className="flex space-x-2">
           <div className="w-3 h-3 rounded-full bg-destructive/50" />
           <div className="w-3 h-3 rounded-full bg-accent/50" />
@@ -49,12 +53,15 @@ export const CodeWindowTyping = ({ codeString, className = "" }: CodeWindowTypin
         {displayedText}
         {!prefersReducedMotion && (
           <motion.span
+            aria-hidden="true"
             animate={{ opacity: [1, 0] }}
             transition={{ repeat: Infinity, duration: 0.8 }}
             className="inline-block w-2 h-4 bg-primary ml-1 align-middle"
           />
         )}
       </div>
+      {/* Screen reader only complete text fallback */}
+      <span className="sr-only">{codeString}</span>
     </div>
   );
 };
