@@ -12,9 +12,9 @@ export const homeContent = {
   siteHeader: {
     links: [
       { label: "About", href: "/about" },
-      { label: "Portfolio", href: "/portfolio" },
       { label: "Services", href: "/services" },
-      { label: "Contact", href: "/contact" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Portfolio", href: "/portfolio" },
     ],
   },
   heroCinematic: {

@@ -1,9 +1,8 @@
-# Next State (Phase 5: About, Features, and Pricing Pages)
+# Next State (Phase 6: Blog and FAQ Implementation)
 
-The next step is to transition into Phase 5, which focuses on building out the core service and identity pages.
+The next step is to transition into Phase 6, focusing on editorial content and detailed information architecture.
 
-1.  Implement `app/about/page.tsx` adhering to the `.agent/layout-about.md` blueprint and consuming `content/about.ts`.
-2.  Implement `app/services/page.tsx` (Features) adhering to the `.agent/layout-features.md` blueprint and consuming `content/features.ts`.
-3.  Implement `app/pricing/page.tsx` adhering to the `.agent/layout-pricing.md` blueprint and consuming `content/pricing.ts`.
+1.  Implement the Blog/Journal landing page (`app/blog/page.tsx`) adhering to the `.agent/layout-blog.md` blueprint. It should feature an editorial masonry or grid layout using `content/blog.ts` and `lib/images.ts`.
+2.  Implement the comprehensive FAQ page (`app/faq/page.tsx`) adhering to the `.agent/layout-faq.md` blueprint. It should utilize the shadcn Accordion component for a clean, accessible interaction model based on `content/faq.ts`.
 
-Ensure these pages maintain the "hospitality-pro" visual language established on the Home page, utilizing the typography and spacing rules defined in the design system. Re-use existing visual components where appropriate.
+Maintain the "hospitality-pro" visual language and ensure responsive design across all new viewports.
