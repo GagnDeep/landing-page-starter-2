@@ -85,13 +85,13 @@ export default function FeaturesPage() {
       </section>
 
       {/* 4. Live Interactive Stalls */}
-      <section className="py-32 bg-[#1A1A1A] text-white relative overflow-hidden">
+      <section className="py-32 bg-primary-foreground text-white relative overflow-hidden">
         <FloatingBlobs className="absolute inset-0 opacity-20 pointer-events-none" />
         <div className="container px-4 md:px-6 relative z-10 text-center max-w-4xl mx-auto space-y-12">
-          <div className="inline-flex items-center justify-center p-4 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] mb-4">
+          <div className="inline-flex items-center justify-center p-4 rounded-full bg-primary/10 text-primary mb-4">
             <Flame className="w-8 h-8" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-semibold text-[#D4AF37]">{liveStalls.heading}</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-semibold text-primary">{liveStalls.heading}</h2>
           <p className="text-xl text-gray-300 leading-relaxed">
             {liveStalls.description}
           </p>

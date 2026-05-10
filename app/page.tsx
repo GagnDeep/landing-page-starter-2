@@ -142,11 +142,11 @@ export default function Home() {
       </section>
 
       {/* 7. Live Cooking Spotlight */}
-      <section className="py-32 bg-[#1A1A1A] text-white relative overflow-hidden">
+      <section className="py-32 bg-primary-foreground text-white relative overflow-hidden">
         <FloatingBlobs className="absolute inset-0 opacity-20 pointer-events-none" />
         <div className="container px-4 md:px-6 relative z-10 flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-heading font-semibold text-[#D4AF37]">{liveCooking.heading}</h2>
+            <h2 className="text-4xl md:text-5xl font-heading font-semibold text-primary">{liveCooking.heading}</h2>
             <p className="text-xl text-gray-300 leading-relaxed max-w-xl">
               {liveCooking.description}
             </p>
@@ -410,13 +410,13 @@ export default function Home() {
       </section>
 
       {/* 19. Pre-Footer CTA */}
-      <section className="py-32 bg-[#1A1A1A] text-white relative overflow-hidden flex items-center justify-center text-center">
+      <section className="py-32 bg-primary-foreground text-white relative overflow-hidden flex items-center justify-center text-center">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)]" />
         <div className="container px-4 md:px-6 relative z-10 space-y-10">
-          <h2 className="text-5xl md:text-6xl font-heading font-bold text-[#D4AF37] max-w-3xl mx-auto leading-tight">
+          <h2 className="text-5xl md:text-6xl font-heading font-bold text-primary max-w-3xl mx-auto leading-tight">
             {preFooterCta.heading}
           </h2>
-          <Button size="lg" className="rounded-full shadow-glow text-lg h-16 px-12 bg-[#D4AF37] text-black hover:bg-[#b5952f]">
+          <Button size="lg" className="rounded-full shadow-glow text-lg h-16 px-12 bg-primary text-black hover:bg-primary/90">
             {preFooterCta.button}
           </Button>
         </div>

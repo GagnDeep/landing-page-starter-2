@@ -80,12 +80,38 @@ export const IMAGES = {
       creditUrl: "https://unsplash.com/@evangelineshaw",
     }
   },
+  contact: {
+    mapPlaceholder: {
+      url: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop",
+      alt: "Map location representation",
+      photographer: "Geo",
+      creditUrl: "https://unsplash.com"
+    }
+  },
   blog: {
     placeholder: {
       url: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
       alt: "Healthy food bowl",
       photographer: "Anna Pelzer",
       creditUrl: "https://unsplash.com/@annapelzer",
+    },
+    dalMakhani: {
+      url: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop",
+      alt: "Indian Dal Makhani",
+      photographer: "Kawaldeep Singh",
+      creditUrl: "https://unsplash.com/@kawaldeep",
+    },
+    thali: {
+      url: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=1000&auto=format&fit=crop",
+      alt: "Royal Indian Thali and spices",
+      photographer: "Rohan G",
+      creditUrl: "https://unsplash.com/@rohang",
+    },
+    corporate: {
+      url: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop",
+      alt: "Corporate gala event",
+      photographer: "Evangeline Shaw",
+      creditUrl: "https://unsplash.com/@evangelineshaw",
     }
   }
 } as const;

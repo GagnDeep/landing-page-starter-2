@@ -153,13 +153,13 @@ export default function PricingPage() {
       </section>
 
       {/* 9. CTA */}
-      <section className="py-32 bg-[#1A1A1A] text-white text-center relative overflow-hidden flex items-center justify-center">
+      <section className="py-32 bg-primary-foreground text-white text-center relative overflow-hidden flex items-center justify-center">
         <FloatingBlobs className="absolute inset-0 opacity-20 pointer-events-none" />
         <div className="container px-4 md:px-6 space-y-8 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold max-w-2xl mx-auto text-[#D4AF37]">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold max-w-2xl mx-auto text-primary">
             {cta.heading}
           </h2>
-          <Button size="lg" className="rounded-full shadow-glow text-lg h-16 px-12 bg-[#D4AF37] text-black hover:bg-[#b5952f]">
+          <Button size="lg" className="rounded-full shadow-glow text-lg h-16 px-12 bg-primary text-black hover:bg-primary/90">
             {cta.button}
           </Button>
         </div>

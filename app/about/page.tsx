@@ -22,7 +22,7 @@ export default function AboutPage() {
     <div className="flex flex-col w-full overflow-hidden">
 
       {/* 1. Hero */}
-      <section className="relative min-h-[60vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#1A1A1A] text-white">
+      <section className="relative min-h-[60vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-primary-foreground text-white">
         <div className="absolute inset-0 opacity-40">
            <Image
               src={IMAGES.about.hero.url}
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container px-4 md:px-6 relative z-10 text-center space-y-6">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-[#D4AF37] drop-shadow-sm">
+          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight text-primary drop-shadow-sm">
             {hero.headline}
           </h1>
         </div>
@@ -105,17 +105,17 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Behind the Scenes */}
-      <section className="py-24 bg-[#1A1A1A] text-white relative overflow-hidden">
+      <section className="py-24 bg-primary-foreground text-white relative overflow-hidden">
         <DotMatrixGrid className="absolute inset-0 opacity-10 pointer-events-none" rows={10} cols={15} />
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8 mb-16">
-            <h2 className="text-4xl font-heading font-semibold text-[#D4AF37]">{behindTheScenes.heading}</h2>
+            <h2 className="text-4xl font-heading font-semibold text-primary">{behindTheScenes.heading}</h2>
             <p className="text-lg text-gray-300 leading-relaxed">{behindTheScenes.description}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
             {behindTheScenes.stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-4xl md:text-5xl font-heading font-bold text-[#D4AF37] mb-2">{stat.value}</div>
+                <div className="text-4xl md:text-5xl font-heading font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-sm tracking-wider uppercase text-gray-400">{stat.label}</div>
               </div>
             ))}
