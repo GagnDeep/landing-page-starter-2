@@ -1,6 +1,6 @@
 # Next State
 
-Ready for Phase 6: About, Features, and Pricing Pages
-- Focus on internal routing and secondary page construction.
-- Repurpose shared visual components for consistency.
-- Continue mapping strict content strings.
+Ready for Phase 7: Blog, FAQ, and Contact Pages
+- Implement the Journal (`/blog` or `/journal`) using `blogContent`.
+- Implement `/faq` using `faqContent` and Shadcn Accordions.
+- Implement `/contact` using `contactContent` and form components.

@@ -157,7 +157,7 @@ export default function Home() {
       <section className="py-24 md:py-32">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-heading text-foreground mb-4">Featured Stories</h2>
+            <h2 className="text-4xl font-heading text-foreground mb-4">{homeContent.caseStudies.one.title.split(" ")[0]} Stories</h2>
             <p className="text-muted-foreground font-sans max-w-2xl mx-auto">Explore the celebrations we&apos;ve had the honor of documenting.</p>
           </div>
 
