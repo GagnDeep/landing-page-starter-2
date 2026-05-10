@@ -1,6 +1,5 @@
 # Next State
 
-- Proceed to Phase 5: Home Page Implementation.
-- Start assembling the 20 distinct sections defined in `.agent/layout-home.md`.
-- Ensure each section correctly consumes the strongly-typed strings from `content/home.ts` and uses imagery from `lib/images.ts`.
-- Utilize the animated visual components established in Phase 3 where appropriate.
+- Proceed to Phase 6: Service, Pricing, and About Pages.
+- Using the structural blueprints (`layout-about.md`, `layout-features.md`, `layout-pricing.md`) and content strings (`content/about.ts`, `content/features.ts`, `content/pricing.ts`), assemble the secondary pages.
+- Ensure consistent styling, leveraging the shared visual primitives, `next/image` integration, and adherence to the "Royal Punjabi" design system established in Phase 1.
