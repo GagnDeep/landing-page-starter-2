@@ -1,9 +1,8 @@
-# Next State (Phase 7: Contact, Careers, and Legal Pages)
+# Next State (Phase 8: Final Polish and QA Audit)
 
-The next step is to transition into Phase 7 to finalize the remaining functional and compliance routes.
+The final step is to transition into Phase 8, ensuring the entire application meets the highest standards of production readiness.
 
-1.  Implement the Contact page (`app/contact/page.tsx`) per `.agent/layout-contact.md` using `content/contact.ts`. Focus on an elegant, high-end inquiry form design (logic not required, UI only).
-2.  Implement the Careers page (`app/careers/page.tsx`) per `.agent/layout-careers.md` using `content/careers.ts`.
-3.  Implement Legal pages (`app/terms/page.tsx` and `app/privacy/page.tsx`) per `.agent/layout-legal.md`. These should rely heavily on the established typography plugin styles for long-form reading.
-
-Ensure perfect dark mode parity and continued reliance on the Phase 3 visual library.
+1.  Perform a comprehensive audit of all pages to verify exact adherence to the "destination-luxury" and "hospitality-pro" aesthetic defined in `.agent/design-system.md`.
+2.  Test responsive layouts and dark/light mode toggles across the entire site.
+3.  Ensure all accessibility (ARIA labels, semantic HTML, `prefers-reduced-motion`) and Next.js best practices are perfectly executed.
+4.  Remove any lingering console warnings or linter errors.
