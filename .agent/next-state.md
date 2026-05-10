@@ -1,4 +1,4 @@
 # Next State
 
-- Proceed to Phase 2: Content Files
-- Create localized content string files for each page, keeping content separate from UI components.
+- Proceed to Phase 3: Animated Visuals & Image Registry
+- Create visual components using Framer Motion and map out Unsplash image URLs in the centralized image registry.
