@@ -1,9 +1,11 @@
 # Current State
 
-- **Phase**: 3/8 (Animated Visuals & Image Registry) - Completed
-- **Status**: The visual component library and remote image registry are established and integrated into the Next.js config.
+- **Phase**: 4/8 (Core Layout and Home Page) - Completed
+- **Status**: The foundational layout is complete. The Home Page is fully assembled and responsive.
 - **Achievements**:
-  - Configured `next.config.mjs` to authorize `images.unsplash.com`.
-  - Created `lib/images.ts` mapping 12 heritage-themed Unsplash images with typed metadata.
-  - Built 8 reusable animated visual components in `components/visuals/`: WarmGradientMesh, TextMarquee, SteamWaves, FlourDustParticles, HeritageStamp, OrganicSectionDivider, MicroIconSet, and AnimatedImageFrame.
-  - All animations respect `prefers-reduced-motion` and are hydration-safe.
+  - `RootLayout` implemented with `Playfair Display` and `Montserrat` fonts.
+  - `next-themes` integrated for dark/light mode toggle.
+  - Global `Header` and `Footer` implemented pulling from content files.
+  - Assembled `app/page.tsx` utilizing 11 sub-components to fulfill all 20 sections of `.agent/layout-home.md`.
+  - Integrated animated visual components (`WarmGradientMesh`, `FlourDustParticles`, `OrganicSectionDivider`, etc.).
+  - Handled all text via `content/` files (no hardcoded strings).

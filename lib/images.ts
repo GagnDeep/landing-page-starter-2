@@ -74,11 +74,11 @@ export const images: Record<ImageKey, ImageRegistryEntry> = {
     credit: { name: "Roman Kraft", url: "https://unsplash.com/@romankraft" }
   },
   customWeddingCake: {
-    src: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=1936&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=2070&auto=format&fit=crop",
     alt: "An elegant, multi-tiered bespoke wedding cake with floral decorations",
-    width: 1936,
-    height: 2904,
-    credit: { name: "Thomas William", url: "https://unsplash.com/@thomaswilliam" }
+    width: 2070,
+    height: 1380,
+    credit: { name: "Tom Pumford", url: "https://unsplash.com/@tompumford" }
   },
   pastryDetails: {
     src: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=2070&auto=format&fit=crop",

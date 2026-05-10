@@ -25,3 +25,12 @@
   - Created `lib/images.ts` for type-safe image management.
   - Built 8 SVG/Tailwind-based animated components reflecting the warm, organic "Heritage Bakery" aesthetic.
   - Ensured all animations are accessible (`prefers-reduced-motion`) and performant (CSS-driven where possible).
+
+## Date: 2026-05-10
+- **Phase**: 4/8 (Core Layout and Home Page)
+- **Summary**: Implemented the `RootLayout` and a fully functional Home Page (`/`).
+  - Set up typography and `ThemeProvider`.
+  - Created global `Header` and `Footer`.
+  - Built 10 home page sections matching `.agent/layout-home.md` specifications.
+  - Integrated Phase 3 animated visuals and image registry.
+  - Addressed code review feedback by moving all residual hardcoded strings to `content/home.ts`.

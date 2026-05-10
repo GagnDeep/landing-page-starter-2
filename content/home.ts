@@ -76,3 +76,37 @@ export const visitUs = {
   hours: "Tuesday – Sunday: 8:00 AM – 9:00 PM | Monday: Closed",
   cta: { label: "Get Directions", href: "/contact" }
 };
+
+export const processSteps = [
+  { title: "Select Ingredients", icon: "wheat" as const, desc: "Sourcing local wheat and pure dairy." },
+  { title: "Slow Proofing", icon: "bread" as const, desc: "Resting dough overnight for complex flavor." },
+  { title: "Precision Baking", icon: "oven" as const, desc: "Baked fresh every single morning." },
+  { title: "Hand Decorating", icon: "cake" as const, desc: "Finishing touches by master artisans." }
+];
+
+export const featuredCollectionsText = {
+  heading: "From the Oven",
+  subheading: "@vermasbakery"
+};
+
+export const artisanalProcessHeading = "The Artisanal Process";
+
+export const globalNavLinks = [
+  { label: "Our Story", href: "/about" },
+  { label: "The Bakery", href: "/features" },
+  { label: "Menu", href: "/pricing" },
+  { label: "Journal", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
+
+export const footerContent = {
+  brandDescription: "Crafting sweet memories for generations. Patiala's heritage bakery specializing in artisanal breads and bespoke cakes.",
+  exploreHeading: "Explore",
+  supportHeading: "Support",
+  visitHeading: "Visit Us",
+  supportLinks: [
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Careers", href: "/careers" }
+  ]
+};
