@@ -20,6 +20,14 @@ export const homeContent = {
   },
   socialProof: {
     badge: "5.0-star reputation in Patiala",
+    items: [
+      "5.0-star reputation in Patiala",
+      "Patiala's Finest",
+      "Near Shiv Mandir",
+      "24/7 Delivery",
+      "Premium Ingredients",
+      "Custom Designs",
+    ]
   },
   valueProp: {
     heading: "Why Patiala Chooses A-One",
@@ -41,14 +49,36 @@ export const homeContent = {
   featuredCakes: {
     heading: "Signature 6-Pound Custom Masterpieces",
     description: "Our pride and joy. Big enough for the whole party, beautiful enough for the front page.",
+    cta: "View Catalog & Pricing",
   },
   featuredGifts: {
     heading: "Thoughtful Gifts, Ready When You Are",
     description: "From hand-tied bouquets to bespoke dry fruit hampers, we curate premium gifts to complement any celebration.",
+    list: ["Premium Dry Fruit Collections", "Luxury Chocolate Hampers", "Fresh Floral Bouquets"],
+    cta: "Explore Gift Options",
   },
   nightRescue: {
     heading: "Midnight Cravings? Forgotten Anniversaries? We've got you.",
     cta: "Rescue Me Now",
+    codeLines: [
+      "[23:45:12] SYSTEM_ALERT: Anniversary forgotten.",
+      "[23:45:14] ROUTING: Initiating A-One Rescue Protocol...",
+      "[23:48:00] KITCHEN: Baking fresh 6-pound truffle.",
+      "[00:30:15] DISPATCH: Driver en route to Shiv Mandir.",
+      "[00:45:00] STATUS: Delivered. Crisis averted.",
+    ]
+  },
+  testimonials: {
+    heading: "What Patiala is Saying",
+    quotes: [
+      { text: "Saved my anniversary at 1 AM. The truffle cake was fresh and beautiful.", author: "Raj K." },
+      { text: "Best custom cakes in the city. The 6-pounder was the highlight of our wedding.", author: "Priya S." }
+    ]
+  },
+  interactiveTeaser: {
+    heading: "Build Your Dream Cake",
+    subheading: "Select your flavor, size, and style.",
+    cta: "Start Building"
   },
   aboutTeaser: {
     heading: "Bridging local artisanal quality and digital-first convenience.",
@@ -59,10 +89,29 @@ export const homeContent = {
     address: "Near Shiv Mandir, Pratap Nagar, Patiala",
     deliveryText: "Delivering warmth and sweetness across Patiala and surrounding areas.",
   },
+  faq: {
+    heading: "Quick Answers",
+    questions: [
+      { q: "How late do you deliver?", a: "We are a true 24/7 service. Midnight deliveries are our specialty." },
+      { q: "Do you make eggless cakes?", a: "Yes, we have a dedicated selection of premium 100% eggless cakes." }
+    ]
+  },
+  blogTeaser: {
+    heading: "The Sweet Talk",
+    articles: [
+      { title: "How to Store a Fresh Cake", date: "May 10, 2024" },
+      { title: "The Story Behind Our 6-Pounders", date: "April 22, 2024" }
+    ],
+    cta: "Read the Blog"
+  },
   newsletter: {
     heading: "Join the A-One Family",
     placeholder: "Your email address",
     cta: "Subscribe",
+  },
+  instagram: {
+    heading: "Follow Our Rescues",
+    cta: "@AOneCakesPatiala"
   },
   secondaryCta: {
     heading: "Ready to order?",

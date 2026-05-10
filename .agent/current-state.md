@@ -1,13 +1,13 @@
 # Current State
 
-**Phase**: 4/8 — Core Layout & Navigation Implementation (COMPLETED)
+**Phase**: 5/8 — Home Page Composition (COMPLETED)
 
 ## What was just completed:
-- Created the global `Header`, `MobileNav`, and `Footer` components.
-- Integrated the `ThemeToggle` for seamless switching between light and dark modes ("Morning Display" / "Evening Fitting").
-- Refactored `app/layout.tsx` to wrap pages in the global header and footer shell.
-- Established a `content/global.ts` file to centralize navigation and footer link structures.
-- Implemented dynamic photographer credit attribution in the footer, reading directly from `lib/images.ts`.
+- Fully assembled the `app/page.tsx` home page.
+- Created standalone, responsive section components in `components/home/` (Hero, SocialProof, ValueProp, FeaturedCakes, FeaturedGifts, NightRescue, AboutTeaser, Location, SecondaryCTA).
+- Integrated Phase 3 visual components (AnimatedGradientMesh, FloatingBlobs, DotMatrixGrid, CodeWindowTyping, LogoMarquee, CTAGlow, MicroIconSet).
+- Populated photography slots dynamically using `lib/images.ts` and Next.js Image component.
+- Pulled all textual content exclusively from `content/home.ts` to ensure zero hardcoded strings.
 
 ## Next immediate steps:
-- Move on to Phase 5: Home Page Composition.
+- Move on to Phase 6: Product, Pricing, and Features Pages.
