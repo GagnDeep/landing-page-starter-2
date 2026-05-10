@@ -28,5 +28,14 @@
 - **Animation Strategy:** Used CSS variables and Tailwind utility classes (`animate-[name]`) rather than heavy JS libraries to keep bundle size minimal. Added explicit `motion-reduce` support to all animated components to meet accessibility standards.
 - **Hydration Safety:** Ensured components like `AnimatedChart` and `CodeWindowTyping` use `useEffect` mounting patterns to avoid SSR mismatch errors.
 
+## Session Entry: Phase 4 Completion
+**Date:** [Current Date]
+**Phase:** 4/8 — Core Layout & Home Page Implementation
+
+### Summary of Decisions
+- **Typography Integration:** Mapped Google Fonts via `next/font/google` directly to the `--font-heading` and `--font-sans` CSS variables to ensure seamless Tailwind integration without layout shift.
+- **Layout Architecture:** Created persistent `Header.tsx` and `Footer.tsx`. Made the header transparent initially, turning to a solid, frosted glass on scroll to emphasize the hero imagery. Footer successfully maps Unsplash credits from the registry dynamically.
+- **Home Page Assembly:** Mapped all 20 layout sections from `content/home.ts`. Relied heavily on Phase 3's visual components (`AnimatedGradientMesh`, `AnimatedHeroIllustration`, `MicroIconSet`) to create visual rhythm rather than spamming heavy stock photography. Kept the page as a strict Server Component.
+
 ### Outstanding Questions for Next Phase
-- For Phase 4 (Home Page implementation), we need to ensure the `next-themes` provider is set up correctly in the root layout to allow our new components to switch smoothly between the 'Daylight Celebration' and 'Evening Fitting' themes.
+- Phase 5 (About & Services) will likely require specific imagery for Kavita's team or the studio. Should we generate realistic Unsplash placeholders for them in `lib/images.ts`, or stick to abstract/floral visuals to maintain privacy until real assets are provided?

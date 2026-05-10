@@ -1,14 +1,22 @@
-import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import { Playfair_Display, Montserrat } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Header } from "@/components/layout/Header"
+import { Footer } from "@/components/layout/Footer"
 import { cn } from "@/lib/utils";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+})
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"],
 })
 
 export default function RootLayout({
@@ -20,10 +28,20 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
+      className={cn(
+        "antialiased font-sans scroll-smooth",
+        montserrat.variable,
+        playfair.variable
+      )}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="min-h-screen flex flex-col">
+        <ThemeProvider defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          <main className="flex-grow pt-[88px]">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

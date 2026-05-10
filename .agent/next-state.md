@@ -1,17 +1,17 @@
 # Next State: Blinking Eye Events
 
-**Upcoming Phase:** Phase 4 - Core Layout & Home Page Implementation
+**Upcoming Phase:** Phase 5 - Services and About Page Implementation
 
 ## Immediate Objectives
-- Create the global layout wrapper (`app/layout.tsx`) including the Main Navigation (transparent to solid on scroll) and Global Footer.
-- Assemble the Home Page (`app/page.tsx`) using the data from `content/home.ts` and the visual components from `components/visuals/`.
-- Translate the narrative structure defined in `.agent/layout-home.md` into responsive, semantic React components.
-- Ensure light/dark mode toggling works flawlessly across the new layout using `next-themes`.
+- Create the About page (`app/about/page.tsx`) mapping data from `content/about.ts`.
+- Create the Features/Services page (`app/features/page.tsx`) mapping data from `content/features.ts`.
+- Translate the narrative structure defined in `.agent/layout-about.md` and `.agent/layout-features.md` into responsive, semantic React components.
+- Introduce new visual components if needed for unique sections (e.g., Team Member grid, Service Detail layouts).
 
 ## Technical Requirements for Next Phase
-- Stick to React Server Components where possible. Use `"use client"` only for interactive elements (like the nav toggle or specific visual components that need hydration context).
-- Ensure image rendering uses `next/image` referencing the `lib/images.ts` registry.
-- Do not pass non-serializable props (like functions) to Client Components from Server Components.
+- Stick to React Server Components where possible.
+- Ensure image rendering uses `next/image` referencing the `lib/images.ts` registry. Add any required imagery for the team or new services to the registry first.
+- Maintain the exact CSS variable usage for OKLCH themes to ensure the layout seamlessly switches between light and dark modes.
 
 ## Blockers / Considerations
-- Verify that `shadcn/ui` components needed for the navigation or footer (like buttons or sheets for mobile nav) are installed before attempting to use them.
+- Verify if any additional Unsplash images need to be mapped in `lib/images.ts` to fully support the visual requirements of the About and Services pages.

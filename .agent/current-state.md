@@ -1,17 +1,21 @@
 # Current State: Blinking Eye Events
 
-**Project Phase:** Phase 3 (Complete) - Animated Visuals & Image Registry
+**Project Phase:** Phase 4 (Complete) - Core Layout & Home Page Implementation
 
 ## What is Currently Built
-- **Design System & Layout:** Phase 1 complete. `globals.css` configured with OKLCH tokens. Layout blueprints available in `.agent/layout-*.md`.
-- **Content Architecture:** Phase 2 complete. Strongly-typed TypeScript files exist in `content/` acting as the single source of truth.
-- **Image Registry:** `lib/images.ts` is established, mapping Unsplash URLs to specific content needs while preserving photographer credit metadata. `next.config.mjs` is updated to support this.
-- **Visual Components:** 8 highly reusable, prop-driven visual components are built in `components/visuals/` using Tailwind CSS and inline SVGs. They are hydration-safe and adhere to `prefers-reduced-motion` guidelines.
+- **Design System & Layout:** Phase 1 complete. `globals.css` configured.
+- **Content Architecture:** Phase 2 complete. `content/` directory handles all text.
+- **Visuals & Assets:** Phase 3 complete. Image registry and animated component library established.
+- **Core Infrastructure & Home Page:** Phase 4 complete.
+  - `app/layout.tsx` is configured with Google Fonts (Playfair Display & Montserrat) and `next-themes` ThemeProvider.
+  - Persistent, responsive `Header` and `Footer` components are implemented (Footer correctly surfaces Unsplash photographer credits).
+  - `app/page.tsx` flawlessly integrates all 20+ layout sections, merging the type-safe content with the animated visual component library, creating a high-fidelity landing experience.
 
 ## Technical Details
-- Next.js (App Router) is scaffolded.
-- Tailwind CSS v4 and shadcn/ui are initialized.
-- CSS animations are preferred over heavy JavaScript animation libraries for performance.
+- Next.js (App Router).
+- SSR-safe animations using Tailwind CSS variables.
+- All strings driven strictly via data files (`content/home.ts`), leaving UI components "pure".
+- Responsive design tailored for mobile and large desktop displays.
 
 ## Known Constraints
-- No actual page route UI code (TSX/layouts) has been assembled yet. All pieces (Data, Assets, Visuals) are waiting to be integrated into pages in Phase 4.
+- The interior routes (About, Services, Pricing, etc.) linked in the Header and Footer do not yet exist. They will route to generic 404s until built in subsequent phases.
