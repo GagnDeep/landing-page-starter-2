@@ -1,21 +1,20 @@
 # Next State: Armaan Driving School
 
-**Target Phase:** 6/8 — Blog and FAQ Page Implementation
+**Target Phase:** 7/8 — Contact, Careers, and Legal Pages
 
 ## Goal
-To build the `/blog` and `/faq` routes, providing structured, SEO-friendly homes for the school's driving advice, local RTO updates, and frequently asked questions.
+To complete the site map by implementing the final operational and legal pages: Contact, Careers, Terms & Conditions, and Privacy Policy.
 
 ## Planned Actions
-1.  **FAQ Page (`app/faq/page.tsx`):**
-    *   Implement the accordion-based FAQ layout according to `.agent/layout-faq.md`.
-    *   Hydrate with data from `content/faq.ts`.
-    *   Include the search/filter UI placeholder and contact form block.
-2.  **Blog Index Page (`app/blog/page.tsx`):**
-    *   Implement the blog listing layout (Hero, Featured, Grid) based on `.agent/layout-blog.md`.
-    *   Hydrate with mock data from `content/blog.ts`.
-3.  **Blog Post Template (Optional/Prep):**
-    *   Outline the `app/blog/[slug]/page.tsx` structure if time permits.
+1.  **Contact Page (`app/contact/page.tsx`):**
+    *   Build out the contact grid (Phone, Email, Map).
+    *   Implement the contact request form UI based on `.agent/layout-contact.md` and `content/contact.ts`.
+2.  **Careers Page (`app/careers/page.tsx`):**
+    *   Construct the recruitment layout detailing core values, requirements, and current openings based on `.agent/layout-careers.md` and `content/careers.ts`.
+3.  **Legal Pages (`app/terms/page.tsx` and `app/privacy/page.tsx`):**
+    *   Create clean, text-heavy layouts utilizing `@tailwindcss/typography` (`prose`) to render the policy arrays defined in `content/terms.ts` and `content/privacy.ts`.
 
 ## Constraints & Considerations
-*   **Accessibility:** Ensure the FAQ accordions are fully accessible (keyboard navigable, proper ARIA states) — utilizing the existing shadcn/ui Accordion component is recommended.
-*   **Data Binding:** Continue the strict pattern of pulling all strings from the `content/` directory.
+*   **Data Binding:** Maintain the strict rule of zero hardcoded strings in the UI components; all copy must flow from the `content/` directory.
+*   **Form Implementation:** The forms on the Contact and Careers pages should be visually complete (using Shadcn UI inputs) but do not require backend submission logic in this frontend phase. Ensure they are SSR safe.
+*   **Typography Reuse:** Leverage the same `prose` setup used in the blog for the legal pages to maintain typographical consistency.
