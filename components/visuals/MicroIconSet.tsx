@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").HTMLMotionProps<"div">>;
+type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").MotionProps>;
 
 export interface MicroIconSetProps extends OmitFramerProps<React.HTMLAttributes<HTMLDivElement>> {
   icons: React.ReactNode[];
@@ -44,7 +44,7 @@ export function MicroIconSet({ icons, className, ...props }: MicroIconSetProps) 
     show: {
       opacity: 1,
       scale: 1,
-      transition: { type: "spring", stiffness: 200, damping: 15 }
+      transition: { type: "spring" as const, stiffness: 200, damping: 15 }
     },
   };
 

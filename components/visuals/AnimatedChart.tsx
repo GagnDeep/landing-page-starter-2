@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").HTMLMotionProps<"div">>;
+type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").MotionProps>;
 
 export interface AnimatedChartProps extends OmitFramerProps<React.HTMLAttributes<HTMLDivElement>> {
   data?: number[];

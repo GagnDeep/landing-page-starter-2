@@ -1,6 +1,6 @@
 # Next State
 
-- Proceed to Phase 4: Core Layout and Navigation Shell.
-- Begin assembling the structural page shells, responsive navigation, and footer using the Phase 1 layouts.
-- Integrate the animated visual components from Phase 3 into the core layout.
-- Start importing and using the text content from `content/` and images from `lib/images.ts`.
+- Proceed to Phase 5: Home Page Implementation.
+- Start assembling the 20 distinct sections defined in `.agent/layout-home.md`.
+- Ensure each section correctly consumes the strongly-typed strings from `content/home.ts` and uses imagery from `lib/images.ts`.
+- Utilize the animated visual components established in Phase 3 where appropriate.

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").HTMLMotionProps<"div">>;
+type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").MotionProps>;
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface AnimatedGradientMeshProps extends OmitFramerProps<React.HTMLAttributes<HTMLDivElement>> {}
@@ -27,7 +27,7 @@ export function AnimatedGradientMesh({ className, ...props }: AnimatedGradientMe
       backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
       transition: {
         duration: 20,
-        ease: "linear",
+        ease: "linear" as const,
         repeat: Infinity,
       },
     },

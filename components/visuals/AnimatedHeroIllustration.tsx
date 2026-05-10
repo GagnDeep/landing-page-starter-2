@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").HTMLMotionProps<"div">>;
+type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").MotionProps>;
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface AnimatedHeroIllustrationProps extends OmitFramerProps<React.HTMLAttributes<HTMLDivElement>> {}
@@ -34,7 +34,7 @@ export function AnimatedHeroIllustration({ className, ...props }: AnimatedHeroIl
 
   const itemVariants = {
     hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50, damping: 20 } },
+    show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 50, damping: 20 } },
   };
 
   return (

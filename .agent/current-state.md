@@ -1,6 +1,7 @@
 # Current State
 
-- Phase 3 (Animated Visuals & Image Registry) completed.
-- `lib/images.ts` established as a type-safe registry mapping Unsplash images to site sections.
-- `next.config.mjs` configured to allow remote pattern for `images.unsplash.com`.
-- 8 Framer Motion components (`AnimatedGradientMesh`, `LogoMarquee`, `AnimatedHeroIllustration`, `AnimatedChart`, `DotMatrixGrid`, `FloatingBlobs`, `CodeWindowTyping`, `MicroIconSet`) created in `components/visuals/`. They respect SSR (`mounted` state check) and accessibility (`useReducedMotion`).
+- Phase 4 (Core Layout and Navigation Shell) completed.
+- Implemented `Header` component with responsive design, sticky behavior, Framer Motion animations, and dynamic content integration from `content/home.ts`.
+- Implemented comprehensive `Footer` component with social links, dynamic quick links, and branding from `content/home.ts`.
+- Updated `app/layout.tsx` to serve as a persistent shell, wrapping page content in `<Header />` and `<Footer />`.
+- Integrated functional light/dark mode toggling matching the design system OKLCH variables.

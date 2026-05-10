@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").HTMLMotionProps<"div">>;
+type OmitFramerProps<T> = Omit<T, keyof import("framer-motion").MotionProps>;
 
 export interface DotMatrixGridProps extends OmitFramerProps<React.HTMLAttributes<HTMLDivElement>> {
   rows?: number;
@@ -12,7 +12,7 @@ export interface DotMatrixGridProps extends OmitFramerProps<React.HTMLAttributes
 }
 
 export function DotMatrixGrid({ rows = 10, cols = 10, className, ...props }: DotMatrixGridProps) {
-
+  const prefersReducedMotion = useReducedMotion();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export function DotMatrixGrid({ rows = 10, cols = 10, className, ...props }: Dot
     return () => clearTimeout(timer);
   }, []);
 
-  if (!mounted) {
+  if (!mounted || prefersReducedMotion) {
     return (
       <div
         className={cn("grid gap-4", className)}
