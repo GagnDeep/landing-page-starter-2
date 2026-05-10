@@ -1,19 +1,30 @@
-import { Button } from "@/components/ui/button"
+import React from 'react';
+import { HeroSection } from '@/components/home/HeroSection';
+import { TrustBanner } from '@/components/home/TrustBanner';
+import { IntroEditorial } from '@/components/home/IntroEditorial';
+import { SignatureSweets } from '@/components/home/SignatureSweets';
+import { BespokeCakes } from '@/components/home/BespokeCakes';
+import { ProcessTimeline } from '@/components/home/ProcessTimeline';
+import { Testimonials } from '@/components/home/Testimonials';
+import { IngredientsHighlight } from '@/components/home/IngredientsHighlight';
+import { FeaturedCollections } from '@/components/home/FeaturedCollections';
+import { VisitUs } from '@/components/home/VisitUs';
+import { Newsletter } from '@/components/home/Newsletter';
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
+    <>
+      <HeroSection />
+      <TrustBanner />
+      <IntroEditorial />
+      <SignatureSweets />
+      <BespokeCakes />
+      <ProcessTimeline />
+      <Testimonials />
+      <IngredientsHighlight />
+      <FeaturedCollections />
+      <VisitUs />
+      <Newsletter />
+    </>
+  );
 }
