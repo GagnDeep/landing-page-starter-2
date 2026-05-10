@@ -9,3 +9,5 @@
 - **Phase 4 complete.** Implemented global layout (Header/Footer/Fonts) and the comprehensive Home page. Mapped content strings and Phase 3 animated visuals correctly. Cleaned up unused imports. Ready for secondary page development.
 
 - **Phase 5 complete.** Implemented About, Services (Features), and Pricing pages. Mapped type-safe content strings and integrated Phase 3 animated visual components (Mesh, DotMatrix, FloatingBlobs). Next step: Blog and FAQ implementation.
+
+- **Phase 6 complete.** Implemented Blog (Index + dynamic Article route) and FAQ pages. Created a scroll-spy interaction for the FAQ categories. Maintained strict adherence to content files and the "hospitality-pro" aesthetic. Ready for Phase 7.

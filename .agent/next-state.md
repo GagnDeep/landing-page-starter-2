@@ -1,8 +1,9 @@
-# Next State (Phase 6: Blog and FAQ Implementation)
+# Next State (Phase 7: Contact, Careers, and Legal Pages)
 
-The next step is to transition into Phase 6, focusing on editorial content and detailed information architecture.
+The next step is to transition into Phase 7 to finalize the remaining functional and compliance routes.
 
-1.  Implement the Blog/Journal landing page (`app/blog/page.tsx`) adhering to the `.agent/layout-blog.md` blueprint. It should feature an editorial masonry or grid layout using `content/blog.ts` and `lib/images.ts`.
-2.  Implement the comprehensive FAQ page (`app/faq/page.tsx`) adhering to the `.agent/layout-faq.md` blueprint. It should utilize the shadcn Accordion component for a clean, accessible interaction model based on `content/faq.ts`.
+1.  Implement the Contact page (`app/contact/page.tsx`) per `.agent/layout-contact.md` using `content/contact.ts`. Focus on an elegant, high-end inquiry form design (logic not required, UI only).
+2.  Implement the Careers page (`app/careers/page.tsx`) per `.agent/layout-careers.md` using `content/careers.ts`.
+3.  Implement Legal pages (`app/terms/page.tsx` and `app/privacy/page.tsx`) per `.agent/layout-legal.md`. These should rely heavily on the established typography plugin styles for long-form reading.
 
-Maintain the "hospitality-pro" visual language and ensure responsive design across all new viewports.
+Ensure perfect dark mode parity and continued reliance on the Phase 3 visual library.
