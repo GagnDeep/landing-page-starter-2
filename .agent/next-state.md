@@ -1,9 +1,9 @@
 # Next State
 
-**Phase**: 2/8 — Content Files
+**Phase**: 3/8 — Animated Visuals & Image Registry
 
 ## Goals for next phase:
-- Create central, type-safe content files in the `content/` directory.
-- Define copy for all pages outlined in the layout blueprints using the established tone and voice (warm, approachable, premium, reliable).
-- Ensure no placeholder text (lorem ipsum) or hardcoded strings exist in future UI components.
-- Prepare the foundation for the visual and structural implementation phases.
+- Establish a centralized, type-safe image registry in `lib/images.ts` using remote Unsplash assets.
+- Ensure visual assets complement the "Boutique Craft" aesthetic defined in the design system.
+- Prepare animated visual components or define motion logic (e.g., staggered reveals, smooth page loads) strictly adhering to SSR safety and CSS variable themeing.
+- Map the content from Phase 2 to the visual assets created in Phase 3.
