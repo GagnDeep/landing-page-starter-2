@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             At Guide Events, we approach every celebration not just as planners, but as artisans. The architecture of a truly luxurious event relies heavily on the unseen details. When executing a destination wedding, the logistics must be invisible to the guests, allowing them to remain completely immersed in the experience.
           </p>
           <blockquote>
-            "True luxury is the absence of friction. It is the ability to be a guest at your own celebration."
+            &quot;True luxury is the absence of friction. It is the ability to be a guest at your own celebration.&quot;
           </blockquote>
           <h3>Navigating Cross-Border Planning</h3>
           <p>
