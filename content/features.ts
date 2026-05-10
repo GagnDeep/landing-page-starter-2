@@ -33,6 +33,28 @@ export const featuresContent = {
       { title: "Deliver", description: "We handle the rest, delivering safely to your location, 24/7." },
     ],
   },
+  dietaryOptions: {
+    heading: "Dietary Preferences",
+    description: "Everyone deserves a slice of celebration. We offer dedicated options for specific dietary needs.",
+    items: [
+      { label: "100% Eggless", description: "Baked in dedicated equipment to ensure purity without compromising on rich flavor or texture." },
+      { label: "Sugar-Free Options", description: "Sweetened naturally or with premium sugar alternatives for health-conscious celebrations." },
+    ]
+  },
+  packaging: {
+    heading: "Premium Presentation",
+    description: "A gift is only as good as its unboxing. Our signature deep-night and gold foil packaging ensures every delivery feels like a luxury experience.",
+  },
+  deliveryNetwork: {
+    heading: "Where We Deliver",
+    description: "Fast, reliable, and secure. We serve the entire Patiala region.",
+    locations: ["Pratap Nagar", "Model Town", "Urban Estate", "Tripuri", "Civil Lines", "Punjabi University Area"]
+  },
+  addons: {
+    heading: "The Little Extras",
+    description: "Complete your order with our premium add-ons.",
+    items: ["Sparkler Candles", "Custom Acrylic Toppers", "Handwritten Calligraphy Notes", "Fresh Floral Accents"]
+  },
   guarantee: {
     heading: "The A-One Guarantee",
     text: "If your order isn't perfectly crafted and delivered on time, we'll make it right. No compromises.",

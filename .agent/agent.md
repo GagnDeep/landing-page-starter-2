@@ -11,3 +11,4 @@
 - Phase 3 complete. Animated visual components and Unsplash registry established. Next: implementing global layout and navigation.
 - Phase 4 complete. Global Header, MobileNav, Footer, and ThemeToggle implemented using OKLCH tokens and content strings. Root layout updated.
 - Phase 5 complete. Assembled the Home Page with 9 core structural sections integrating animated components and Unsplash registry imagery.
+- Phase 6 complete. Features and Pricing pages built using Phase 3 visuals and strict content file hydration. Sections are fully responsive and theme-aware.
