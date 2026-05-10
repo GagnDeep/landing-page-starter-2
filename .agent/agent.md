@@ -9,3 +9,8 @@
 - **Phase 2 Completion:** Successfully created the `content/` directory and populated all 10 page-specific TypeScript files.
 - **Content Structure:** All UI-visible strings, SEO metadata, and structural labels are extracted into typed exported constants.
 - **Brand Voice Observations:** The copy successfully balances a 'luxury-bridal' tone with 'NRI-trusted' reliability. It highlights the pure vegetarian constraint as a premium feature and emphasizes the capacity for grand-scale (700+ guest) events.
+
+## Session: 2026-05-10 (Phase 3)
+- **Phase 3 Completion:** Created visual component library and image registry. Visuals are SSR-safe and theme-aware.
+- **Component Details:** Built 8 animated components using Framer Motion (e.g. `AnimatedGradientMesh`, `LogoMarquee`, `AnimatedSoyaChaapSVG`). They are correctly typed, support reduced motion, and are hydration-safe.
+- **Image Registry:** Configured `next.config.mjs` and created `lib/images.ts` pointing to optimized Unsplash assets.

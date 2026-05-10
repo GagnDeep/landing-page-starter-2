@@ -1,4 +1,4 @@
 # Next State
 
-- Proceed to Phase 3: Animated Visuals & Image Registry
-- Create visual components using Framer Motion and map out Unsplash image URLs in the centralized image registry.
+- Proceed to Phase 4: Core Layout and Navigation Shell
+- Implement global navigation, footer, and common shell components based on the layout intent files.
