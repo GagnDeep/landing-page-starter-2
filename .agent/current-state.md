@@ -1,9 +1,9 @@
 # Current State
 
-- **Phase**: 2/8 (Content Files) - Completed
-- **Status**: The content strategy is implemented. A centralized, type-safe content repository exists.
+- **Phase**: 3/8 (Animated Visuals & Image Registry) - Completed
+- **Status**: The visual component library and remote image registry are established and integrated into the Next.js config.
 - **Achievements**:
-  - Created `content/types.ts` defining standard TS interfaces for the content objects.
-  - Created 10 specific page content files (`home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`).
-  - Ensured all copy adheres to the "Heritage Bakery" voice and avoids placeholder text.
-  - No UI or component logic was introduced.
+  - Configured `next.config.mjs` to authorize `images.unsplash.com`.
+  - Created `lib/images.ts` mapping 12 heritage-themed Unsplash images with typed metadata.
+  - Built 8 reusable animated visual components in `components/visuals/`: WarmGradientMesh, TextMarquee, SteamWaves, FlourDustParticles, HeritageStamp, OrganicSectionDivider, MicroIconSet, and AnimatedImageFrame.
+  - All animations respect `prefers-reduced-motion` and are hydration-safe.

@@ -1,7 +1,6 @@
 # Next State
 
-- **Target Phase**: 3/8 (Animated Visuals & Image Registry)
+- **Target Phase**: 4/8 (Core Layout and Home Page)
 - **Handoff Notes**:
-  - Content files are ready to be imported into components.
-  - The type schema in `content/types.ts` should be referenced when building props for the React components.
-  - Next step involves setting up the central image registry (`lib/images.ts`) and planning animated visuals that are SSR-safe.
+  - The design system, content files, image registry, and visual components are all in place.
+  - Next step involves assembling the global layout (Header/Footer) and building the Home Page route utilizing all the assets created in Phases 1-3.

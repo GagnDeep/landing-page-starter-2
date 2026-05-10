@@ -18,3 +18,10 @@
   - Maintained the "Heritage Bakery" tone, focusing on authenticity, local sourcing, and craftsmanship.
   - Defined explicit types in `content/types.ts` (e.g., `HeroSection`, `TextBlock`) to ensure component prop safety in future phases.
   - Strictly avoided creating any UI, JSX, or CSS code.
+
+## Date: 2026-05-10
+- **Phase**: 3/8 (Animated Visuals & Image Registry)
+- **Summary**: Established the project's visual component library and remote image registry.
+  - Created `lib/images.ts` for type-safe image management.
+  - Built 8 SVG/Tailwind-based animated components reflecting the warm, organic "Heritage Bakery" aesthetic.
+  - Ensured all animations are accessible (`prefers-reduced-motion`) and performant (CSS-driven where possible).
