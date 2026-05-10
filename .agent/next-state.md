@@ -1,14 +1,15 @@
 # Next State Intent
 
 ## Target Phase
-Phase 5 — About, Features, and Pricing Pages
+Phase 6 — Blog and FAQ Pages
 
-## Objectives for Phase 5
-- Develop `app/about/page.tsx`, `app/features/page.tsx`, and `app/pricing/page.tsx`.
-- Follow the exact layout intents specified in `.agent/layout-about.md`, `.agent/layout-features.md`, and `.agent/layout-pricing.md`.
-- Wire content from `content/about.ts`, `content/features.ts`, and `content/pricing.ts`.
-- Continue utilizing the animated components from `components/visuals/` to maintain the high-end luxury feel.
-- Ensure responsive design, accessibility, and fast load times.
+## Objectives for Phase 6
+- Develop `app/blog/page.tsx` displaying the featured article, categories, and recent posts grid.
+- Develop `app/faq/page.tsx` utilizing shadcn/ui Accordion components to present categorized questions cleanly.
+- Wire content from `content/blog.ts` and `content/faq.ts`.
+- For the Blog page, implement the necessary UI scaffolding to support dynamic blog entries (even if the posts themselves are mocked via content strings for now).
+- Maintain rigorous typography hierarchy (`typeset` skill) and high-end visual design.
 
 ## Dependencies / Requirements Before Starting
-- Rely on Phase 1 layout intents, Phase 2 content strings, and Phase 3 visual components.
+- Read Phase 1 layout intents (`layout-blog.md`, `layout-faq.md`) and content strings (`content/blog.ts`, `content/faq.ts`).
+- Review `components/ui/accordion.tsx` usage if already installed, or install via shadcn.

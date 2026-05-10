@@ -1,19 +1,18 @@
 # Current Project State
 
 ## Status
-- **Phase:** 4/8 (Core Layout Shell & Home Page)
+- **Phase:** 5/8 (About, Features, and Pricing Pages)
 - **Status:** Complete.
 
 ## Recent Achievements
-- Created the global `Header` and `Footer` components, making them responsive and wired up with dynamic navigation links from `content/global.ts`.
-- Integrated `Header` and `Footer` into `app/layout.tsx`.
-- Built the `app/page.tsx` (Home Page) to exact specifications from `.agent/layout-home.md`, utilizing 20 distinct section structures.
-- Plumbed all hardcoded UI text to reference the type-safe `content/home.ts`.
-- Brought the Home Page to life with Phase 3 animated visual components (`RevealText`, `FadeIn`, `ParallaxImage`, `StaggerGroup`, `ElegantTyping`, `FloatingBlobs`, `LogoMarquee`, `ScaleImage`).
-- Bound the Unsplash image registry (`lib/images.ts`) to visual components using Next.js `Image`.
+- Built the `About` page (`/about`) focusing on the founder's vision, core values, and catering heritage.
+- Built the `Features` page (`/features`) mapping detailed service offerings (decor, culinary, logistics) with alternating image/text layouts.
+- Built the `Pricing` page (`/pricing`) establishing clear service tiers (Full Orchestration, Destination, Design) with a focus on custom quotes over rigid packages.
+- Wired all three pages dynamically using content strings from `content/about.ts`, `content/features.ts`, and `content/pricing.ts`.
+- Deeply integrated Phase 3 animated components (`RevealText`, `ScaleImage`, `StaggerGroup`, `FloatingBlobs`, `DotMatrixGrid`) and Unsplash registry imagery to maintain the "royal Punjabi luxury" aesthetic.
 
 ## Current Blockers / Constraints
-- None. Phase 4 is complete.
+- None. Phase 5 is complete.
 
 ## Next Immediate Actions
-- Move to Phase 5: About, Features, and Pricing Pages.
+- Move to Phase 6: Blog and FAQ Pages.
