@@ -1,6 +1,7 @@
 # Next State
 
-Ready for Phase 7: Blog, FAQ, and Contact Pages
-- Implement the Journal (`/blog` or `/journal`) using `blogContent`.
-- Implement `/faq` using `faqContent` and Shadcn Accordions.
-- Implement `/contact` using `contactContent` and form components.
+Ready for Phase 8: Careers, Legal, and Final Polish
+- Implement `/careers`, `/terms`, and `/privacy` routes.
+- Perform final site-wide accessibility audit.
+- Test cross-browser compatibility and responsive degradation.
+- Resolve any final hydration/lint warnings before delivery.
