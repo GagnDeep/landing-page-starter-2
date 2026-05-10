@@ -1,6 +1,5 @@
 # Next State / Handoff
 
-Ready to proceed to **Phase 4 — Core Layout and Global Components**.
+Ready to proceed to **Phase 5 — Home Page and About Page Implementation**.
 
-With the content decoupled (Phase 2), the visual tokens set (Phase 1), and the motion/image assets primed (Phase 3), we are ready to assemble the core global shell.
-The next phase requires building out the `Navbar`, `Footer`, `MobileMenu`, and the main `Layout` wrappers that will frame all the pages. It is vital to use the `lib/images.ts` registry for logos and the `content/` files for navigation strings.
+The core shell (Header, Footer, Theme, Fonts, Animations, Content Registry) is fully operational. Phase 5 should focus strictly on building out the rich content and layout rhythm for the `app/page.tsx` and `app/about/page.tsx` routes, heavily utilizing the `lib/images.ts` registry, Phase 3's visual components, and the Phase 2 content definitions.

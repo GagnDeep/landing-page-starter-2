@@ -1,17 +1,11 @@
 # Current State
 
-Phase 3 (Animated Visuals & Image Registry) is complete.
+Phase 4 (Core Layout and Global Components) is complete.
 
-- Created `components/visuals/` directory and implemented the following prop-driven, responsive animated components:
-  1. `AnimatedGradientMesh.tsx`: A slow, elegant background hero mesh using OKLCH variables.
-  2. `LogoMarquee.tsx`: A seamless scrolling logo track for partners/venues.
-  3. `AnimatedFloralSVG.tsx`: A path-drawing floral SVG metaphor.
-  4. `DotMatrixGrid.tsx`: A subtle density-driven background texture.
-  5. `FloatingBlobs.tsx`: Soft, blurred organic shapes for depth.
-  6. `CodeWindowTyping.tsx`: A typing effect component adapted for the 'process' steps.
-  7. `AnimatedStatCounter.tsx`: A numeric counter for reviews and years.
-  8. `AvatarStack.tsx`: A stacked avatar component for testimonial social proof.
-- Built a strongly-typed `lib/images.ts` registry referencing direct, optimized Unsplash URLs tailored specifically to the "Anand Karaj & floral artisan" aesthetic, removing all need for hardcoded `src` strings in future components.
-- Configured `next.config.mjs` to accept `images.unsplash.com` in `remotePatterns`.
+- Engineered `components/layout/Navbar.tsx` and `components/layout/Footer.tsx` using the tokens established in Phase 1 and copy populated from Phase 2 (`content/home.ts`).
+- Avoided hardcoded strings in layouts by dynamically referencing the content registry for brand names, phone numbers, hours, and addresses.
+- Integrated the visual `AnimatedFloralSVG.tsx` built in Phase 3 as the brand mark in the header and footer.
+- Established `app/layout.tsx` to handle the overarching Next.js layout, wrapping the application in a `ThemeProvider` to persist light/dark modes using the OKLCH theme engine.
+- Connected global typography (Inter and Playfair Display) smoothly across the layout.
 
-All components strictly honor `prefers-reduced-motion` to ensure WCAG accessibility.
+The site shell is now fully accessible, responsive, hydration-safe, and visually consistent with the Royal Flower Decoration aesthetic.
