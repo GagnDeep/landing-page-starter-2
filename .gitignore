@@ -13,7 +13,13 @@
 
 # next.js
 /.next/
+/.next-dev/
+/.next-prod/
 /out/
+
+# pm2
+/logs/
+.pm2/
 
 # production
 /build
