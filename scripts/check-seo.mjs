@@ -39,6 +39,21 @@ function checkBannedString(content, filePath) {
   }
 }
 
+function extractText(html) {
+  let text = html.replace(/<[^>]*>/g, " ")
+  return text.replace(/\s+/g, " ").trim()
+}
+
+function getLinks(content) {
+  const links = []
+  const regex = /<a[^>]*href=["']([^"']*)["'][^>]*>/gi
+  let match
+  while ((match = regex.exec(content)) !== null) {
+    links.push(match[1])
+  }
+  return links
+}
+
 function checkSeo() {
   if (!fs.existsSync(OUT_DIR)) {
     console.error("❌ Build output directory (.next-prod) not found.")
@@ -49,17 +64,18 @@ function checkSeo() {
   let htmlFiles = 0
 
   walkDir(OUT_DIR, (filePath) => {
-    // skip internal Next.js files
     if (filePath.includes("_next")) return
 
     htmlFiles++
     const content = fs.readFileSync(filePath, "utf-8")
     const relativePath = path.relative(OUT_DIR, filePath)
+    const textContent = extractText(content)
+    const wordCount = textContent.split(" ").length
 
     // Compliance Check
     checkBannedString(content, filePath)
 
-    // Quick regex checks since we don't have cheerio
+    // Quick regex checks
     const titleMatch = content.match(/<title[^>]*>(.*?)<\/title>/)
     const descMatch =
       content.match(
@@ -131,6 +147,72 @@ function checkSeo() {
     if (!content.includes('type="application/ld+json"')) {
       console.error(`❌ ${relativePath}: Missing JSON-LD structured data`)
       errors++
+    }
+
+    // Word Floor Checks
+    if (relativePath.includes("hubs/") && !relativePath.endsWith("hubs.html")) {
+      if (wordCount < 1800) {
+        console.error(
+          `❌ ${relativePath}: Word count (${wordCount}) below floor for Hub pages (1800)`
+        )
+        errors++
+      }
+    } else if (
+      relativePath.includes("vendors/") &&
+      !relativePath.endsWith("vendors.html")
+    ) {
+      if (wordCount < 1200) {
+        console.error(
+          `❌ ${relativePath}: Word count (${wordCount}) below floor for Review pages (1200)`
+        )
+        errors++
+      }
+    }
+
+    // Internal linking check
+    const links = getLinks(content)
+    if (relativePath.includes("hubs/") && !relativePath.endsWith("hubs.html")) {
+      const hubSlug = path.basename(filePath, ".html")
+      // Ensure Hub links up to root and across to at least 2 siblings. Our design has "Related Categories"
+      let siblingsCount = 0
+      for (const link of links) {
+        if (link.startsWith("/hubs/") && link !== `/hubs/${hubSlug}`) {
+          siblingsCount++
+        }
+      }
+      if (siblingsCount < 2) {
+        console.error(
+          `❌ ${relativePath}: Hub must link across to at least two siblings (found ${siblingsCount})`
+        )
+        errors++
+      }
+    } else if (
+      relativePath.includes("vendors/") &&
+      !relativePath.endsWith("vendors.html")
+    ) {
+      // vendors child page. Must link up to hub. (Our design has Category Hub link)
+      let linksToHub = false
+      for (const link of links) {
+        if (link.startsWith("/hubs/")) linksToHub = true
+      }
+      if (!linksToHub) {
+        console.error(
+          `❌ ${relativePath}: Spoke (vendor) must link up to its hub`
+        )
+        errors++
+      }
+    } else if (
+      relativePath.includes("jobs/") &&
+      !relativePath.endsWith("jobs.html")
+    ) {
+      let linksToHub = false
+      for (const link of links) {
+        if (link.startsWith("/jobs")) linksToHub = true
+      }
+      if (!linksToHub) {
+        console.error(`❌ ${relativePath}: Spoke (job) must link up to its hub`)
+        errors++
+      }
     }
   })
 
