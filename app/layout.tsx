@@ -3,6 +3,7 @@ import { Figtree, Geist_Mono } from "next/font/google"
 import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SiteHeader } from "@/components/site-header"
 import { cn } from "@/lib/utils"
 import { siteContent } from "@/content/site-content"
 
@@ -34,7 +35,12 @@ export default function RootLayout({
       )}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <div className="relative flex min-h-svh flex-col">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )
