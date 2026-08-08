@@ -7,15 +7,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-
-export interface Supplier {
-  name: string
-  capabilities: string[]
-  certifications: string[]
-  icvScore: string
-}
-
-const suppliers: Supplier[] = []
+import { suppliers } from "@/lib/content"
+import Link from "next/link"
 
 export function SupplierDirectory() {
   if (suppliers.length === 0) {
@@ -48,14 +41,21 @@ export function SupplierDirectory() {
         <TableBody>
           {suppliers.map((supplier) => (
             <TableRow key={supplier.name}>
-              <TableCell className="font-medium">{supplier.name}</TableCell>
+              <TableCell className="font-medium">
+                <Link
+                  href={`/suppliers/${supplier.id}`}
+                  className="hover:underline"
+                >
+                  {supplier.name}
+                </Link>
+              </TableCell>
               <TableCell>
                 <div className="flex flex-wrap gap-1">
                   {supplier.capabilities.map((cap) => (
                     <Badge
                       key={cap}
                       variant="secondary"
-                      className="font-mono tabular-nums"
+                      className="font-mono text-xs tabular-nums"
                     >
                       {cap}
                     </Badge>
@@ -68,15 +68,17 @@ export function SupplierDirectory() {
                     <Badge
                       key={cert}
                       variant="outline"
-                      className="font-mono tabular-nums"
+                      className="font-mono text-xs tabular-nums"
                     >
                       {cert}
                     </Badge>
                   ))}
                 </div>
               </TableCell>
-              <TableCell className="text-right font-mono tabular-nums">
-                {supplier.icvScore}
+              <TableCell className="text-right font-mono text-sm tabular-nums">
+                {supplier.icvScore === "High"
+                  ? `High {{VERIFY: exact ICV score for ${supplier.name}}}`
+                  : supplier.icvScore}
               </TableCell>
             </TableRow>
           ))}

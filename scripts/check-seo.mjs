@@ -6,16 +6,31 @@ function getFiles(dir, ext = ".html", files = []) {
   const items = fs.readdirSync(dir)
   for (const item of items) {
     const fullPath = path.join(dir, item)
-    if (fs.statSync(fullPath).isDirectory() && item !== "_next") {
+    if (
+      fs.statSync(fullPath).isDirectory() &&
+      item !== "_next" &&
+      item !== "server"
+    ) {
       getFiles(fullPath, ext, files)
-    } else if (fullPath.endsWith(ext) && !fullPath.includes("/_not-found")) {
+    } else if (
+      fullPath.endsWith(ext) &&
+      !fullPath.includes("/_not-found") &&
+      !fullPath.includes("/server/")
+    ) {
       files.push(fullPath)
     }
   }
   return files
 }
 
-const outDir = path.join(process.cwd(), ".next-prod")
+// If `out` directory exists, check it. Otherwise fallback to `.next-prod` or `.next`
+let outDir = path.join(process.cwd(), "out")
+if (!fs.existsSync(outDir)) {
+  outDir = path.join(process.cwd(), ".next-prod")
+  if (!fs.existsSync(outDir)) {
+    outDir = path.join(process.cwd(), ".next")
+  }
+}
 const files = getFiles(outDir)
 
 let errors = 0
@@ -28,19 +43,48 @@ function assert(condition, file, message) {
 }
 
 if (files.length === 0) {
-  console.error("No HTML files found in .next-prod/. Did you run build?")
+  console.error(`No HTML files found in ${outDir}. Did you run build?`)
   process.exit(1)
 }
 
 const bannedStrings = ["lorem ipsum", "TODO", "FIXME"]
 const bannedSchemas = ["NewsArticle"]
 
+// Track links for internal linking law
+const graph = new Map()
+
 for (const file of files) {
+  const relativePath = path.relative(outDir, file).replace(/\\/g, "/")
+  const is404 =
+    relativePath.includes("404") || relativePath.includes("not-found")
+
+  // Create a clean URL path representing this file. e.g., 'about/index.html' -> '/about/'
+  let routePath = "/"
+  if (relativePath !== "index.html" && !is404) {
+    routePath =
+      "/" + relativePath.replace(/\/index\.html$/, "/").replace(/\.html$/, "/")
+  }
+
   const content = fs.readFileSync(file, "utf8")
 
-  // Exclude checking 404 for word floors and some strict content rules, but check SEO
-  const is404 = file.includes("404") || file.includes("not-found")
-  const relativePath = path.relative(outDir, file).replace(/\\/g, "/")
+  // Extract all hrefs
+  const linkMatches = content.matchAll(/<a[^>]*href="([^"]+)"[^>]*>/g)
+  const links = new Set()
+  for (const match of linkMatches) {
+    let href = match[1]
+    if (href.startsWith("http")) continue // external
+    if (href.startsWith("#")) continue // anchor
+
+    // Normalize href to have trailing slash for comparison if it's not a file
+    if (!href.endsWith("/") && !href.includes(".")) href += "/"
+    links.add(href)
+  }
+
+  if (!is404) {
+    graph.set(routePath, links)
+  }
+
+  // --- Check SEO Constraints ---
 
   // H1
   const h1Matches = content.match(/<h1[^>]*>.*?<\/h1>/gs)
@@ -140,7 +184,16 @@ for (const file of files) {
     "Must have valid JSON-LD"
   )
 
-  // Banned schemas
+  if (relativePath !== "index.html" && !is404) {
+    assert(
+      content.includes('"@type":"BreadcrumbList"') ||
+        content.includes('"@type": "BreadcrumbList"'),
+      file,
+      "Pages below root must have BreadcrumbList schema"
+    )
+  }
+
+  // Banned schemas, strings, themes
   for (const banned of bannedSchemas) {
     assert(
       !content.includes(`"@type":"${banned}"`) &&
@@ -149,8 +202,6 @@ for (const file of files) {
       `Must not contain banned schema type: ${banned}`
     )
   }
-
-  // Banned strings
   for (const banned of bannedStrings) {
     assert(
       !content.toLowerCase().includes(banned.toLowerCase()),
@@ -158,8 +209,6 @@ for (const file of files) {
       `Must not contain banned string: ${banned}`
     )
   }
-
-  // Banned content themes (journalism, weapons, etc)
   const bannedKeywords = [
     "newsarticle",
     "dateline",
@@ -176,16 +225,87 @@ for (const file of files) {
       `Must not contain restricted keyword: ${keyword}`
     )
   }
+}
 
-  // BreadcrumbList on every page below root
-  if (relativePath !== "index.html" && !is404) {
+// Check linking laws
+// 1. Hub links to every published child
+// 2. Child links up to its hub
+// 3. Child links across to at least two siblings
+// 4. Zero orphan pages
+// 5. Max 2 clicks from home
+
+for (const [route, links] of graph.entries()) {
+  if (route === "/") continue
+
+  const parts = route.split("/").filter(Boolean)
+  const isHub = parts.length === 1
+  const isChild = parts.length === 2
+
+  if (isHub) {
+    // Hub should link to all its children
+    for (const otherRoute of graph.keys()) {
+      const otherParts = otherRoute.split("/").filter(Boolean)
+      if (otherParts.length === 2 && otherParts[0] === parts[0]) {
+        assert(
+          links.has(otherRoute),
+          route,
+          `Hub must link to child: ${otherRoute}`
+        )
+      }
+    }
+  }
+
+  if (isChild) {
+    // Child must link to its hub
+    const hubRoute = `/${parts[0]}/`
+    assert(links.has(hubRoute), route, `Child must link up to hub ${hubRoute}`)
+
+    // Child must link to at least 2 siblings
+    let siblingLinks = 0
+    for (const link of links) {
+      if (
+        link !== route &&
+        link.startsWith(hubRoute) &&
+        link.split("/").filter(Boolean).length === 2
+      ) {
+        siblingLinks++
+      }
+    }
     assert(
-      content.includes('"@type":"BreadcrumbList"') ||
-        content.includes('"@type": "BreadcrumbList"'),
-      file,
-      "Pages below root must have BreadcrumbList schema"
+      siblingLinks >= 2,
+      route,
+      `Child must link to at least 2 siblings. Found ${siblingLinks}.`
     )
   }
+}
+
+// Distance from home (max 2 clicks)
+const visited = new Set(["/"])
+let queue = ["/"]
+let clicks = 0
+
+while (queue.length > 0 && clicks <= 2) {
+  const nextQueue = []
+  for (const node of queue) {
+    const edges = graph.get(node)
+    if (!edges) continue
+    for (const edge of edges) {
+      if (graph.has(edge) && !visited.has(edge)) {
+        visited.add(edge)
+        nextQueue.push(edge)
+      }
+    }
+  }
+  queue = nextQueue
+  clicks++
+}
+
+for (const route of graph.keys()) {
+  assert(
+    visited.has(route),
+    route,
+    `Page ${route} is either an orphan or more than 2 clicks from home page.`
+  )
 }
 
 if (errors > 0) {
