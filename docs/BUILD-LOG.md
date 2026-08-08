@@ -9,8 +9,8 @@
 - Details: Built the primary hero section in app/page.tsx. Utilized Next.js layout primitives, shadcn's Badge and Button, and applied the OKLCH theme for a high-tech industrial look. Included visual verification for both light and dark modes.
 
 ## Pass 3: Features Section
-- Status: Pending
-- Details: Add a features section detailing the AI capabilities for RFQ generation.
+- Status: Complete
+- Details: Added a features section highlighting core capabilities (AI Schematic Parsing, BOM Matching, Instant RFQ) using grid layouts and HugeIcons.
 
 ## Pass 4: How it Works Section
 - Status: Pending

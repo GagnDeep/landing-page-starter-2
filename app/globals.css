@@ -48,14 +48,13 @@
 }
 
 :root {
-  /* Slate & Electric Blue - High Tech Industrial */
   --background: oklch(0.99 0.005 260);
   --foreground: oklch(0.15 0.02 260);
   --card: oklch(1 0 260);
   --card-foreground: oklch(0.15 0.02 260);
   --popover: oklch(1 0 260);
   --popover-foreground: oklch(0.15 0.02 260);
-  --primary: oklch(0.55 0.15 250); /* Electric Blue */
+  --primary: oklch(0.55 0.15 250);
   --primary-foreground: oklch(0.98 0 260);
   --secondary: oklch(0.95 0.01 260);
   --secondary-foreground: oklch(0.25 0.02 260);
@@ -66,13 +65,13 @@
   --destructive: oklch(0.6 0.15 20);
   --border: oklch(0.9 0.01 260);
   --input: oklch(0.9 0.01 260);
-  --ring: oklch(0.55 0.15 250); /* Electric Blue */
+  --ring: oklch(0.55 0.15 250);
   --chart-1: oklch(0.55 0.15 250);
   --chart-2: oklch(0.65 0.12 210);
   --chart-3: oklch(0.45 0.1 270);
   --chart-4: oklch(0.7 0.15 290);
   --chart-5: oklch(0.8 0.1 320);
-  --radius: 0.25rem; /* Sharp, industrial edges */
+  --radius: 0.25rem;
   --sidebar: oklch(0.985 0 260);
   --sidebar-foreground: oklch(0.15 0.02 260);
   --sidebar-primary: oklch(0.55 0.15 250);
@@ -84,14 +83,13 @@
 }
 
 .dark {
-  /* Slate & Electric Blue - High Tech Industrial */
   --background: oklch(0.15 0.02 260);
   --foreground: oklch(0.98 0 260);
   --card: oklch(0.2 0.02 260);
   --card-foreground: oklch(0.98 0 260);
   --popover: oklch(0.2 0.02 260);
   --popover-foreground: oklch(0.98 0 260);
-  --primary: oklch(0.65 0.15 250); /* Bright Electric Blue */
+  --primary: oklch(0.65 0.15 250);
   --primary-foreground: oklch(0.15 0.02 260);
   --secondary: oklch(0.25 0.03 260);
   --secondary-foreground: oklch(0.95 0.01 260);
@@ -102,7 +100,7 @@
   --destructive: oklch(0.6 0.15 20);
   --border: oklch(0.25 0.03 260);
   --input: oklch(0.25 0.03 260);
-  --ring: oklch(0.65 0.15 250); /* Bright Electric Blue */
+  --ring: oklch(0.65 0.15 250);
   --chart-1: oklch(0.65 0.15 250);
   --chart-2: oklch(0.55 0.12 210);
   --chart-3: oklch(0.45 0.1 270);
