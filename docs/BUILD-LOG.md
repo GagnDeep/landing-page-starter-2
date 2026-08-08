@@ -13,8 +13,8 @@
 - Details: Added a features section highlighting core capabilities (AI Schematic Parsing, BOM Matching, Instant RFQ) using grid layouts and HugeIcons.
 
 ## Pass 4: How it Works Section
-- Status: Pending
-- Details: Implement step-by-step workflow visualization.
+- Status: Complete
+- Details: Implemented step-by-step workflow visualization connecting design schematics to final quotes using alternating layout steps and HugeIcons.
 
 ## Pass 5: FAQ & Final CTA
 - Status: Pending

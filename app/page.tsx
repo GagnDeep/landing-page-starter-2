@@ -11,6 +11,9 @@ import {
   Brain01Icon,
   Database01Icon,
   Analytics01Icon,
+  Upload01Icon,
+  CpuIcon,
+  CheckmarkCircle01Icon,
 } from "@hugeicons/core-free-icons"
 
 export default function Page() {
@@ -154,6 +157,123 @@ export default function Page() {
                       Generate a standardized, manufacturer-ready RFQ package in
                       seconds, complete with cut lists.
                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        {/* Pass 4: How it Works Section */}
+        <Section id="how-it-works" className="bg-background py-16 md:py-24">
+          <div className="mx-auto flex max-w-[64rem] flex-col items-center gap-12">
+            <div className="flex flex-col items-center gap-4 text-center">
+              <h2 className="font-heading text-3xl font-bold sm:text-4xl">
+                From schematic to quote in three steps
+              </h2>
+              <p className="max-w-[42rem] leading-relaxed text-muted-foreground sm:text-lg">
+                Our workflow is designed to minimize manual data entry and
+                maximize accuracy, putting hours back into your engineering
+                process.
+              </p>
+            </div>
+
+            <div className="relative mx-auto flex w-full max-w-4xl flex-col gap-12 pt-8 md:gap-0">
+              {/* Connecting Line for Desktop */}
+              <div className="absolute top-[40px] left-[27px] hidden h-[calc(100%-80px)] w-0.5 bg-border md:block"></div>
+
+              {/* Step 1 */}
+              <div className="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-12">
+                <div className="flex items-center gap-4 md:w-1/2 md:justify-end md:gap-6">
+                  <div className="md:text-right">
+                    <h3 className="text-xl font-bold text-foreground">
+                      Upload your files
+                    </h3>
+                    <p className="mt-2 text-muted-foreground">
+                      Drag and drop your PDF schematics, DWG files, or
+                      unstructured BOMs directly into our platform.
+                    </p>
+                  </div>
+                  <div className="hidden size-14 shrink-0 items-center justify-center rounded-full border-4 border-background bg-primary/10 md:flex">
+                    <span className="text-lg font-bold text-primary">1</span>
+                  </div>
+                </div>
+
+                {/* Mobile Number */}
+                <div className="absolute top-0 -left-[50px] flex size-10 shrink-0 items-center justify-center rounded-full border border-border bg-background md:hidden">
+                  <span className="font-bold text-primary">1</span>
+                </div>
+
+                <div className="flex w-full md:w-1/2">
+                  <div className="flex h-[200px] w-full items-center justify-center rounded-xl border border-border bg-muted/30 p-8">
+                    <HugeiconsIcon
+                      icon={Upload01Icon}
+                      className="size-16 text-muted-foreground/50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative flex flex-col items-start gap-6 md:mt-16 md:flex-row-reverse md:items-center md:gap-12">
+                <div className="flex items-center gap-4 md:w-1/2 md:justify-start md:gap-6">
+                  <div className="md:text-left">
+                    <h3 className="text-xl font-bold text-foreground">
+                      AI Extraction
+                    </h3>
+                    <p className="mt-2 text-muted-foreground">
+                      Our specialized vision and NLP models instantly extract
+                      connections, pinouts, and components.
+                    </p>
+                  </div>
+                  <div className="hidden size-14 shrink-0 items-center justify-center rounded-full border-4 border-background bg-primary/10 md:order-first md:flex">
+                    <span className="text-lg font-bold text-primary">2</span>
+                  </div>
+                </div>
+
+                {/* Mobile Number */}
+                <div className="absolute top-0 -left-[50px] flex size-10 shrink-0 items-center justify-center rounded-full border border-border bg-background md:hidden">
+                  <span className="font-bold text-primary">2</span>
+                </div>
+
+                <div className="flex w-full md:w-1/2">
+                  <div className="flex h-[200px] w-full items-center justify-center rounded-xl border border-border bg-muted/30 p-8">
+                    <HugeiconsIcon
+                      icon={CpuIcon}
+                      className="size-16 text-primary/50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative flex flex-col items-start gap-6 md:mt-16 md:flex-row md:items-center md:gap-12">
+                <div className="flex items-center gap-4 md:w-1/2 md:justify-end md:gap-6">
+                  <div className="md:text-right">
+                    <h3 className="text-xl font-bold text-foreground">
+                      Review & Export
+                    </h3>
+                    <p className="mt-2 text-muted-foreground">
+                      Validate the generated BOM and cut list, then export a
+                      complete RFQ package to your manufacturer.
+                    </p>
+                  </div>
+                  <div className="hidden size-14 shrink-0 items-center justify-center rounded-full border-4 border-background bg-primary/10 md:flex">
+                    <span className="text-lg font-bold text-primary">3</span>
+                  </div>
+                </div>
+
+                {/* Mobile Number */}
+                <div className="absolute top-0 -left-[50px] flex size-10 shrink-0 items-center justify-center rounded-full border border-border bg-background md:hidden">
+                  <span className="font-bold text-primary">3</span>
+                </div>
+
+                <div className="flex w-full md:w-1/2">
+                  <div className="flex h-[200px] w-full items-center justify-center rounded-xl border border-primary/20 bg-primary/5 p-8">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle01Icon}
+                      className="size-16 text-primary"
+                    />
                   </div>
                 </div>
               </div>
