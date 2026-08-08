@@ -30,3 +30,5 @@ Verify:       pnpm run verify       # Must exit 0
 - No invented facts. Any figure, price, date, fee, threshold, payout, vendor claim or missing copy must be supplied as `{{VERIFY: ...}}`.
 - No fabricated social proof (testimonials, logo walls, review counts, etc.).
 - No lorem ipsum, TODO, or FIXME.
+- Every child links to its hub and at least two siblings. Every hub links to every child.
+- Word floors: pillar/hub >1800, comparison/review >1200, guides/spokes >900.
