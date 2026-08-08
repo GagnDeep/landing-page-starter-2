@@ -7,6 +7,14 @@ const isDev = process.env.NODE_ENV !== "production"
 
 const nextConfig = {
   distDir: isDev ? ".next-dev" : ".next-prod",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
 }
 
 export default nextConfig
