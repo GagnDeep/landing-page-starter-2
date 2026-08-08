@@ -1,0 +1,12 @@
+
+> landing-page-starter@0.0.1 dev /app
+> next dev --turbopack -p 7811
+
+⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::7811
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::7811)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  sysca GET /pricing 200 in 2.3s (next.js: 1877ms, application-code: 451ms)
+ Command failed with exit code 1.
