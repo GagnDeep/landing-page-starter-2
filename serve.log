@@ -1,0 +1,86 @@
+npm warn exec The following package was not found and will be installed: serve@14.2.6
+ INFO  Accepting connections at http://localhost:7822
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 389 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/media/23b7a97ae3b5c134-s.p.226pwps5o-gq_.woff2
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/0ttp2r03h-i9v.css
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/2hn6t6csqzdrj.css
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/media/5f402bd2d8eef81a-s.p.40bho2kviej2o.woff2
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 15 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 15 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 13 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 13 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 12 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 21 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 5 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/12wmw1tm0_yul.js
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/1uo41wgs9bom9.js
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/38l97uvwruw-r.js
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/27_weislvn3q3.js
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/turbopack-3lcof8wlg2v97.js
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/28rm8iudqtmg7.js
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 12 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 12 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 11 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 11 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 15 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 19 ms
+ HTTP  8/8/2026 7:42:03 AM ::1 GET /_next/static/chunks/0jyu-vq1qagps.js
+ HTTP  8/8/2026 7:42:03 AM ::1 Returned 200 in 6 ms
+ HTTP  8/8/2026 7:42:04 AM ::1 HEAD /
+ HTTP  8/8/2026 7:42:04 AM ::1 HEAD /about
+ HTTP  8/8/2026 7:42:04 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:04 AM ::1 Returned 200 in 2 ms
+ HTTP  8/8/2026 7:42:04 AM ::1 GET /__next._tree.txt?_rsc=5CB68i4pnAekjehf
+ HTTP  8/8/2026 7:42:04 AM ::1 GET /about/__next._tree.txt?_rsc=5CB68i4pnAekjehf
+ HTTP  8/8/2026 7:42:04 AM ::1 Returned 200 in 3 ms
+ HTTP  8/8/2026 7:42:04 AM ::1 Returned 200 in 2 ms
+ HTTP  8/8/2026 7:42:04 AM ::1 GET /__next.__PAGE__.txt?_rsc=8nTjltbQWvg6NcbE
+ HTTP  8/8/2026 7:42:04 AM ::1 Returned 200 in 2 ms
+ HTTP  8/8/2026 7:42:04 AM ::1 GET /about/__next.about.__PAGE__.txt?_rsc=hzcUC6YqarYE9pKE
+ HTTP  8/8/2026 7:42:04 AM ::1 Returned 200 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /about
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 200 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/media/23b7a97ae3b5c134-s.p.226pwps5o-gq_.woff2
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/0ttp2r03h-i9v.css
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/media/5f402bd2d8eef81a-s.p.40bho2kviej2o.woff2
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 3 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/2hn6t6csqzdrj.css
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 3 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/12wmw1tm0_yul.js
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/1uo41wgs9bom9.js
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 0 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/38l97uvwruw-r.js
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/27_weislvn3q3.js
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/turbopack-3lcof8wlg2v97.js
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/28rm8iudqtmg7.js
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /_next/static/chunks/0jyu-vq1qagps.js
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 HEAD /
+ HTTP  8/8/2026 7:42:05 AM ::1 HEAD /about
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 2 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 304 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /__next._tree.txt?_rsc=Sdev7PUlRw12F58X
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 200 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /about/__next._tree.txt?_rsc=Sdev7PUlRw12F58X
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 200 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /__next.__PAGE__.txt?_rsc=IbqYazZHyjXYH_Ld
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 200 in 1 ms
+ HTTP  8/8/2026 7:42:05 AM ::1 GET /about/__next.about.__PAGE__.txt?_rsc=-PmfjtzM0R4ONS4g
+ HTTP  8/8/2026 7:42:05 AM ::1 Returned 200 in 0 ms

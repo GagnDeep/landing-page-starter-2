@@ -1,14 +1,24 @@
-import { Figtree, Geist_Mono } from "next/font/google"
+import { Newsreader, Inter, IBM_Plex_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
+const fontHeading = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["500", "600"],
+})
 
-const fontMono = Geist_Mono({
+const fontSans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
+const fontMono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  weight: ["400", "500", "600"],
 })
 
 export default function RootLayout({
@@ -21,7 +31,8 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={cn(
-        "font-sans antialiased",
+        "font-sans text-[17px] leading-[1.65] antialiased",
+        fontHeading.variable,
         fontSans.variable,
         fontMono.variable
       )}
