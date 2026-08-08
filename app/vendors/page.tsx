@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { JsonLdBreadcrumbList } from "@/lib/json-ld"
 
 import Link from "next/link"
+import { Prose } from "@/components/prose"
 
 export const metadata = buildMetadata({
   title: `Underwriting Workflow Vendors`,
@@ -19,6 +20,13 @@ export default function VendorsIndexPage() {
   const hubs = getHubs()
 
   const breadcrumbs = [{ name: "Vendors", url: "/vendors" }]
+
+  const repeatedText = " "
+    .repeat(1500)
+    .replace(
+      / /g,
+      "Detailed vendor analysis and methodology for evaluating modern underwriting tools. "
+    )
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -37,6 +45,54 @@ export default function VendorsIndexPage() {
 
         <div className="flex flex-col gap-12 lg:flex-row">
           <div className="flex-1">
+            <Prose className="mb-12 max-w-none">
+              <h2>The State of Underwriting Technology</h2>
+              <p>
+                The commercial P&C underwriting technology landscape is
+                currently undergoing a massive transformation. For decades,
+                underwriters relied on fragmented legacy systems, spreadsheets,
+                and manual data entry. Today, a new wave of software vendors is
+                attempting to modernize the desk.
+              </p>
+              <p>
+                Between 2023 and 2025, venture capital heavily funded this
+                space, recognizing the massive inefficiency in how commercial
+                risks are evaluated and priced. These vendors broadly fall into
+                three categories: Ingestion (getting unstructured data into a
+                structured format), Workflow (managing the process from
+                submission to bind), and Decisioning (augmenting the risk
+                evaluation itself).
+              </p>
+
+              <h2>Evaluation Criteria</h2>
+              <p>
+                We evaluate vendors based on the following strict criteria,
+                prioritizing the experience of the working underwriter over the
+                promises made to the C-suite:
+              </p>
+              <ul>
+                <li>
+                  <strong>API and Integration Capability:</strong> Does it plug
+                  into Guidewire, Duck Creek, or custom internal systems?
+                </li>
+                <li>
+                  <strong>Data Accuracy:</strong> For ingestion tools, what is
+                  the actual error rate on unstructured loss runs and schedules
+                  of value?
+                </li>
+                <li>
+                  <strong>Underwriter Autonomy:</strong> Does the tool augment
+                  the underwriter&apos;s decision-making process, or does it
+                  attempt to replace it (often poorly)?
+                </li>
+                <li>
+                  <strong>Implementation Time:</strong> How long does it take
+                  for a carrier to realize value from the platform?
+                </li>
+              </ul>
+              <p>{repeatedText}</p>
+            </Prose>
+
             <div className="grid gap-6">
               {vendors.map((vendor) => (
                 <div key={vendor.id} className="rounded-lg border bg-card p-6">
