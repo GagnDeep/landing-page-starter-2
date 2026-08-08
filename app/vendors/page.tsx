@@ -4,7 +4,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { JsonLdBreadcrumbList } from "@/lib/json-ld"
-
 import Link from "next/link"
 import { Prose } from "@/components/prose"
 
@@ -32,7 +31,11 @@ export default function VendorsIndexPage() {
     <div className="flex min-h-screen flex-col">
       <JsonLdBreadcrumbList items={breadcrumbs} />
       <Header />
-      <main className="container mx-auto max-w-[1440px] flex-1 px-4 py-12">
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="container mx-auto max-w-[1440px] flex-1 px-4 py-12 focus:outline-none"
+      >
         <Breadcrumbs items={breadcrumbs} />
 
         <h1 className="mb-6 font-heading text-4xl font-semibold text-primary">
@@ -93,34 +96,46 @@ export default function VendorsIndexPage() {
               <p>{repeatedText}</p>
             </Prose>
 
-            <div className="grid gap-6">
-              {vendors.map((vendor) => (
-                <div key={vendor.id} className="rounded-lg border bg-card p-6">
-                  <div className="mb-4 flex flex-col justify-between gap-4 md:flex-row md:items-center">
-                    <h2 className="font-heading text-2xl font-semibold text-primary">
-                      <Link
-                        href={`/vendors/${vendor.slug}`}
-                        className="hover:underline"
-                      >
-                        {vendor.name}
-                      </Link>
-                    </h2>
-                    <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 font-mono text-xs font-semibold">
-                      {vendor.category}
-                    </span>
-                  </div>
-                  <p className="mb-6 text-muted-foreground">
-                    {vendor.description}
-                  </p>
-                  <Link
-                    href={`/vendors/${vendor.slug}`}
-                    className="font-mono text-sm text-primary hover:underline"
+            {vendors.length === 0 ? (
+              <div className="rounded-lg border border-dashed p-12 text-center text-muted-foreground">
+                <p className="mb-2 text-lg font-medium">
+                  No vendors listed yet.
+                </p>
+                <p>Check back later as we continuously evaluate the market.</p>
+              </div>
+            ) : (
+              <div className="grid gap-6">
+                {vendors.map((vendor) => (
+                  <div
+                    key={vendor.id}
+                    className="rounded-lg border bg-card p-6 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2"
                   >
-                    Read our analysis →
-                  </Link>
-                </div>
-              ))}
-            </div>
+                    <div className="mb-4 flex flex-col justify-between gap-4 md:flex-row md:items-center">
+                      <h2 className="font-heading text-2xl font-semibold text-primary">
+                        <Link
+                          href={`/vendors/${vendor.slug}`}
+                          className="-ml-1 flex inline-block min-h-[44px] items-center rounded px-1 hover:underline focus-visible:underline focus-visible:outline-none"
+                        >
+                          {vendor.name}
+                        </Link>
+                      </h2>
+                      <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 font-mono text-xs font-semibold">
+                        {vendor.category}
+                      </span>
+                    </div>
+                    <p className="mb-6 line-clamp-3 max-w-prose text-muted-foreground">
+                      {vendor.description}
+                    </p>
+                    <Link
+                      href={`/vendors/${vendor.slug}`}
+                      className="-ml-1 inline-flex min-h-[44px] items-center rounded px-1 font-mono text-sm text-primary hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                    >
+                      Read our analysis →
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <aside className="w-full shrink-0 lg:w-[320px]">
@@ -133,7 +148,7 @@ export default function VendorsIndexPage() {
                   <li key={hub.id}>
                     <Link
                       href={`/hubs/${hub.slug}`}
-                      className="block text-muted-foreground transition-colors hover:text-primary"
+                      className="-mx-2 block flex min-h-[44px] items-center rounded px-2 text-muted-foreground transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                     >
                       {hub.title}
                     </Link>

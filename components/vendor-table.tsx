@@ -4,17 +4,11 @@ import { useState } from "react"
 import Link from "next/link"
 import { getVendors } from "@/lib/content"
 
-// Ensure static fallback works by executing the content fetch outside client state directly if possible, or passing as props.
-// However, the brief says "fully keyboard-operable, with a static server-rendered fallback that exposes the same content to crawlers".
-// A pure Server Component can't have interactive sorting, so we use a Client Component that receives data as props, or fetches statically.
-
 export function VendorTable({
   initialVendors,
 }: {
   initialVendors?: import("@/content/schemas").VendorSchema[]
 }) {
-  // If not passed, default to empty to avoid hydration errors if we try to fetch in client component,
-  // but in our setup, we can import getVendors directly since it's just a static array.
   const allVendors = initialVendors || getVendors()
 
   const [sortField, setSortField] = useState<
@@ -55,18 +49,18 @@ export function VendorTable({
   })
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <div className="flex items-center gap-2">
+    <div className="w-full space-y-4">
+      <div className="mb-2 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div className="flex w-full items-center gap-2 sm:w-auto">
           <label
             htmlFor="category-filter"
-            className="text-sm font-medium text-foreground"
+            className="text-sm font-medium whitespace-nowrap text-foreground"
           >
-            Filter:
+            Filter by:
           </label>
           <select
             id="category-filter"
-            className="h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
+            className="h-11 w-full min-w-[44px] rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none sm:h-9 sm:w-auto"
             value={filterCategory}
             onChange={(e) => setFilterCategory(e.target.value)}
           >
@@ -79,35 +73,63 @@ export function VendorTable({
         </div>
       </div>
 
-      <div className="w-full overflow-x-auto rounded-lg border bg-card text-card-foreground shadow-sm">
-        <table className="w-full text-left text-sm">
+      <div
+        className="w-full overflow-x-auto rounded-lg border bg-card text-card-foreground shadow-sm focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2"
+        tabIndex={0}
+        role="region"
+        aria-label="Vendor Comparison Table"
+      >
+        <table className="w-full min-w-[600px] text-left text-sm">
           <thead className="border-b bg-muted/50 font-mono text-xs text-muted-foreground uppercase">
             <tr>
-              <th className="px-6 py-4 font-medium">
+              <th className="px-6 py-4 font-medium" scope="col">
                 <button
                   onClick={() => handleSort("name")}
-                  className="flex items-center gap-1 rounded px-1 hover:text-foreground focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
+                  className="-ml-2 flex min-h-[44px] items-center gap-1 rounded px-2 py-1 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+                  aria-label={
+                    sortField === "name"
+                      ? sortDirection === "asc"
+                        ? "ascending"
+                        : "descending"
+                      : "none"
+                  }
                 >
                   Vendor{" "}
                   {sortField === "name" &&
                     (sortDirection === "asc" ? "↑" : "↓")}
                 </button>
               </th>
-              <th className="px-6 py-4 font-medium">
+              <th className="px-6 py-4 font-medium" scope="col">
                 <button
                   onClick={() => handleSort("category")}
-                  className="flex items-center gap-1 rounded px-1 hover:text-foreground focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
+                  className="-ml-2 flex min-h-[44px] items-center gap-1 rounded px-2 py-1 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+                  aria-label={
+                    sortField === "category"
+                      ? sortDirection === "asc"
+                        ? "ascending"
+                        : "descending"
+                      : "none"
+                  }
                 >
                   Category{" "}
                   {sortField === "category" &&
                     (sortDirection === "asc" ? "↑" : "↓")}
                 </button>
               </th>
-              <th className="px-6 py-4 font-medium">Funding</th>
-              <th className="px-6 py-4 font-medium">
+              <th className="px-6 py-4 font-medium" scope="col">
+                Funding
+              </th>
+              <th className="px-6 py-4 font-medium" scope="col">
                 <button
                   onClick={() => handleSort("fundingDate")}
-                  className="flex items-center gap-1 rounded px-1 hover:text-foreground focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
+                  className="-ml-2 flex min-h-[44px] items-center gap-1 rounded px-2 py-1 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+                  aria-label={
+                    sortField === "fundingDate"
+                      ? sortDirection === "asc"
+                        ? "ascending"
+                        : "descending"
+                      : "none"
+                  }
                 >
                   Verified{" "}
                   {sortField === "fundingDate" &&
@@ -119,11 +141,18 @@ export function VendorTable({
           <tbody className="divide-y font-mono">
             {sortedVendors.length === 0 ? (
               <tr>
-                <td
-                  colSpan={4}
-                  className="px-6 py-8 text-center text-muted-foreground"
-                >
-                  No vendors found in this category.
+                <td colSpan={4} className="px-6 py-12 text-center">
+                  <div className="flex flex-col items-center justify-center space-y-2">
+                    <p className="text-muted-foreground">
+                      No vendors found matching this filter.
+                    </p>
+                    <button
+                      onClick={() => setFilterCategory("All")}
+                      className="min-h-[44px] min-w-[44px] rounded text-primary hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+                    >
+                      Clear filter
+                    </button>
+                  </div>
                 </td>
               </tr>
             ) : (
@@ -132,20 +161,22 @@ export function VendorTable({
                   key={vendor.id}
                   className="transition-colors hover:bg-muted/50"
                 >
-                  <td className="px-6 py-4 font-sans font-semibold text-foreground">
+                  <td className="max-w-[200px] truncate px-6 py-4 font-sans font-semibold text-foreground">
                     <Link
                       href={`/vendors/${vendor.slug}`}
-                      className="rounded px-1 hover:underline focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
+                      className="-ml-1 flex min-h-[44px] items-center rounded px-1 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
                     >
-                      {vendor.name}
+                      <span className="truncate">{vendor.name}</span>
                     </Link>
                   </td>
-                  <td className="px-6 py-4 text-muted-foreground">
+                  <td className="px-6 py-4 whitespace-nowrap text-muted-foreground">
                     {vendor.category}
                   </td>
-                  <td className="px-6 py-4">{vendor.fundingAmount}</td>
-                  <td className="px-6 py-4">
-                    <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {vendor.fundingAmount}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold">
                       {vendor.fundingDate}
                     </span>
                   </td>
@@ -159,26 +190,43 @@ export function VendorTable({
       <noscript>
         {/* Static fallback for crawlers without JS */}
         <div className="w-full overflow-x-auto rounded-lg border bg-card text-card-foreground shadow-sm">
-          <table className="w-full text-left text-sm">
+          <table className="w-full min-w-[600px] text-left text-sm">
             <thead className="border-b bg-muted/50 font-mono text-xs text-muted-foreground uppercase">
               <tr>
-                <th className="px-6 py-4 font-medium">Vendor</th>
-                <th className="px-6 py-4 font-medium">Category</th>
-                <th className="px-6 py-4 font-medium">Funding</th>
-                <th className="px-6 py-4 font-medium">Verified</th>
+                <th className="px-6 py-4 font-medium" scope="col">
+                  Vendor
+                </th>
+                <th className="px-6 py-4 font-medium" scope="col">
+                  Category
+                </th>
+                <th className="px-6 py-4 font-medium" scope="col">
+                  Funding
+                </th>
+                <th className="px-6 py-4 font-medium" scope="col">
+                  Verified
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y font-mono">
               {allVendors.map((vendor) => (
                 <tr key={vendor.id}>
-                  <td className="px-6 py-4 font-sans font-semibold text-foreground">
-                    <a href={`/vendors/${vendor.slug}`}>{vendor.name}</a>
+                  <td className="max-w-[200px] truncate px-6 py-4 font-sans font-semibold text-foreground">
+                    <a
+                      href={`/vendors/${vendor.slug}`}
+                      className="block truncate hover:underline"
+                    >
+                      {vendor.name}
+                    </a>
                   </td>
-                  <td className="px-6 py-4 text-muted-foreground">
+                  <td className="px-6 py-4 whitespace-nowrap text-muted-foreground">
                     {vendor.category}
                   </td>
-                  <td className="px-6 py-4">{vendor.fundingAmount}</td>
-                  <td className="px-6 py-4">{vendor.fundingDate}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {vendor.fundingAmount}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {vendor.fundingDate}
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -8,17 +8,20 @@ const fontHeading = Spectral({
   subsets: ["latin"],
   weight: ["500", "600"],
   variable: "--font-heading",
+  display: "swap",
 })
 
 const fontSans = Public_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 })
 
 const fontMono = Courier_Prime({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-mono",
+  display: "swap",
 })
 
 export default function RootLayout({
@@ -38,7 +41,15 @@ export default function RootLayout({
       )}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none"
+          >
+            Skip to content
+          </a>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

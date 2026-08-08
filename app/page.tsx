@@ -28,7 +28,11 @@ export default function HomePage() {
       <JsonLdOrganization />
       <JsonLdWebSite />
       <Header />
-      <main className="container mx-auto flex max-w-[1440px] flex-1 flex-col gap-12 px-4 py-12 lg:flex-row lg:py-20">
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="container mx-auto flex max-w-[1440px] flex-1 flex-col gap-12 px-4 py-12 focus:outline-none lg:flex-row lg:py-20"
+      >
         <div className="max-w-[66ch] flex-1">
           <h1 className="mb-6 font-heading text-4xl font-semibold tracking-tight text-primary md:text-5xl lg:text-6xl">
             The Desk
@@ -117,7 +121,10 @@ export default function HomePage() {
             </h2>
             <VendorTable initialVendors={vendors} />
             <div className="mt-4 border-t pt-4 text-center font-mono text-sm">
-              <Link href="/vendors" className="text-primary hover:underline">
+              <Link
+                href="/vendors"
+                className="inline-flex min-h-[44px] items-center justify-center rounded px-2 text-primary hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
+              >
                 View Full Directory →
               </Link>
             </div>
