@@ -3,6 +3,11 @@ import { Playfair_Display, Manrope } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import { buildMetadata } from "@/lib/site"
+
+export const metadata = buildMetadata()
 
 const fontHeading = Playfair_Display({
   subsets: ["latin"],
@@ -29,8 +34,12 @@ export default function RootLayout({
         fontHeading.variable
       )}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="flex min-h-screen flex-col">
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
