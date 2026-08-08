@@ -20,7 +20,7 @@ export function SiteHeader() {
               Product
             </Link>
             <Link
-              href="#"
+              href="/pricing"
               className="text-foreground/60 transition-colors hover:text-foreground/80"
             >
               Pricing
