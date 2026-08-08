@@ -1,15 +1,29 @@
-import { Figtree, Geist_Mono } from "next/font/google"
-
-import "./globals.css"
+import type { Metadata } from "next"
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { buildMetadata } from "@/lib/metadata"
+import "./globals.css"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
+const fontHeading = Archivo({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["600", "700"],
+})
 
-const fontMono = Geist_Mono({
+const fontSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600"],
+})
+
+const fontMono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  weight: ["400", "500"],
 })
+
+export const metadata: Metadata = buildMetadata()
 
 export default function RootLayout({
   children,
@@ -17,17 +31,23 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn(
-        "font-sans antialiased",
-        fontSans.variable,
-        fontMono.variable
-      )}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          fontSans.variable,
+          fontHeading.variable,
+          fontMono.variable,
+          "font-sans antialiased"
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
