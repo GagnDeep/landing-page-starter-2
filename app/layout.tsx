@@ -1,14 +1,17 @@
-import { Figtree, Geist_Mono } from "next/font/google"
+import { Playfair_Display, Manrope } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
-
-const fontMono = Geist_Mono({
+const fontHeading = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-heading",
+})
+
+const fontSans = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
 })
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
       className={cn(
         "font-sans antialiased",
         fontSans.variable,
-        fontMono.variable
+        fontHeading.variable
       )}
     >
       <body>
