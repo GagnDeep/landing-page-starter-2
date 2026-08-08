@@ -4,6 +4,26 @@ import { siteConfig } from "@/lib/site"
 export const dynamic = "force-static"
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const stateSlugs = [
+    "california",
+    "texas",
+    "florida",
+    "new-york",
+    "pennsylvania",
+    "illinois",
+    "ohio",
+    "georgia",
+    "north-carolina",
+    "virginia",
+  ]
+  const guideSlugs = [
+    "sam-gov-registration",
+    "cage-code",
+    "8a-certification",
+    "hubzone-certification",
+    "sdvosb-certifi",
+  ]
+
   const routes = [
     "/",
     "/about/",
@@ -11,11 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/disclaimers/",
     "/disclosures/",
     "/guides/",
-    "/guides/sam-gov-registration/",
-    "/guides/cage-code/",
-    "/guides/8a-certification/",
-    "/guides/hubzone-certification/",
-    "/guides/sdvosb-certifi/",
+    "/states/",
+    ...guideSlugs.map((slug) => `/guides/${slug}/`),
+    ...stateSlugs.map((slug) => `/states/${slug}/`),
   ]
 
   return routes.map((route) => ({

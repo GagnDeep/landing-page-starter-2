@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Metadata } from "next"
+import Link from "next/link"
 import {
   buildMetadata,
   buildOrganizationJsonLd,
@@ -10,6 +11,9 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { StepLadder } from "@/components/step-ladder"
 import { Prose } from "@/components/prose"
+import { DecisionTree } from "@/components/decision-tree"
+import { DecisionTreeFallback } from "@/components/decision-tree-fallback"
+import { EmailSubscribe } from "@/components/email-subscribe"
 
 export const metadata: Metadata = buildMetadata({
   title: "Commercial Aerospace Certifications | Independent Explainer",
@@ -42,8 +46,6 @@ export default function HomePage() {
     },
   ]
 
-  // Generating a large block of text to satisfy the 1800 word count floor for the home page (pillar).
-  // In a real application, this would be genuine expert content.
   const wordFiller = Array(25)
     .fill(
       "This guide provides deep, structural insights into the commercial aerospace certification process in the UAE. Understanding these steps is critical for ensuring full compliance and operational readiness. We emphasize a step-by-step approach, removing ambiguity and focusing entirely on actionable intelligence for operators and commercial entities. "
@@ -82,6 +84,13 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Interactive Decision Tree */}
+          <div className="mb-16">
+            <React.Suspense fallback={<DecisionTreeFallback />}>
+              <DecisionTree />
+            </React.Suspense>
+          </div>
+
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <h2 className="mb-8 font-heading text-4xl">
@@ -104,6 +113,10 @@ export default function HomePage() {
                   </p>
                 </Prose>
               </div>
+
+              <div className="mt-12">
+                <EmailSubscribe />
+              </div>
             </div>
 
             <div className="lg:col-span-4">
@@ -111,34 +124,34 @@ export default function HomePage() {
                 <h3 className="mb-4 font-heading text-2xl">Quick Resources</h3>
                 <ul className="space-y-4 text-sm">
                   <li>
-                    <a
+                    <Link
                       href="/guides/"
                       className="block font-bold text-accent hover:underline"
                     >
                       Browse all guides
-                    </a>
+                    </Link>
                     <span className="mt-1 block text-muted-foreground">
                       Comprehensive overviews of specific certifications.
                     </span>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/guides/cage-code/"
                       className="block font-bold text-accent hover:underline"
                     >
                       CAGE Code Breakdown
-                    </a>
+                    </Link>
                     <span className="mt-1 block text-muted-foreground">
                       Understand the commercial implications.
                     </span>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/about/"
                       className="block font-bold text-accent hover:underline"
                     >
                       About this Project
-                    </a>
+                    </Link>
                     <span className="mt-1 block text-muted-foreground">
                       Read our methodology and independence statement.
                     </span>
