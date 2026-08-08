@@ -1,19 +1,46 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { SupplierDirectory } from "@/components/supplier-directory"
+import { getOrganizationSchema, getWebSiteSchema } from "@/lib/json-ld"
 
-export default function Page() {
+export default function Home() {
+  const orgSchema = getOrganizationSchema()
+  const webSiteSchema = getWebSiteSchema()
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mb-12 max-w-2xl">
+            <h1 className="mb-4 font-heading text-4xl font-bold tracking-wider uppercase">
+              Aerospace UAE
+            </h1>
+            <p className="text-lg leading-loose text-muted-foreground">
+              A curated directory of UAE aerospace, MRO and
+              defence-manufacturing suppliers plus a specialist jobs board.
+              Designed for procurement staff at primes and recruiters hiring
+              specialist engineers.
+            </p>
+          </div>
+
+          <div className="mb-8">
+            <h2 className="mb-6 font-heading text-2xl font-semibold tracking-wider uppercase">
+              Supplier Index
+            </h2>
+            <SupplierDirectory />
+          </div>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </main>
+      <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
     </div>
   )
 }
