@@ -1,4 +1,4 @@
 # Next State
 
-- Execute Pass 2 of the build order (`docs/BUILD-LOG.md`).
-- Build the hero section and initial value proposition.
+- Execute Pass 4 of the build order (`docs/BUILD-LOG.md`).
+- Create secondary pages or deeper content sections if necessary.
