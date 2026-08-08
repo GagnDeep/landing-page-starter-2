@@ -1,6 +1,7 @@
 import fs from "fs/promises"
 import path from "path"
 import { fileURLToPath } from "url"
+import { JSDOM } from "jsdom"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -75,6 +76,30 @@ async function checkSeo() {
       // Note: Ignoring length constraints for now to keep it simple, could expand
       if (!descMatch) {
         logError(`${relPath}: Missing meta description`)
+      }
+
+      // Word floors for Hub and Spoke pages using JSDOM for accuracy
+      const dom = new JSDOM(content)
+      const text = dom.window.document.body.textContent || ""
+      const wordCount = text.split(/\s+/).filter((w) => w.length > 0).length
+
+      if (relPath.includes("guides/index.html") || relPath === "guides.html") {
+        // Hub page
+        if (wordCount < 1800) {
+          logError(
+            `${relPath}: Hub page word count is ${wordCount} (must be > 1800)`
+          )
+        }
+      } else if (
+        relPath.includes("guides/") &&
+        !relPath.includes("index.html")
+      ) {
+        // Spoke page
+        if (wordCount < 900) {
+          logError(
+            `${relPath}: Spoke page word count is ${wordCount} (must be > 900)`
+          )
+        }
       }
     }
   } catch (error) {
