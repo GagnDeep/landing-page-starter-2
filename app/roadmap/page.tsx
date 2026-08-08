@@ -2,6 +2,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Prose } from "@/components/prose"
+import { DecisionTree } from "@/components/decision-tree"
+import { CheckoutForm } from "@/components/checkout-form"
 import { buildMetadata } from "@/lib/site"
 import { buildBreadcrumbLd } from "@/lib/json-ld"
 
@@ -17,17 +19,23 @@ export default function RoadmapPage() {
   ])
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background selection:bg-accent/30 selection:text-foreground">
       <Header />
-      <main className="container mx-auto max-w-7xl flex-1 px-4 py-12">
+      <main className="container mx-auto max-w-7xl flex-1 px-6 py-16 sm:py-24">
         <Breadcrumbs items={[{ name: "Buyer's Roadmap" }]} />
-        <Prose className="mx-auto">
-          <h1>Handpan Buyer&apos;s Roadmap</h1>
-          <p className="lead text-xl font-medium text-muted-foreground">
+        <Prose className="mx-auto mt-12">
+          <h1 className="font-heading text-5xl leading-[1.1] font-medium tracking-tight sm:text-6xl">
+            Handpan Buyer&apos;s Roadmap
+          </h1>
+          <p className="mt-8 max-w-2xl text-[19px] leading-[1.8] font-medium text-muted-foreground/90">
             The decision is genuinely confusing: makers publish little pricing
             or lead-time detail, cheap marketplace imports have a bad
             reputation. This roadmap is your guide.
           </p>
+
+          <div className="not-prose my-16">
+            <DecisionTree />
+          </div>
 
           <h2>The Anxiety of the First Purchase</h2>
           <p>
@@ -175,6 +183,10 @@ export default function RoadmapPage() {
             Follow these steps, exercise patience, and you will secure an
             instrument that resonates with you for a lifetime.
           </p>
+
+          <div className="not-prose my-24">
+            <CheckoutForm />
+          </div>
         </Prose>
       </main>
       <Footer />

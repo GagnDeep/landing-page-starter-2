@@ -23,15 +23,17 @@ export default function Home() {
   const jsonLd = [buildOrganizationLd(), buildWebSiteLd()]
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background selection:bg-accent/30 selection:text-foreground">
       <Header />
       <main className="flex-1">
-        <section className="bg-background py-24 sm:py-32">
-          <div className="container mx-auto max-w-7xl px-4 text-center">
-            <h1 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">
+        {/* Tone Field Hero Section */}
+        <section className="relative overflow-hidden bg-background py-32 sm:py-40">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-background to-background"></div>
+          <div className="relative container mx-auto max-w-7xl px-6 text-center">
+            <h1 className="mx-auto max-w-4xl font-heading text-5xl leading-[1.1] font-medium tracking-tight text-foreground sm:text-7xl">
               Compare handpan makers, prices, and waits.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
+            <p className="mx-auto mt-8 max-w-2xl text-[19px] leading-[1.8] text-muted-foreground/90">
               The independent, maker-agnostic price and wait-time comparison
               guide for buying a handpan. We don&apos;t sell instruments. We
               verify the facts.
@@ -39,12 +41,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container mx-auto max-w-7xl px-4 py-16">
+        {/* The Signature Component Section */}
+        <section className="container mx-auto max-w-6xl px-6 py-12">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h2 className="font-heading text-3xl font-semibold tracking-tight">
+            <h2 className="font-heading text-4xl font-medium tracking-tight">
               Verified Maker Directory
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-5 text-[17.5px] leading-[1.7] text-muted-foreground">
               Every price, wait time, and maker claim listed here is
               independently verified by direct email to the maker.
             </p>
@@ -52,7 +55,8 @@ export default function Home() {
           <MakerTable makers={makerData} />
         </section>
 
-        <section className="container mx-auto max-w-7xl px-4 py-24">
+        {/* Article Section */}
+        <section className="container mx-auto max-w-7xl px-6 py-32">
           <Prose className="mx-auto">
             <h2>Why Handpano Exists</h2>
             <p>
