@@ -1,0 +1,15 @@
+
+> landing-page-starter@0.0.1 start /app
+> next start -p 7822
+
+⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::7822
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::7822)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 7822
+}
+ ELIFECYCLE  Command failed with exit code 1.
