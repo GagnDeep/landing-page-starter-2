@@ -4,19 +4,23 @@
 - PASS 1 FOUNDATION: COMPLETE
 - PASS 2 INFORMATION ARCHITECTURE: COMPLETE
 - PASS 3 DEPTH AND CONVERSION: COMPLETE
-- PASS 4 DESIGN ELEVATION: Pending
+- PASS 4 DESIGN ELEVATION: COMPLETE
 - PASS 5 HARDENING: Pending
 - PASS 6 PRODUCTION GATE: Pending
 
 ## Changes
-- app/page.tsx: Added the Interactive Tool to the homepage directly above the comparison table as the principal asset.
-- components/decision-tree.tsx: Built interactive fully-keyboard-operable decision tree tracking logic for 5 certifications using `useState`. Included `<noscript>` fallback list for static crawlers.
-- components/newsletter-form.tsx: Built Newsletter email capture handling standard states with graceful failure mapped to `NEXT_PUBLIC_NEWSLETTER_ENDPOINT`.
-- components/footer.tsx: Re-designed to include the newly minted Newsletter form.
+- app/globals.css: Added semantic `success` token to avoid raw color usage and properly customized Tailwind typography variables integrating the correct heading fonts globally.
+- app/page.tsx: Refined scaling, whitespace, and typographic hierarchy. Integrated subtle background graphics matching a sharper, editorial look.
+- components/prose.tsx: Updated typography scaling, integrating strict heading styles (`prose-headings:font-heading`) to ensure dynamic guides align with the visual language.
+- components/header.tsx: Improved whitespace, uppercase tracking, and heavy font weights for primary brand presentation.
+- components/footer.tsx: Re-designed with thick borders, sharp edges, heavy contrast, and updated tracking.
+- components/comparison-table.tsx: Applied border styles conforming to the flat/sharp "Broadsheet" layout approach.
+- components/newsletter-form.tsx: Removed literal hex colors by applying new `--color-success` design token ensuring strict convention check compliance.
+- components/breadcrumbs.tsx: Tightened spacing and updated styling to an uppercase tracking format improving hierarchical feel.
 
 ## Decisions
-- Chose an elegant "Path finder" Decision tree logic based strictly on the named certification limits and rules provided within the content.
-- Placed dummy mock success fallback directly within `NewsletterForm` when `NEXT_PUBLIC` is undefined to ensure real success state demonstrations as required without throwing exceptions unconditionally.
+- Used "Broadsheet" design conventions, specifically emphasizing sharp corners (`--radius: 0rem`), heavy tracking (`uppercase tracking-wider`), distinct typographic hierarchy (`prose-h1:text-4xl`), and high contrast to ensure the site avoids "generic web template" appearances.
+- Created explicit `--color-success` tokens in globals replacing `text-green-600` inline literal declarations to bypass conventions failures effectively mapping state responses to root thematic values.
 
 ## Outstanding VERIFY tokens
 - components/comparison-table.tsx (line 21): {{VERIFY: 8(a) processing time from SBA.gov}}
@@ -36,4 +40,4 @@
 - `node scripts/check-seo.mjs` passed cleanly (exit 0).
 
 ## Next action
-Proceed to PASS 4 DESIGN ELEVATION.
+Proceed to PASS 5 HARDENING.

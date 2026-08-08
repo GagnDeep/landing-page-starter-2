@@ -8,22 +8,28 @@ export function Breadcrumbs({
   items: { label: string; href?: string }[]
 }) {
   return (
-    <nav aria-label="Breadcrumb" className="mb-4">
-      <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
+    <nav aria-label="Breadcrumb" className="mb-8">
+      <ol className="flex items-center space-x-2 text-sm font-medium tracking-wide text-muted-foreground uppercase">
         <li>
-          <Link href="/" className="hover:text-foreground">
+          <Link href="/" className="transition-colors hover:text-primary">
             Home
           </Link>
         </li>
         {items.map((item) => (
           <li key={item.label} className="flex items-center space-x-2">
-            <HugeiconsIcon icon={ArrowRight01Icon} className="h-4 w-4" />
+            <HugeiconsIcon
+              icon={ArrowRight01Icon}
+              className="mx-1 h-4 w-4 opacity-50"
+            />
             {item.href ? (
-              <Link href={item.href} className="hover:text-foreground">
+              <Link
+                href={item.href}
+                className="transition-colors hover:text-primary"
+              >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-foreground" aria-current="page">
+              <span className="font-bold text-foreground" aria-current="page">
                 {item.label}
               </span>
             )}
