@@ -1,0 +1,9 @@
+
+> landing-page-starter@0.0.1 start
+> next start -p 7822
+
+▲ Next.js 16.3.0
+- Local:         http://localhost:7822
+- Network:       http://192.168.0.2:7822
+✓ Ready in 211ms
+✓ Running next.config.mjs took 20ms
