@@ -30,10 +30,10 @@ export default function Home() {
         />
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl">
+          <h1 className="mb-6 font-heading text-4xl tracking-tight text-primary sm:text-5xl lg:text-6xl">
             Practical Resources for Catering Businesses
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl leading-relaxed text-muted-foreground">
             Information on licensing, cottage-food law, pricing, contracts,
             software and food-safety certification for operators running events
             out of a commercial or legal home kitchen.

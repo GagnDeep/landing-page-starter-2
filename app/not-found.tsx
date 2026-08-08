@@ -7,6 +7,9 @@ export const metadata = {
   title: "Page Not Found | The Caterer's Business Toolkit",
   description:
     "The page you are looking for does not exist or has been moved. Check our home page to find practical resources for your catering business including state laws.",
+  alternates: {
+    canonical: "https://instituteofcatering.com/404/",
+  },
 }
 
 export default function NotFound() {
