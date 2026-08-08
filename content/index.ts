@@ -2,6 +2,30 @@ export const content = {
   global: {
     brand: "Handpano",
   },
+  services: {
+    heading: "Our Signature Services",
+    subheading: "Curated experiences tailored to elevate your natural beauty.",
+    items: [
+      {
+        id: "service-1",
+        title: "Editorial Styling",
+        description: "Bespoke hair and makeup design tailored for modern sophistication.",
+        imageSlot: "service1" as const,
+      },
+      {
+        id: "service-2",
+        title: "Luxury Skin Rituals",
+        description: "Rejuvenating treatments utilizing premium, high-performance skincare.",
+        imageSlot: "service2" as const,
+      },
+      {
+        id: "service-3",
+        title: "Bridal Couture",
+        description: "Flawless, enduring artistry for your most significant moments.",
+        imageSlot: "service3" as const,
+      }
+    ]
+  },
   hero: {
     heading: "Discover the Art of Handpano",
     subheading: "A high-end, modern luxury beauty studio delivering an artistic editorial aesthetic.",

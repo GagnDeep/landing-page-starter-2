@@ -30,3 +30,12 @@
 - Added hero heading, subheading, and CTA configs to `content/index.ts`.
 - Formatted files and ensured `pnpm run verify` passed.
 - Marked Pass 3 complete in `docs/BUILD-LOG.md`.
+
+## Pass 4 Execution
+
+- Read standing order and verified Pass 3 was complete.
+- Created `components/sections/services.tsx` using shadcn UI Cards, Next/Image and semantic layout tokens.
+- Imported Services into `app/page.tsx`.
+- Added services content configuration to `content/index.ts`.
+- Formatted files and ensured `pnpm run verify` passed.
+- Marked Pass 4 complete in `docs/BUILD-LOG.md`.
