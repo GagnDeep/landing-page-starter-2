@@ -1,14 +1,27 @@
-import { Figtree, Geist_Mono } from "next/font/google"
+import { Spectral, Public_Sans, Courier_Prime } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
-
-const fontMono = Geist_Mono({
+const fontHeading = Spectral({
   subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-heading",
+  display: "swap",
+})
+
+const fontSans = Public_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+})
+
+const fontMono = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
   variable: "--font-mono",
+  display: "swap",
 })
 
 export default function RootLayout({
@@ -22,12 +35,21 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn(
         "font-sans antialiased",
+        fontHeading.variable,
         fontSans.variable,
         fontMono.variable
       )}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none"
+          >
+            Skip to content
+          </a>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
