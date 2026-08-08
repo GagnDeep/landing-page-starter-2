@@ -8,13 +8,13 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Prose } from "@/components/prose"
-import { guides } from "@/content/guides"
+import { states } from "@/content/states"
 
 export const dynamic = "force-static"
 
 export function generateStaticParams() {
-  return guides.map((g) => ({
-    slug: g.slug,
+  return states.map((s) => ({
+    slug: s.slug,
   }))
 }
 
@@ -24,37 +24,37 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const resolvedParams = await params
-  const guide = guides.find((g) => g.slug === resolvedParams.slug)
-  if (!guide) {
+  const stateData = states.find((s) => s.slug === resolvedParams.slug)
+  if (!stateData) {
     return buildMetadata({
       title: "Not Found",
-      description: "Guide not found.",
+      description: "State not found.",
     })
   }
 
   return buildMetadata({
-    title: `${guide.title} | Aerospace Certifications`,
-    description: guide.description,
-    path: `/guides/${guide.slug}/`,
+    title: `${stateData.stateName} Aerospace Compliance | Aerospace Certifications`,
+    description: stateData.description,
+    path: `/states/${stateData.slug}/`,
   })
 }
 
-export default async function GuidePage({
+export default async function StatePage({
   params,
 }: {
   params: Promise<{ slug: string }>
 }) {
   const resolvedParams = await params
-  const guide = guides.find((g) => g.slug === resolvedParams.slug)
+  const stateData = states.find((s) => s.slug === resolvedParams.slug)
 
-  if (!guide) {
+  if (!stateData) {
     notFound()
   }
 
-  // Cross-linking logic: Find the related guides based on slugs
-  const relatedGuidesData = guide.relatedGuides
-    .map((relSlug) => guides.find((g) => g.slug === relSlug))
-    .filter(Boolean)
+  // Cross-linking logic: Find 2 related states to satisfy structural linking rules
+  const relatedStates = states
+    .filter((s) => s.slug !== stateData.slug)
+    .slice(0, 2)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -63,9 +63,9 @@ export default async function GuidePage({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             buildArticleJsonLd({
-              headline: guide.title,
-              url: `/guides/${guide.slug}/`,
-              datePublished: guide.lastVerifiedDate,
+              headline: `${stateData.stateName} Aerospace Compliance`,
+              url: `/states/${stateData.slug}/`,
+              datePublished: stateData.lastVerifiedDate,
             })
           ),
         }}
@@ -76,22 +76,23 @@ export default async function GuidePage({
         <div className="mx-auto max-w-5xl">
           <Breadcrumbs
             items={[
-              { name: "Guides", url: "/guides/" },
-              { name: guide.title, url: `/guides/${guide.slug}/` },
+              { name: "States", url: "/states/" },
+              { name: stateData.stateName, url: `/states/${stateData.slug}/` },
             ]}
           />
 
           <h1 className="mt-8 mb-4 font-heading text-5xl tracking-tight">
-            {guide.title}
+            {stateData.stateName} Aerospace Compliance
           </h1>
           <p className="mb-8 text-muted-foreground">
-            Verified by: {guide.sourceAuthority} on {guide.lastVerifiedDate}
+            Verified by: {stateData.sourceAuthority} on{" "}
+            {stateData.lastVerifiedDate}
           </p>
 
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <Prose>
-                <div dangerouslySetInnerHTML={{ __html: guide.body }} />
+                <div dangerouslySetInnerHTML={{ __html: stateData.body! }} />
               </Prose>
 
               <div className="mt-12 rounded-[0.375rem] border border-border bg-muted p-6">
@@ -99,7 +100,7 @@ export default async function GuidePage({
                   Required Documentation
                 </h3>
                 <ul className="list-disc space-y-2 pl-6 font-mono text-sm">
-                  {guide.requirements.map((req, i) => (
+                  {stateData.localRequirements.map((req, i) => (
                     <li key={i}>{req}</li>
                   ))}
                 </ul>
@@ -108,18 +109,18 @@ export default async function GuidePage({
 
             <div className="lg:col-span-4">
               <div className="sticky top-6 rounded-[0.375rem] border border-border bg-background p-6">
-                <h3 className="mb-4 font-heading text-2xl">Related Guides</h3>
+                <h3 className="mb-4 font-heading text-2xl">Related States</h3>
                 <ul className="space-y-4 text-sm">
-                  {relatedGuidesData.map((rg) => (
-                    <li key={rg!.slug}>
+                  {relatedStates.map((rs) => (
+                    <li key={rs.slug}>
                       <Link
-                        href={`/guides/${rg!.slug}/`}
+                        href={`/states/${rs.slug}/`}
                         className="block font-bold text-accent hover:underline"
                       >
-                        {rg!.title}
+                        {rs.stateName} Compliance
                       </Link>
                       <span className="mt-1 line-clamp-2 block text-muted-foreground">
-                        {rg!.description}
+                        {rs.description}
                       </span>
                     </li>
                   ))}

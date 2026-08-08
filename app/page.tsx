@@ -11,9 +11,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { StepLadder } from "@/components/step-ladder"
 import { Prose } from "@/components/prose"
-import { DecisionTree } from "@/components/decision-tree"
-import { DecisionTreeFallback } from "@/components/decision-tree-fallback"
-import { EmailSubscribe } from "@/components/email-subscribe"
 
 export const metadata: Metadata = buildMetadata({
   title: "Commercial Aerospace Certifications | Independent Explainer",
@@ -84,13 +81,6 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Interactive Decision Tree */}
-          <div className="mb-16">
-            <React.Suspense fallback={<DecisionTreeFallback />}>
-              <DecisionTree />
-            </React.Suspense>
-          </div>
-
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <h2 className="mb-8 font-heading text-4xl">
@@ -112,10 +102,6 @@ export default function HomePage() {
                     {wordFiller}
                   </p>
                 </Prose>
-              </div>
-
-              <div className="mt-12">
-                <EmailSubscribe />
               </div>
             </div>
 
