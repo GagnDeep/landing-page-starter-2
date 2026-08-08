@@ -21,3 +21,12 @@
 - Updated `content/index.ts` to include navigation links, CTA, and footer content.
 - Marked Pass 2 as complete in `docs/BUILD-LOG.md`.
 - Executed `pnpm run verify` to ensure the build remains green and successfully passed.
+
+## Pass 3 Execution
+
+- Read standing order and verified Pass 2 was complete.
+- Created `components/sections/hero.tsx` using Next/Image and semantic layout tokens.
+- Imported Hero into `app/page.tsx`.
+- Added hero heading, subheading, and CTA configs to `content/index.ts`.
+- Formatted files and ensured `pnpm run verify` passed.
+- Marked Pass 3 complete in `docs/BUILD-LOG.md`.

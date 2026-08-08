@@ -2,6 +2,18 @@ export const content = {
   global: {
     brand: "Handpano",
   },
+  hero: {
+    heading: "Discover the Art of Handpano",
+    subheading: "A high-end, modern luxury beauty studio delivering an artistic editorial aesthetic.",
+    cta: {
+      label: "Book Your Experience",
+      href: "/#book"
+    },
+    secondaryCta: {
+      label: "View Our Services",
+      href: "/#services"
+    }
+  },
   navigation: {
     links: [
       { label: "Home", href: "/" },
