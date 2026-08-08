@@ -1,19 +1,48 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { SignatureComponent } from "@/components/signature-component"
+import { buildMetadata } from "@/lib/site"
+import { buildWebSiteLd, buildOrganizationLd } from "@/lib/json-ld"
 
-export default function Page() {
+export const metadata = buildMetadata({
+  title: "The Caterer's Business Toolkit - Practical Resources",
+  description:
+    "A practical resource for people who already run a catering business — licensing, cottage-food law, pricing, contracts, software and food-safety certification.",
+  path: "/",
+})
+
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="flex min-h-svh flex-col">
+      <Header />
+      <main className="container mx-auto flex-1 px-4 py-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildOrganizationLd()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildWebSiteLd()),
+          }}
+        />
+
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <h1 className="mb-6 font-heading text-4xl tracking-tight text-primary sm:text-5xl lg:text-6xl">
+            Practical Resources for Catering Businesses
+          </h1>
+          <p className="text-xl leading-relaxed text-muted-foreground">
+            Information on licensing, cottage-food law, pricing, contracts,
+            software and food-safety certification for operators running events
+            out of a commercial or legal home kitchen.
+          </p>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+
+        <SignatureComponent />
+      </main>
+      <Footer />
     </div>
   )
 }
