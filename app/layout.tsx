@@ -1,14 +1,22 @@
-import { Figtree, Geist_Mono } from "next/font/google"
+import { Playfair_Display, Manrope } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import { buildMetadata } from "@/lib/site"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
+export const metadata = buildMetadata()
 
-const fontMono = Geist_Mono({
+const fontHeading = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-heading",
+})
+
+const fontSans = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
 })
 
 export default function RootLayout({
@@ -23,11 +31,15 @@ export default function RootLayout({
       className={cn(
         "font-sans antialiased",
         fontSans.variable,
-        fontMono.variable
+        fontHeading.variable
       )}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="flex min-h-screen flex-col">
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
