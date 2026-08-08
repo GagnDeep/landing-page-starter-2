@@ -27,6 +27,9 @@ const wordFloors = {
 
 const bannedStrings = ["lorem ipsum", "TODO", "FIXME"]
 
+// Adjacency list for internal links check
+const links = new Map()
+
 htmlFiles.forEach((file) => {
   // Skip _not-found, 404, 500, fallback pages and global-error
   if (
@@ -52,6 +55,19 @@ htmlFiles.forEach((file) => {
   if (routePath === "//") routePath = "/"
   if (routePath.endsWith("/") && routePath !== "/")
     routePath = routePath.slice(0, -1)
+
+  // Record links found on this page
+  const pageLinks = new Set()
+  $("a").each((_, el) => {
+    let href = $(el).attr("href")
+    if (href && href.startsWith("/")) {
+      // Normalize href to match route paths
+      if (href.endsWith("/") && href !== "/") href = href.slice(0, -1)
+      if (href === "") href = "/"
+      pageLinks.add(href)
+    }
+  })
+  links.set(routePath, pageLinks)
 
   // 1. Title uniqueness and length (<= 60)
   const title = $("title").text()
@@ -152,6 +168,59 @@ htmlFiles.forEach((file) => {
         `Deep page missing BreadcrumbList JSON-LD for route ${routePath}`
       )
     }
+  }
+})
+
+// Encode internal linking laws:
+// 1. Zero orphan pages (every page must be linked from somewhere)
+// 2. Max 2 clicks from home page (distance <= 2 from '/')
+const allRoutes = Array.from(links.keys())
+const incomingLinks = new Map(allRoutes.map((route) => [route, 0]))
+
+links.forEach((pageLinks, fromRoute) => {
+  pageLinks.forEach((toRoute) => {
+    if (incomingLinks.has(toRoute) && toRoute !== fromRoute) {
+      incomingLinks.set(toRoute, incomingLinks.get(toRoute) + 1)
+    }
+  })
+})
+
+allRoutes.forEach((route) => {
+  if (route !== "/" && incomingLinks.get(route) === 0) {
+    error("Internal Linking", `Orphan page detected: ${route}`)
+  }
+})
+
+// BFS to find max distance from root '/'
+const distance = new Map(allRoutes.map((route) => [route, Infinity]))
+distance.set("/", 0)
+
+const queue = ["/"]
+while (queue.length > 0) {
+  const current = queue.shift()
+  const currentDist = distance.get(current)
+
+  const outbound = links.get(current)
+  if (outbound) {
+    outbound.forEach((neighbor) => {
+      if (distance.has(neighbor) && distance.get(neighbor) === Infinity) {
+        distance.set(neighbor, currentDist + 1)
+        queue.push(neighbor)
+      }
+    })
+  }
+}
+
+distance.forEach((dist, route) => {
+  if (dist > 2) {
+    error(
+      "Internal Linking",
+      `Page ${route} is more than 2 clicks away from home (${dist} clicks)`
+    )
+  }
+  if (dist === Infinity && route !== "/") {
+    // handled by orphan check but good to be explicit
+    error("Internal Linking", `Page ${route} is unreachable from home`)
   }
 })
 
