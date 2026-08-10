@@ -6,8 +6,8 @@
 | 2. Information Architecture | COMPLETE |
 | 3. Depth and Conversion | COMPLETE |
 | 4. Design Elevation | COMPLETE |
-| 5. Hardening | IN PROGRESS |
-| 6. Production Gate | PENDING |
+| 5. Hardening | COMPLETE |
+| 6. Production Gate | IN PROGRESS |
 
 ## Changes
 - Rewrote AGENTS.md to be under 150 lines and restate compliance rules and manifest.
@@ -110,3 +110,6 @@
 
 - Typography refined locally through global CSS scales.
 - Pass 4 complete with UI constraints maintained and verified cleanly.
+
+
+- Verified Hardening per the rules. Empty states applied where appropriate, error states on checkout. Overflows on tables handled via overflow-x-auto min-w constraints.

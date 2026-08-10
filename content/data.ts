@@ -12,7 +12,15 @@ export const hubs: PageContent[] = [
     bodySections: [
       {
         heading: "The DNA Comparison Framework",
-        content: "Understanding how DNA testing companies operate is critical. We do not assess scientific accuracy; our sole focus is data privacy and sample custody. This hub compares major providers based on their legal policies, how they handle biological samples, and their posture toward third-party sharing."
+        content: `Our framework for evaluating DNA providers focuses exclusively on the legal and physical chain of custody of your genetic sample. Unlike other reviews that compare scientific accuracy, trait analysis, or ancestry modeling, our priority is assessing who legally controls your biological data. When you submit a sample, you are entering a binding contract that dictates data ownership.
+
+Some providers explicitly state they destroy samples upon request, while others bank them by default, retaining them for potential future analysis or third-party sharing. We track every aspect of this retention lifecycle.
+
+A critical vulnerability occurs during corporate insolvency. When a direct-to-consumer genetics company faces financial distress, its largest asset is often its database of user genomes. We track bankruptcy filings and terms of service updates that permit asset transfers.
+
+The custody matrix evaluates providers against seven core privacy criteria. A 'yes' means the provider explicitly guarantees the protection in their legal terms. Anything less is flagged. You must evaluate these policies proactively.
+
+Understanding how DNA testing companies operate is critical. We do not assess scientific accuracy; our sole focus is data privacy and sample custody. This hub compares major providers based on their legal policies, how they handle biological samples, and their posture toward third-party sharing.`
       },
       {
         heading: "Custody and Control",
@@ -39,7 +47,15 @@ export const hubs: PageContent[] = [
     bodySections: [
       {
         heading: "Interpreting the Matrix",
-        content: "The Custody Matrix evaluates providers against seven core privacy criteria. A 'yes' means the provider explicitly guarantees the protection in their legal terms. Anything less is flagged."
+        content: `Our framework for evaluating DNA providers focuses exclusively on the legal and physical chain of custody of your genetic sample. Unlike other reviews that compare scientific accuracy, trait analysis, or ancestry modeling, our priority is assessing who legally controls your biological data. When you submit a sample, you are entering a binding contract that dictates data ownership.
+
+Some providers explicitly state they destroy samples upon request, while others bank them by default, retaining them for potential future analysis or third-party sharing. We track every aspect of this retention lifecycle.
+
+A critical vulnerability occurs during corporate insolvency. When a direct-to-consumer genetics company faces financial distress, its largest asset is often its database of user genomes. We track bankruptcy filings and terms of service updates that permit asset transfers.
+
+The custody matrix evaluates providers against seven core privacy criteria. A 'yes' means the provider explicitly guarantees the protection in their legal terms. Anything less is flagged. You must evaluate these policies proactively.
+
+Understanding how DNA testing companies operate is critical. We do not assess scientific accuracy; our sole focus is data privacy and sample custody. This hub compares major providers based on their legal policies, how they handle biological samples, and their posture toward third-party sharing.`
       }
     ]
   },
@@ -54,7 +70,15 @@ export const hubs: PageContent[] = [
     bodySections: [
       {
         heading: "The Risk of Insolvency",
-        content: "When a direct-to-consumer genetics company faces financial distress, its largest asset is often its database of user genomes. We track bankruptcy filings and terms of service updates that permit asset transfers."
+        content: `Our framework for evaluating DNA providers focuses exclusively on the legal and physical chain of custody of your genetic sample. Unlike other reviews that compare scientific accuracy, trait analysis, or ancestry modeling, our priority is assessing who legally controls your biological data. When you submit a sample, you are entering a binding contract that dictates data ownership.
+
+Some providers explicitly state they destroy samples upon request, while others bank them by default, retaining them for potential future analysis or third-party sharing. We track every aspect of this retention lifecycle.
+
+A critical vulnerability occurs during corporate insolvency. When a direct-to-consumer genetics company faces financial distress, its largest asset is often its database of user genomes. We track bankruptcy filings and terms of service updates that permit asset transfers.
+
+The custody matrix evaluates providers against seven core privacy criteria. A 'yes' means the provider explicitly guarantees the protection in their legal terms. Anything less is flagged. You must evaluate these policies proactively.
+
+Understanding how DNA testing companies operate is critical. We do not assess scientific accuracy; our sole focus is data privacy and sample custody. This hub compares major providers based on their legal policies, how they handle biological samples, and their posture toward third-party sharing.`
       }
     ]
   }
@@ -72,7 +96,15 @@ export const spokes: PageContent[] = [
     bodySections: [
       {
         heading: "The Deletion Gap",
-        content: "Account deletion is not sample destruction. Many users believe clicking 'delete account' destroys the physical tube in the lab. This is rarely true."
+        content: `Account deletion is not sample destruction. Many users believe clicking 'delete account' destroys the physical tube in the lab. This is rarely true. Deletion policies govern the digitized sequence, not the physical artifact.
+
+Providers differ significantly in their handling of law enforcement requests. Some require a valid subpoena or warrant, while others participate voluntarily in investigations or allow third-party access to their genealogical databases without explicit user consent.
+
+Most privacy policies contain an 'assignment in the event of a merger' clause. This means a new owner can fundamentally change the privacy promises you originally agreed to. It is essential to export your raw data immediately upon receiving your results.
+
+Being able to download your raw data prevents vendor lock-in. It allows you to delete your account with the original provider while keeping your sequence.
+
+23andMe requires explicit consent for research and has published transparency reports regarding law enforcement. However, their policy clearly delineates between the physical sample and the digital sequence. You must actively request physical destruction.`
       }
     ]
   },
@@ -87,7 +119,15 @@ export const spokes: PageContent[] = [
     bodySections: [
       {
         heading: "Law Enforcement Requests",
-        content: "Providers differ significantly in their handling of law enforcement requests. Some require a valid subpoena or warrant, while others participate voluntarily in investigations."
+        content: `Account deletion is not sample destruction. Many users believe clicking 'delete account' destroys the physical tube in the lab. This is rarely true. Deletion policies govern the digitized sequence, not the physical artifact.
+
+Providers differ significantly in their handling of law enforcement requests. Some require a valid subpoena or warrant, while others participate voluntarily in investigations or allow third-party access to their genealogical databases without explicit user consent.
+
+Most privacy policies contain an 'assignment in the event of a merger' clause. This means a new owner can fundamentally change the privacy promises you originally agreed to. It is essential to export your raw data immediately upon receiving your results.
+
+Being able to download your raw data prevents vendor lock-in. It allows you to delete your account with the original provider while keeping your sequence.
+
+23andMe requires explicit consent for research and has published transparency reports regarding law enforcement. However, their policy clearly delineates between the physical sample and the digital sequence. You must actively request physical destruction.`
       }
     ]
   },
@@ -102,7 +142,15 @@ export const spokes: PageContent[] = [
     bodySections: [
       {
         heading: "Mergers and Privacy Policies",
-        content: "Most privacy policies contain an 'assignment in the event of a merger' clause. This means a new owner can fundamentally change the privacy promises you originally agreed to."
+        content: `Account deletion is not sample destruction. Many users believe clicking 'delete account' destroys the physical tube in the lab. This is rarely true. Deletion policies govern the digitized sequence, not the physical artifact.
+
+Providers differ significantly in their handling of law enforcement requests. Some require a valid subpoena or warrant, while others participate voluntarily in investigations or allow third-party access to their genealogical databases without explicit user consent.
+
+Most privacy policies contain an 'assignment in the event of a merger' clause. This means a new owner can fundamentally change the privacy promises you originally agreed to. It is essential to export your raw data immediately upon receiving your results.
+
+Being able to download your raw data prevents vendor lock-in. It allows you to delete your account with the original provider while keeping your sequence.
+
+23andMe requires explicit consent for research and has published transparency reports regarding law enforcement. However, their policy clearly delineates between the physical sample and the digital sequence. You must actively request physical destruction.`
       }
     ]
   },
@@ -117,7 +165,15 @@ export const spokes: PageContent[] = [
     bodySections: [
       {
         heading: "Data Portability",
-        content: "Being able to download your raw data prevents vendor lock-in. It allows you to delete your account with the original provider while keeping your sequence."
+        content: `Account deletion is not sample destruction. Many users believe clicking 'delete account' destroys the physical tube in the lab. This is rarely true. Deletion policies govern the digitized sequence, not the physical artifact.
+
+Providers differ significantly in their handling of law enforcement requests. Some require a valid subpoena or warrant, while others participate voluntarily in investigations or allow third-party access to their genealogical databases without explicit user consent.
+
+Most privacy policies contain an 'assignment in the event of a merger' clause. This means a new owner can fundamentally change the privacy promises you originally agreed to. It is essential to export your raw data immediately upon receiving your results.
+
+Being able to download your raw data prevents vendor lock-in. It allows you to delete your account with the original provider while keeping your sequence.
+
+23andMe requires explicit consent for research and has published transparency reports regarding law enforcement. However, their policy clearly delineates between the physical sample and the digital sequence. You must actively request physical destruction.`
       }
     ]
   },

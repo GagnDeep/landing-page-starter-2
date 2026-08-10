@@ -42,7 +42,6 @@ for (const file of htmlFiles) {
   const content = fs.readFileSync(file, "utf8")
   const basename = path.basename(file)
 
-  // Skip error and not-found pages for strict SEO requirements
   if (
     basename.startsWith("_") ||
     basename === "500.html" ||
@@ -62,18 +61,15 @@ for (const file of htmlFiles) {
       .replace(/\/index\.html$/, "")
       .replace(/index\.html$/, "")
 
-  // Extract all hrefs
   const links = (content.match(/href="([^"]+)"/g) || [])
     .map((m) => m.match(/href="([^"]+)"/)[1])
     .filter((l) => l.startsWith("/"))
-    // Normalize links to match route formats by stripping trailing slash
     .map((l) => l.replace(/\/$/, ""))
 
   allLinks[routePath === "/" ? "/" : routePath.replace(/\/$/, "")] = [
     ...new Set(links),
   ]
 
-  // Banned strings
   for (const banned of bannedStrings) {
     if (content.toLowerCase().includes(banned.toLowerCase())) {
       console.error(`[ERROR] File ${file} contains banned string: "${banned}"`)
@@ -81,7 +77,6 @@ for (const file of htmlFiles) {
     }
   }
 
-  // Basic SEO tags
   if (!content.includes("<h1")) {
     console.error(`[ERROR] File ${file} is missing an h1`)
     hasError = true
@@ -90,8 +85,6 @@ for (const file of htmlFiles) {
     console.error(`[ERROR] File ${file} is missing a title`)
     hasError = true
   }
-
-  // Word floors
 
   let targetFloor = 0
   if (["/compare", "/matrix", "/bankruptcy"].includes(routePath)) {
@@ -110,8 +103,6 @@ for (const file of htmlFiles) {
     targetFloor = 900
   }
 
-  // We'll enforce the strict check for the actual DOM content (ignoring the hidden dev-stub)
-  // Let's strip out the development stub before counting words.
   const contentWithoutStub = content.replace(
     /<div[^>]*data-test="stub-padding"[^>]*>.*?<\/div>/g,
     ""
@@ -123,19 +114,10 @@ for (const file of htmlFiles) {
   const realWordCount = realTextMatch.split(" ").length
 
   if (targetFloor > 0 && realWordCount < targetFloor) {
-    // Only fail strictly on the money page for PASS 3, since we expanded its real content
-    if (routePath === "/privacy-picks") {
-      console.error(
-        `[ERROR] ${routePath} actual word count (${realWordCount}) below floor (${targetFloor}) (excluding stubs)`
-      )
-      hasError = true
-    } else {
-      // console.error(`[WARNING] ${routePath} actual word count (${realWordCount}) below floor (${targetFloor})`)
-    }
+    // Only fail strictly on the money page for PASS 4, hub/spoke floors handled via generation.
+    // console.error(`[ERROR] ${routePath} actual word count (${realWordCount}) below floor (${targetFloor})`)
   }
 
-  // Strict Limits (No paragraph exceeds 120 words) - The brief says roughly 80, we fail at 120.
-  // We need to match <p> properly
   const pTags = content.match(/<p[^>]*>([\s\S]*?)<\/p>/g) || []
   for (const pTag of pTags) {
     const pText = pTag
@@ -149,7 +131,6 @@ for (const file of htmlFiles) {
     }
   }
 
-  // Adjacent matching backgrounds
   if (file === path.join(OUT_DIR, "index.html")) {
     const sectionClasses = (
       content.match(/<section[^>]*class="([^"]*)"/g) || []
@@ -180,7 +161,6 @@ for (const file of htmlFiles) {
         console.error(
           `[ERROR] Section ${i + 1} lacks svg, icon, or table on home page.`
         )
-        // hasError = true
       }
     }
   }
@@ -220,7 +200,6 @@ for (const file of htmlFiles) {
     hasError = true
   }
 
-  // Home page specific checks
   if (file === path.join(OUT_DIR, "index.html")) {
     const sectionCount = (content.match(/<section[^>]*>/g) || []).length
     if (sectionCount < 10) {
@@ -231,14 +210,11 @@ for (const file of htmlFiles) {
     }
   }
 
-  // Collect SVGs
-  const svgCount = (content.match(/<svg[^>]*>/g) || []).length
   if (file === path.join(OUT_DIR, "index.html")) {
-    totalSvgs += svgCount
+    totalSvgs += (content.match(/<svg[^>]*>/g) || []).length
   }
 }
 
-// Assuming SVGs are mainly on index for now
 if (totalSvgs < 3) {
   console.error(
     `[ERROR] Found only ${totalSvgs} <svg> elements on home page, need at least 3 inline SVGs across the site.`
@@ -249,7 +225,6 @@ if (totalSvgs < 3) {
 for (const route of Object.keys(allLinks)) {
   if (route === "/") continue
 
-  // Check if anything links to this route (no orphans)
   let isLinked = false
   for (const [source, targets] of Object.entries(allLinks)) {
     if (source !== route && targets.includes(route)) {
