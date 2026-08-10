@@ -57,3 +57,19 @@ pnpm dlx shadcn@latest add <component>
 ```
 
 They land in `components/ui/`, which is vendored and never hand-edited.
+
+## Deployment
+
+The application is deployed automatically to Cloudflare Pages via GitHub Actions whenever changes are pushed to the `main` branch.
+
+**Deployment Requirements:**
+- **Build Command:** `pnpm run build`
+- **Output Directory:** `.next-prod`
+- **Framework:** Next.js (Static HTML Export)
+
+**Cloudflare Pages Setup:**
+1. Connect your GitHub repository to Cloudflare Pages.
+2. Select the repository and branch (`main`).
+3. Set the build command to `pnpm run build`.
+4. Set the build output directory to `.next-prod`.
+5. Add any required environment variables (e.g., `NEXT_PUBLIC_CHECKOUT_ENDPOINT`).
