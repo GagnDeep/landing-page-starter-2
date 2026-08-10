@@ -181,7 +181,7 @@ export const moneyPage: PageContent = {
     },
     {
        heading: "What to do before testing",
-       content: `Always check the current policy before purchasing a kit. Read the terms of service specifically regarding data sharing, law enforcement access, and sample destruction. If you are uncomfortable with the terms, do not spit in the tube. Once your sample is processed, retracting the data becomes a complex and sometimes impossible task depending on the provider's backup procedures.</p><p>We advise all users to utilize pseudonyms and burner email addresses when registering their kits to minimize the link between their biological sample and their real-world identity.</p><p>Furthermore, we recommend purchasing kits using prepaid cards or alternative payment methods to further obscure your identity.`
+       content: `Always check the current policy before purchasing a kit. Read the terms of service specifically regarding data sharing, law enforcement access, and sample destruction. If you are uncomfortable with the terms, do not spit in the tube. Once your sample is processed, retracting the data becomes a complex and sometimes impossible task depending on the provider&apos;s backup procedures.</p><p>We advise all users to utilize pseudonyms and burner email addresses when registering their kits to minimize the link between their biological sample and their real-world identity.</p><p>Furthermore, we recommend purchasing kits using prepaid cards or alternative payment methods to further obscure your identity.`
     },
     {
        heading: "The Top Providers",

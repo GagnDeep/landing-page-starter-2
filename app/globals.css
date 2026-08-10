@@ -186,12 +186,15 @@
 
   /* Type Scale */
   .text-display {
+    letter-spacing: -0.04em;
     @apply text-5xl leading-tight font-bold tracking-tighter md:text-7xl;
   }
   .text-h1 {
+    letter-spacing: -0.02em;
     @apply text-4xl leading-tight font-bold tracking-tight md:text-5xl;
   }
   .text-h2 {
+    letter-spacing: -0.01em;
     @apply text-3xl leading-tight font-semibold tracking-tight md:text-4xl;
   }
   .text-h3 {
