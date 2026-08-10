@@ -16,6 +16,12 @@ export function Header() {
             Matrix
           </Link>
           <Link
+            href="/platforms/"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Platforms
+          </Link>
+          <Link
             href="/components/"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >

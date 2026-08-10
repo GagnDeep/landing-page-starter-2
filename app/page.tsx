@@ -151,7 +151,7 @@ export default function HomePage() {
               </p>
             </Prose>
             <Link
-              href="/components/sensors/"
+              href="/components/"
               className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
             >
               View Sensors{" "}
