@@ -44,6 +44,12 @@ export default function RootLayout({
       className={cn(fontHeading.variable, fontSans.variable, fontMono.variable)}
     >
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only z-[100] rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground outline-none focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:ring-2 focus:ring-ring focus:ring-offset-2"
+        >
+          Skip to main content
+        </a>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -51,7 +57,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="flex-1">{children}</div>
+          <div
+            id="main-content"
+            className="flex-1 focus:outline-none"
+            tabIndex={-1}
+          >
+            {children}
+          </div>
           <Footer />
         </ThemeProvider>
       </body>
