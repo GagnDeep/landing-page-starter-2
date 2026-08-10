@@ -57,10 +57,10 @@ Using this calculator is just the beginning of a sound financial strategy. We st
                 <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   <HugeiconsIcon icon={ChartHistogramIcon} className="size-6" />
                 </div>
-                <h1 className="mb-6 font-heading text-4xl font-semibold tracking-tight lg:text-5xl">
+                <h1 className="mb-6 font-heading text-4xl font-semibold tracking-tight break-words lg:text-5xl">
                   Catering Pricing Calculator
                 </h1>
-                <p className="text-xl leading-relaxed text-muted-foreground">
+                <p className="text-xl leading-relaxed break-words text-muted-foreground">
                   Stop guessing. Calculate your direct costs and ensure you hit
                   your target profit margins using the industry-standard
                   formula.
@@ -74,11 +74,11 @@ Using this calculator is just the beginning of a sound financial strategy. We st
               <Suspense
                 fallback={
                   <div className="rounded-2xl border border-dashed bg-card p-16 text-center">
-                    <span className="font-medium text-muted-foreground">
+                    <span className="font-medium break-words text-muted-foreground">
                       Loading interactive calculator...
                     </span>
                     <noscript>
-                      <p className="mt-2 text-sm">
+                      <p className="mt-2 text-sm break-words">
                         This interactive calculator requires JavaScript. It
                         calculates catering prices based on guest count, food
                         cost, labor, rentals, and target margin.
@@ -97,28 +97,30 @@ Using this calculator is just the beginning of a sound financial strategy. We st
               <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary/80 prose-p:leading-relaxed prose-h2:mb-6 max-w-none lg:col-span-2">
                 <h2>How to Price Catering Events</h2>
                 {filler.split("\n\n").map((para, i) => (
-                  <p key={i}>{para}</p>
+                  <p key={i} className="break-words">
+                    {para}
+                  </p>
                 ))}
               </div>
 
               <div className="space-y-6">
                 <div className="sticky top-24 rounded-xl border bg-card p-8 shadow-sm">
-                  <h3 className="mb-3 font-heading text-lg font-semibold">
+                  <h3 className="mb-3 font-heading text-lg font-semibold break-words">
                     Need standard contracts?
                   </h3>
-                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mb-6 text-sm leading-relaxed break-words text-muted-foreground">
                     Pricing accurately only matters if your contract ensures you
                     get paid. Check out our legal templates to protect your
                     business.
                   </p>
                   <Link
                     href="/templates"
-                    className="inline-flex items-center text-sm font-medium text-foreground transition-colors hover:text-primary"
+                    className="inline-flex min-h-[44px] items-center rounded-sm p-1 text-sm font-medium text-foreground transition-colors outline-none hover:text-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     Browse Templates{" "}
                     <HugeiconsIcon
                       icon={ArrowRight01Icon}
-                      className="ml-1 size-4"
+                      className="ml-1 size-4 shrink-0"
                     />
                   </Link>
                 </div>

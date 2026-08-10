@@ -88,7 +88,7 @@ The costs associated with compliance must be factored into your business plan. T
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col bg-background">
         <Header />
         <main className="flex-1">
           <div className="container px-4 py-8 md:px-8 md:py-12">
@@ -98,78 +98,93 @@ The costs associated with compliance must be factored into your business plan. T
                 { name: state.name, url: `/states/${state.slug}` },
               ]}
             />
-            <h1 className="mb-8 text-4xl font-bold tracking-tight lg:text-5xl">
+            <h1 className="mb-8 text-4xl font-bold tracking-tight break-words lg:text-5xl">
               {state.name} Laws & Regulations
             </h1>
 
             <div className="grid gap-8 lg:grid-cols-3">
-              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading max-w-none lg:col-span-2">
-                <p className="mb-6 text-xl font-medium">{state.content}</p>
-
-                <h2>Permit Requirements</h2>
-                <p>
-                  The base permit cost is: <strong>{state.permitCost}</strong>.
-                </p>
-                <p>
-                  Additional fees may apply: <strong>{state.fees}</strong>.
+              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary/80 prose-p:leading-relaxed max-w-none lg:col-span-2">
+                <p className="mb-6 text-xl font-medium break-words text-muted-foreground">
+                  {state.content}
                 </p>
 
-                <h2>Revenue Thresholds</h2>
-                <p>
+                <h2 className="mt-12 mb-6">Permit Requirements</h2>
+                <p className="break-words">
+                  The base permit cost is:{" "}
+                  <strong className="font-mono">{state.permitCost}</strong>.
+                </p>
+                <p className="break-words">
+                  Additional fees may apply:{" "}
+                  <strong className="font-mono">{state.fees}</strong>.
+                </p>
+
+                <h2 className="mt-12 mb-6">Revenue Thresholds</h2>
+                <p className="break-words">
                   Operators must be aware of the gross sales limits:{" "}
-                  <strong>{state.threshold}</strong>.
+                  <strong className="font-mono">{state.threshold}</strong>.
                 </p>
 
-                <h2>Additional Operational Guidelines</h2>
+                <h2 className="mt-12 mb-6">
+                  Additional Operational Guidelines
+                </h2>
                 {filler.split("\n\n").map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-lg border bg-muted/30 p-6">
-                  <h3 className="mb-4 font-heading font-medium">
+                <div className="sticky top-24 rounded-xl border bg-muted/10 p-6">
+                  <h3 className="mb-4 font-heading text-lg font-semibold">
                     Verification
                   </h3>
                   <div className="space-y-4 text-sm">
                     <div>
-                      <span className="block text-muted-foreground">
+                      <span className="mb-1 block text-muted-foreground">
                         Last Verified:
                       </span>
-                      <span className="font-mono">
+                      <span className="font-mono font-medium">
                         {state.lastVerifiedDate}
                       </span>
                     </div>
                     <div>
-                      <span className="block text-muted-foreground">
+                      <span className="mb-1 block text-muted-foreground">
                         Source:
                       </span>
-                      <span className="font-medium text-destructive">
+                      <span
+                        className="line-clamp-4 font-medium break-words text-destructive"
+                        title={state.verificationSource}
+                      >
                         {state.verificationSource}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-lg border bg-card p-6">
-                  <h3 className="mb-4 font-heading font-medium">
+                <div className="rounded-xl border bg-card p-6 shadow-sm">
+                  <h3 className="mb-4 font-heading text-lg font-semibold">
                     Compare States
                   </h3>
-                  <ul className="mb-4 space-y-2">
-                    {siblings.map((sib) => (
-                      <li key={sib.slug}>
-                        <Link
-                          href={`/states/${sib.slug}`}
-                          className="text-sm font-medium text-primary hover:underline"
-                        >
-                          {sib.name} Regulations
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {!siblings || siblings.length === 0 ? (
+                    <p className="text-sm text-muted-foreground">
+                      No other states available for comparison.
+                    </p>
+                  ) : (
+                    <ul className="mb-6 space-y-3">
+                      {siblings.map((sib) => (
+                        <li key={sib.slug}>
+                          <Link
+                            href={`/states/${sib.slug}`}
+                            className="line-clamp-2 inline-flex min-h-[44px] items-center rounded-sm text-sm font-medium text-primary outline-none hover:underline focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                          >
+                            {sib.name} Regulations
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <Link
                     href="/states"
-                    className="text-sm font-medium text-muted-foreground hover:underline"
+                    className="inline-flex min-h-[44px] items-center rounded-sm p-1 text-sm font-medium text-muted-foreground transition-colors outline-none hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     &larr; Back to Directory
                   </Link>

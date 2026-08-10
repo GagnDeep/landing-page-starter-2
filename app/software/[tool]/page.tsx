@@ -87,7 +87,7 @@ Finally, the long-term viability of the vendor is a crucial consideration. You a
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col bg-background">
         <Header />
         <main className="flex-1">
           <div className="container px-4 py-8 md:px-8 md:py-12">
@@ -97,81 +97,100 @@ Finally, the long-term viability of the vendor is a crucial consideration. You a
                 { name: tool.name, url: `/software/${tool.slug}` },
               ]}
             />
-            <h1 className="mb-8 text-4xl font-bold tracking-tight lg:text-5xl">
-              {tool.name} Review
-            </h1>
 
-            <div className="grid gap-8 lg:grid-cols-3">
-              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading max-w-none lg:col-span-2">
-                <p className="mb-6 text-xl font-medium">{tool.content}</p>
+            <div className="grid gap-12 lg:grid-cols-3">
+              <div className="lg:col-span-2">
+                <h1 className="mb-4 text-4xl font-bold tracking-tight break-words lg:text-5xl">
+                  {tool.name} Review
+                </h1>
+                <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary/80 prose-p:leading-relaxed max-w-none">
+                  <p className="mb-8 text-xl font-medium break-words text-muted-foreground">
+                    {tool.content}
+                  </p>
 
-                <h2>Pricing Model</h2>
-                <p>
-                  The current pricing structure is:{" "}
-                  <strong>{tool.pricing}</strong>.
-                </p>
+                  <h2 className="mt-12 mb-6">Pricing Model</h2>
+                  <p className="break-words">
+                    The current pricing structure is:{" "}
+                    <strong className="font-mono">{tool.pricing}</strong>.
+                  </p>
 
-                <h2>Key Features</h2>
-                <ul>
-                  {tool.features.map((f) => (
-                    <li key={f}>{f}</li>
+                  <h2 className="mt-12 mb-6">Key Features</h2>
+                  <ul className="space-y-2">
+                    {tool.features.map((f) => (
+                      <li key={f} className="break-words">
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h2 className="mt-12 mb-6">In-Depth Analysis</h2>
+                  {filler.split("\n\n").map((para, i) => (
+                    <p key={i}>{para}</p>
                   ))}
-                </ul>
-
-                <h2>In-Depth Analysis</h2>
-                {filler.split("\n\n").map((para, i) => (
-                  <p key={i}>{para}</p>
-                ))}
+                </div>
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-lg border bg-muted/30 p-6">
-                  <h3 className="mb-4 font-heading font-medium">
+                <div className="sticky top-24 rounded-xl border bg-muted/10 p-6">
+                  <h3 className="mb-4 font-heading text-lg font-semibold">
                     Software Details
                   </h3>
                   <div className="space-y-4 text-sm">
                     <div>
-                      <span className="block text-muted-foreground">
+                      <span className="mb-1 block text-muted-foreground">
                         Category:
                       </span>
-                      <span className="font-medium">{tool.category}</span>
+                      <span className="font-medium break-words">
+                        {tool.category}
+                      </span>
                     </div>
                     <div>
-                      <span className="block text-muted-foreground">
+                      <span className="mb-1 block text-muted-foreground">
                         Last Verified:
                       </span>
-                      <span className="font-mono">{tool.lastVerifiedDate}</span>
+                      <span className="font-mono font-medium">
+                        {tool.lastVerifiedDate}
+                      </span>
                     </div>
                     <div>
-                      <span className="block text-muted-foreground">
+                      <span className="mb-1 block text-muted-foreground">
                         Vendor Site:
                       </span>
-                      <span className="font-medium break-words text-destructive">
+                      <span
+                        className="line-clamp-3 font-medium break-words text-destructive"
+                        title={tool.verificationSource}
+                      >
                         {tool.verificationSource}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-lg border bg-card p-6">
-                  <h3 className="mb-4 font-heading font-medium">
+                <div className="rounded-xl border bg-card p-6 shadow-sm">
+                  <h3 className="mb-4 font-heading text-lg font-semibold">
                     Alternative Options
                   </h3>
-                  <ul className="mb-4 space-y-2">
-                    {siblings.map((sib) => (
-                      <li key={sib.slug}>
-                        <Link
-                          href={`/software/${sib.slug}`}
-                          className="text-sm font-medium text-primary hover:underline"
-                        >
-                          {sib.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {!siblings || siblings.length === 0 ? (
+                    <p className="text-sm text-muted-foreground">
+                      No alternatives available for comparison.
+                    </p>
+                  ) : (
+                    <ul className="mb-6 space-y-3">
+                      {siblings.map((sib) => (
+                        <li key={sib.slug}>
+                          <Link
+                            href={`/software/${sib.slug}`}
+                            className="line-clamp-2 inline-flex min-h-[44px] items-center rounded-sm text-sm font-medium text-primary outline-none hover:underline focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                          >
+                            {sib.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <Link
                     href="/software"
-                    className="text-sm font-medium text-muted-foreground hover:underline"
+                    className="inline-flex min-h-[44px] items-center rounded-sm p-1 text-sm font-medium text-muted-foreground transition-colors outline-none hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     &larr; Back to Directory
                   </Link>

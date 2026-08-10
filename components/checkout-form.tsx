@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useId } from "react"
 import { Button } from "@/components/ui/button"
 
 export function CheckoutForm({
@@ -15,6 +15,7 @@ export function CheckoutForm({
     "idle" | "loading" | "success" | "error"
   >("idle")
   const endpoint = process.env.NEXT_PUBLIC_CHECKOUT_ENDPOINT
+  const errorId = useId()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -51,13 +52,13 @@ export function CheckoutForm({
 
   if (status === "success") {
     return (
-      <div className="rounded-md bg-primary/10 p-4 text-center">
-        <h4 className="mb-1 font-heading font-medium text-primary">
+      <div className="rounded-md border border-primary/20 bg-primary/10 p-6 text-center">
+        <h4 className="mb-2 font-heading text-lg font-medium text-primary">
           Check your inbox
         </h4>
-        <p className="text-sm text-primary/80">
-          We&apos;ve sent the secure download link for {templateName} to your
-          email.
+        <p className="text-sm break-words text-primary/80">
+          We&apos;ve sent the secure download link for{" "}
+          <span className="font-semibold">{templateName}</span> to your email.
         </p>
       </div>
     )
@@ -79,17 +80,28 @@ export function CheckoutForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@cateringbusiness.com"
-          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+          aria-invalid={status === "error"}
+          aria-describedby={status === "error" ? errorId : undefined}
+          className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 aria-[invalid=true]:border-destructive"
         />
       </div>
 
       {status === "error" && (
-        <div className="text-sm font-medium text-destructive">
-          There was a problem processing your request. Please try again later.
+        <div
+          id={errorId}
+          className="rounded-md bg-destructive/10 p-3 text-sm font-medium break-words text-destructive"
+          role="alert"
+        >
+          There was a problem processing your request. Please ensure you are
+          connected to the network or try again later.
         </div>
       )}
 
-      <Button type="submit" className="w-full" disabled={status === "loading"}>
+      <Button
+        type="submit"
+        className="h-12 w-full text-base font-medium"
+        disabled={status === "loading"}
+      >
         {status === "loading" ? "Processing..." : `Purchase Template`}
       </Button>
     </form>

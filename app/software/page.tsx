@@ -69,35 +69,50 @@ Our comprehensive reviews are designed to help you navigate this complex market.
           </section>
 
           <section className="container border-b bg-muted/10 px-4 py-12 md:px-8">
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {softwareData.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/software/${item.slug}`}
-                  className="group relative flex flex-col justify-between overflow-hidden rounded-xl border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
-                >
-                  <div className="absolute top-0 right-0 p-4 text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                    <HugeiconsIcon icon={ArrowRight01Icon} className="size-5" />
-                  </div>
-                  <div>
-                    <span className="mb-3 block text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-                      {item.category}
-                    </span>
-                    <span className="mb-2 block font-heading text-xl font-semibold">
-                      {item.name}
-                    </span>
-                    <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-                      {item.content}
-                    </p>
-                  </div>
-                  <div className="mt-auto border-t border-border/50 pt-4">
-                    <span className="text-sm font-medium text-foreground transition-colors group-hover:text-primary">
-                      Read detailed review &rarr;
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            {!softwareData || softwareData.length === 0 ? (
+              <div className="flex flex-col items-center justify-center rounded-xl border border-dashed bg-card p-12 text-center">
+                <h3 className="mb-2 font-heading text-xl font-medium">
+                  No Reviews Available
+                </h3>
+                <p className="max-w-sm text-muted-foreground">
+                  We are currently evaluating platforms. Check back soon for
+                  detailed software reviews.
+                </p>
+              </div>
+            ) : (
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {softwareData.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/software/${item.slug}`}
+                    className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-xl border bg-background p-6 shadow-sm transition-all outline-none hover:border-primary/50 hover:shadow-md focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  >
+                    <div className="absolute top-0 right-0 p-4 text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                      <HugeiconsIcon
+                        icon={ArrowRight01Icon}
+                        className="size-5"
+                      />
+                    </div>
+                    <div>
+                      <span className="mb-3 block text-xs font-semibold tracking-wider break-words text-muted-foreground uppercase">
+                        {item.category}
+                      </span>
+                      <span className="mb-2 line-clamp-2 block font-heading text-xl font-semibold break-words">
+                        {item.name}
+                      </span>
+                      <p className="mb-4 line-clamp-3 text-sm leading-relaxed break-words text-muted-foreground">
+                        {item.content}
+                      </p>
+                    </div>
+                    <div className="mt-auto border-t border-border/50 pt-4">
+                      <span className="text-sm font-medium text-foreground transition-colors group-hover:text-primary">
+                        Read detailed review &rarr;
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
           </section>
 
           <section className="container px-4 py-16 md:px-8 lg:py-24">

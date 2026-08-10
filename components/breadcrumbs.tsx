@@ -11,25 +11,34 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="mb-6 flex items-center text-sm text-muted-foreground"
+      className="mb-6 flex flex-wrap items-center gap-y-2 text-sm text-muted-foreground"
     >
-      <ol className="flex items-center space-x-2">
+      <ol className="flex flex-wrap items-center space-x-2">
         <li>
-          <Link href="/" className="transition-colors hover:text-foreground">
+          <Link
+            href="/"
+            className="inline-flex min-h-[44px] items-center rounded-sm p-1 transition-colors outline-none hover:text-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
             Home
           </Link>
         </li>
         {items.map((item, index) => (
-          <li key={item.url} className="flex items-center space-x-2">
-            <HugeiconsIcon icon={ArrowRight01Icon} className="h-4 w-4" />
+          <li key={item.url} className="flex items-center space-x-2 break-all">
+            <HugeiconsIcon
+              icon={ArrowRight01Icon}
+              className="h-4 w-4 shrink-0"
+            />
             {index === items.length - 1 ? (
-              <span className="font-medium text-foreground" aria-current="page">
+              <span
+                className="line-clamp-1 py-1 font-medium text-foreground"
+                aria-current="page"
+              >
                 {item.name}
               </span>
             ) : (
               <Link
                 href={item.url}
-                className="transition-colors hover:text-foreground"
+                className="line-clamp-1 inline-flex min-h-[44px] items-center rounded-sm p-1 transition-colors outline-none hover:text-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {item.name}
               </Link>
