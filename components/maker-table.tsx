@@ -6,31 +6,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-
-const makers = [
-  {
-    name: "Ayasa",
-    price: "{{VERIFY: confirm by direct email to the maker}}",
-    waitTime: "{{VERIFY: confirm by direct email to the maker}}",
-    location: "Netherlands",
-  },
-  {
-    name: "Yishama",
-    price: "{{VERIFY: confirm by direct email to the maker}}",
-    waitTime: "{{VERIFY: confirm by direct email to the maker}}",
-    location: "Israel",
-  },
-  {
-    name: "Symphonic Steel",
-    price: "{{VERIFY: confirm by direct email to the maker}}",
-    waitTime: "{{VERIFY: confirm by direct email to the maker}}",
-    location: "USA",
-  },
-]
+import { makers } from "@/content/makers"
 
 export function MakerTable() {
   return (
-    <div className="w-full overflow-auto rounded-lg border">
+    <div className="w-full overflow-auto rounded-lg border bg-card">
       <Table>
         <TableHeader>
           <TableRow>
@@ -42,11 +22,15 @@ export function MakerTable() {
         </TableHeader>
         <TableBody>
           {makers.map((maker) => (
-            <TableRow key={maker.name}>
+            <TableRow key={maker.slug}>
               <TableCell className="font-medium">{maker.name}</TableCell>
               <TableCell>{maker.location}</TableCell>
-              <TableCell className="font-mono">{maker.price}</TableCell>
-              <TableCell className="font-mono">{maker.waitTime}</TableCell>
+              <TableCell className="font-mono">
+                {maker.basePrice.value}
+              </TableCell>
+              <TableCell className="font-mono">
+                {maker.waitTime.value}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
