@@ -196,7 +196,7 @@ htmlFiles.forEach((file) => {
           }
         }
       })
-    } catch (e) {
+    } catch {
       error(file, `Invalid JSON-LD format.`)
     }
   })

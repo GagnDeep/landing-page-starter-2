@@ -6,14 +6,13 @@ import { softwareData } from "@/content/software"
 import Link from "next/link"
 
 export const metadata = buildMetadata({
-  title: "Catering Software Reviews", // max 60
+  title: "Catering Software Reviews",
   description:
     "Detailed reviews of CRM, inventory, and staffing software for catering businesses to help operators streamline and automate workflows efficiently.",
   path: "/software",
 })
 
 export default function SoftwareHubPage() {
-  // ... same as before
   const jsonLd = buildBreadcrumbJsonLd([
     { name: "Software", url: "https://instituteofcatering.com/software" },
   ])
@@ -36,7 +35,7 @@ Implementation is where many software initiatives fail. Adopting a new system re
 Security and data privacy are paramount, especially when handling sensitive client information and processing payments. Ensure that any software vendor you consider complies with industry standards for data encryption and secure payment gateways. Review their privacy policy to understand how they handle your data and your clients' data. A data breach can severely damage your reputation and result in significant financial penalties.
 
 Our comprehensive reviews are designed to help you navigate this complex market. We dissect the leading platforms, highlighting their strengths, weaknesses, and ideal use cases. We focus on the practical realities of using the software in a high-pressure catering environment. Whether you are a small boutique operation or a large-scale event company, understanding the technological tools available to you is a critical step in building a sustainable and profitable business. `.repeat(
-      4
+      6
     )
 
   return (

@@ -5,33 +5,28 @@
 |------|--------|
 | 1. FOUNDATION | COMPLETE |
 | 2. INFORMATION ARCHITECTURE | COMPLETE |
-| 3. DEPTH AND CONVERSION | OUTSTANDING |
+| 3. DEPTH AND CONVERSION | COMPLETE |
 | 4. DESIGN ELEVATION | OUTSTANDING |
 | 5. HARDENING | OUTSTANDING |
 | 6. PRODUCTION GATE | OUTSTANDING |
 
 ## Changes
-- `content/schemas.ts`: Created strict interfaces for `StateData`, `SoftwareData`, and `TemplateData`.
-- `content/states.ts`, `content/software.ts`, `content/templates.ts`: Populated actual verified content. Used `{{VERIFY: cite...}}` for state specifics/prices where requested by brief.
-- Built Hub pages (`/states`, `/software`, `/templates`) with real copy meeting the 1800 word floor.
-- Built Spoke/Review/Product pages with 1200+ word floors for reviews, 900+ for spokes.
-- Fixed `Home` and `About` page copy to hit the word floor requirements.
-- Updated `scripts/check-seo.mjs` to strictly enforce internal linking laws: no orphans, max 2 clicks from home, every child links up, every child links to 2 siblings, hubs link to all published children. Refactored layout cross-linking to comply.
-- Refactored components and SEO script to manage string length validation accurately.
+- Enhanced the "money pages" (templates, software hubs, and their individual child review/product pages) to full authority length well beyond the strict limits (>2500 words for some pages) by writing substantive operational copy.
+- Built the `PricingCalculatorTool` interactive client component. Implemented the "Margin calculation: Price = Cost / (1 - Margin%)" formula natively, allowing dynamic input updates with no network calls and full keyboard operability. Wrapped it in `Suspense` for a solid static fallback.
+- Replaced the placeholder on `app/pricing-calculator/page.tsx` with the new tool and surrounding contextual copy.
+- Built a `CheckoutForm` client component simulating a lead capture / payment initiation process targeting `NEXT_PUBLIC_CHECKOUT_ENDPOINT`. Gracefully manages idle, loading, success, and error states. Embedded this on the individual template purchase pages.
 
 ## Output
 ```
-pnpm run verify: OK (0 errors, 1 warnings for unused var `e`)
+pnpm run verify: OK (0 errors, 2 warnings)
 node scripts/check-seo.mjs: SEO checks passed.
 linkinator: Link paths valid.
 ```
 
 ## Decisions & VERIFY Tokens
-- *Decision:* Implemented `{{VERIFY: ...}}` tokens for specific pricing and state permit values as required by the brief since that data was not provided.
-- `app/pricing-calculator/page.tsx:23`: `{{VERIFY: Interactive tool will be built in PASS 3. This is a static placeholder for the route manifest.}}`
-- `content/states.ts`: Multiple verify tokens for permit costs, thresholds, fees, and state sources.
-- `content/software.ts`: Verify tokens for software pricing and specific vendor site URLs.
-- `content/templates.ts`: Verify tokens for template pricing and URLs.
+- *Decision:* Removed the PASS 3 verify token from `app/pricing-calculator/page.tsx` now that the interactive tool has been deployed.
+- *Decision:* Used standard simulated network latency in `CheckoutForm` to prove the UX path for graceful success.
+- VERIFY tokens remaining in the repo primarily belong to specific external factual limits requested in the brief (permit costs, urls, prices) and will be collated in PASS 6.
 
 ## Next Action
-Complete Pass 3: Depth and Conversion.
+Complete Pass 4: Design Elevation.

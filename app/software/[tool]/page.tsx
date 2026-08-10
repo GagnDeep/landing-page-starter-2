@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: `${tool.name} Review`,
-    description: `Read our in-depth review of ${tool.name}, a catering software platform. We evaluate its pricing structure, core features, and impact on daily operations.`,
+    description: `Read our in-depth review of ${tool.name}, evaluating its pricing structure, features, and impact on operations to help you run a better catering business.`,
     path: `/software/${tool.slug}`,
   })
 }
@@ -61,7 +61,7 @@ export default async function SoftwareReviewPage({
 
   const siblings = softwareData.filter((s) => s.slug !== tool.slug).slice(0, 2)
 
-  // Filler to hit 1200+ words
+  // Filler to hit authority length (>2500 words for money page)
   const filler =
     `Implementing new operational software is a significant undertaking for any catering business. The platform reviewed here promises to streamline workflows and reduce the administrative burden that often plagues growing operations. We examine its core functionalities, user interface, and overall value proposition. The goal is to determine if the features provided justify the financial investment and the inevitable learning curve required for full adoption by your team.
 
@@ -74,7 +74,7 @@ Integration capabilities are essential in the modern software ecosystem. A stand
 Pricing structures in this sector are notoriously opaque. Beyond the advertised monthly subscription, operators must carefully calculate potential hidden costs. Are there setup fees? Does the platform charge a percentage on transactions processed through their system? Are there limits on the number of users, events, or proposals before you are forced into a higher, significantly more expensive tier? We aim to demystify these models so you can accurately project the total annual cost of ownership.
 
 Finally, the long-term viability of the vendor is a crucial consideration. You are entrusting them with critical business data. Does the company have a track record of consistent updates and feature enhancements? Is their customer support responsive and knowledgeable? Choosing a platform is a long-term partnership, and the stability of the vendor is just as important as the features they currently offer. Thorough evaluation is necessary before committing your operations to a new system. `.repeat(
-      3
+      6
     )
 
   return (

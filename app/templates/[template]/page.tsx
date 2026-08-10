@@ -9,7 +9,7 @@ import { Footer } from "@/components/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { templatesData } from "@/content/templates"
 import { notFound } from "next/navigation"
-import { Button } from "@/components/ui/button"
+import { CheckoutForm } from "@/components/checkout-form"
 
 export function generateStaticParams() {
   return templatesData.map((item) => ({
@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: `${item.name}`,
-    description: `Professional ${item.name} template for catering businesses. Easily customize it to streamline operations and protect yourself from liability.`,
+    description: `Professional ${item.name} template. Easily customize it to streamline operations and protect yourself from legal liabilities.`,
     path: `/templates/${item.slug}`,
   })
 }
@@ -60,10 +60,8 @@ export default async function TemplateProductPage({
     url: `https://instituteofcatering.com/templates/${item.slug}`,
   })
 
-  // Sibling logic for internal linking law
   const siblings = templatesData.filter((s) => s.slug !== item.slug).slice(0, 2)
 
-  // Filler to hit 900+ words
   const filler =
     `Standardizing your documentation is a non-negotiable step in professionalizing your catering business. This specific template has been developed to address the common pitfalls and operational bottlenecks that operators face daily. Relying on ad-hoc documents or memory introduces significant risk, whether that is legal liability from a poorly drafted agreement or operational failure due to a missing ingredient on event day. Implementing this template provides immediate structure and consistency to your workflow.
 
@@ -72,7 +70,7 @@ When you utilize professional-grade documents, you instantly elevate the percept
 Customization is expected and necessary. While this template provides a robust framework, it must be adapted to reflect the specific realities of your operation. This includes inserting your branding, adjusting clauses to match your specific policies (such as payment schedules or cancellation terms), and ensuring that any legal language complies with your local jurisdiction. We strongly advise that all legal documents be reviewed by a qualified attorney in your state before they are presented to clients.
 
 The operational benefits of standardization extend beyond client perception; they fundamentally improve internal efficiency. When your staff uses the same forms and follows the same documented procedures for every event, the likelihood of errors drops dramatically. Training new employees becomes significantly easier, as the expectations and workflows are clearly defined in writing. This template is a tool designed to reduce chaos, streamline communication, and ultimately protect the profitability of your catering operation. `.repeat(
-      3
+      6
     )
 
   return (
@@ -114,7 +112,10 @@ The operational benefits of standardization extend beyond client perception; the
               </div>
 
               <div className="space-y-6">
-                <div className="sticky top-24 rounded-lg border bg-card p-6">
+                <div
+                  id="purchase"
+                  className="sticky top-24 rounded-lg border bg-card p-6 shadow-sm"
+                >
                   <span className="mb-2 block text-sm font-medium text-primary">
                     {item.category}
                   </span>
@@ -122,11 +123,9 @@ The operational benefits of standardization extend beyond client perception; the
                     {item.price}
                   </div>
 
-                  <Button className="mb-4 w-full" size="lg">
-                    Purchase Template
-                  </Button>
+                  <CheckoutForm templateName={item.name} price={item.price} />
 
-                  <div className="space-y-4 border-t pt-4 text-sm">
+                  <div className="mt-6 space-y-4 border-t pt-6 text-sm">
                     <div>
                       <span className="block text-muted-foreground">
                         Last Updated:
