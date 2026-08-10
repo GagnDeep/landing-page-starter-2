@@ -8,6 +8,14 @@ import { Footer } from "@/components/footer"
 import { StateDirectory } from "@/components/state-directory"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { HugeiconsIcon } from "@hugeicons/react"
+import {
+  ArrowRight01Icon,
+  ChartHistogramIcon,
+  File01Icon,
+  ComputerDesk01Icon,
+  Book01Icon,
+} from "@hugeicons/core-free-icons"
 
 export const metadata = buildMetadata({
   title: "Catering Business Toolkit",
@@ -49,71 +57,188 @@ The catering industry is incredibly rewarding, but it is also unforgiving to tho
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
       />
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col bg-background">
         <Header />
         <main className="flex-1">
-          <section className="border-b bg-muted/30">
-            <div className="container px-4 py-16 md:px-8 md:py-24 lg:py-32">
-              <div className="max-w-3xl">
-                <h1 className="mb-6 text-4xl font-bold tracking-tight lg:text-5xl xl:text-6xl">
-                  Run your catering business legally and profitably.
+          {/* Hero Section - The "Prep Sheet" Vibe */}
+          <section className="relative overflow-hidden border-b bg-card">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:4rem_4rem] opacity-20" />
+            <div className="relative z-10 container px-4 py-20 md:px-8 md:py-32 lg:py-40">
+              <div className="mx-auto max-w-4xl text-center">
+                <div className="mb-6 inline-flex items-center rounded-full border bg-background px-4 py-1.5 text-sm font-medium shadow-sm">
+                  <span className="flex items-center gap-2 text-accent">
+                    <HugeiconsIcon
+                      icon={Book01Icon}
+                      className="size-4"
+                      strokeWidth={2}
+                    />
+                    The Operator&apos;s Resource
+                  </span>
+                </div>
+                <h1 className="mb-8 font-heading text-5xl font-semibold tracking-tight text-foreground lg:text-7xl">
+                  Run your catering business <br className="hidden md:block" />
+                  <span className="text-primary italic">
+                    legally and profitably.
+                  </span>
                 </h1>
-                <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
-                  A practical resource for catering operators. We provide
-                  up-to-date information on state licensing, cottage-food laws,
-                  pricing strategies, and rock-solid contracts to protect your
-                  business.
+                <p className="mx-auto mb-10 max-w-2xl text-xl leading-relaxed text-muted-foreground">
+                  A practical resource for operators. Navigate state licensing,
+                  cottage-food laws, pricing strategies, and rock-solid
+                  contracts to protect your business.
                 </p>
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <Button size="lg" asChild>
-                    <Link href="/about">Learn More</Link>
+                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                  <Button
+                    size="lg"
+                    className="h-12 rounded-full px-8 text-base font-medium shadow-md transition-transform hover:-translate-y-0.5"
+                    asChild
+                  >
+                    <Link href="/states">Find Your State Laws</Link>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="h-12 rounded-full border-border px-8 text-base font-medium transition-colors hover:bg-muted/50"
+                    asChild
+                  >
+                    <Link href="/pricing-calculator">Pricing Calculator</Link>
                   </Button>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="container border-b bg-muted/10 px-4 py-8 md:px-8">
-            <div className="flex flex-wrap gap-4 text-sm font-medium">
-              <span>Quick Links:</span>
-              <Link href="/states" className="text-primary hover:underline">
-                State Laws
+          {/* Quick Nav Grid */}
+          <section className="relative z-20 container -mt-12 px-4 py-12 md:px-8">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <Link
+                href="/states"
+                className="group flex flex-col justify-between rounded-xl border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
+              >
+                <div className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <HugeiconsIcon icon={File01Icon} className="size-5" />
+                </div>
+                <h2 className="mb-2 font-heading text-lg font-semibold">
+                  State Laws
+                </h2>
+                <p className="flex-1 text-sm text-muted-foreground">
+                  Cottage food & commercial permits.
+                </p>
+                <div className="mt-4 flex items-center text-sm font-medium text-primary">
+                  Explore Directory{" "}
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    className="ml-1 size-4"
+                  />
+                </div>
               </Link>
-              <Link href="/software" className="text-primary hover:underline">
-                Software Reviews
-              </Link>
-              <Link href="/templates" className="text-primary hover:underline">
-                Templates
-              </Link>
+
               <Link
                 href="/pricing-calculator"
-                className="text-primary hover:underline"
+                className="group flex flex-col justify-between rounded-xl border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
               >
-                Pricing Calculator
+                <div className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <HugeiconsIcon icon={ChartHistogramIcon} className="size-5" />
+                </div>
+                <h2 className="mb-2 font-heading text-lg font-semibold">
+                  Pricing Tool
+                </h2>
+                <p className="flex-1 text-sm text-muted-foreground">
+                  Calculate true margins & food costs.
+                </p>
+                <div className="mt-4 flex items-center text-sm font-medium text-accent">
+                  Calculate Now{" "}
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    className="ml-1 size-4"
+                  />
+                </div>
+              </Link>
+
+              <Link
+                href="/templates"
+                className="group flex flex-col justify-between rounded-xl border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
+              >
+                <div className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-secondary text-secondary-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
+                  <HugeiconsIcon icon={Book01Icon} className="size-5" />
+                </div>
+                <h2 className="mb-2 font-heading text-lg font-semibold">
+                  Templates
+                </h2>
+                <p className="flex-1 text-sm text-muted-foreground">
+                  Contracts, prep sheets & intake forms.
+                </p>
+                <div className="mt-4 flex items-center text-sm font-medium text-foreground">
+                  Browse Forms{" "}
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    className="ml-1 size-4"
+                  />
+                </div>
+              </Link>
+
+              <Link
+                href="/software"
+                className="group flex flex-col justify-between rounded-xl border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
+              >
+                <div className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-muted text-foreground transition-colors group-hover:bg-primary/20 group-hover:text-primary">
+                  <HugeiconsIcon icon={ComputerDesk01Icon} className="size-5" />
+                </div>
+                <h2 className="mb-2 font-heading text-lg font-semibold">
+                  Software
+                </h2>
+                <p className="flex-1 text-sm text-muted-foreground">
+                  Reviews of CRM & operational tools.
+                </p>
+                <div className="mt-4 flex items-center text-sm font-medium text-foreground group-hover:text-primary">
+                  Read Reviews{" "}
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    className="ml-1 size-4"
+                  />
+                </div>
               </Link>
             </div>
           </section>
 
+          {/* Signature Component Section */}
           <section className="container px-4 py-16 md:px-8 lg:py-24">
-            <div className="mb-12">
-              <h2 className="mb-4 text-3xl font-bold tracking-tight">
+            <div className="mx-auto mb-16 max-w-3xl text-center">
+              <h2 className="mb-6 font-heading text-3xl font-semibold tracking-tight lg:text-4xl">
                 State Licensing & Cottage Food Law
               </h2>
-              <p className="max-w-2xl text-lg text-muted-foreground">
+              <p className="text-lg leading-relaxed text-muted-foreground">
                 Cottage-food law has been loosening across a growing number of
                 US states since 2023. Select your state to see the latest
                 requirements, permits, and fees.
               </p>
             </div>
-            <StateDirectory />
+
+            <div className="rounded-2xl border bg-card p-2 shadow-sm">
+              <div className="rounded-xl border bg-background/50 p-6 md:p-10">
+                <StateDirectory />
+              </div>
+            </div>
           </section>
 
-          <section className="container border-t px-4 py-16 md:px-8 lg:py-24">
-            <div className="prose prose-slate dark:prose-invert prose-headings:font-heading max-w-none">
-              <h2>The Business of Catering</h2>
-              {filler.split("\n\n").map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+          {/* Main Content Body */}
+          <section className="border-t bg-muted/10">
+            <div className="container px-4 py-16 md:px-8 lg:py-24">
+              <div className="mx-auto max-w-3xl">
+                <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary prose-a:underline-offset-4 hover:prose-a:text-primary/80 prose-p:leading-relaxed prose-h2:mt-16 prose-h2:mb-8 max-w-none">
+                  <h2 className="text-center">The Business of Catering</h2>
+                  <div className="my-8 rounded-xl border border-dashed bg-background p-8 shadow-sm">
+                    <p className="mt-0 mb-0 text-center text-lg font-medium italic">
+                      &quot;We do not teach cooking. We teach operators how to
+                      protect themselves from liability, price their services to
+                      ensure a margin, and understand the ever-changing
+                      landscape of state regulations.&quot;
+                    </p>
+                  </div>
+                  {filler.split("\n\n").map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
         </main>

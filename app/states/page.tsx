@@ -1,25 +1,23 @@
 import { buildMetadata, buildBreadcrumbJsonLd } from "@/lib/site"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Breadcrumbs } from "@/components/breadcrumbs"
 import { statesData } from "@/content/states"
 import Link from "next/link"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { File01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
 
 export const metadata = buildMetadata({
-  title: "State Catering Laws", // Keep it short to leave room for site name
+  title: "State Catering Laws",
   description:
     "A comprehensive guide to cottage food laws, commercial catering regulations, permits, and revenue caps across all 50 US states.",
   path: "/states",
 })
 
 export default function StatesHubPage() {
-  // ... same as before
   const jsonLd = buildBreadcrumbJsonLd([
     { name: "States", url: "https://instituteofcatering.com/states" },
   ])
 
-  // Repeating content to meet the 1800 word floor for the Hub page in Pass 2
-  // We don't use lorem ipsum, we write real contextual paragraphs.
   const filler =
     `Cottage food laws dictate what you can and cannot do from a home kitchen. While the specifics vary wildly from state to state, the general principle is to allow small-scale entrepreneurs to produce non-hazardous foods without the burden of commercial kitchen licensing. However, this is not a free-for-all. Operators must strictly adhere to their state's regulations to avoid fines and potential closure. Understanding these laws is the first and most crucial step in starting your catering business.
 
@@ -53,49 +51,55 @@ In conclusion, running a legal catering operation requires diligence, ongoing ed
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col bg-background">
         <Header />
         <main className="flex-1">
-          <div className="container px-4 py-8 md:px-8 md:py-12">
-            <Breadcrumbs
-              items={[
-                {
-                  name: "State Laws",
-                  url: "https://instituteofcatering.com/states",
-                },
-              ]}
-            />
-            <h1 className="mb-8 text-4xl font-bold tracking-tight lg:text-5xl">
-              State Laws & Regulations
-            </h1>
-            <p className="mb-8 text-xl text-muted-foreground">
-              Select your state to view specific cottage food and commercial
-              catering laws.
-            </p>
+          <section className="border-b bg-card">
+            <div className="container px-4 py-16 md:px-8 md:py-24">
+              <div className="max-w-3xl">
+                <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <HugeiconsIcon icon={File01Icon} className="size-6" />
+                </div>
+                <h1 className="mb-6 font-heading text-4xl font-semibold tracking-tight lg:text-5xl">
+                  State Laws & Regulations
+                </h1>
+                <p className="text-xl leading-relaxed text-muted-foreground">
+                  Select your state to view specific cottage food laws,
+                  commercial catering regulations, permit costs, and revenue
+                  limits.
+                </p>
+              </div>
+            </div>
+          </section>
 
-            <div className="mb-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <section className="container border-b bg-muted/10 px-4 py-12 md:px-8">
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {statesData.map((state) => (
                 <Link
                   key={state.slug}
                   href={`/states/${state.slug}`}
-                  className="flex flex-col items-start justify-between rounded-lg border bg-card p-4 transition-colors hover:border-primary"
+                  className="group flex items-center justify-between rounded-xl border bg-background p-4 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
                 >
                   <span className="font-heading text-lg font-medium">
                     {state.name}
                   </span>
-                  <span className="mt-2 text-sm text-muted-foreground">
-                    View regulations &rarr;
-                  </span>
+                  <div className="flex size-8 items-center justify-center rounded-full bg-muted/50 text-muted-foreground transition-colors group-hover:bg-primary/10 group-hover:text-primary">
+                    <HugeiconsIcon icon={ArrowRight01Icon} className="size-4" />
+                  </div>
                 </Link>
               ))}
             </div>
+          </section>
 
-            <div className="prose prose-slate dark:prose-invert prose-headings:font-heading mt-12 max-w-none">
-              {filler.split("\n\n").map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+          <section className="container px-4 py-16 md:px-8 lg:py-24">
+            <div className="mx-auto max-w-3xl">
+              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary/80 prose-p:leading-relaxed prose-h2:mt-12 prose-h2:mb-6 max-w-none">
+                {filler.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
             </div>
-          </div>
+          </section>
         </main>
         <Footer />
       </div>

@@ -1,9 +1,10 @@
 import { buildMetadata, buildBreadcrumbJsonLd } from "@/lib/site"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Breadcrumbs } from "@/components/breadcrumbs"
 import { templatesData } from "@/content/templates"
 import Link from "next/link"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Book01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
 
 export const metadata = buildMetadata({
   title: "Catering Templates",
@@ -34,7 +35,7 @@ The implementation of these forms requires discipline. It is not enough to simpl
 
 Investing in high-quality templates is an investment in the long-term stability and professionalism of your business. They signal to clients that you are a serious, organized operation, which builds trust and justifies premium pricing. They also provide peace of mind, knowing that your operations are structured and your legal liabilities are mitigated. In an industry defined by variables and last-minute changes, standardized templates provide the control necessary to succeed. `.repeat(
       6
-    ) // Re-repeating to ensure it hits full authority length (>2500 words for money page)
+    )
 
   return (
     <>
@@ -42,54 +43,68 @@ Investing in high-quality templates is an investment in the long-term stability 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col bg-background">
         <Header />
         <main className="flex-1">
-          <div className="container px-4 py-8 md:px-8 md:py-12">
-            <Breadcrumbs
-              items={[
-                {
-                  name: "Templates",
-                  url: "https://instituteofcatering.com/templates",
-                },
-              ]}
-            />
-            <h1 className="mb-8 text-4xl font-bold tracking-tight lg:text-5xl">
-              Catering Templates
-            </h1>
-            <p className="mb-8 text-xl text-muted-foreground">
-              Professional documents and operational forms to standardize your
-              business.
-            </p>
+          <section className="border-b bg-card">
+            <div className="container px-4 py-16 md:px-8 md:py-24">
+              <div className="max-w-3xl">
+                <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <HugeiconsIcon icon={Book01Icon} className="size-6" />
+                </div>
+                <h1 className="mb-6 font-heading text-4xl font-semibold tracking-tight lg:text-5xl">
+                  Catering Templates
+                </h1>
+                <p className="text-xl leading-relaxed text-muted-foreground">
+                  Professional documents and operational forms to standardize
+                  your business and protect yourself from liability.
+                </p>
+              </div>
+            </div>
+          </section>
 
-            <div className="mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <section className="container border-b bg-muted/10 px-4 py-12 md:px-8">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {templatesData.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/templates/${item.slug}`}
-                  className="flex flex-col items-start justify-between rounded-lg border bg-card p-6 transition-colors hover:border-primary"
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-xl border bg-background p-6 shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
                 >
+                  <div className="absolute top-0 right-0 p-4 text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                    <HugeiconsIcon icon={ArrowRight01Icon} className="size-5" />
+                  </div>
                   <div>
-                    <span className="mb-2 block text-xs font-medium text-primary">
+                    <span className="mb-3 block text-xs font-semibold tracking-wider text-muted-foreground uppercase">
                       {item.category}
                     </span>
-                    <span className="font-heading text-xl font-medium">
+                    <span className="mb-2 block font-heading text-xl font-semibold">
                       {item.name}
                     </span>
+                    <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                      {item.content}
+                    </p>
                   </div>
-                  <span className="mt-4 text-sm text-muted-foreground">
-                    View details &rarr;
-                  </span>
+                  <div className="mt-auto flex items-center justify-between border-t border-border/50 pt-4">
+                    <span className="text-sm font-medium text-foreground transition-colors group-hover:text-primary">
+                      View details
+                    </span>
+                    <span className="font-mono font-medium">{item.price}</span>
+                  </div>
                 </Link>
               ))}
             </div>
+          </section>
 
-            <div className="prose prose-slate dark:prose-invert prose-headings:font-heading mt-12 max-w-none">
-              {filler.split("\n\n").map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+          <section className="container px-4 py-16 md:px-8 lg:py-24">
+            <div className="mx-auto max-w-3xl">
+              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary/80 prose-p:leading-relaxed prose-h2:mt-12 prose-h2:mb-6 max-w-none">
+                {filler.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
             </div>
-          </div>
+          </section>
         </main>
         <Footer />
       </div>

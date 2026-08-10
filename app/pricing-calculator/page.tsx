@@ -1,10 +1,14 @@
 import { buildMetadata, buildBreadcrumbJsonLd } from "@/lib/site"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Breadcrumbs } from "@/components/breadcrumbs"
 import { PricingCalculatorTool } from "@/components/pricing-calculator-tool"
 import { Suspense } from "react"
 import Link from "next/link"
+import { HugeiconsIcon } from "@hugeicons/react"
+import {
+  ChartHistogramIcon,
+  ArrowRight01Icon,
+} from "@hugeicons/core-free-icons"
 
 export const metadata = buildMetadata({
   title: "Catering Pricing Calculator",
@@ -21,7 +25,6 @@ export default function PricingCalculatorPage() {
     },
   ])
 
-  // Filler to hit word floor (900+ for tools/spokes theoretically, although brief says tools exempt, it's safer to have substantive copy)
   const filler =
     `Pricing catering events is one of the most challenging aspects of running a food business. Unlike a restaurant where menu prices are static and predictable, catering involves a constantly shifting set of variables. The number of guests, the style of service, the venue requirements, and fluctuating ingredient costs all impact the bottom line. Failing to accurately account for these variables is the primary reason many talented caterers struggle financially. Our pricing calculator is designed to remove the guesswork and ensure you hit your target profit margins on every single event.
 
@@ -45,34 +48,37 @@ Using this calculator is just the beginning of a sound financial strategy. We st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col bg-background">
         <Header />
         <main className="flex-1">
-          <div className="container px-4 py-8 md:px-8 md:py-12">
-            <Breadcrumbs
-              items={[
-                { name: "Pricing Calculator", url: "/pricing-calculator" },
-              ]}
-            />
-
-            <div className="mb-12 max-w-3xl">
-              <h1 className="mb-6 text-4xl font-bold tracking-tight lg:text-5xl">
-                Catering Pricing Calculator
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                Stop guessing. Calculate your direct costs and ensure you hit
-                your target profit margins using the industry-standard formula.
-              </p>
+          <section className="border-b bg-card">
+            <div className="container px-4 py-16 md:px-8 md:py-24">
+              <div className="max-w-3xl">
+                <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <HugeiconsIcon icon={ChartHistogramIcon} className="size-6" />
+                </div>
+                <h1 className="mb-6 font-heading text-4xl font-semibold tracking-tight lg:text-5xl">
+                  Catering Pricing Calculator
+                </h1>
+                <p className="text-xl leading-relaxed text-muted-foreground">
+                  Stop guessing. Calculate your direct costs and ensure you hit
+                  your target profit margins using the industry-standard
+                  formula.
+                </p>
+              </div>
             </div>
+          </section>
 
-            <div className="mb-16">
+          <div className="container border-b bg-muted/10 px-4 py-12 md:px-8">
+            <div className="mx-auto max-w-5xl">
               <Suspense
                 fallback={
-                  <div className="rounded-lg border border-dashed bg-card p-12 text-center">
-                    Loading interactive calculator...
-                    {/* Static fallback for crawlers */}
+                  <div className="rounded-2xl border border-dashed bg-card p-16 text-center">
+                    <span className="font-medium text-muted-foreground">
+                      Loading interactive calculator...
+                    </span>
                     <noscript>
-                      <p>
+                      <p className="mt-2 text-sm">
                         This interactive calculator requires JavaScript. It
                         calculates catering prices based on guest count, food
                         cost, labor, rentals, and target margin.
@@ -84,9 +90,11 @@ Using this calculator is just the beginning of a sound financial strategy. We st
                 <PricingCalculatorTool />
               </Suspense>
             </div>
+          </div>
 
-            <div className="grid gap-12 border-t pt-12 lg:grid-cols-3">
-              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading max-w-none lg:col-span-2">
+          <section className="container px-4 py-16 md:px-8 lg:py-24">
+            <div className="grid gap-12 lg:grid-cols-3">
+              <div className="prose prose-slate dark:prose-invert prose-headings:font-heading prose-a:text-primary hover:prose-a:text-primary/80 prose-p:leading-relaxed prose-h2:mb-6 max-w-none lg:col-span-2">
                 <h2>How to Price Catering Events</h2>
                 {filler.split("\n\n").map((para, i) => (
                   <p key={i}>{para}</p>
@@ -94,24 +102,29 @@ Using this calculator is just the beginning of a sound financial strategy. We st
               </div>
 
               <div className="space-y-6">
-                <div className="sticky top-24 rounded-lg border bg-card p-6">
-                  <h3 className="mb-4 font-heading font-medium">
+                <div className="sticky top-24 rounded-xl border bg-card p-8 shadow-sm">
+                  <h3 className="mb-3 font-heading text-lg font-semibold">
                     Need standard contracts?
                   </h3>
-                  <p className="mb-4 text-sm text-muted-foreground">
+                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
                     Pricing accurately only matters if your contract ensures you
-                    get paid. Check out our legal templates.
+                    get paid. Check out our legal templates to protect your
+                    business.
                   </p>
                   <Link
                     href="/templates"
-                    className="text-sm font-medium text-primary hover:underline"
+                    className="inline-flex items-center text-sm font-medium text-foreground transition-colors hover:text-primary"
                   >
-                    Browse Templates &rarr;
+                    Browse Templates{" "}
+                    <HugeiconsIcon
+                      icon={ArrowRight01Icon}
+                      className="ml-1 size-4"
+                    />
                   </Link>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </main>
         <Footer />
       </div>

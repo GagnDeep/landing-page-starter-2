@@ -54,16 +54,18 @@
 }
 
 :root {
-  --background: oklch(0.968 0.012 95);
+  /* Service Ware Theme - Light */
+  /* Warm modern, soft shapes and hard information */
+  --background: oklch(0.968 0.012 95); /* linen */
   --foreground: oklch(0.24 0.014 150);
 
-  --card: oklch(1 0 0);
+  --card: oklch(1 0 0); /* white */
   --card-foreground: oklch(0.24 0.014 150);
 
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.24 0.014 150);
 
-  --primary: oklch(0.48 0.062 152);
+  --primary: oklch(0.48 0.062 152); /* deep sage */
   --primary-foreground: oklch(0.968 0.012 95);
 
   --secondary: oklch(0.92 0.012 95);
@@ -72,7 +74,7 @@
   --muted: oklch(0.94 0.014 95);
   --muted-foreground: oklch(0.5 0.014 150);
 
-  --accent: oklch(0.63 0.13 55);
+  --accent: oklch(0.63 0.13 55); /* copper */
   --accent-foreground: oklch(0.968 0.012 95);
 
   --destructive: oklch(0.577 0.245 27.325);
@@ -101,6 +103,7 @@
 }
 
 .dark {
+  /* Service Ware Theme - Dark */
   --background: oklch(0.19 0.016 152);
   --foreground: oklch(0.94 0.01 95);
 
@@ -150,6 +153,7 @@
     @apply border-border outline-ring/50;
   }
   body {
+    /* Brief: Figtree at 17px, line height 1.65 */
     @apply bg-background text-[17px] leading-[1.65] text-foreground;
   }
   h1,
@@ -158,9 +162,10 @@
   h4,
   h5,
   h6 {
+    /* Brief: Bricolage Grotesque, variable, weight 500 to 700 with slight optical width contrast at display sizes. */
     @apply font-heading tracking-tight;
   }
   html {
-    @apply font-sans;
+    @apply font-sans selection:bg-primary/20 selection:text-primary;
   }
 }

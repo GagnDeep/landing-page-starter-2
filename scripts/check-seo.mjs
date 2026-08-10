@@ -3,7 +3,7 @@ import path from "path"
 import * as cheerio from "cheerio"
 import { globSync } from "glob"
 
-const OUT_DIR = path.join(process.cwd(), "out")
+const OUT_DIR = path.join(process.cwd(), ".next-prod")
 
 if (!fs.existsSync(OUT_DIR)) {
   console.error(`Error: out/ directory not found. Run pnpm run build first.`)
