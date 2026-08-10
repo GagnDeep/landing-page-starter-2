@@ -1,0 +1,14 @@
+
+> landing-page-starter@0.0.1 dev /app
+> next dev --turbopack -p 7811
+
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:7811
+- Network:       http://192.168.0.2:7811
+✓ Ready in 557ms
+✓ Running next.config.mjs took 29ms
+
+○ Compiling / ...
+ GET / 200 in 9.2s (next.js: 6.7s, application-code: 2.5s)
+ ELIFECYCLE  Command failed.
+[?25h

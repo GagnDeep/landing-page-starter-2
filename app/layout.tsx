@@ -1,15 +1,36 @@
-import { Figtree, Geist_Mono } from "next/font/google"
-
+import type { Metadata } from "next"
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google"
+import { ThemeProvider } from "next-themes"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { cn } from "@/lib/utils"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
-
-const fontMono = Geist_Mono({
+const fontHeading = Archivo({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["600", "700"],
+  variable: "--font-heading",
+  display: "swap",
 })
+
+const fontSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-sans",
+  display: "swap",
+})
+
+const fontMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+})
+
+export const metadata: Metadata = {
+  title: "Institute of Humanoids",
+  description: "The supply chain index for humanoid robotics.",
+}
 
 export default function RootLayout({
   children,
@@ -20,14 +41,19 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(
-        "font-sans antialiased",
-        fontSans.variable,
-        fontMono.variable
-      )}
+      className={cn(fontHeading.variable, fontSans.variable, fontMono.variable)}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="flex min-h-screen flex-col font-sans antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
