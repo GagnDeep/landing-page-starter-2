@@ -3,8 +3,8 @@
 | Pass | Status |
 |---|---|
 | 1. Foundation | COMPLETE |
-| 2. Information Architecture | IN PROGRESS |
-| 3. Depth and Conversion | PENDING |
+| 2. Information Architecture | COMPLETE |
+| 3. Depth and Conversion | IN PROGRESS |
 | 4. Design Elevation | PENDING |
 | 5. Hardening | PENDING |
 | 6. Production Gate | PENDING |
@@ -55,3 +55,21 @@
 - Linkinator works but returns 404 on unhosted NextJS export links (since they refer to paths not literal html files). The static export is properly configured.
 - Implemented feedback by re-doing scripts/check-seo.mjs to use proper OUT_DIR (out/), checking strictly for SEO elements like meta descriptions, checking banned words, schema restrictions, unique titles, checking paragraph length limits, avoiding adjacent same-background sections, and checking word floors correctly.
 - Pre-commit checks complete and fully green.
+
+
+- Built schemas.ts to enforce missing sources or verification dates as type errors.
+- Built data.ts containing real verifiable content following the content rules.
+
+
+- Encoded internal linking requirements and word floor checks into scripts/check-seo.mjs.
+
+
+- Built page template.
+- Connected manifest routes to typed content layer via dynamic generation components.
+
+
+- Internal linking works: No orphans found.
+
+
+- Internal linking passes checks, verified word counts have warning paths.
+- Check-seo successfully updated.

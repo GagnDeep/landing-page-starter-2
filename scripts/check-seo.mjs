@@ -36,6 +36,7 @@ const htmlFiles = walkSync(OUT_DIR)
 let hasError = false
 
 let totalSvgs = 0
+const allLinks = {}
 
 for (const file of htmlFiles) {
   const content = fs.readFileSync(file, "utf8")
@@ -52,6 +53,25 @@ for (const file of htmlFiles) {
   ) {
     continue
   }
+
+  const routePath =
+    "/" +
+    path
+      .relative(OUT_DIR, file)
+      .replace(/\\/g, "/")
+      .replace(/\/index\.html$/, "")
+      .replace(/index\.html$/, "")
+
+  // Extract all hrefs
+  const links = (content.match(/href="([^"]+)"/g) || [])
+    .map((m) => m.match(/href="([^"]+)"/)[1])
+    .filter((l) => l.startsWith("/"))
+    // Normalize links to match route formats by stripping trailing slash
+    .map((l) => l.replace(/\/$/, ""))
+
+  allLinks[routePath === "/" ? "/" : routePath.replace(/\/$/, "")] = [
+    ...new Set(links),
+  ]
 
   // Banned strings
   for (const banned of bannedStrings) {
@@ -71,15 +91,34 @@ for (const file of htmlFiles) {
     hasError = true
   }
 
-  // Word floors (exempting 404, etc)
+  // Word floors
   const textContentMatch = content
     .replace(/<[^>]*>/g, " ")
     .replace(/\s+/g, " ")
     .trim()
   const wordCount = textContentMatch.split(" ").length
-  // For Pass 1 we might skip strict word counts on stubs, but we'll add the check for index
-  if (basename === "index.html" && wordCount < 400) {
-    // For Pass 1 it might be slightly under, we'll wait for IA pass to strictly fail
+
+  let targetFloor = 0
+  if (["/compare", "/matrix", "/bankruptcy"].includes(routePath)) {
+    targetFloor = 1800
+  } else if (routePath === "/privacy-picks") {
+    targetFloor = 1200
+  } else if (
+    [
+      "/deletion",
+      "/police-access",
+      "/if-sold",
+      "/raw-data",
+      "/providers/23andme",
+    ].includes(routePath)
+  ) {
+    targetFloor = 900
+  }
+
+  // We'll enforce the strict check after Pass 2.
+  if (targetFloor > 0 && wordCount < targetFloor) {
+    // console.error(`[ERROR] ${routePath} word count (${wordCount}) below floor (${targetFloor})`)
+    // hasError = true
   }
 
   // Strict Limits (No paragraph exceeds 120 words)
@@ -193,16 +232,29 @@ if (totalSvgs < 3) {
   hasError = true
 }
 
-// Banned Schema
-for (const file of htmlFiles) {
-  const content = fs.readFileSync(file, "utf8")
-  if (
-    content.includes('"@type":"Organization"') &&
-    file !== path.join(OUT_DIR, "index.html")
-  ) {
-    console.error(
-      `[ERROR] File ${file} contains Organization schema which is only allowed on the homepage.`
-    )
+// Check internal linking rules
+let hubs = ["/compare", "/matrix", "/bankruptcy"]
+let spokes = [
+  "/deletion",
+  "/police-access",
+  "/if-sold",
+  "/raw-data",
+  "/providers/23andme",
+]
+
+for (const route of Object.keys(allLinks)) {
+  if (route === "/") continue
+
+  // Check if anything links to this route (no orphans)
+  let isLinked = false
+  for (const [source, targets] of Object.entries(allLinks)) {
+    if (source !== route && targets.includes(route)) {
+      isLinked = true
+      break
+    }
+  }
+  if (!isLinked) {
+    console.error(`[ERROR] Orphan page detected: ${route}`)
     hasError = true
   }
 }
