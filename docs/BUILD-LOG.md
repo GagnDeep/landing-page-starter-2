@@ -6,31 +6,27 @@
 | 1 | Foundation | COMPLETE |
 | 2 | Information Architecture | COMPLETE |
 | 3 | Depth and Conversion | COMPLETE |
-| 4 | Design Elevation | OUTSTANDING |
+| 4 | Design Elevation | COMPLETE |
 | 5 | Hardening | OUTSTANDING |
 | 6 | Production Gate | OUTSTANDING |
 
-## CHANGELOG (Pass 3)
-- `components/matrix.tsx`: Refactored Matrix component to be fully interactive (client component) with multi-variable filters (region, confidence, hiring-only) and search functionality. The table renders statically during SSR and becomes interactive via React.
-- `components/job-post-form.tsx`: Created a custom client form component for the `/jobs/post/` route. The form correctly submits data asynchronously using a `NEXT_PUBLIC_JOB_POST_WEBHOOK` environment variable with graceful fallback behaviors and detailed error handling/success states.
-- `app/jobs/post/page.tsx`: Augmented the page layout to full authority length with structured conversion elements such as an FAQ accordion and role segmentation tables.
+## CHANGELOG (Pass 4)
+- `app/page.tsx`: Elevated homepage design to include 12 distinct layout sections (Split hero, metric strip, bento grid, comparison matrix, leaderboard, stepper, timeline, SVG diagram, SVG gauge, FAQ, quote, and conversion band) with strictly alternating token backgrounds (`bg-background`, `bg-muted/10`, `bg-foreground`).
+- `app/methodology/page.tsx`: Built a custom inline SVG graphic illustrating the compliance verification logic tree.
+- `app/components/actuators/page.tsx`, `app/platforms/page.tsx`, `app/suppliers/page.tsx`, `app/components/page.tsx`, `app/jobs/page.tsx`: Replaced unstructured bulleted facts with structured matrices, tables, bento layouts, or timeline strips, ensuring no page contains blocks of generic prose exceeding 400 words without a visual break. Added semantic iconography to every feature/step.
+- Maintained deliberate spacing scale constraints (`py-16`, `py-24`).
 
 ## VERIFICATION RESULTS
-- `pnpm run verify`: Exited 0. No format, convention, or linting errors.
-- `node scripts/check-seo.mjs`: ✅ All SEO checks passed.
-- Visual checks (Playwright): Validated UI rendering, interactions and theme toggle functionality via end-to-end testing with video recording.
+- `pnpm run verify`: Exited 0. No typescript, formatting, linting, or convention errors.
+- `node scripts/check-seo.mjs`: ✅ All visual rule checks passed (>= 10 sections on index, 3 global inline SVGs, alternating background validation).
+- Visual checks (Playwright): Ensured responsive scaling of tables within overflow containers.
 
 ## DECISIONS MADE
-- Implemented static rendering for the initial Matrix view by reading directly from `getRelationships()` during hydration to satisfy crawler availability without needing active hooks fetching data.
-- Handled Linkinator 404s for specific sub-supplier and component routing logic that falls under a fully-fledged programmatic generation step outside of the explicit manifest. Will build dynamic spoke routes if required in later passes.
+- Implemented a custom SVG Gauge component (`app/page.tsx`) mapping standardization velocity to hit the 3-SVG minimum constraint.
+- Swapped simple prose text in components/platforms/suppliers with styled link blocks, bento elements, and descriptive icons per domain specs.
 
 ## OUTSTANDING VERIFY TOKENS
-- `app/page.tsx`: `{{VERIFY: Total Platforms}}`
-- `app/page.tsx`: `{{VERIFY: Total Components}}`
-- `app/page.tsx`: `{{VERIFY: Total Suppliers}}`
-- `app/page.tsx`: `{{VERIFY: Total Jobs}}`
-- `app/page.tsx`: `{{VERIFY: Top 5 Suppliers by confirmed integrations}}`
-- `app/page.tsx`: `{{VERIFY: Job Post Price}}`
+- `app/page.tsx`: `{{VERIFY: Total Platforms}}`, `{{VERIFY: Total Components}}`, `{{VERIFY: Total Suppliers}}`, `{{VERIFY: Total Jobs}}`, `{{VERIFY: Top 5 Suppliers by confirmed integrations}}`, `{{VERIFY: Timeline Entry 3}}`, `{{VERIFY: Timeline Date 3}}`, `{{VERIFY: Industry Quote Attribution}}`, `{{VERIFY: Job Post Price}}`
 - `components/matrix.tsx`: `{{VERIFY: Matrix edge list JSON data}}`
 - `app/components/actuators/page.tsx`: `{{VERIFY: Actuator market landscape overview}}`, `{{VERIFY: Actuator Supplier List}}`
 - `app/components/page.tsx`: `{{VERIFY: Analysis on component evolution trends}}`, `{{VERIFY: Analysis on component standardization impacts}}`
@@ -40,4 +36,4 @@
 - `app/jobs/post/page.tsx`: `{{VERIFY: Job Post Price}}`
 
 ## NEXT ACTION
-Begin Pass 4: Design Elevation.
+Begin Pass 5: Hardening.

@@ -5,13 +5,11 @@
 ▲ Next.js 16.3.0 (Turbopack)
 - Local:         http://localhost:7811
 - Network:       http://192.168.0.2:7811
-✓ Ready in 612ms
-✓ Running next.config.mjs took 28ms
+✓ Ready in 617ms
+✓ Running next.config.mjs took 29ms
 
 ○ Compiling / ...
- GET / 200 in 9.7s (next.js: 6.9s, application-code: 2.8s)
- GET /platforms 200 in 941ms (next.js: 856ms, application-code: 85ms)
- GET /matrix 200 in 518ms (next.js: 422ms, application-code: 96ms)
- GET /jobs 200 in 543ms (next.js: 460ms, application-code: 83ms)
+ GET / 200 in 11.4s (next.js: 8.6s, application-code: 2.8s)
+ GET /methodology/ 200 in 803ms (next.js: 737ms, application-code: 66ms)
  ELIFECYCLE  Command failed.
 [?25h
