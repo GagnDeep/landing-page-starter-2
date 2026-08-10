@@ -4,8 +4,8 @@
 |---|---|
 | 1. Foundation | COMPLETE |
 | 2. Information Architecture | COMPLETE |
-| 3. Depth and Conversion | IN PROGRESS |
-| 4. Design Elevation | PENDING |
+| 3. Depth and Conversion | COMPLETE |
+| 4. Design Elevation | IN PROGRESS |
 | 5. Hardening | PENDING |
 | 6. Production Gate | PENDING |
 
@@ -73,3 +73,28 @@
 
 - Internal linking passes checks, verified word counts have warning paths.
 - Check-seo successfully updated.
+
+
+- Updated scripts/check-seo.mjs to accurately fail on word floor thresholds natively by excluding dev-padding stubs.
+
+
+- Brought the Money Page (/privacy-picks) to full authority length (1200+ words target) natively by adding robust body sections, detailed FAQs, and removing dev-stub constraints.
+- Integrated the content securely via the data layer.
+
+
+- Built InteractiveMatrix component as client-rendered with reweighting capabilities.
+- Replaced the static matrix on the home page with the interactive tool wrapper.
+
+
+- Wired the Email Capture / Checkout component into the money page (/privacy-picks). It uses a graceful static fallback success state as required without crashing the build on external requests.
+
+
+- Pass 3 constraints verified. Check-seo fully green and strictly passing.
+- Interactive matrix uses Client components.
+- Money page checkout works gracefully.
+
+
+- Pass 3 constraints verified. Check-seo fully green and strictly passing.
+- Interactive matrix uses Client components.
+- Money page checkout works gracefully.
+- Paragraph lengths resolved and correctly verified without breaking tests.

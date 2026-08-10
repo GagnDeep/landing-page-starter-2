@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { CustodyMatrix } from "@/components/custody-matrix"
+import { CustodyMatrixWrapper as CustodyMatrix } from "@/components/custody-matrix-wrapper"
 import {
   buildMetadata,
   buildOrganizationJsonLd,

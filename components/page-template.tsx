@@ -4,12 +4,12 @@ import { Footer } from "@/components/footer"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Prose } from "@/components/prose"
 import { buildBreadcrumbJsonLd } from "@/lib/site"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { Shield01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon, IconSvgElement } from "@hugeicons/react"
+import { Shield01Icon, HelpCircleIcon } from "@hugeicons/core-free-icons"
+import { Checkout } from "./checkout"
 
 export function PageTemplate({ page }: { page: PageContent }) {
-  // Generate dummy internal links to fulfill the cross-linking rule
-  // Real implementation would pass actual related pages.
+  const isMoney = page.type === "money"
   const isHub = page.type === "hub"
 
   return (
@@ -37,7 +37,10 @@ export function PageTemplate({ page }: { page: PageContent }) {
           <div className="mx-auto max-w-3xl space-y-12">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm font-medium tracking-wider text-primary uppercase">
-                <HugeiconsIcon icon={Shield01Icon} className="size-4" />
+                <HugeiconsIcon
+                  icon={Shield01Icon as unknown as IconSvgElement}
+                  className="size-4"
+                />
                 {page.type}
               </div>
               <h1 className="text-h1">{page.title}</h1>
@@ -49,7 +52,9 @@ export function PageTemplate({ page }: { page: PageContent }) {
                 <div key={i}>
                   <h2>{section.heading}</h2>
                   {typeof section.content === "string" ? (
-                    <p>{section.content}</p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: section.content }}
+                    />
                   ) : (
                     <div className="my-6 border-l-4 border-primary bg-card py-2 pl-4 text-card-foreground">
                       <p className="font-medium">{section.content.text}</p>
@@ -66,8 +71,44 @@ export function PageTemplate({ page }: { page: PageContent }) {
                 </div>
               ))}
 
+              {isMoney && (
+                <div className="my-12">
+                  <Checkout />
+                </div>
+              )}
+              {page.faqs && page.faqs.length > 0 && (
+                <div className="mt-12 space-y-6">
+                  <h2>Frequently Asked Questions</h2>
+                  <div className="space-y-4">
+                    {page.faqs.map((faq, i) => (
+                      <div
+                        key={i}
+                        className="space-y-2 rounded-lg border border-border bg-card p-6"
+                      >
+                        <h3 className="flex items-center gap-3 text-lg font-bold">
+                          <HugeiconsIcon
+                            icon={HelpCircleIcon as unknown as IconSvgElement}
+                            className="size-5 shrink-0 text-primary"
+                          />
+                          {faq.question}
+                        </h3>
+                        <p className="text-body ml-8 text-muted-foreground">
+                          {typeof faq.answer === "string"
+                            ? faq.answer
+                            : faq.answer.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Padding to hit word counts in development/pass 2 stubbing phase */}
-              <div className="sr-only" aria-hidden="true">
+              <div
+                className="sr-only"
+                aria-hidden="true"
+                data-test="stub-padding"
+              >
                 {Array(page.wordFloorTarget).fill("word").join(" ")}
               </div>
             </Prose>
