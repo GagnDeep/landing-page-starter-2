@@ -19,18 +19,18 @@ export function Footer() {
           </span>
           <ul className="space-y-2">
             <li>
-              <Link href="/compare" className="text-small hover:text-primary">
+              <Link href="/compare/" className="text-small hover:text-primary">
                 Compare
               </Link>
             </li>
             <li>
-              <Link href="/matrix" className="text-small hover:text-primary">
+              <Link href="/matrix/" className="text-small hover:text-primary">
                 Custody Matrix
               </Link>
             </li>
             <li>
               <Link
-                href="/bankruptcy"
+                href="/bankruptcy/"
                 className="text-small hover:text-primary"
               >
                 Bankruptcy Risk
@@ -44,31 +44,31 @@ export function Footer() {
           </span>
           <ul className="space-y-2">
             <li>
-              <Link href="/deletion" className="text-small hover:text-primary">
+              <Link href="/deletion/" className="text-small hover:text-primary">
                 Deletion Policy
               </Link>
             </li>
             <li>
               <Link
-                href="/police-access"
+                href="/police-access/"
                 className="text-small hover:text-primary"
               >
                 Police Access
               </Link>
             </li>
             <li>
-              <Link href="/if-sold" className="text-small hover:text-primary">
+              <Link href="/if-sold/" className="text-small hover:text-primary">
                 If Sold
               </Link>
             </li>
             <li>
-              <Link href="/raw-data" className="text-small hover:text-primary">
+              <Link href="/raw-data/" className="text-small hover:text-primary">
                 Raw Data Export
               </Link>
             </li>
             <li>
               <Link
-                href="/providers/23andme"
+                href="/providers/23andme/"
                 className="text-small hover:text-primary"
               >
                 23andMe Profile
@@ -82,13 +82,13 @@ export function Footer() {
           </span>
           <ul className="space-y-2">
             <li>
-              <Link href="/about" className="text-small hover:text-primary">
+              <Link href="/about/" className="text-small hover:text-primary">
                 About Us
               </Link>
             </li>
             <li>
               <Link
-                href="/privacy-picks"
+                href="/privacy-picks/"
                 className="text-small font-bold text-primary hover:text-primary"
               >
                 Privacy Picks

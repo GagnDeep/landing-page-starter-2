@@ -56,7 +56,7 @@ export default function Home() {
               </p>
               <div className="flex gap-4 pt-4">
                 <a
-                  href="/matrix"
+                  href="/matrix/"
                   className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium whitespace-nowrap text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
                 >
                   View the Matrix
@@ -568,7 +568,7 @@ export default function Home() {
             </p>
             <div>
               <a
-                href="/privacy-picks"
+                href="/privacy-picks/"
                 className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-10 text-lg text-sm font-medium whitespace-nowrap text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
               >
                 View the Picks

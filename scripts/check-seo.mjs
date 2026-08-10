@@ -45,7 +45,10 @@ for (const file of htmlFiles) {
   if (
     basename.startsWith("_") ||
     basename === "500.html" ||
-    basename === "404.html"
+    basename === "404.html" ||
+    file.includes("/404/") ||
+    file.includes("/_not-found/") ||
+    file.includes("/_error/")
   ) {
     continue
   }
@@ -94,7 +97,7 @@ for (const file of htmlFiles) {
   }
 
   // Adjacent matching backgrounds
-  if (basename === "index.html" && file === path.join(OUT_DIR, "index.html")) {
+  if (file === path.join(OUT_DIR, "index.html")) {
     const sectionClasses = (
       content.match(/<section[^>]*class="([^"]*)"/g) || []
     ).map((m) => m.match(/class="([^"]*)"/)[1])
@@ -165,7 +168,7 @@ for (const file of htmlFiles) {
   }
 
   // Home page specific checks
-  if (basename === "index.html" && file === path.join(OUT_DIR, "index.html")) {
+  if (file === path.join(OUT_DIR, "index.html")) {
     const sectionCount = (content.match(/<section[^>]*>/g) || []).length
     if (sectionCount < 10) {
       console.error(
@@ -177,7 +180,7 @@ for (const file of htmlFiles) {
 
   // Collect SVGs
   const svgCount = (content.match(/<svg[^>]*>/g) || []).length
-  if (basename === "index.html" && file === path.join(OUT_DIR, "index.html")) {
+  if (file === path.join(OUT_DIR, "index.html")) {
     totalSvgs += svgCount
   }
 }
@@ -195,10 +198,12 @@ for (const file of htmlFiles) {
   const content = fs.readFileSync(file, "utf8")
   if (
     content.includes('"@type":"Organization"') &&
-    file !== path.join(OUT_DIR, "index.html") &&
-    !file.endsWith("/index.html")
+    file !== path.join(OUT_DIR, "index.html")
   ) {
-    // console.error(`[ERROR] File ${file} contains Organization schema which is only allowed on the homepage.`)
+    console.error(
+      `[ERROR] File ${file} contains Organization schema which is only allowed on the homepage.`
+    )
+    hasError = true
   }
 }
 

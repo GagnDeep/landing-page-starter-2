@@ -1,4 +1,3 @@
-export const dynamic = "force-static"
 import { MetadataRoute } from "next"
 
 import { siteConfig } from "@/lib/site"
@@ -23,3 +22,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes
 }
+export const dynamic = "force-static"

@@ -15,19 +15,19 @@ export function Header() {
         </Link>
         <nav className="ml-auto flex gap-6">
           <Link
-            href="/matrix"
+            href="/matrix/"
             className="text-small font-medium transition-colors hover:text-primary"
           >
             Custody Matrix
           </Link>
           <Link
-            href="/privacy-picks"
+            href="/privacy-picks/"
             className="text-small font-medium transition-colors hover:text-primary"
           >
             Privacy Picks
           </Link>
           <Link
-            href="/compare"
+            href="/compare/"
             className="text-small font-medium transition-colors hover:text-primary"
           >
             Compare

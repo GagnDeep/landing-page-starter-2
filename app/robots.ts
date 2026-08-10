@@ -1,4 +1,3 @@
-export const dynamic = "force-static"
 import { MetadataRoute } from "next"
 
 import { siteConfig } from "@/lib/site"
@@ -12,3 +11,4 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${siteConfig.url}/sitemap.xml`,
   }
 }
+export const dynamic = "force-static"
