@@ -114,8 +114,10 @@ for (const file of htmlFiles) {
   const realWordCount = realTextMatch.split(" ").length
 
   if (targetFloor > 0 && realWordCount < targetFloor) {
-    // Only fail strictly on the money page for PASS 4, hub/spoke floors handled via generation.
-    // console.error(`[ERROR] ${routePath} actual word count (${realWordCount}) below floor (${targetFloor})`)
+    console.error(
+      `[ERROR] ${routePath} actual word count (${realWordCount}) below floor (${targetFloor})`
+    )
+    hasError = true
   }
 
   const pTags = content.match(/<p[^>]*>([\s\S]*?)<\/p>/g) || []
