@@ -18,6 +18,30 @@ export function Header() {
             >
               About
             </Link>
+            <Link
+              href="/states"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              States
+            </Link>
+            <Link
+              href="/software"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Software
+            </Link>
+            <Link
+              href="/templates"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Templates
+            </Link>
+            <Link
+              href="/pricing-calculator"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Pricing
+            </Link>
           </nav>
         </div>
       </div>
