@@ -115,7 +115,7 @@ export function InteractiveMatrix() {
         <h3 className="font-heading text-lg font-bold">
           Filter & Weight by Concern
         </h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="mb-4 flex flex-wrap gap-4">
           <label className="flex cursor-pointer items-center gap-2">
             <input
               type="checkbox"
@@ -142,7 +142,7 @@ export function InteractiveMatrix() {
       </div>
 
       <div className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
-        <div className="overflow-x-auto">
+        <div className="touch-target min-h-[300px] overflow-x-auto">
           <table className="w-full min-w-[800px] border-collapse text-left">
             <thead>
               <tr className="border-b border-border bg-muted">
@@ -212,6 +212,22 @@ export function InteractiveMatrix() {
                   </td>
                 </tr>
               ))}
+              {sortedProviders.length === 0 && (
+                <tr>
+                  <td
+                    colSpan={8}
+                    className="bg-muted/20 p-8 text-center text-muted-foreground"
+                  >
+                    <HugeiconsIcon
+                      icon={HelpCircleIcon as unknown as IconSvgElement}
+                      className="mx-auto mb-2 size-8 opacity-50"
+                    />
+                    <p>
+                      No providers match the selected criteria (empty state).
+                    </p>
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

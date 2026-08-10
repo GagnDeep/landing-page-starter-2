@@ -34,7 +34,7 @@ export function PageTemplate({ page }: { page: PageContent }) {
         <div className="container mx-auto px-4">
           <Breadcrumbs items={[{ name: page.title, url: `/${page.id}` }]} />
 
-          <div className="mx-auto max-w-3xl space-y-12">
+          <div className="mx-auto max-w-3xl space-y-12 [overflow-wrap:anywhere] break-words">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm font-medium tracking-wider text-primary uppercase">
                 <HugeiconsIcon

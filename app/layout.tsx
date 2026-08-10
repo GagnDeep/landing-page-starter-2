@@ -38,7 +38,13 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider defaultTheme="dark" enableSystem={false}>
-          {children}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-background focus:p-4 focus:text-foreground"
+          >
+            Skip to main content
+          </a>
+          <div id="main-content">{children}</div>
         </ThemeProvider>
       </body>
     </html>
