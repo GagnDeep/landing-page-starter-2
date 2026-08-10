@@ -1,12 +1,11 @@
-import { Figtree, Geist_Mono } from "next/font/google"
-
+import { Fraunces, Karla, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
-const fontSans = Figtree({ subsets: ["latin"], variable: "--font-sans" })
-
-const fontMono = Geist_Mono({
+const fontSans = Karla({ subsets: ["latin"], variable: "--font-sans" })
+const fontHeading = Fraunces({ subsets: ["latin"], variable: "--font-heading" })
+const fontMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
@@ -23,6 +22,7 @@ export default function RootLayout({
       className={cn(
         "font-sans antialiased",
         fontSans.variable,
+        fontHeading.variable,
         fontMono.variable
       )}
     >
