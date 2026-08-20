@@ -1,11 +1,16 @@
-# Landing Page Starter
+# bro.tax — Tax Filing & Estimator for Freelancers & Creators
 
-Next.js App Router + shadcn/ui starter for building production landing pages.
+Next.js App Router + Tailwind CSS v4 + shadcn/ui application built for `bro.tax`: an irreverent, rigorous tax brand for 1099 self-employed workers, creators, and gig workers.
 
 ## Requirements
 
 - Node.js 24.x (see `.nvmrc`)
 - pnpm 10.x (`corepack enable`)
+
+## Installed Dependencies & Justifications
+
+- **`sharp` (`0.35.3`)**: High-performance image processing library used in build scripts to convert raw photography into optimized `.webp` formats stored in `/public/images/`.
+- **`@hugeicons/react` (`1.1.9`)**: Clean, scalable SVG icon system strictly used across all components (`HugeiconsIcon`) to avoid informal emoji icons.
 
 ## Quick start
 
@@ -31,29 +36,15 @@ pnpm run dev          # http://localhost:7811
 
 `pnpm run verify` is the definition of done. Nothing merges without it.
 
-## Stack
+## Stack & Design System
 
 Next.js (App Router, Turbopack) · React 19 · TypeScript strict · Tailwind CSS v4
-(inline `@theme`, no config file) · shadcn/ui (`radix-maia`, neutral) ·
-HugeIcons · next-themes.
+(inline `@theme`, no config file) · shadcn/ui · HugeIcons · next-themes.
 
-Exact versions live in `package.json` — that is the only place they are stated,
-on purpose. TypeScript is pinned to 6.x and ESLint to 9.x; see `AGENTS.md` for
-why bumping either breaks the lint stack.
+Exact versions live in `package.json`. TypeScript is pinned to 6.x and ESLint to 9.x; see `AGENTS.md` for why bumping either breaks the lint stack.
 
-## Working in this repo
+## Documentation
 
-Read [`AGENTS.md`](AGENTS.md) first. It is the contract for humans and coding
-agents alike: commands, frozen paths, design-system rules, PR conventions.
-
-For delegating work to [Jules](https://jules.google), see
-[`.jules/README.md`](.jules/README.md) — brief templates, the environment setup
-script, and session tooling.
-
-## Adding UI primitives
-
-```bash
-pnpm dlx shadcn@latest add <component>
-```
-
-They land in `components/ui/`, which is vendored and never hand-edited.
+- [`PLAN.md`](PLAN.md): Market research, 20+ verbatim quotes, competitor teardown, 40+ keywords, official IRS tax rate table, positioning & route tree.
+- [`DESIGN.md`](DESIGN.md): Palette selection (Electric Volt Lime + Obsidian Charcoal), contrast verification, typography rules, and image manifest.
+- [`AGENTS.md`](AGENTS.md): Coding rules, frozen paths, conventions.
